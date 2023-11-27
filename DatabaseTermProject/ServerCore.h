@@ -1,12 +1,12 @@
 #ifndef DATABASETERMPROJECT_SERVERCORE_H
 #define DATABASETERMPROJECT_SERVERCORE_H
 
-
+#include <winsock2.h>
+#include <memory>
 #include <iostream>
 #include <string>
 #include <cstring>
-#include <winsock2.h>
-#include <memory>
+#include <process.h>
 #include "ServerConstant.h"
 
 using namespace std;
@@ -14,7 +14,7 @@ using namespace std;
 class ServerCore {
 public:
     ServerCore();
-    int run();
+    void run();
 private:
     typedef struct {
         SOCKET sc;
@@ -29,8 +29,11 @@ private:
     shared_ptr<SOCK_INFO[]> socketArray;
     int                     socketCount;
 
-    SOCKET initServer();
-
+    SOCKET  initServer();
+    void    addClient();
+    void    readClient(int index);
+    void    removeClient(int index);
+    void    notifyClient(string msg);
 };
 
 

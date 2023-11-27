@@ -39,6 +39,12 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 14,
@@ -58,7 +64,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Program Files/PostgreSQL/15/include"
 				}
 			],
@@ -97,6 +103,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "\"C:\\Program Files\\PostgreSQL\\15\\lib\\libpq.lib\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lws2_32",
 				"role" : "libraries"
 			},
 			{

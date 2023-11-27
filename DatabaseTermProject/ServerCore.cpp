@@ -16,13 +16,13 @@ SOCKET ServerCore::initServer() {
     WORD wVersionRequested = MAKEWORD(2, 2);
     if (WSAStartup(wVersionRequested, &wsadata) != 0) {
         cout << "WSAStartup Error." << endl;
-        return -1;
+        return 0;
     }
 
     // create socket
     if ((sc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
         cout << "socket creation error." << endl;
-        return -1;
+        return 0;
     }
 
     // bind
@@ -31,27 +31,90 @@ SOCKET ServerCore::initServer() {
     socketAddress.sin_port = htons(serverPort);
     if (bind(sc, reinterpret_cast<sockaddr*>(&socketAddress), sizeof(socketAddress)) < 0) {
         cout << "bind error." << "\n";
-        return -1;
+        return 0;
     }
 
     // listen
     if (listen(sc, SOMAXCONN) < 0) {
         cout << "listen error." << endl;
-        return -1;
+        return 0;
     }
 
     return sc;
 }
 
-int ServerCore::run() {
+void ServerCore::run() {
     WSANETWORKEVENTS ev;
-    int index;
-    WSAEVENT handle_array[maxClientCount + 1];
+    WSAEVENT handleArray[maxClientCount + 1];
 
     SOCKET sc = initServer();
-    if (sc < 0) {
+    if (sc == 0) {
         cout << "socket initialization error" << endl;
-        return -1;
+        exit(0);
     }
+
+    HANDLE event = WSACreateEvent();
+    socketArray[socketCount].ev         = event;
+    socketArray[socketCount].sc         = sc;
+    socketArray[socketCount].nickname   = "svr";
+    socketArray[socketCount].clientIP   = "0.0.0.0";
+
+    WSAEventSelect(sc, event, FD_ACCEPT);
+    socketCount++;
+
+    int index;
+    while (true) {
+        for (int i=0; i<socketCount; i++)
+            handleArray[i] = socketArray[i].ev;
+
+        index = WSAWaitForMultipleEvents(socketCount, handleArray, false, INFINITE, false);
+        if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
+            WSAEnumNetworkEvents(socketArray[index].sc, socketArray[index].ev, &ev);
+            if (ev.lNetworkEvents == FD_ACCEPT) addClient();
+            else if (ev.lNetworkEvents == FD_READ) readClient(index);
+            else if (ev.lNetworkEvents == FD_CLOSE) removeClient(index);
+        }
+    }
+//    closesocket(sc);
+//    WSACleanup();
+//    _endthreadex(0);
 }
 
+void ServerCore::addClient() {
+    SOCKADDR_IN socketAddress;
+    SOCKET acceptSocket;
+    int length;
+
+    length = sizeof(socketAddress);
+    acceptSocket = accept(socketArray[0].sc, reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
+
+    HANDLE event = WSACreateEvent();
+    socketArray[socketCount].ev = event;
+    socketArray[socketCount].sc = acceptSocket;
+    socketArray[socketCount].clientIP = inet_ntoa(socketAddress.sin_addr);
+
+    WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
+
+    socketCount++;
+    notifyClient("신규 클라이언트 접속(IP : " + socketArray[socketCount].clientIP + ")");
+}
+
+void ServerCore::readClient(int index) {
+    char buf[MAXBYTE];
+    SOCKADDR_IN clientAddress;
+    int bytes = recv(socketArray[index].sc, buf, MAXBYTE, 0);
+    string msg = "[" + socketArray[index].clientIP + "] (bytes: " + to_string(bytes) + ") : " + buf;
+    notifyClient(msg);
+}
+
+void ServerCore::removeClient(int index) {
+    string removeClientIP = socketArray[index].clientIP;
+    socketCount--;
+    swap(socketArray[index], socketArray[socketCount]);
+    notifyClient("클라이언트 접속 종료(IP : " + removeClientIP + ")");
+}
+
+void ServerCore::notifyClient(string msg) {
+    for (int i=0; i<socketCount; i++)
+        send(socketArray[i].sc, msg.c_str(), MAXBYTE, 0);
+}

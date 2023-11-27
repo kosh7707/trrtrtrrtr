@@ -1,8 +1,6 @@
-#include <iostream>
-#include <string>
+#include "ServerCore.h"
 #include "ServerConstant.h"
 #include "DatabaseConnection.h"
-#include "ServerCore.h"
 
 using namespace std;
 
@@ -15,9 +13,6 @@ int main() {
     cout << "-------------------------------" << endl;
     cout << "Connection to database succeed." << endl;
     cout << "-------------------------------" << endl;
-
-    ServerCore sc;
-    sc.
 
     while (true) {
         cout << "-------------------------------" << endl;

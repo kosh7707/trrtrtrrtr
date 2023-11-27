@@ -29,3 +29,6 @@ add_executable(DatabaseTermProject main.cpp
 
 # Link the executable `ExamplePostgreSQL` with the PostgreSQL library
 target_link_libraries(DatabaseTermProject ${PostgreSQL_LIBRARIES})
+
+# include winsock2_32
+target_link_libraries(DatabaseTermProject ws2_32)
