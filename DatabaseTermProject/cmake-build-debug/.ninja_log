@@ -1,0 +1,7 @@
+# ninja log v5
+6	1111	7224981584705639	CMakeFiles/DatabaseTermProject.dir/main.cpp.obj	928b3282f6f31247
+2	105	7227532526321223	build.ninja	d29610a4e3582391
+1131	1195	7224981585526629	DatabaseTermProject.exe	48612164e35188c1
+9	249	7224981576092846	CMakeFiles/DatabaseTermProject.dir/ServerConstant.cpp.obj	ae5ad25c5b7a6386
+11	249	7224981576092846	CMakeFiles/DatabaseTermProject.dir/IDatabaseConnection.cpp.obj	96436715e51eeda0
+3	1130	7224981584906641	CMakeFiles/DatabaseTermProject.dir/DatabaseConnection.cpp.obj	951e334ee40ac085
