@@ -5,7 +5,9 @@ bool DatabaseConnection::isConnected() {
 }
 
 void DatabaseConnection::query(const string& query) {
-    if (query.substr(0, 6) == "select") selectQuery(query);
+    string temp = query.substr(0, 6);
+    for (auto& it : temp) it = tolower(it);
+    if (temp == "select") selectQuery(query);
     else commandQuery(query);
 }
 

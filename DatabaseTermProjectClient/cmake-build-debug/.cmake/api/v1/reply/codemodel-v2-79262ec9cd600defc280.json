@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DatabaseTermProjectClient::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DatabaseTermProjectClient-Debug-582220586c9484e1cc44.json",
+					"jsonFile" : "target-DatabaseTermProjectClient-Debug-2202e3af3a2ebded2bec.json",
 					"name" : "DatabaseTermProjectClient",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient/cmake-build-debug",
-		"source" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient"
+		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-debug",
+		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient"
 	},
 	"version" : 
 	{

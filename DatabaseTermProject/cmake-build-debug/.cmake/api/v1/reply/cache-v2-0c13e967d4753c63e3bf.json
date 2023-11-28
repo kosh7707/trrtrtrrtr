@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Administrator/Desktop/DatabaseTermProjectClient/cmake-build-debug"
+			"value" : "c:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient"
+			"value" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/DatabaseTermProjectClient"
+			"value" : "C:/Program Files (x86)/DatabaseTermProject"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "DatabaseTermProjectClient"
+			"value" : "DatabaseTermProject"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1254,7 +1254,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "DatabaseTermProjectClient_BINARY_DIR",
+			"name" : "DatabaseTermProject_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1263,10 +1263,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient/cmake-build-debug"
+			"value" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug"
 		},
 		{
-			"name" : "DatabaseTermProjectClient_IS_TOP_LEVEL",
+			"name" : "DatabaseTermProject_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1278,7 +1278,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "DatabaseTermProjectClient_SOURCE_DIR",
+			"name" : "DatabaseTermProject_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Administrator/Desktop/DatabaseTermProjectClient"
+			"value" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

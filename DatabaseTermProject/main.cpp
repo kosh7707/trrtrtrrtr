@@ -10,9 +10,10 @@ int main() {
         cout << "Connection to database failed: " << endl;
         exit(1);
     }
-    cout << "-------------------------------" << endl;
     cout << "Connection to database succeed." << endl;
-    cout << "-------------------------------" << endl;
+
+    ServerCore sc;
+    sc.run();
 
     while (true) {
         cout << "-------------------------------" << endl;
@@ -23,7 +24,7 @@ int main() {
             getline(cin, temp);
             query += temp + " ";
         }
-        if (query == "exit;") break;
+        if (query == "exit; ") break;
         dc.query(query);
     }
 

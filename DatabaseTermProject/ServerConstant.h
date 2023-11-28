@@ -31,7 +31,7 @@ public:
     }
 private:
     const string dbName = "databasetermproject";
-    const string dbId = "postgresql";
+    const string dbId = "kosh7707";
     const string dbPw = "root";
     const string connInfo = "postgresql://postgres@localhost?port=5432&dbname=" + dbName + "&user=" + dbId + "&password=" + dbPw;
     const int serverPort = 7707;

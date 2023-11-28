@@ -75,9 +75,9 @@ void ServerCore::run() {
             else if (ev.lNetworkEvents == FD_CLOSE) removeClient(index);
         }
     }
-//    closesocket(sc);
-//    WSACleanup();
-//    _endthreadex(0);
+    closesocket(sc);
+    WSACleanup();
+    _endthreadex(0);
 }
 
 void ServerCore::addClient() {
@@ -95,26 +95,27 @@ void ServerCore::addClient() {
 
     WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
 
+    notifyClient("New Client Connected (IP : " + socketArray[socketCount].clientIP + ", name : " + socketArray[socketCount].nickname + ")");
     socketCount++;
-    notifyClient("신규 클라이언트 접속(IP : " + socketArray[socketCount].clientIP + ")");
 }
 
 void ServerCore::readClient(int index) {
     char buf[MAXBYTE];
     SOCKADDR_IN clientAddress;
     int bytes = recv(socketArray[index].sc, buf, MAXBYTE, 0);
-    string msg = "[" + socketArray[index].clientIP + "] (bytes: " + to_string(bytes) + ") : " + buf;
-    notifyClient(msg);
+    notifyClient("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
 }
 
 void ServerCore::removeClient(int index) {
     string removeClientIP = socketArray[index].clientIP;
+    string removeClientNickName = socketArray[index].nickname;
     socketCount--;
     swap(socketArray[index], socketArray[socketCount]);
-    notifyClient("클라이언트 접속 종료(IP : " + removeClientIP + ")");
+    notifyClient("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
 }
 
 void ServerCore::notifyClient(string msg) {
-    for (int i=0; i<socketCount; i++)
+    cout << msg << endl;
+    for (int i=1; i<socketCount; i++)
         send(socketArray[i].sc, msg.c_str(), MAXBYTE, 0);
 }
