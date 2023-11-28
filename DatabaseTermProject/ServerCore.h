@@ -33,7 +33,8 @@ private:
     void    addClient();
     void    readClient(int index);
     void    removeClient(int index);
-    void    notifyClient(string msg);
+    void    notifyClient(int index, string msg);
+    void    notifyAllClients(string msg);
 };
 
 

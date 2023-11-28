@@ -1,4 +1,14 @@
-create user kosh7707 superuser with encrypted password 'root';
+create user kosh7707 with encrypted password 'root';
+
+alter user kosh7707 with superuser;
+
+alter user kosh7707 with createdb;
+
+alter user kosh7707 with createrole;
+
+alter user kosh7707 with replication;
+
+alter user kosh7707 with bypassrls;
 
 create tablespace ts_databasetermproject owner kosh7707 location 'C:\Program Files\PostgreSQL\15\data\';
 

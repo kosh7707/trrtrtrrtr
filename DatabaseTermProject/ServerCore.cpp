@@ -95,7 +95,7 @@ void ServerCore::addClient() {
 
     WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
 
-    notifyClient("New Client Connected (IP : " + socketArray[socketCount].clientIP + ", name : " + socketArray[socketCount].nickname + ")");
+    notifyAllClients("New Client Connected (IP : " + socketArray[socketCount].clientIP + ", name : " + socketArray[socketCount].nickname + ")");
     socketCount++;
 }
 
@@ -103,7 +103,7 @@ void ServerCore::readClient(int index) {
     char buf[MAXBYTE];
     SOCKADDR_IN clientAddress;
     int bytes = recv(socketArray[index].sc, buf, MAXBYTE, 0);
-    notifyClient("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
+    notifyAllClients("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
 }
 
 void ServerCore::removeClient(int index) {
@@ -111,11 +111,16 @@ void ServerCore::removeClient(int index) {
     string removeClientNickName = socketArray[index].nickname;
     socketCount--;
     swap(socketArray[index], socketArray[socketCount]);
-    notifyClient("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
+    notifyAllClients("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
 }
 
-void ServerCore::notifyClient(string msg) {
+void ServerCore::notifyAllClients(string msg) {
     cout << msg << endl;
     for (int i=1; i<socketCount; i++)
         send(socketArray[i].sc, msg.c_str(), MAXBYTE, 0);
+}
+
+void ServerCore::notifyClient(int index, string msg) {
+    cout << msg << endl;
+    send(socketArray[index].sc, msg.c_str(), MAXBYTE, 0);
 }

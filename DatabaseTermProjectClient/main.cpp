@@ -32,7 +32,7 @@ SOCKET clientInit() {
     serverAddress.sin_port = htons(serverPort);
 
     if ((connect(clientSocket, reinterpret_cast<sockaddr*>(&serverAddress), sizeof(serverAddress))) < 0) {
-        cout << "connection error" << endl;
+        cout << "Connection Error" << endl;
         return 0;
     }
 
@@ -72,14 +72,13 @@ int main() {
 
     SOCKET clientSocket = clientInit();
     if (clientSocket == 0) {
-        cout << "client Init fail" << endl;
+        cout << "Client Init Fail" << endl;
         return 0;
     }
 
     HANDLE mainThread = (HANDLE)_beginthreadex(NULL, 0, run, (void*)clientSocket, 0, &tid);
 
     while (true) {
-        cout << "message:";
         string msg; cin >> msg;
         send(clientSocket, msg.c_str(), sizeof(msg.c_str()), 0);
         if (msg == "exit") break;

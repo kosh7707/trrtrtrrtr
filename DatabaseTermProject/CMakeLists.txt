@@ -32,3 +32,6 @@ target_link_libraries(DatabaseTermProject ${PostgreSQL_LIBRARIES})
 
 # include winsock2_32
 target_link_libraries(DatabaseTermProject ws2_32)
+
+# for distribution
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
