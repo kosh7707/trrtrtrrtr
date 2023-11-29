@@ -1,4 +1,5 @@
 #include "ServerCore.h"
+#include "DatabaseConnection.h"
 
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
@@ -95,18 +96,19 @@ void ServerCore::addClient() {
 
     WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
 
-    notifyAllClients("New Client Connected (IP : " + socketArray[socketCount].clientIP + ", name : " + socketArray[socketCount].nickname + ")");
     socketCount++;
 }
 
-void ServerCore::readClient(int index) {
+void ServerCore::readClient(const int index) {
     char buf[MAXBYTE];
     SOCKADDR_IN clientAddress;
     int bytes = recv(socketArray[index].sc, buf, MAXBYTE, 0);
-    notifyAllClients("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
+    string msg = buf;
+    if (msg.substr(0,7) == "[login]") handleLogin(index, msg);
+    else notifyAllClients("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
 }
 
-void ServerCore::removeClient(int index) {
+void ServerCore::removeClient(const int index) {
     string removeClientIP = socketArray[index].clientIP;
     string removeClientNickName = socketArray[index].nickname;
     socketCount--;
@@ -114,13 +116,36 @@ void ServerCore::removeClient(int index) {
     notifyAllClients("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
 }
 
-void ServerCore::notifyAllClients(string msg) {
+void ServerCore::notifyAllClients(const string& msg) {
     cout << msg << endl;
     for (int i=1; i<socketCount; i++)
         send(socketArray[i].sc, msg.c_str(), MAXBYTE, 0);
 }
 
-void ServerCore::notifyClient(int index, string msg) {
+void ServerCore::notifyClient(const int index, const string& msg) {
     cout << msg << endl;
     send(socketArray[index].sc, msg.c_str(), MAXBYTE, 0);
+}
+
+void ServerCore::handleLogin(const int index, const string& msg) {
+    string id, pw, temp;
+    for (int i=7; i<msg.length(); i++) {
+        if (msg[i] == ',') {
+            id = temp;
+            temp = "";
+            continue;
+        }
+        temp += msg[i];
+    }
+    pw = temp;
+    IDatabaseConnection& dc = DatabaseConnection::getInstance();
+    string query = "INSERT INTO Accounts (user_id, user_pw) VALUES ('"+ id + "', '" + pw + "');";
+    bool executed = dc.query(query.c_str());
+    if (executed) {
+        socketArray[index].nickname = id;
+        notifyAllClients("New Client Connected (IP : " + socketArray[index].clientIP + ", name : " + socketArray[index].nickname + ")");
+    }
+    else {
+        notifyClient(index, "400");
+    }
 }

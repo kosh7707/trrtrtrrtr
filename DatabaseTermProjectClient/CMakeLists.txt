@@ -3,7 +3,11 @@ project(DatabaseTermProjectClient)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(DatabaseTermProjectClient main.cpp)
+add_executable(DatabaseTermProjectClient main.cpp
+        ClientCore.cpp
+        ClientCore.h
+        ClientConstant.cpp
+        ClientConstant.h)
 
 # include winsock2_32
 target_link_libraries(DatabaseTermProjectClient ws2_32)

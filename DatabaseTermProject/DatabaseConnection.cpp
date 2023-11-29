@@ -4,11 +4,13 @@ bool DatabaseConnection::isConnected() {
     return PQstatus(conn) == CONNECTION_OK;
 }
 
-void DatabaseConnection::query(const string& query) {
+bool DatabaseConnection::query(const string& query) {
+    bool ret = true;
     string temp = query.substr(0, 6);
     for (auto& it : temp) it = tolower(it);
     if (temp == "select") selectQuery(query);
-    else commandQuery(query);
+    else ret = commandQuery(query);
+    return ret;
 }
 
 void DatabaseConnection::connectionClose() {
@@ -44,14 +46,15 @@ void DatabaseConnection::selectQuery(const std::string& query) {
     PQclear(res);
 }
 
-void DatabaseConnection::commandQuery(const string& query) {
+bool DatabaseConnection::commandQuery(const string& query) {
     PGresult* res = PQexec(conn, stoca(query));
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         cout << "command query: " << query << "\ncommand failed." << endl;
-        return;
+        return false;
     }
     cout << "query executed" << endl;
     PQclear(res);
+    return true;
 }
 
 

@@ -31,10 +31,11 @@ private:
 
     SOCKET  initServer();
     void    addClient();
-    void    readClient(int index);
-    void    removeClient(int index);
-    void    notifyClient(int index, string msg);
-    void    notifyAllClients(string msg);
+    void    readClient(const int index);
+    void    removeClient(const int index);
+    void    notifyClient(const int index, const string& msg);
+    void    notifyAllClients(const string& msg);
+    void    handleLogin(const int index, const string& msg);
 };
 
 
