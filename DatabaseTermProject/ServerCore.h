@@ -8,6 +8,8 @@
 #include <cstring>
 #include <process.h>
 #include "ServerConstant.h"
+#include "Client.h"
+#include "AccountDAO.h"
 
 using namespace std;
 
@@ -16,18 +18,13 @@ public:
     ServerCore();
     void run();
 private:
-    typedef struct {
-        SOCKET sc;
-        HANDLE ev;
-        string nickname;
-        string clientIP;
-    } SOCK_INFO;
     ServerConstant          serverConstant;
-    const int               maxClientCount;
-    const int               serverPort;
-    const string            serverIP;
-    shared_ptr<SOCK_INFO[]> socketArray;
-    int                     socketCount;
+    AccountDAO              accountDao;
+    shared_ptr<Client[]>    Clients;
+    string                  serverIP;
+    int                     maxClientCount;
+    int                     serverPort;
+    int                     ClientsCount;
 
     SOCKET  initServer();
     void    addClient();

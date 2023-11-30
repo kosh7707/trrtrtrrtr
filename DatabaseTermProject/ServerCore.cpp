@@ -4,8 +4,8 @@
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
                             serverIP(serverConstant.getServerIP()) {
-    socketArray = shared_ptr<SOCK_INFO[]>(new SOCK_INFO[maxClientCount + 1]);
-    socketCount = 0;
+    Clients = shared_ptr<Client[]>(new Client[maxClientCount + 1]);
+    ClientsCount = 0;
 }
 
 SOCKET ServerCore::initServer() {
@@ -55,30 +55,28 @@ void ServerCore::run() {
     }
 
     HANDLE event = WSACreateEvent();
-    socketArray[socketCount].ev         = event;
-    socketArray[socketCount].sc         = sc;
-    socketArray[socketCount].nickname   = "svr";
-    socketArray[socketCount].clientIP   = "0.0.0.0";
+    Clients[ClientsCount].setEv(event);
+    Clients[ClientsCount].setSc(sc);
+    Clients[ClientsCount].setIp("0.0.0.0");
 
     WSAEventSelect(sc, event, FD_ACCEPT);
-    socketCount++;
+    ClientsCount++;
 
     int index;
     while (true) {
-        for (int i=0; i<socketCount; i++)
-            handleArray[i] = socketArray[i].ev;
-
-        index = WSAWaitForMultipleEvents(socketCount, handleArray, false, INFINITE, false);
+        for (int i=0; i<ClientsCount; i++)
+            handleArray[i] = Clients[i].getEv();
+        index = WSAWaitForMultipleEvents(ClientsCount, handleArray, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
-            WSAEnumNetworkEvents(socketArray[index].sc, socketArray[index].ev, &ev);
+            WSAEnumNetworkEvents(Clients[index].getSc(), Clients[index].getEv(), &ev);
             if (ev.lNetworkEvents == FD_ACCEPT) addClient();
             else if (ev.lNetworkEvents == FD_READ) readClient(index);
             else if (ev.lNetworkEvents == FD_CLOSE) removeClient(index);
         }
     }
-    closesocket(sc);
-    WSACleanup();
-    _endthreadex(0);
+//    closesocket(sc);
+//    WSACleanup();
+//    _endthreadex(0);
 }
 
 void ServerCore::addClient() {
@@ -87,44 +85,44 @@ void ServerCore::addClient() {
     int length;
 
     length = sizeof(socketAddress);
-    acceptSocket = accept(socketArray[0].sc, reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
+    acceptSocket = accept(Clients[0].getSc(), reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
 
     HANDLE event = WSACreateEvent();
-    socketArray[socketCount].ev = event;
-    socketArray[socketCount].sc = acceptSocket;
-    socketArray[socketCount].clientIP = inet_ntoa(socketAddress.sin_addr);
+    Clients[ClientsCount].setEv(event);
+    Clients[ClientsCount].setSc(acceptSocket);
+    Clients[ClientsCount].setIp(inet_ntoa(socketAddress.sin_addr));
 
     WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
 
-    socketCount++;
+    ClientsCount++;
 }
 
 void ServerCore::readClient(const int index) {
     char buf[MAXBYTE];
     SOCKADDR_IN clientAddress;
-    int bytes = recv(socketArray[index].sc, buf, MAXBYTE, 0);
+    int bytes = recv(Clients[index].getSc(), buf, MAXBYTE, 0);
     string msg = buf;
     if (msg.substr(0,7) == "[login]") handleLogin(index, msg);
-    else notifyAllClients("(" + socketArray[index].clientIP + ")" + socketArray[index].nickname + " : " + buf);
+    else notifyAllClients("(" + Clients[index].getIp() + ")" + Clients[index].getAccount()->getUserId() + " : " + buf);
 }
 
 void ServerCore::removeClient(const int index) {
-    string removeClientIP = socketArray[index].clientIP;
-    string removeClientNickName = socketArray[index].nickname;
-    socketCount--;
-    swap(socketArray[index], socketArray[socketCount]);
+    string removeClientIP = Clients[index].getIp();
+    string removeClientNickName = Clients[index].getAccount()->getUserId();
+    ClientsCount--;
+    swap(Clients[index], Clients[ClientsCount]);
     notifyAllClients("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
 }
 
 void ServerCore::notifyAllClients(const string& msg) {
     cout << msg << endl;
-    for (int i=1; i<socketCount; i++)
-        send(socketArray[i].sc, msg.c_str(), MAXBYTE, 0);
+    for (int i=1; i<ClientsCount; i++)
+        send(Clients[i].getSc(), msg.c_str(), MAXBYTE, 0);
 }
 
 void ServerCore::notifyClient(const int index, const string& msg) {
-    cout << msg << endl;
-    send(socketArray[index].sc, msg.c_str(), MAXBYTE, 0);
+    cout << "notifyClient, index: " << index << ", msg: " << msg << endl;
+    send(Clients[index].getSc(), msg.c_str(), MAXBYTE, 0);
 }
 
 void ServerCore::handleLogin(const int index, const string& msg) {
@@ -138,14 +136,27 @@ void ServerCore::handleLogin(const int index, const string& msg) {
         temp += msg[i];
     }
     pw = temp;
-    IDatabaseConnection& dc = DatabaseConnection::getInstance();
-    string query = "INSERT INTO Accounts (user_id, user_pw) VALUES ('"+ id + "', '" + pw + "');";
-    bool executed = dc.query(query.c_str());
-    if (executed) {
-        socketArray[index].nickname = id;
-        notifyAllClients("New Client Connected (IP : " + socketArray[index].clientIP + ", name : " + socketArray[index].nickname + ")");
+    if (accountDao.checkAccountExists(id)) {
+        shared_ptr<Account> account = accountDao.getAccount(id, pw);
+        if (account != nullptr) {
+            Clients[index].setAccount(account);
+            notifyClient(index, "200");
+            notifyAllClients("New Client Connected(IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+        }
+        else {
+            notifyClient(index, "400");
+        }
     }
     else {
-        notifyClient(index, "400");
+        bool res = accountDao.registerAccount(id, pw);
+        if (res) {
+            shared_ptr<Account> account = accountDao.getAccount(id, pw);
+            Clients[index].setAccount(account);
+            notifyClient(index, "201");
+            notifyAllClients("New Client Connected(IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+        }
+        else {
+            notifyClient(index, "401");
+        }
     }
 }

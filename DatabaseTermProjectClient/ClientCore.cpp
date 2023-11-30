@@ -1,6 +1,6 @@
 #include "ClientCore.h"
 
-ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(clientConstant.getServerPort()) {
+ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(clientConstant.getServerPort()), isLogin(false) {
     WSADATA wsadata;
     SOCKADDR_IN serverAddress;
 
@@ -69,20 +69,53 @@ ClientCore::~ClientCore() {
 
 void ClientCore::login() {
     char buf[MAXBYTE];
-    string id, pw;
-    cout << "please enter the id:"; cin >> id;
-    cout << "please enter the pw:"; cin >> pw;
-    string loginRequest = "[login]" + id + "," + pw;
-    send(sc, loginRequest.c_str(), sizeof(loginRequest), 0);
-    recv(sc, buf, MAXBYTE, 0);
-    string loginResponse = buf;
-    if (loginResponse == "200") {
-        // login success
+    int length = 0;
+    int index = 0;
+    WSANETWORKEVENTS ev;
+    HANDLE event = WSACreateEvent();
+
+    WSAEventSelect(sc, event, FD_READ | FD_CLOSE);
+    while (true) {
+        string id, pw;
+        cout << "please enter the id:"; cin >> id;
+        cout << "please enter the pw:"; cin >> pw;
+        string loginRequest = "[login]" + id + "," + pw;
+        send(sc, loginRequest.c_str(), sizeof(loginRequest), 0);
+
+        index = WSAWaitForMultipleEvents(1, &event, false, INFINITE, false);
+        if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
+            WSAEnumNetworkEvents(sc, event, &ev);
+            if (ev.lNetworkEvents == FD_READ) {
+                length = recv(sc, buf, MAXBYTE, 0);
+                if (length > 0) {
+                    string loginResponse = buf;
+                    if (loginResponse == "200") {
+                        cout << "login success" << endl;
+                        isLogin = true;
+                        break;
+                    }
+                    else if (loginResponse == "201") {
+                        cout << "register success" << endl;
+                        isLogin = true;
+                        break;
+                    }
+                    else if (loginResponse == "400") {
+                        cout << "wrong password, login failed" << endl;
+                    }
+                    else if (loginResponse == "401") {
+                        cout << "register failed" << endl;
+                    }
+                }
+            }
+            else if (ev.lNetworkEvents == FD_CLOSE) {
+                cout << "Server Disconnected" << endl;
+                closesocket(sc);
+                break;
+            }
+        }
     }
-    else if (loginResponse == "201") {
-        // register success
-    }
-    else {
-        // login error
-    }
+}
+
+bool ClientCore::getIsLogin() {
+    return isLogin;
 }

@@ -17,6 +17,7 @@ public:
     SOCKET  getSocket();
     void run();
     void login();
+    bool getIsLogin();
 private:
     static unsigned int WINAPI runThread(void* params);
     ClientConstant  clientConstant;
@@ -25,6 +26,7 @@ private:
     unsigned int    tid;
     SOCKET          sc;
     HANDLE          mainThread;
+    bool            isLogin;
 };
 
 

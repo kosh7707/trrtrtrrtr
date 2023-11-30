@@ -1,0 +1,15 @@
+# ninja log v5
+6	157	7230231916507625	CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj	8a8ecd3c7287609c
+1	758	7230231922507791	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	d9ec1c2334b142d8
+4	792	7230231922856645	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
+792	1025	7230231925148980	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
+2	772	7230250702334564	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
+772	1016	7230250704736531	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
+1	761	7230251452675708	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
+771	1010	7230251455127527	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
+2	718	7230251884241829	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	d9ec1c2334b142d8
+719	952	7230251886544123	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
+2	735	7230252691432076	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
+735	972	7230252693769262	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
+2	1098	7230267621230766	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
+1098	1354	7230267623752328	DatabaseTermProjectClient.exe	e6ddef7e742e0e41

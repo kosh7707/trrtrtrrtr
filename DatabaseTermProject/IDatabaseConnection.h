@@ -3,16 +3,15 @@
 
 
 #include <string>
+#include <libpq-fe.h>
 using namespace std;
 
 class IDatabaseConnection {
 public:
-    virtual bool isConnected() = 0;
-    virtual bool query(const string& query) = 0;
-    virtual void connectionClose() = 0;
-private:
-    virtual void selectQuery(const string& query) = 0;
-    virtual bool commandQuery(const string& query) = 0;
+    virtual bool        isConnected() = 0;
+    virtual PGresult*   selectQuery(const string& query) = 0;
+    virtual bool        commandQuery(const string& query) = 0;
+    virtual void        connectionClose() = 0;
 };
 
 

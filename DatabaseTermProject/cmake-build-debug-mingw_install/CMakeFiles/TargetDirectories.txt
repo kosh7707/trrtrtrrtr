@@ -1,0 +1,3 @@
+C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug-mingw_install/CMakeFiles/DatabaseTermProject.dir
+C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug-mingw_install/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug-mingw_install/CMakeFiles/rebuild_cache.dir

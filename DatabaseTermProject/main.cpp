@@ -15,18 +15,7 @@ int main() {
     ServerCore sc;
     sc.run();
 
-    while (true) {
-        cout << "-------------------------------" << endl;
-        cout << "SQL test" << endl;
-        cout << "Enter the SQL query (u need to input ; at the end of query.) (exit: exit;)\n";
-        string query, temp;
-        while (temp[temp.length()-1] != ';') {
-            getline(cin, temp);
-            query += temp + " ";
-        }
-        if (query == "exit; ") break;
-        dc.query(query);
-    }
+    while (true);
 
     dc.connectionClose();
     return 0;

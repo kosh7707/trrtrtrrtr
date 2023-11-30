@@ -25,7 +25,13 @@ add_executable(DatabaseTermProject main.cpp
         IDatabaseConnection.cpp
         IDatabaseConnection.h
         ServerCore.cpp
-        ServerCore.h)
+        ServerCore.h
+        Client.cpp
+        Client.h
+        Account.cpp
+        Account.h
+        AccountDAO.cpp
+        AccountDAO.h)
 
 # Link the executable `ExamplePostgreSQL` with the PostgreSQL library
 target_link_libraries(DatabaseTermProject ${PostgreSQL_LIBRARIES})

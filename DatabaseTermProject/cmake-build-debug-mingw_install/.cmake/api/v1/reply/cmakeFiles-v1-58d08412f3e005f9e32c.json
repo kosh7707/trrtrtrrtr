@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeSystem.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -270,7 +270,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -514,7 +514,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -588,7 +588,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeRCCompiler.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -667,7 +667,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -766,7 +766,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release-mingw_install/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-debug-mingw_install/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -777,7 +777,7 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release-mingw_install",
+		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-debug-mingw_install",
 		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject"
 	},
 	"version" : 
