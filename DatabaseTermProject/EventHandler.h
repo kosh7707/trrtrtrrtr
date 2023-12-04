@@ -1,0 +1,14 @@
+//
+// Created by Administrator on 2023-12-04.
+//
+
+#ifndef DATABASETERMPROJECT_EVENTHANDLER_H
+#define DATABASETERMPROJECT_EVENTHANDLER_H
+
+
+class EventHandler {
+
+};
+
+
+#endif //DATABASETERMPROJECT_EVENTHANDLER_H
