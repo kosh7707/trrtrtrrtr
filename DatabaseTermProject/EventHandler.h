@@ -1,10 +1,9 @@
-//
-// Created by Administrator on 2023-12-04.
-//
-
 #ifndef DATABASETERMPROJECT_EVENTHANDLER_H
 #define DATABASETERMPROJECT_EVENTHANDLER_H
 
+
+#define LOGIN_EVENT 0
+#define CHAT_EVENT 1
 
 class EventHandler {
 

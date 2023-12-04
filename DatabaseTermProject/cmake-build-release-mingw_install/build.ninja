@@ -105,6 +105,13 @@ build CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj: CXX_COMPILER__Datab
   OBJECT_DIR = CMakeFiles\DatabaseTermProject.dir
   OBJECT_FILE_DIR = CMakeFiles\DatabaseTermProject.dir
 
+build CMakeFiles/DatabaseTermProject.dir/EventHandler.cpp.obj: CXX_COMPILER__DatabaseTermProject_unscanned_Release C$:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/EventHandler.cpp || cmake_object_order_depends_target_DatabaseTermProject
+  DEP_FILE = CMakeFiles\DatabaseTermProject.dir\EventHandler.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Program Files/PostgreSQL/15/include"
+  OBJECT_DIR = CMakeFiles\DatabaseTermProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\DatabaseTermProject.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DatabaseTermProject
@@ -113,7 +120,7 @@ build CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj: CXX_COMPILER__Datab
 #############################################
 # Link the executable DatabaseTermProject.exe
 
-build DatabaseTermProject.exe: CXX_EXECUTABLE_LINKER__DatabaseTermProject_Release CMakeFiles/DatabaseTermProject.dir/main.cpp.obj CMakeFiles/DatabaseTermProject.dir/DatabaseConnection.cpp.obj CMakeFiles/DatabaseTermProject.dir/ServerConstant.cpp.obj CMakeFiles/DatabaseTermProject.dir/IDatabaseConnection.cpp.obj CMakeFiles/DatabaseTermProject.dir/ServerCore.cpp.obj CMakeFiles/DatabaseTermProject.dir/Client.cpp.obj CMakeFiles/DatabaseTermProject.dir/Account.cpp.obj CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj | C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib
+build DatabaseTermProject.exe: CXX_EXECUTABLE_LINKER__DatabaseTermProject_Release CMakeFiles/DatabaseTermProject.dir/main.cpp.obj CMakeFiles/DatabaseTermProject.dir/DatabaseConnection.cpp.obj CMakeFiles/DatabaseTermProject.dir/ServerConstant.cpp.obj CMakeFiles/DatabaseTermProject.dir/IDatabaseConnection.cpp.obj CMakeFiles/DatabaseTermProject.dir/ServerCore.cpp.obj CMakeFiles/DatabaseTermProject.dir/Client.cpp.obj CMakeFiles/DatabaseTermProject.dir/Account.cpp.obj CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj CMakeFiles/DatabaseTermProject.dir/EventHandler.cpp.obj | C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib
   FLAGS = -static-libstdc++ -static-libgcc -O3 -DNDEBUG
   LINK_LIBRARIES = "C:/Program Files/PostgreSQL/15/lib/libpq.lib"  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DatabaseTermProject.dir

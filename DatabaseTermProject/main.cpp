@@ -15,8 +15,6 @@ int main() {
     ServerCore sc;
     sc.run();
 
-    while (true);
-
     dc.connectionClose();
     return 0;
 }

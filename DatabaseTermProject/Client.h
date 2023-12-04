@@ -21,7 +21,6 @@ private:
     SOCKET _sc;
     HANDLE _ev;
     string _ip;
-
 };
 
 

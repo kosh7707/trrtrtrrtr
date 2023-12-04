@@ -10,8 +10,10 @@ int main() {
 
     clientCore.run();
     SOCKET sc = clientCore.getSocket();
+
+    cin.ignore();
     while (clientCore.getIsLogin()) {
-        string msg; cin >> msg;
+        string msg; getline(cin, msg);
         send(sc, msg.c_str(), sizeof(msg), 0);
         if (msg == "exit") break;
     }

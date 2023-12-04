@@ -12,6 +12,7 @@ public:
     shared_ptr<Account> getAccount(const string& id, const string& pw);
     bool checkAccountExists(const string& id);
     bool registerAccount(const string& id, const string& pw);
+    bool updateAccountLastLogin(const string& id);
 };
 
 

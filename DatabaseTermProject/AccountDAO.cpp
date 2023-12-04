@@ -36,3 +36,10 @@ bool AccountDAO::registerAccount(const string& id, const string& pw) {
     bool res = databaseConnection.commandQuery(query);
     return res;
 }
+
+bool AccountDAO::updateAccountLastLogin(const string& id) {
+    IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
+    string query = "update accounts set last_login=CURRENT_TIMESTAMP where user_id='" + id + "';";
+    bool res = databaseConnection.commandQuery(query);
+    return res;
+}

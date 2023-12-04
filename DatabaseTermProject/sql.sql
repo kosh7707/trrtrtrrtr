@@ -19,6 +19,6 @@ create table accounts (
     account_id   serial primary key,
     user_id      varchar(20) unique,
     user_pw      varchar(20),
-    created_date date default current_date,
-    last_login   date default current_date
+    created_date date default current_timestamp,
+    last_login   date default current_timestamp
 );

@@ -13,20 +13,17 @@ SOCKET ServerCore::initServer() {
     SOCKET sc;
     SOCKADDR_IN socketAddress;
 
-    // WSAStartup
     WORD wVersionRequested = MAKEWORD(2, 2);
     if (WSAStartup(wVersionRequested, &wsadata) != 0) {
         cout << "WSAStartup Error." << endl;
         return 0;
     }
 
-    // create socket
     if ((sc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
         cout << "socket creation error." << endl;
         return 0;
     }
 
-    // bind
     socketAddress.sin_family = AF_INET;
     socketAddress.sin_addr.s_addr = htonl(INADDR_ANY);
     socketAddress.sin_port = htons(serverPort);
@@ -35,7 +32,6 @@ SOCKET ServerCore::initServer() {
         return 0;
     }
 
-    // listen
     if (listen(sc, SOMAXCONN) < 0) {
         cout << "listen error." << endl;
         return 0;
@@ -111,7 +107,7 @@ void ServerCore::removeClient(const int index) {
     string removeClientNickName = Clients[index].getAccount()->getUserId();
     ClientsCount--;
     swap(Clients[index], Clients[ClientsCount]);
-    notifyAllClients("Client Disconnected (IP : " + removeClientIP + ", name : " + removeClientNickName + ")");
+    notifyAllClients("Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")");
 }
 
 void ServerCore::notifyAllClients(const string& msg) {
@@ -140,8 +136,9 @@ void ServerCore::handleLogin(const int index, const string& msg) {
         shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
             Clients[index].setAccount(account);
+            accountDao.updateAccountLastLogin(id);
             notifyClient(index, "200");
-            notifyAllClients("New Client Connected(IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
         else {
             notifyClient(index, "400");
@@ -153,7 +150,7 @@ void ServerCore::handleLogin(const int index, const string& msg) {
             shared_ptr<Account> account = accountDao.getAccount(id, pw);
             Clients[index].setAccount(account);
             notifyClient(index, "201");
-            notifyAllClients("New Client Connected(IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
         else {
             notifyClient(index, "401");
