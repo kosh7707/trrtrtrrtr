@@ -76,10 +76,11 @@ void ClientCore::login() {
 
     WSAEventSelect(sc, event, FD_READ | FD_CLOSE);
     while (true) {
-        string id, pw;
+        string id, pw, role;
         cout << "please enter the id:"; cin >> id;
         cout << "please enter the pw:"; cin >> pw;
-        string loginRequest = "[login]" + id + "," + pw;
+        cout << "please enter the role(0: merchant, 1: mage, 2: hacker):"; cin >> role;
+        string loginRequest = "[0]" + id + "," + pw + "," + role;
         send(sc, loginRequest.c_str(), sizeof(loginRequest), 0);
 
         index = WSAWaitForMultipleEvents(1, &event, false, INFINITE, false);
@@ -118,4 +119,9 @@ void ClientCore::login() {
 
 bool ClientCore::getIsLogin() {
     return isLogin;
+}
+
+void ClientCore::chat(const string& msg) {
+    string temp = "[1]" + msg;
+    send(sc, temp.c_str(), sizeof(temp), 0);
 }

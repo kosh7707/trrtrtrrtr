@@ -15,9 +15,10 @@ public:
     ClientCore();
     ~ClientCore();
     SOCKET  getSocket();
-    void run();
-    void login();
-    bool getIsLogin();
+    void    run();
+    void    login();
+    bool    getIsLogin();
+    void    chat(const string& msg);
 private:
     static unsigned int WINAPI runThread(void* params);
     ClientConstant  clientConstant;

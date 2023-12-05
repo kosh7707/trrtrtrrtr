@@ -31,7 +31,6 @@ bool DatabaseConnection::commandQuery(const string& query) {
         cout << "command query: " << query << "\ncommand failed." << endl;
         return false;
     }
-    cout << "query executed" << endl;
     PQclear(res);
     return true;
 }

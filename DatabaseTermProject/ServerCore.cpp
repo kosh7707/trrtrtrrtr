@@ -95,11 +95,11 @@ void ServerCore::addClient() {
 
 void ServerCore::readClient(const int index) {
     char buf[MAXBYTE];
-    SOCKADDR_IN clientAddress;
-    int bytes = recv(Clients[index].getSc(), buf, MAXBYTE, 0);
-    string msg = buf;
-    if (msg.substr(0,7) == "[login]") handleLogin(index, msg);
-    else notifyAllClients("(" + Clients[index].getIp() + ")" + Clients[index].getAccount()->getUserId() + " : " + buf);
+    recv(Clients[index].getSc(), buf, MAXBYTE, 0);
+    if (getEvent(buf) == LOGIN_EVENT)
+        handleLogin(index, getMessage(buf));
+    else if (getEvent(buf) == CHAT_EVENT)
+        handleChat(index, getMessage(buf));
 }
 
 void ServerCore::removeClient(const int index) {
@@ -117,23 +117,26 @@ void ServerCore::notifyAllClients(const string& msg) {
 }
 
 void ServerCore::notifyClient(const int index, const string& msg) {
-    cout << "notifyClient, index: " << index << ", msg: " << msg << endl;
     send(Clients[index].getSc(), msg.c_str(), MAXBYTE, 0);
 }
 
 void ServerCore::handleLogin(const int index, const string& msg) {
-    string id, pw, temp;
-    for (int i=7; i<msg.length(); i++) {
+    string temp;
+    vector<string> vec;
+    for (int i=0; i<msg.length(); i++) {
         if (msg[i] == ',') {
-            id = temp;
+            vec.emplace_back(temp);
             temp = "";
-            continue;
         }
-        temp += msg[i];
+        else temp += msg[i];
     }
-    pw = temp;
+    vec.emplace_back(temp);
+    string id = vec[0];
+    string pw = vec[1];
+    string role = vec[2];
     if (accountDao.checkAccountExists(id)) {
-        shared_ptr<Account> account = accountDao.getAccount(id, pw);
+        // login
+        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
         if (account != nullptr) {
             Clients[index].setAccount(account);
             accountDao.updateAccountLastLogin(id);
@@ -145,9 +148,10 @@ void ServerCore::handleLogin(const int index, const string& msg) {
         }
     }
     else {
+        // register
         bool res = accountDao.registerAccount(id, pw);
         if (res) {
-            shared_ptr<Account> account = accountDao.getAccount(id, pw);
+            shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
             Clients[index].setAccount(account);
             notifyClient(index, "201");
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
@@ -156,4 +160,21 @@ void ServerCore::handleLogin(const int index, const string& msg) {
             notifyClient(index, "401");
         }
     }
+}
+
+int ServerCore::getEvent(const char* buf) {
+    string temp = buf;
+    string prefix = temp.substr(0, 3);
+    if (prefix == "[0]") return LOGIN_EVENT;
+    else if (prefix == "[1]") return CHAT_EVENT;
+    else return -1;
+}
+
+string ServerCore::getMessage(const char* buf) {
+    string temp = buf;
+    return temp.substr(3);
+}
+
+void ServerCore::handleChat(const int index, const string& msg) {
+    notifyAllClients(Clients[index].getAccount()->getUserId() + " : " + msg);
 }

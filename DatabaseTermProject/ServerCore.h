@@ -10,6 +10,8 @@
 #include "ServerConstant.h"
 #include "Client.h"
 #include "AccountDAO.h"
+#define LOGIN_EVENT 0
+#define CHAT_EVENT 1
 
 using namespace std;
 
@@ -27,12 +29,15 @@ private:
     int                     ClientsCount;
 
     SOCKET  initServer();
+    int     getEvent(const char* buf);
+    string  getMessage(const char* buf);
     void    addClient();
     void    readClient(const int index);
     void    removeClient(const int index);
     void    notifyClient(const int index, const string& msg);
     void    notifyAllClients(const string& msg);
     void    handleLogin(const int index, const string& msg);
+    void    handleChat(const int index, const string& msg);
 };
 
 
