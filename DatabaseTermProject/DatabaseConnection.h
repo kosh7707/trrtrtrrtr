@@ -15,10 +15,11 @@ public:
         static DatabaseConnection dc;
         return dc;
     }
-    bool        isConnected();
-    PGresult*   selectQuery(const string& query);
-    bool        commandQuery(const string& query);
-    void        connectionClose();
+    bool            isConnected();
+    PGresult*       selectQuery(const string& query);
+    bool            commandQuery(const string& query);
+    void            connectionClose();
+    const PGconn*   getConn() const;
 private:
     DatabaseConnection();
     ServerConstant  serverConstant;

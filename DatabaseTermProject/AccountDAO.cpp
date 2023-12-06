@@ -37,21 +37,40 @@ bool AccountDAO::registerAccount(const string& id, const string& pw, const strin
     if (role == "0") insert_role = "merchant";
     else if (role == "1") insert_role = "mage";
     else insert_role = "hacker";
-    // TODO 트랜잭션 구현
-    // insert DB Table user account
-    IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
-    string query1 = "insert into accounts(user_id, user_pw, role) values ('" + id + "', '" + pw + "', '" + insert_role + "');";
-    bool res1 = databaseConnection.commandQuery(query1);
-    if (!res1) return false;
-    // create DBMS user account and grant role
-    string query2 = "create user " + id + " with password '" + pw + "';";
-    bool res2 = databaseConnection.commandQuery(query2);
-    if (!res2) return false;
-    string query3 = "grant " + insert_role + " to " + id + ";";
-    bool res3 = databaseConnection.commandQuery(query3);
-    if (!res3) return false;
 
-    return true;
+    IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
+    const PGconn* conn = databaseConnection.getConn();
+    try {
+        // begin transaction
+        if (PQtransactionStatus(conn) != PQTRANS_IDLE)
+            throw runtime_error("begin transaction error, status not IDLE");
+        databaseConnection.commandQuery("BEGIN;");
+
+        // insert DB Table user account
+        string query1 = "insert into accounts(user_id, user_pw, role) values ('" + id + "', '" + pw + "', '" + insert_role + "');";
+        bool res1 = databaseConnection.commandQuery(query1);
+        if (!res1) throw runtime_error("exec error, query: " + query1 + "\nerr: " + PQerrorMessage(conn));
+
+        // create DBMS user account
+        string query2 = "create user " + id + " with password '" + pw + "';";
+        bool res2 = databaseConnection.commandQuery(query2);
+        if (!res2) throw runtime_error("exec error, query: " + query2 + "\nerr: " + PQerrorMessage(conn));
+
+        // grant user role
+        string query3 = "grant " + insert_role + " to " + id + ";";
+        bool res3 = databaseConnection.commandQuery(query3);
+        if (!res3) throw runtime_error("exec error, query: " + query3 + "\nerr: " + PQerrorMessage(conn));
+
+        // transaction success, commit
+        databaseConnection.commandQuery("COMMIT;");
+        return true;
+    } catch (const exception& err) {
+        // transaction failed, rollback
+        cout << err.what() << endl;
+        if (PQtransactionStatus(conn) == PQTRANS_INTRANS)
+            databaseConnection.commandQuery("ROLLBACK;");
+        return false;
+    }
 }
 
 bool AccountDAO::updateAccountLastLogin(const string& id) {

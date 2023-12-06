@@ -21,7 +21,6 @@ PGresult* DatabaseConnection::selectQuery(const std::string& query) {
         cout << "select query: " << query << "\nselect failed." << endl;
         return nullptr;
     }
-
     return res;
 }
 
@@ -33,6 +32,10 @@ bool DatabaseConnection::commandQuery(const string& query) {
     }
     PQclear(res);
     return true;
+}
+
+const PGconn* DatabaseConnection::getConn() const {
+    return conn;
 }
 
 

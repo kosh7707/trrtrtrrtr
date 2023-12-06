@@ -128,6 +128,78 @@ DatabaseTermProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/build
 .PHONY : DatabaseTermProject/fast
 
+Account.obj: Account.cpp.obj
+.PHONY : Account.obj
+
+# target to build an object file
+Account.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Account.cpp.obj
+.PHONY : Account.cpp.obj
+
+Account.i: Account.cpp.i
+.PHONY : Account.i
+
+# target to preprocess a source file
+Account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Account.cpp.i
+.PHONY : Account.cpp.i
+
+Account.s: Account.cpp.s
+.PHONY : Account.s
+
+# target to generate assembly for a file
+Account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Account.cpp.s
+.PHONY : Account.cpp.s
+
+AccountDAO.obj: AccountDAO.cpp.obj
+.PHONY : AccountDAO.obj
+
+# target to build an object file
+AccountDAO.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj
+.PHONY : AccountDAO.cpp.obj
+
+AccountDAO.i: AccountDAO.cpp.i
+.PHONY : AccountDAO.i
+
+# target to preprocess a source file
+AccountDAO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.i
+.PHONY : AccountDAO.cpp.i
+
+AccountDAO.s: AccountDAO.cpp.s
+.PHONY : AccountDAO.s
+
+# target to generate assembly for a file
+AccountDAO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.s
+.PHONY : AccountDAO.cpp.s
+
+Client.obj: Client.cpp.obj
+.PHONY : Client.obj
+
+# target to build an object file
+Client.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Client.cpp.obj
+.PHONY : Client.cpp.obj
+
+Client.i: Client.cpp.i
+.PHONY : Client.i
+
+# target to preprocess a source file
+Client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Client.cpp.i
+.PHONY : Client.cpp.i
+
+Client.s: Client.cpp.s
+.PHONY : Client.s
+
+# target to generate assembly for a file
+Client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProject.dir\build.make CMakeFiles/DatabaseTermProject.dir/Client.cpp.s
+.PHONY : Client.cpp.s
+
 DatabaseConnection.obj: DatabaseConnection.cpp.obj
 .PHONY : DatabaseConnection.obj
 
@@ -257,6 +329,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DatabaseTermProject
+	@echo ... Account.obj
+	@echo ... Account.i
+	@echo ... Account.s
+	@echo ... AccountDAO.obj
+	@echo ... AccountDAO.i
+	@echo ... AccountDAO.s
+	@echo ... Client.obj
+	@echo ... Client.i
+	@echo ... Client.s
 	@echo ... DatabaseConnection.obj
 	@echo ... DatabaseConnection.i
 	@echo ... DatabaseConnection.s

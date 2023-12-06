@@ -82,6 +82,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/Account.cpp">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/Account.h">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/AccountDAO.cpp">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/AccountDAO.h">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/Client.cpp">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/Client.h">
+			<Option target="DatabaseTermProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/DatabaseConnection.cpp">
 			<Option target="DatabaseTermProject"/>
 		</Unit>

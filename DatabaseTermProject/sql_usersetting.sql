@@ -1,3 +1,5 @@
+drop owned by kosh77;
+
 create user kosh7707 with encrypted password 'root';
 
 alter user kosh7707 with superuser;

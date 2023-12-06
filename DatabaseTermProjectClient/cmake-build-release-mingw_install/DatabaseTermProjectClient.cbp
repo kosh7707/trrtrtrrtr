@@ -24,6 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Program Files/PostgreSQL/15/include"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -45,6 +46,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Program Files/PostgreSQL/15/include"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -80,6 +82,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/ClientConstant.cpp">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/ClientConstant.h">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/ClientCore.cpp">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/ClientCore.h">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/DatabaseConnection.cpp">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/DatabaseConnection.h">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/IDatabaseConnection.cpp">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/IDatabaseConnection.h">
+			<Option target="DatabaseTermProjectClient"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/main.cpp">
 			<Option target="DatabaseTermProjectClient"/>
 		</Unit>

@@ -128,6 +128,102 @@ DatabaseTermProjectClient/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/build
 .PHONY : DatabaseTermProjectClient/fast
 
+ClientConstant.obj: ClientConstant.cpp.obj
+.PHONY : ClientConstant.obj
+
+# target to build an object file
+ClientConstant.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj
+.PHONY : ClientConstant.cpp.obj
+
+ClientConstant.i: ClientConstant.cpp.i
+.PHONY : ClientConstant.i
+
+# target to preprocess a source file
+ClientConstant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.i
+.PHONY : ClientConstant.cpp.i
+
+ClientConstant.s: ClientConstant.cpp.s
+.PHONY : ClientConstant.s
+
+# target to generate assembly for a file
+ClientConstant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.s
+.PHONY : ClientConstant.cpp.s
+
+ClientCore.obj: ClientCore.cpp.obj
+.PHONY : ClientCore.obj
+
+# target to build an object file
+ClientCore.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj
+.PHONY : ClientCore.cpp.obj
+
+ClientCore.i: ClientCore.cpp.i
+.PHONY : ClientCore.i
+
+# target to preprocess a source file
+ClientCore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.i
+.PHONY : ClientCore.cpp.i
+
+ClientCore.s: ClientCore.cpp.s
+.PHONY : ClientCore.s
+
+# target to generate assembly for a file
+ClientCore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.s
+.PHONY : ClientCore.cpp.s
+
+DatabaseConnection.obj: DatabaseConnection.cpp.obj
+.PHONY : DatabaseConnection.obj
+
+# target to build an object file
+DatabaseConnection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj
+.PHONY : DatabaseConnection.cpp.obj
+
+DatabaseConnection.i: DatabaseConnection.cpp.i
+.PHONY : DatabaseConnection.i
+
+# target to preprocess a source file
+DatabaseConnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.i
+.PHONY : DatabaseConnection.cpp.i
+
+DatabaseConnection.s: DatabaseConnection.cpp.s
+.PHONY : DatabaseConnection.s
+
+# target to generate assembly for a file
+DatabaseConnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.s
+.PHONY : DatabaseConnection.cpp.s
+
+IDatabaseConnection.obj: IDatabaseConnection.cpp.obj
+.PHONY : IDatabaseConnection.obj
+
+# target to build an object file
+IDatabaseConnection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj
+.PHONY : IDatabaseConnection.cpp.obj
+
+IDatabaseConnection.i: IDatabaseConnection.cpp.i
+.PHONY : IDatabaseConnection.i
+
+# target to preprocess a source file
+IDatabaseConnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.i
+.PHONY : IDatabaseConnection.cpp.i
+
+IDatabaseConnection.s: IDatabaseConnection.cpp.s
+.PHONY : IDatabaseConnection.s
+
+# target to generate assembly for a file
+IDatabaseConnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DatabaseTermProjectClient.dir\build.make CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.s
+.PHONY : IDatabaseConnection.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +257,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DatabaseTermProjectClient
+	@echo ... ClientConstant.obj
+	@echo ... ClientConstant.i
+	@echo ... ClientConstant.s
+	@echo ... ClientCore.obj
+	@echo ... ClientCore.i
+	@echo ... ClientCore.s
+	@echo ... DatabaseConnection.obj
+	@echo ... DatabaseConnection.i
+	@echo ... DatabaseConnection.s
+	@echo ... IDatabaseConnection.obj
+	@echo ... IDatabaseConnection.i
+	@echo ... IDatabaseConnection.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
