@@ -136,7 +136,7 @@ void ServerCore::handleLogin(const int index, const string& msg) {
     string role = vec[2];
     if (accountDao.checkAccountExists(id)) {
         // login
-        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
+        shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
             Clients[index].setAccount(account);
             accountDao.updateAccountLastLogin(id);
@@ -149,9 +149,9 @@ void ServerCore::handleLogin(const int index, const string& msg) {
     }
     else {
         // register
-        bool res = accountDao.registerAccount(id, pw);
+        bool res = accountDao.registerAccount(id, pw, role);
         if (res) {
-            shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
+            shared_ptr<Account> account = accountDao.getAccount(id, pw);
             Clients[index].setAccount(account);
             notifyClient(index, "201");
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
