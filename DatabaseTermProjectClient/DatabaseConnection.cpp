@@ -8,8 +8,8 @@ void DatabaseConnection::connectionClose() {
     PQfinish(conn);
 }
 
-DatabaseConnection::DatabaseConnection() {
-    const string connInfo = clientConstant.getConnInfo();
+void DatabaseConnection::connectDB(const string& id, const string& pw) {
+    string connInfo = "postgresql://postgres@localhost?port=5432&dbname=databasetermproject&user=" + id + "&password=" + pw;
     conn = PQconnectdb(connInfo.c_str());
     if (PQstatus(conn) != CONNECTION_OK)
         PQfinish(conn);
@@ -33,6 +33,10 @@ bool DatabaseConnection::commandQuery(const string& query) {
     }
     PQclear(res);
     return true;
+}
+
+PGconn* DatabaseConnection::getConn() {
+    return conn;
 }
 
 

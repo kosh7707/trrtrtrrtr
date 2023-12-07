@@ -7,21 +7,27 @@
 #include <string>
 #include <cstring>
 #include <process.h>
+#include <vector>
 #include "ServerConstant.h"
 #include "Client.h"
 #include "AccountDAO.h"
+#include "InventoryDAO.h"
+#define INVALID_EVENT -1
 #define LOGIN_EVENT 0
 #define CHAT_EVENT 1
+#define GET_TEST_ITEM_EVENT 2
+#define INVENTORY_CHECK_EVENT 3
 
 using namespace std;
 
 class ServerCore {
 public:
     ServerCore();
-    void run();
+    [[noreturn]] void run();
 private:
     ServerConstant          serverConstant;
     AccountDAO              accountDao;
+    InventoryDAO            inventoryDao;
     shared_ptr<Client[]>    Clients;
     string                  serverIP;
     int                     maxClientCount;
@@ -38,6 +44,8 @@ private:
     void    notifyAllClients(const string& msg);
     void    handleLogin(const int index, const string& msg);
     void    handleChat(const int index, const string& msg);
+    void    handleGetTestItem(const int index);
+    void    handleInventoryCheck(const int index);
 };
 
 

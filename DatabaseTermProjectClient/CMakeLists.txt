@@ -22,9 +22,7 @@ add_executable(DatabaseTermProjectClient main.cpp
         ClientConstant.cpp
         ClientConstant.h
         DatabaseConnection.cpp
-        DatabaseConnection.h
-        IDatabaseConnection.cpp
-        IDatabaseConnection.h)
+        DatabaseConnection.h)
 
 # Link the executable `ExamplePostgreSQL` with the PostgreSQL library
 target_link_libraries(DatabaseTermProjectClient ${PostgreSQL_LIBRARIES})

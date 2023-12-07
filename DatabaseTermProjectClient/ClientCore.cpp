@@ -92,11 +92,15 @@ void ClientCore::login() {
                     string loginResponse = buf;
                     if (loginResponse == "200") {
                         cout << "login success" << endl;
+                        userId = id;
+                        userPw = pw;
                         isLogin = true;
                         break;
                     }
                     else if (loginResponse == "201") {
                         cout << "register success" << endl;
+                        userId = id;
+                        userPw = pw;
                         isLogin = true;
                         break;
                     }
@@ -124,4 +128,20 @@ bool ClientCore::getIsLogin() {
 void ClientCore::chat(const string& msg) {
     string temp = "[1]" + msg;
     send(sc, temp.c_str(), sizeof(temp), 0);
+}
+
+const string &ClientCore::getUserId() const {
+    return userId;
+}
+
+const string &ClientCore::getUserPw() const {
+    return userPw;
+}
+
+void ClientCore::connectDB() {
+    dc.connectDB(userId, userPw);
+}
+
+DatabaseConnection &ClientCore::getDatabaseConnection() {
+    return dc;
 }

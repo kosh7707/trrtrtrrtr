@@ -30,10 +30,10 @@ create table items (
 
 drop table if exists inventory cascade;
 create table inventory (
-                           id              serial primary key,
                            account_id      int not null,
                            item_id         int not null,
                            quantity        int not null,
+                           primary key (account_id, item_id),
                            foreign key (account_id) references accounts(account_id) on delete cascade,
                            foreign key (item_id) references items(id) on delete cascade
 );

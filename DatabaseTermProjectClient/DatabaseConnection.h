@@ -6,21 +6,18 @@
 #include <string>
 #include <libpq-fe.h>
 #include "ClientConstant.h"
-#include "IDatabaseConnection.h"
 using namespace std;
 
-class DatabaseConnection : IDatabaseConnection {
+class DatabaseConnection{
 public:
-    static IDatabaseConnection& getInstance() {
-        static DatabaseConnection dc;
-        return dc;
-    }
+    DatabaseConnection() {}
+    void connectDB(const string& id, const string& pw);
     bool        isConnected();
     PGresult*   selectQuery(const string& query);
     bool        commandQuery(const string& query);
     void        connectionClose();
+    PGconn*     getConn();
 private:
-    DatabaseConnection();
     ClientConstant  clientConstant;
     PGconn*         conn;
 };

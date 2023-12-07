@@ -1,11 +1,12 @@
 # ninja log v5
-6	157	7230231916507625	CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj	8a8ecd3c7287609c
-785	1054	7234561306829818	DatabaseTermProjectClient.exe	e6ddef7e742e0e41
-67	1656	7234461322861532	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	d9ec1c2334b142d8
-3	785	7234561304175736	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	bb8e927bd2e87e6a
-7	175	7235392989014354	CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj	94e0a7b661c10c5a
-10	187	7235392989144394	CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj	124f61ee7b081f64
-8	287	7235392990124397	CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj	80fbcacc5be6c8a1
-4	810	7235392995374693	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	c2a66b953e4a103f
-2	819	7235392995464693	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	f87c940e23fe58e
-819	1066	7235392997884688	DatabaseTermProjectClient.exe	36eec873dd22b6af
+10	199	7236183967033684	CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj	94e0a7b661c10c5a
+783	1029	7236189163784631	DatabaseTermProjectClient.exe	36eec873dd22b6af
+8	297	7236183967993673	CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj	80fbcacc5be6c8a1
+6	830	7236183973333713	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	c2a66b953e4a103f
+2	783	7236189161364674	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	f87c940e23fe58e
+12	179	7236183966823660	CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj	124f61ee7b081f64
+9	178	7236203148924478	CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj	94e0a7b661c10c5a
+11	268	7236203149814474	CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj	80fbcacc5be6c8a1
+3	870	7236203155839996	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	c2a66b953e4a103f
+6	914	7236203156280022	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	f87c940e23fe58e
+914	1161	7236203158710017	DatabaseTermProjectClient.exe	9ea746f23122a691

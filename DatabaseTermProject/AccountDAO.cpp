@@ -1,8 +1,13 @@
 #include "AccountDAO.h"
 
-shared_ptr<Account> AccountDAO::getAccount(const string& id, const string& pw) {
+shared_ptr<Account> AccountDAO::getAccount(const string& id, const string& pw, const string& role) {
+    string insert_role;
+    if (role == "0") insert_role = "merchant";
+    else if (role == "1") insert_role = "mage";
+    else insert_role = "hacker";
+
     IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
-    string query = "select * from accounts where user_id='" + id + "' and user_pw='" + pw + "';";
+    string query = "select * from accounts where user_id='" + id + "' and user_pw='" + pw + "' and role='"+ insert_role + "';";
     auto res = databaseConnection.selectQuery(query);
 
     if (PQntuples(res) == 0) {
@@ -16,12 +21,12 @@ shared_ptr<Account> AccountDAO::getAccount(const string& id, const string& pw) {
     int accountId = stoi(PQgetvalue(res, 0, 0));
     string userId = PQgetvalue(res, 0, 1);
     string userPw = PQgetvalue(res, 0, 2);
-    string role = PQgetvalue(res, 0, 3);
+    string _role = PQgetvalue(res, 0, 3);
     int balance = stoi(string(PQgetvalue(res, 0, 4)));
     string createdDate = PQgetvalue(res, 0, 5);
     string lastLogin = PQgetvalue(res, 0, 6);
 
-    shared_ptr<Account> account = shared_ptr<Account>(new Account(accountId, userId, userPw, role, balance, createdDate, lastLogin));
+    shared_ptr<Account> account = shared_ptr<Account>(new Account(accountId, userId, userPw, _role, balance, createdDate, lastLogin));
     return account;
 }
 
@@ -49,17 +54,17 @@ bool AccountDAO::registerAccount(const string& id, const string& pw, const strin
         // insert DB Table user account
         string query1 = "insert into accounts(user_id, user_pw, role) values ('" + id + "', '" + pw + "', '" + insert_role + "');";
         bool res1 = databaseConnection.commandQuery(query1);
-        if (!res1) throw runtime_error("exec error, query: " + query1 + "\nerr: " + PQerrorMessage(conn));
+        if (!res1) throw runtime_error("exec error, query: " + query1);
 
         // create DBMS user account
         string query2 = "create user " + id + " with password '" + pw + "';";
         bool res2 = databaseConnection.commandQuery(query2);
-        if (!res2) throw runtime_error("exec error, query: " + query2 + "\nerr: " + PQerrorMessage(conn));
+        if (!res2) throw runtime_error("exec error, query: " + query2);
 
         // grant user role
         string query3 = "grant " + insert_role + " to " + id + ";";
         bool res3 = databaseConnection.commandQuery(query3);
-        if (!res3) throw runtime_error("exec error, query: " + query3 + "\nerr: " + PQerrorMessage(conn));
+        if (!res3) throw runtime_error("exec error, query: " + query3);
 
         // transaction success, commit
         databaseConnection.commandQuery("COMMIT;");
@@ -67,8 +72,10 @@ bool AccountDAO::registerAccount(const string& id, const string& pw, const strin
     } catch (const exception& err) {
         // transaction failed, rollback
         cout << err.what() << endl;
-        if (PQtransactionStatus(conn) == PQTRANS_INTRANS)
+        if (PQtransactionStatus(conn) == PQTRANS_INTRANS) {
+            cout << "transaction rollback" << endl;
             databaseConnection.commandQuery("ROLLBACK;");
+        }
         return false;
     }
 }

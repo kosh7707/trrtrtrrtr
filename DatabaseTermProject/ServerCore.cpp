@@ -1,5 +1,4 @@
 #include "ServerCore.h"
-#include "DatabaseConnection.h"
 
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
@@ -40,7 +39,7 @@ SOCKET ServerCore::initServer() {
     return sc;
 }
 
-void ServerCore::run() {
+[[noreturn]] void ServerCore::run() {
     WSANETWORKEVENTS ev;
     WSAEVENT handleArray[maxClientCount + 1];
 
@@ -70,9 +69,6 @@ void ServerCore::run() {
             else if (ev.lNetworkEvents == FD_CLOSE) removeClient(index);
         }
     }
-//    closesocket(sc);
-//    WSACleanup();
-//    _endthreadex(0);
 }
 
 void ServerCore::addClient() {
@@ -93,15 +89,6 @@ void ServerCore::addClient() {
     ClientsCount++;
 }
 
-void ServerCore::readClient(const int index) {
-    char buf[MAXBYTE];
-    recv(Clients[index].getSc(), buf, MAXBYTE, 0);
-    if (getEvent(buf) == LOGIN_EVENT)
-        handleLogin(index, getMessage(buf));
-    else if (getEvent(buf) == CHAT_EVENT)
-        handleChat(index, getMessage(buf));
-}
-
 void ServerCore::removeClient(const int index) {
     string removeClientIP = Clients[index].getIp();
     string removeClientNickName = Clients[index].getAccount()->getUserId();
@@ -120,6 +107,40 @@ void ServerCore::notifyClient(const int index, const string& msg) {
     send(Clients[index].getSc(), msg.c_str(), MAXBYTE, 0);
 }
 
+int ServerCore::getEvent(const char* buf) {
+    string temp = buf;
+    string prefix = temp.substr(0, 3);
+    if (prefix == "[0]") return LOGIN_EVENT;
+    else if (prefix == "[1]") return CHAT_EVENT;
+    else if (prefix == "[2]") return GET_TEST_ITEM_EVENT;
+    else if (prefix == "[3]") return INVENTORY_CHECK_EVENT;
+    else return INVALID_EVENT;
+}
+
+string ServerCore::getMessage(const char* buf) {
+    string temp = buf;
+    return temp.substr(3);
+}
+
+/*-------------------
+| Event Handling Part
+-------------------*/
+
+void ServerCore::readClient(const int index) {
+    char buf[MAXBYTE];
+    recv(Clients[index].getSc(), buf, MAXBYTE, 0);
+    int event = getEvent(buf); string msg = getMessage(buf);
+    if (event == LOGIN_EVENT) handleLogin(index, msg);
+    else if (event == CHAT_EVENT) handleChat(index, msg);
+    else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index, msg);
+    else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index, msg);
+    else cout << "INVALID EVENT\nmsg: " << msg << endl;
+}
+
+void ServerCore::handleChat(const int index, const string& msg) {
+    notifyAllClients(Clients[index].getAccount()->getUserId() + " : " + msg);
+}
+
 void ServerCore::handleLogin(const int index, const string& msg) {
     string temp;
     vector<string> vec;
@@ -136,7 +157,7 @@ void ServerCore::handleLogin(const int index, const string& msg) {
     string role = vec[2];
     if (accountDao.checkAccountExists(id)) {
         // login
-        shared_ptr<Account> account = accountDao.getAccount(id, pw);
+        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
         if (account != nullptr) {
             Clients[index].setAccount(account);
             accountDao.updateAccountLastLogin(id);
@@ -151,7 +172,7 @@ void ServerCore::handleLogin(const int index, const string& msg) {
         // register
         bool res = accountDao.registerAccount(id, pw, role);
         if (res) {
-            shared_ptr<Account> account = accountDao.getAccount(id, pw);
+            shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
             Clients[index].setAccount(account);
             notifyClient(index, "201");
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
@@ -162,19 +183,16 @@ void ServerCore::handleLogin(const int index, const string& msg) {
     }
 }
 
-int ServerCore::getEvent(const char* buf) {
-    string temp = buf;
-    string prefix = temp.substr(0, 3);
-    if (prefix == "[0]") return LOGIN_EVENT;
-    else if (prefix == "[1]") return CHAT_EVENT;
-    else return -1;
+void ServerCore::handleGetTestItem(const int index) {
+    string id = Clients[index].getAccount()->getUserId();
+    bool res = inventoryDao.insertItem(id, 1);
+    if (res) cout << "grant user '" + id + "' test item." << endl;
+    else cout << "error, can't grant user '" + id + "' test item." << endl;
 }
 
-string ServerCore::getMessage(const char* buf) {
-    string temp = buf;
-    return temp.substr(3);
+void ServerCore::handleInventoryCheck(const int index) {
+    string id = Clients[index].getAccount()->getUserId();
+    bool res = inventoryDao.inventoryCheck(id);
+    // TODO 인벤토리 내용물 msg로 담아서 send 구현
 }
 
-void ServerCore::handleChat(const int index, const string& msg) {
-    notifyAllClients(Clients[index].getAccount()->getUserId() + " : " + msg);
-}

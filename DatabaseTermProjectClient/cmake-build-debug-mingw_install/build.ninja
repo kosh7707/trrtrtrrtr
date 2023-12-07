@@ -77,13 +77,6 @@ build CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\DatabaseTermProjectClient.dir
   OBJECT_FILE_DIR = CMakeFiles\DatabaseTermProjectClient.dir
 
-build CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj: CXX_COMPILER__DatabaseTermProjectClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/IDatabaseConnection.cpp || cmake_object_order_depends_target_DatabaseTermProjectClient
-  DEP_FILE = CMakeFiles\DatabaseTermProjectClient.dir\IDatabaseConnection.cpp.obj.d
-  FLAGS = -static-libgcc -static-libstdc++ -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -I"C:/Program Files/PostgreSQL/15/include"
-  OBJECT_DIR = CMakeFiles\DatabaseTermProjectClient.dir
-  OBJECT_FILE_DIR = CMakeFiles\DatabaseTermProjectClient.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DatabaseTermProjectClient
@@ -92,7 +85,7 @@ build CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj: CXX_
 #############################################
 # Link the executable DatabaseTermProjectClient.exe
 
-build DatabaseTermProjectClient.exe: CXX_EXECUTABLE_LINKER__DatabaseTermProjectClient_Debug CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj | C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib
+build DatabaseTermProjectClient.exe: CXX_EXECUTABLE_LINKER__DatabaseTermProjectClient_Debug CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj | C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib
   FLAGS = -static-libgcc -static-libstdc++ -g
   LINK_LIBRARIES = "C:/Program Files/PostgreSQL/15/lib/libpq.lib"  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DatabaseTermProjectClient.dir
