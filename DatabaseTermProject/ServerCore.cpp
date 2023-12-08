@@ -39,6 +39,10 @@ SOCKET ServerCore::initServer() {
     return sc;
 }
 
+/*-------------------
+| Client Handling Part
+-------------------*/
+
 [[noreturn]] void ServerCore::run() {
     WSANETWORKEVENTS ev;
     WSAEVENT handleArray[maxClientCount + 1];
@@ -132,8 +136,8 @@ void ServerCore::readClient(const int index) {
     int event = getEvent(buf); string msg = getMessage(buf);
     if (event == LOGIN_EVENT) handleLogin(index, msg);
     else if (event == CHAT_EVENT) handleChat(index, msg);
-    else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index, msg);
-    else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index, msg);
+    else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index);
+    else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index);
     else cout << "INVALID EVENT\nmsg: " << msg << endl;
 }
 
@@ -186,13 +190,19 @@ void ServerCore::handleLogin(const int index, const string& msg) {
 void ServerCore::handleGetTestItem(const int index) {
     string id = Clients[index].getAccount()->getUserId();
     bool res = inventoryDao.insertItem(id, 1);
-    if (res) cout << "grant user '" + id + "' test item." << endl;
-    else cout << "error, can't grant user '" + id + "' test item." << endl;
+    if (res) {
+        notifyClient(index, "grant user '" + id + "' test item.");
+        cout << "grant user '" + id + "' test item." << endl;
+    }
+    else{
+        notifyClient(index, "error, can't grant user '" + id + "' test item.");
+        cout << "error, can't grant user '" + id + "' test item." << endl;
+    }
 }
 
 void ServerCore::handleInventoryCheck(const int index) {
     string id = Clients[index].getAccount()->getUserId();
-    bool res = inventoryDao.inventoryCheck(id);
-    // TODO 인벤토리 내용물 msg로 담아서 send 구현
+    string res = inventoryDao.inventoryCheck(id);
+    notifyClient(index, res);
 }
 

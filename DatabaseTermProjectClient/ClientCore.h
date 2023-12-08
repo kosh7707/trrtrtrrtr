@@ -6,6 +6,7 @@
 #include <string>
 #include <winsock2.h>
 #include <process.h>
+#include <vector>
 #include "ClientConstant.h"
 #include "DatabaseConnection.h"
 
@@ -19,7 +20,8 @@ public:
     void                run();
     void                login();
     bool                getIsLogin();
-    void                chat(const string& msg);
+    void                handleChat(const string& msg);
+    void                handleCommand(const vector<string>& command);
     const string&       getUserId() const;
     const string&       getUserPw() const;
     void                connectDB();

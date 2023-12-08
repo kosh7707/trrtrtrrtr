@@ -125,9 +125,14 @@ bool ClientCore::getIsLogin() {
     return isLogin;
 }
 
-void ClientCore::chat(const string& msg) {
+void ClientCore::handleChat(const string& msg) {
     string temp = "[1]" + msg;
     send(sc, temp.c_str(), sizeof(temp), 0);
+}
+
+void ClientCore::handleCommand(const vector<string>& command) {
+    if (command[0] == "getTestItem") send(sc, "[2]", sizeof("[2]"), 0);
+    else if (command[0] == "inventoryCheck") send(sc, "[3]", sizeof("[3]"), 0);
 }
 
 const string &ClientCore::getUserId() const {

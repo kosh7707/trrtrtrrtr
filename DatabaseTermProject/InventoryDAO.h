@@ -1,6 +1,7 @@
 #ifndef DATABASETERMPROJECT_INVENTORYDAO_H
 #define DATABASETERMPROJECT_INVENTORYDAO_H
 
+#include <sstream>
 #include "DatabaseConnection.h"
 class InventoryDAO {
 public:

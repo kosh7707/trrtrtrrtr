@@ -1,0 +1,2 @@
+!getTestItem --> 테스트용 아이템 인벤토리에 넣기
+!inventoryCheck --> 현재 인벤토리에 있는 아이템 확인
