@@ -86,3 +86,6 @@ drop role if exists hacker;
 create role hacker;
 revoke all privileges on all tables in schema public from hacker;
 grant select (auction_id, item_name, item_gadget, seller, start_time, end_time, current_price, current_bidder) on AuctionsView to hacker;
+
+-- TODO Auctions Table schema 다시 짜야함, 그에 따른 AuctionsView도 다시 짜야하고, 각종 명령어들 처리도 해줘야 함.
+-- TODO PermisionStore의 개념을 도입해야함.

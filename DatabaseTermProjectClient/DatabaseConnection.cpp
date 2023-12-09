@@ -35,6 +35,7 @@ bool DatabaseConnection::commandQuery(const string& query) {
     try {
         pqxx::work txn(*conn);
         txn.exec(query);
+        txn.commit();
         return true;
     }
     catch (const exception& e) {
@@ -48,6 +49,7 @@ bool DatabaseConnection::transaction(const vector<string>& queries) {
         pqxx::work txn(*conn);
         for (const auto& query : queries)
             txn.exec(query);
+        txn.commit();
         return true;
     }
     catch (const exception& e) {

@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+
 # 게임 인벤토리 및 경매장 구현
 
 winsock2로 서버-클라이언트간 소켓 통신하며, postgreSQL을 DBMS로 사용해서 게임 인벤토리 및 경매장을 구현해보았습니다.
@@ -37,4 +39,23 @@ postgreSQL이 설치되어 있어야 합니다. 설정된 경로는 C:\Program F
 ](https://hectorhon.blogspot.com/2018/05/building-libpqxx-on-msys2-mingw-64-bit.html))<br>
 
 
-## 유저 기능
+## 유저 기능 및 명령어
+
+유저는 자신의 인벤토리에 있는 아이템의 확인, 경매장에서의 물품 등록/구매/판매가 가능합니다.<br>
+시작할때 정한 직업에 따라 경매 물품 확인 시 확인 가능한 아이템 정보가 달라집니다.
+(merchant: score)
+(mage: mana, buff)
+(hacker: gadget)
+
+기본적으로 유저는 채팅을 치거나, 명령어를 입력해서 서버와 소통합니다.<br>
+명령어는 `!command` 를 입력하시면 됩니다.
+
+- `!getTestItem` : 테스트 아이템을 하나 얻습니다.
+- `!inventoryCheck` : 현재 내 정보와 인벤토리에 있는 아이템을 확인합니다.
+- `!sellItem [item_id] [quantity] [buyNowPrice] [startingBidPrice]` : 현재 내 인벤토리에 있는 아이템을 판매합니다.
+- `!buyNow [auction_id]` : auction_id에 해당하는 경매 품목을 즉시 구매합니다.
+- `!bid [auction_id] [price]` : auction_id에 해당하는 경매 품목을 입찰합니다.
+- `!breakItem [item_id] [quantity]` : item_id에 해당하는 인벤토리에 있는 아이템을 부수고 마나를 획득합니다.
+- `!query` : 데이터베이스에 직접 쿼리를 실행합니다. 최초 유저가 갖는 권한은 auctionView에 대한 select 입니다. 쿼리는 세미콜론(;)이 등장할 때까지 계속 입력받을 수 있습니다.
+- `!openPermissionStore` : 권한 상점에 있는 권한들을 불러옵니다.
+- `!buyPermission [permission_store_id]` : 권한 상점에 있는 권한을 구매합니다. 마나를 소모하여 구매할 수 있습니다. 해커의 경우, 특정 가젯들을 소지해야 구매 가능합니다.
