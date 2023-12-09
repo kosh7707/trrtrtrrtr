@@ -61,6 +61,7 @@ SOCKET ServerCore::initServer() {
     WSAEventSelect(sc, event, FD_ACCEPT);
     ClientsCount++;
 
+    cout << "server listening at 127.0.0.1:7707" << endl;
     int index;
     while (true) {
         for (int i=0; i<ClientsCount; i++)
@@ -94,11 +95,17 @@ void ServerCore::addClient() {
 }
 
 void ServerCore::removeClient(const int index) {
-    string removeClientIP = Clients[index].getIp();
-    string removeClientNickName = Clients[index].getAccount()->getUserId();
-    ClientsCount--;
-    swap(Clients[index], Clients[ClientsCount]);
-    notifyAllClients("Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")");
+    if (Clients[index].getAccount() == nullptr) {
+        ClientsCount--;
+        swap(Clients[index], Clients[ClientsCount]);
+    }
+    else {
+        string removeClientIP = Clients[index].getIp();
+        string removeClientNickName = Clients[index].getAccount()->getUserId();
+        ClientsCount--;
+        swap(Clients[index], Clients[ClientsCount]);
+        notifyAllClients("Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")");
+    }
 }
 
 void ServerCore::notifyAllClients(const string& msg) {
@@ -177,9 +184,14 @@ void ServerCore::handleLogin(const int index, const string& msg) {
         bool res = accountDao.registerAccount(id, pw, role);
         if (res) {
             shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
-            Clients[index].setAccount(account);
-            notifyClient(index, "201");
-            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+            if (account != nullptr) {
+                Clients[index].setAccount(account);
+                notifyClient(index, "201");
+                notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
+            }
+            else {
+                notifyClient(index, "401");
+            }
         }
         else {
             notifyClient(index, "401");

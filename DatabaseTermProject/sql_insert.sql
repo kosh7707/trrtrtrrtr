@@ -1,15 +1,6 @@
 -- buff
-insert into buffs(name, description) values ('Test ¹öÇÁ', 'Test ¹öÇÁ ¼³¸í');
+insert into buffs(name, description) values ('Testìš© ë²„í”„', 'Testìš© ë²„í”„ ì„¤ëª…');
 
 -- item
-insert into items(name, score, mana, buff_id, gadget) values ('Test ¾ÆÀÌÅÛ', 1, 1, 1, 'a');
+insert into items(name, score, mana, buff_id, gadget) values ('Test ì•„ì´í…œ', 1, 1, 1, 'a');
 
-select ac.role Á÷¾÷, ac.balance ¼ÒÁö±İ, ac.mana ¸¶³ª from accounts ac where user_id = 'kosh77';
-
-select items.name ¾ÆÀÌÅÛÀÌ¸§, items.score Á¡¼ö, items.mana ¸¶³ª, items.gadget °¡Á¬, buffs.name ¹öÇÁÀÌ¸§, inventory.quantity ¼ö·®
-from accounts ac, items, inventory, buffs
-where ac.user_id = 'kosh77'
-  and ac.account_id = inventory.account_id
-  and items.id = inventory.item_id
-  and items.buff_id = buffs.id
-order by items.id;

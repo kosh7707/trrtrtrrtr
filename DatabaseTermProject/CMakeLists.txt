@@ -3,19 +3,6 @@ project(DatabaseTermProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Custom location of the PostgreSQL library
-set(PostgreSQL_DIR "C:/Program Files/PostgreSQL/15")
-set(PostgreSQL_ROOT "${PostgreSQL_DIR}")
-set(PostgreSQL_LIBRARY_DIR "${PostgreSQL_DIR}/lib")
-set(PostgreSQL_INCLUDE_DIRS "${PostgreSQL_DIR}/include")
-set(PostgreSQL_LIBRARIES "${PostgreSQL_DIR}/lib/libpq.lib")
-
-# Include the INCLUDE directories
-include_directories(${PostgreSQL_INCLUDE_DIRS})
-
-# Link the LIBRARY directory
-link_directories(${PostgreSQL_LIBRARY_DIRS})
-
 # Create an executable
 add_executable(DatabaseTermProject main.cpp
         DatabaseConnection.cpp
@@ -35,11 +22,15 @@ add_executable(DatabaseTermProject main.cpp
         InventoryDAO.cpp
         InventoryDAO.h)
 
-# Link the executable `ExamplePostgreSQL` with the PostgreSQL library
-target_link_libraries(DatabaseTermProject ${PostgreSQL_LIBRARIES})
+# include libpqxx
+add_subdirectory(./libpqxx build-pqxx)
+target_link_libraries(DatabaseTermProject PRIVATE pqxx)
 
 # include winsock2_32
-target_link_libraries(DatabaseTermProject ws2_32)
+target_link_libraries(DatabaseTermProject PRIVATE ws2_32)
 
-# for distribution
+# include static stdc++ library for distribution
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
+
+
+

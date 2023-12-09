@@ -1,5 +1,12 @@
 #include "Account.h"
 
+
+Account::Account(int accountId, const string& userId, const string& userPw, const string& role, int balance,
+                 int mana, const string& createdDate, const string& lastLogin) : accountId(accountId), userId(userId),
+                                                                       userPw(userPw), role(role), balance(balance),
+                                                                       mana(mana), createdDate(createdDate),
+                                                                       lastLogin(lastLogin) {}
+
 int Account::getAccountId() const {
     return accountId;
 }
@@ -35,7 +42,3 @@ const string& Account::getRole() const {
     return role;
 }
 
-Account::Account(int accountId, const string& userId, const string& userPw, const string& role, int balance,
-                 const string& createdDate, const string& lastLogin) : accountId(accountId), userId(userId),
-                                                                       userPw(userPw), role(role), balance(balance),
-                                                                       createdDate(createdDate), lastLogin(lastLogin) {}

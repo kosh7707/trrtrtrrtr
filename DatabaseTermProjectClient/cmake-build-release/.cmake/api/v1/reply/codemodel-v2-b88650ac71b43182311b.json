@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "build-pqxx",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx-Release-eeb0746a2901de3a76e4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libpqxx"
+				},
+				{
+					"build" : "build-pqxx/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx.src-Release-ca431cb445ddd4102f86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "libpqxx/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "build-pqxx/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx.include-Release-2473c3530153a818ccbd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "libpqxx/include"
+				},
+				{
+					"build" : "build-pqxx/test",
+					"jsonFile" : "directory-build-pqxx.test-Release-5b69ab4581b41ff5e39f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "libpqxx/test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DatabaseTermProjectClient",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DatabaseTermProjectClient::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DatabaseTermProjectClient-Release-ef4b70208e18aef69941.json",
+					"name" : "DatabaseTermProjectClient",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pqxx::@ded9971ed639e414d3a4",
+					"jsonFile" : "target-pqxx-Release-be58213fa2772cd31a1f.json",
+					"name" : "pqxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "runner::@81e2c75a6ff29b583f40",
+					"jsonFile" : "target-runner-Release-976b31e22f0ba6dab28e.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release",
+		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

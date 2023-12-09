@@ -9,7 +9,7 @@ class Account {
 public:
     Account();
     Account(int accountId, const string& userId, const string& userPw, const string& role, int balance,
-            const string& createdDate, const string& lastLogin);
+            int mana, const string& createdDate, const string& lastLogin);
 
     int             getAccountId() const;
     const string&   getUserId() const;
@@ -25,6 +25,7 @@ private:
     string  userPw;
     string  role;
     int     balance;
+    int     mana;
     string  createdDate;
     string  lastLogin;
 };

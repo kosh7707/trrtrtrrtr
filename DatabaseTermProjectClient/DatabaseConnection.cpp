@@ -1,42 +1,57 @@
 #include "DatabaseConnection.h"
 
-bool DatabaseConnection::isConnected() {
-    return PQstatus(conn) == CONNECTION_OK;
-}
+DatabaseConnection::DatabaseConnection() {}
 
-void DatabaseConnection::connectionClose() {
-    PQfinish(conn);
+bool DatabaseConnection::isConnected() {
+    return conn->is_open();
 }
 
 void DatabaseConnection::connectDB(const string& id, const string& pw) {
-    string connInfo = "postgresql://postgres@localhost?port=5432&dbname=databasetermproject&user=" + id + "&password=" + pw;
-    conn = PQconnectdb(connInfo.c_str());
-    if (PQstatus(conn) != CONNECTION_OK)
-        PQfinish(conn);
+    string connInfo = "dbname=databasetermproject user=" + id + " password=" + pw + " hostaddr=127.0.0.1 port=5432";
+    conn = make_unique<pqxx::connection>(connInfo);
 }
 
-PGresult* DatabaseConnection::selectQuery(const std::string& query) {
-    PGresult* res = PQexec(conn, query.c_str());
-    if (PQresultStatus(res) != PGRES_TUPLES_OK) {
-        cout << "select query: " << query << "\nselect failed." << endl;
-        return nullptr;
-    }
+vector<map<string, string>> DatabaseConnection::selectQuery(const string& query) {
+    try {
+        pqxx::work txn(*conn);
+        pqxx::result res = txn.exec(query);
 
-    return res;
+        vector<map<string, string>> ret;
+        for (const auto& row : res) {
+            map<string, string> temp_map;
+            for (const auto& field : row)
+                temp_map[field.name()] = field.c_str();
+            ret.push_back(temp_map);
+        }
+        return ret;
+    }
+    catch (const exception& e) {
+        cerr << e.what() << endl;
+        return vector<map<string, string>>();
+    }
 }
 
 bool DatabaseConnection::commandQuery(const string& query) {
-    PGresult* res = PQexec(conn, query.c_str());
-    if (PQresultStatus(res) != PGRES_COMMAND_OK) {
-        cout << "command query: " << query << "\ncommand failed." << endl;
+    try {
+        pqxx::work txn(*conn);
+        txn.exec(query);
+        return true;
+    }
+    catch (const exception& e) {
+        cerr << e.what() << endl;
         return false;
     }
-    PQclear(res);
-    return true;
 }
 
-PGconn* DatabaseConnection::getConn() {
-    return conn;
+bool DatabaseConnection::transaction(const vector<string>& queries) {
+    try {
+        pqxx::work txn(*conn);
+        for (const auto& query : queries)
+            txn.exec(query);
+        return true;
+    }
+    catch (const exception& e) {
+        cerr << e.what() << endl;
+        return false;
+    }
 }
-
-

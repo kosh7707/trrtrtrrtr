@@ -25,10 +25,6 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
     }
 }
 
-SOCKET ClientCore::getSocket() {
-    return sc;
-}
-
 unsigned int WINAPI ClientCore::runThread(void* params) {
     SOCKET sc = (SOCKET)params;
     char buf[MAXBYTE];
@@ -58,6 +54,7 @@ unsigned int WINAPI ClientCore::runThread(void* params) {
 }
 
 void ClientCore::run() {
+    connectDB();
     mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)sc, 0, &tid);
 }
 
@@ -144,9 +141,7 @@ const string &ClientCore::getUserPw() const {
 }
 
 void ClientCore::connectDB() {
-    dc.connectDB(userId, userPw);
+    IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
+    databaseConnection.connectDB(userId, userPw);
 }
 
-DatabaseConnection &ClientCore::getDatabaseConnection() {
-    return dc;
-}

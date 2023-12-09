@@ -18,17 +18,16 @@ string InventoryDAO::inventoryCheck(const string& id) {
     IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
     std::ostringstream ss;
 
-    // À¯Àú Á¤º¸ Äõ¸®
-    string query1 = "select ac.role, ac.balance, ac.mana from accounts ac where user_id = '"+ id + "';";
+    string query1 = "select ac.user_id ì•„ì´ë””, ac.role ì§ì—…, ac.balance ì”ê³ , ac.mana ë§ˆë‚˜ from accounts ac where user_id = '"+ id + "';";
     auto res1 = databaseConnection.selectQuery(query1);
-    for (int i=0; i<PQntuples(res1); i++) {
-        for (int j=0; j<PQnfields(res1); j++)
-            ss << PQgetvalue(res1, i, j) << ",";
-        ss << "\n";
+    ss << "----------------------\n";
+    for (const auto& row : res1) {
+        for (const auto& p : row)
+            ss << p.first << ":" << p.second << "\n";
+        ss << "----------------------\n";
     }
 
-    // À¯Àú ÀÎº¥Åä¸® Äõ¸®
-    const char* queryTemplate = "select items.name, items.score, items.mana, items.gadget, buffs.name, inventory.quantity\n"
+    const char* queryTemplate = "select items.name ì•„ì´í…œì´ë¦„, items.score ì ìˆ˜, items.mana ë§ˆë‚˜, items.gadget ê°€ì ¯, buffs.name ë²„í”„ì´ë¦„, inventory.quantity ìˆ˜ëŸ‰\n"
                                 "from accounts ac, items, inventory, buffs\n"
                                 "where ac.user_id = '%s'\n"
                                 "  and ac.account_id = inventory.account_id\n"
@@ -39,10 +38,11 @@ string InventoryDAO::inventoryCheck(const string& id) {
     snprintf(queryBuffer, sizeof(queryBuffer), queryTemplate, id.c_str());
     string query(queryBuffer);
     auto res2 = databaseConnection.selectQuery(query);
-    for (int i=0; i<PQntuples(res2); i++) {
-        for (int j=0; j<PQnfields(res2); j++)
-            ss << PQgetvalue(res2, i, j) << ",";
-        ss << "\n";
+    ss << "----------------------\n";
+    for (const auto& row : res2) {
+        for (const auto& p : row)
+            ss << p.first << ":" << p.second << "\n";
+        ss << "----------------------\n";
     }
-    return ss.str();;
+    return ss.str();
 }

@@ -16,7 +16,6 @@ class ClientCore {
 public:
     ClientCore();
     ~ClientCore();
-    SOCKET              getSocket();
     void                run();
     void                login();
     bool                getIsLogin();
@@ -25,7 +24,6 @@ public:
     const string&       getUserId() const;
     const string&       getUserPw() const;
     void                connectDB();
-    DatabaseConnection& getDatabaseConnection();
 
 private:
     static unsigned int WINAPI runThread(void* params);
@@ -38,7 +36,6 @@ private:
     bool                isLogin;
     string              userId;
     string              userPw;
-    DatabaseConnection  dc;
 };
 
 

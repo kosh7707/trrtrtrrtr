@@ -3,27 +3,25 @@
 
 
 #include <iostream>
-#include <string>
-#include <libpq-fe.h>
+#include <memory>
 #include "ServerConstant.h"
 #include "IDatabaseConnection.h"
 using namespace std;
 
-class DatabaseConnection : IDatabaseConnection{
+class DatabaseConnection : IDatabaseConnection {
 public:
     static IDatabaseConnection& getInstance() {
         static DatabaseConnection dc;
         return dc;
     }
-    bool            isConnected();
-    PGresult*       selectQuery(const string& query);
-    bool            commandQuery(const string& query);
-    void            connectionClose();
-    const PGconn*   getConn() const;
+    bool isConnected();
+    bool commandQuery(const string& query);
+    vector<map<string, string>> selectQuery(const string& query);
+    bool transaction(const vector<string>& queries);
 private:
     DatabaseConnection();
     ServerConstant  serverConstant;
-    PGconn*         conn;
+    unique_ptr<pqxx::connection> conn;
 };
 
 

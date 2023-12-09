@@ -5,16 +5,14 @@
 using namespace std;
 
 int main() {
-    IDatabaseConnection& dc = DatabaseConnection::getInstance();
-    if (!dc.isConnected()) {
-        cout << "Connection to database failed: " << endl;
-        exit(1);
+    try {
+        IDatabaseConnection& dc = DatabaseConnection::getInstance();
+
+        ServerCore sc;
+        sc.run();
+
+    } catch (const exception& e) {
+        cerr << e.what() << endl;
+        return 0;
     }
-    cout << "Connection to database succeed." << endl;
-
-    ServerCore sc;
-    sc.run();
-
-    dc.connectionClose();
-    return 0;
 }
