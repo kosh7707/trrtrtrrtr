@@ -541,4 +541,5 @@ CMakeFiles/DatabaseTermProject.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
  C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/include/pqxx/transactor.hxx \
  C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/include/pqxx/internal/header-post.hxx \
- C:\Users\Administrator\Desktop\trrtrtrrtr\DatabaseTermProject\InventoryDAO.h
+ C:\Users\Administrator\Desktop\trrtrtrrtr\DatabaseTermProject\InventoryDAO.h \
+ C:\Users\Administrator\Desktop\trrtrtrrtr\DatabaseTermProject\AuctionDAO.h

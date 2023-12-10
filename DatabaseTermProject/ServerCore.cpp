@@ -125,12 +125,27 @@ int ServerCore::getEvent(const char* buf) {
     else if (prefix == "[1]") return CHAT_EVENT;
     else if (prefix == "[2]") return GET_TEST_ITEM_EVENT;
     else if (prefix == "[3]") return INVENTORY_CHECK_EVENT;
+    else if (prefix == "[4]") return SELL_ITEM_EVENT;
+    else if (prefix == "[5]") return BUY_NOW_EVENT;
+    else if (prefix == "[6]") return BID_EVENT;
+    else if (prefix == "[7]") return BREAK_ITEM_EVENT;
+    else if (prefix == "[8]") return OPEN_PERMISSION_STORE_EVENT;
+    else if (prefix == "[9]") return BUY_PERMISSION_EVENT;
     else return INVALID_EVENT;
 }
 
 string ServerCore::getMessage(const char* buf) {
     string temp = buf;
     return temp.substr(3);
+}
+
+vector<string> ServerCore::split(const string& input, char delimiter) {
+    vector<string> result;
+    stringstream ss(input);
+    string token;
+    while (getline(ss, token, delimiter))
+        result.push_back(token);
+    return result;
 }
 
 /*-------------------
@@ -145,6 +160,12 @@ void ServerCore::readClient(const int index) {
     else if (event == CHAT_EVENT) handleChat(index, msg);
     else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index);
     else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index);
+    else if (event == SELL_ITEM_EVENT) handleSellItem(index, msg);
+    else if (event == BUY_NOW_EVENT) handleBuyNow(index, msg);
+    else if (event == BID_EVENT) handleBid(index, msg);
+    else if (event == BREAK_ITEM_EVENT) handleBreakItem(index, msg);
+    else if (event == OPEN_PERMISSION_STORE_EVENT) handleOpenPermissionStore(index);
+    else if (event == BUY_PERMISSION_EVENT) handleBuyPermission(index, msg);
     else cout << "INVALID EVENT\nmsg: " << msg << endl;
 }
 
@@ -153,19 +174,10 @@ void ServerCore::handleChat(const int index, const string& msg) {
 }
 
 void ServerCore::handleLogin(const int index, const string& msg) {
-    string temp;
-    vector<string> vec;
-    for (int i=0; i<msg.length(); i++) {
-        if (msg[i] == ',') {
-            vec.emplace_back(temp);
-            temp = "";
-        }
-        else temp += msg[i];
-    }
-    vec.emplace_back(temp);
-    string id = vec[0];
-    string pw = vec[1];
-    string role = vec[2];
+    vector<string> params = split(msg, ',');
+    string id = params[0];
+    string pw = params[1];
+    string role = params[2];
     if (accountDao.checkAccountExists(id)) {
         // login
         shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
@@ -175,27 +187,18 @@ void ServerCore::handleLogin(const int index, const string& msg) {
             notifyClient(index, "200");
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
-        else {
-            notifyClient(index, "400");
-        }
+        else notifyClient(index, "400");
     }
     else {
         // register
-        bool res = accountDao.registerAccount(id, pw, role);
-        if (res) {
-            shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
-            if (account != nullptr) {
-                Clients[index].setAccount(account);
-                notifyClient(index, "201");
-                notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
-            }
-            else {
-                notifyClient(index, "401");
-            }
+        accountDao.registerAccount(id, pw, role);
+        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
+        if (account != nullptr) {
+            Clients[index].setAccount(account);
+            notifyClient(index, "201");
+            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
-        else {
-            notifyClient(index, "401");
-        }
+        else notifyClient(index, "401");
     }
 }
 
@@ -217,4 +220,101 @@ void ServerCore::handleInventoryCheck(const int index) {
     string res = inventoryDao.inventoryCheck(id);
     notifyClient(index, res);
 }
+
+void ServerCore::handleSellItem(const int index, const string& msg) {
+    string id = Clients[index].getAccount()->getUserId();
+    vector<string> params = split(msg, ',');
+    bool res = inventoryDao.sellItem(id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
+    if (res) notifyClient(index, "Item has been successfully registered in the auction.");
+    else notifyClient(index, "Failed to register the item in the auction.");
+}
+
+void ServerCore::handleBuyNow(const int index, const string& msg) {
+    string id = Clients[index].getAccount()->getUserId();
+    vector<string> params = split(msg, ',');
+    bool res = inventoryDao.buyNow(id, stoi(params[0]));
+    if (res) notifyClient(index, "Item has been successfully purchased in the auction.");
+    else notifyClient(index, "Failed to purchase the item in the auction.");
+}
+
+void ServerCore::handleBid(const int index, const string& msg) {
+    string id = Clients[index].getAccount()->getUserId();
+    vector<string> params = split(msg, ',');
+    bool res = inventoryDao.bid(id, params[0], params[1]);
+    if (res) notifyClient(index, "Bid has been successfully placed in the auction.");
+    else notifyClient(index, "Failed to place the bid in the auction.");
+}
+
+void ServerCore::handleBreakItem(const int index, const string& msg) {
+    string id = Clients[index].getAccount()->getUserId();
+    vector<string> params = split(msg, ',');
+    bool res = inventoryDao.breakItem(id, stoi(params[0]), stoi(params[1]));
+    if (res) notifyClient(index, "Item has been successfully breaked in the auction.");
+    else notifyClient(index, "Failed to break the item.");
+}
+
+void ServerCore::handleOpenPermissionStore(const int index) {
+    string id = Clients[index].getAccount()->getUserId();
+    // TODO Permission Store를 만듭시다..
+}
+
+void ServerCore::handleBuyPermission(const int index, const string& msg) {
+    string id = Clients[index].getAccount()->getUserId();
+    vector<string> params = split(msg, ',');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

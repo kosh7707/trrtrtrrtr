@@ -28,6 +28,7 @@ private:
     int     mana;
     string  createdDate;
     string  lastLogin;
+    // TODO Accounts 객체가 accountId 말고 다른걸 들고있어봤자 쓸모가 없음.
 };
 
 

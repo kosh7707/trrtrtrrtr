@@ -20,7 +20,8 @@ add_executable(DatabaseTermProject main.cpp
         AccountDAO.cpp
         AccountDAO.h
         InventoryDAO.cpp
-        InventoryDAO.h)
+        InventoryDAO.h
+)
 
 # include libpqxx
 add_subdirectory(./libpqxx build-pqxx)

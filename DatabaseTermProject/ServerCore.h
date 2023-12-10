@@ -17,6 +17,12 @@
 #define CHAT_EVENT 1
 #define GET_TEST_ITEM_EVENT 2
 #define INVENTORY_CHECK_EVENT 3
+#define SELL_ITEM_EVENT 4
+#define BUY_NOW_EVENT 5
+#define BID_EVENT 6
+#define BREAK_ITEM_EVENT 7
+#define OPEN_PERMISSION_STORE_EVENT 8
+#define BUY_PERMISSION_EVENT 9
 
 using namespace std;
 
@@ -42,10 +48,17 @@ private:
     void    removeClient(const int index);
     void    notifyClient(const int index, const string& msg);
     void    notifyAllClients(const string& msg);
+    vector<string> split(const string& input, char delimiter);
     void    handleLogin(const int index, const string& msg);
     void    handleChat(const int index, const string& msg);
     void    handleGetTestItem(const int index);
     void    handleInventoryCheck(const int index);
+    void    handleSellItem(const int index, const string& msg);
+    void    handleBuyNow(const int index, const string& msg);
+    void    handleBid(const int index, const string& msg);
+    void    handleBreakItem(const int index, const string& msg);
+    void    handleOpenPermissionStore(const int index);
+    void    handleBuyPermission(const int index, const string& msg);
 };
 
 

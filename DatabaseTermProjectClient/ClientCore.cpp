@@ -137,19 +137,19 @@ void ClientCore::handleCommand(const vector<string>& command) {
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "sellItem") {
-        string cmd = "[4]," + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
+        string cmd = "[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "buyNow") {
-        string cmd = "[5]," + command[1];
+        string cmd = "[5]" + command[1];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "bid") {
-        string cmd = "[6]," + command[1] + "," + command[2];
+        string cmd = "[6]" + command[1] + "," + command[2];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "breakItem") {
-        string cmd = "[7]," + command[1] + "," + command[2];
+        string cmd = "[7]" + command[1] + "," + command[2];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "query") {
@@ -169,7 +169,7 @@ void ClientCore::handleCommand(const vector<string>& command) {
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
     else if (command[0] == "buyPermission") {
-        string cmd = "[9]," + command[1];
+        string cmd = "[9]" + command[1];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
 }
