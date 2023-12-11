@@ -13,6 +13,7 @@
 #include "Client.h"
 #include "AccountDAO.h"
 #include "InventoryDAO.h"
+#include "PermissionStoreDAO.h"
 #define INVALID_EVENT -1
 #define LOGIN_EVENT 0
 #define CHAT_EVENT 1
@@ -35,6 +36,7 @@ private:
     ServerConstant          serverConstant;
     AccountDAO              accountDao;
     InventoryDAO            inventoryDao;
+    PermissionStoreDAO      permissionStoreDao;
     shared_ptr<Client[]>    Clients;
     string                  serverIP;
     int                     maxClientCount;

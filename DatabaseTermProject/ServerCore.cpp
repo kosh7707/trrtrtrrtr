@@ -325,14 +325,16 @@ void ServerCore::handleBreakItem(const int index, const string& msg) {
 
 void ServerCore::handleOpenPermissionStore(const int index) {
     int account_id = Clients[index].getAccount()->getAccountId();
-
-
+    string res = permissionStoreDao.openPermissionStore();
+    notifyClient(index, res);
 }
 
 void ServerCore::handleBuyPermission(const int index, const string& msg) {
-    int account_id = Clients[index].getAccount()->getAccountId();
+    const string& id = Clients[index].getAccount()->getUserId();
     vector<string> params = split(msg, ',');
-
+    bool res = permissionStoreDao.buyPermission(id, stoi(params[0]));
+    if (res) notifyClient(index, "Permission has been successfully purchased in the store.");
+    else notifyClient(index, "Failed to purchased the permission");
 }
 
 

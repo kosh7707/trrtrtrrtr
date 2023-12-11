@@ -128,52 +128,70 @@ void ClientCore::handleChat(const string& msg) {
 }
 
 void ClientCore::handleCommand(const vector<string>& command) {
-    if (command[0] == "getTestItem") {
-        string cmd = "[2]";
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "inventoryCheck") {
-        string cmd = "[3]";
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "sellItem") {
-        string cmd = "[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "buyNow") {
-        string cmd = "[5]" + command[1];
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "bid") {
-        string cmd = "[6]" + command[1] + "," + command[2];
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "breakItem") {
-        string cmd = "[7]" + command[1] + "," + command[2];
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "query") {
-        IDatabaseConnection& dc = DatabaseConnection::getInstance();
-        cout << "Enter the SQL query (you need to input ; at the end of query.)\n";
-        string query, temp;
-        while (temp[temp.length()-1] != ';') {
-            getline(cin, temp);
-            query += temp + " ";
+    try {
+        if (command[0] == "getTestItem") {
+            string cmd = "[2]";
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
         }
-        for (int i=0; i<=6; i++) query[i] = tolower(query[i]);
-        if (query.substr(0, 6) == "select") dc.selectQuery(query);
-        else dc.commandQuery(query);
-    }
-    else if (command[0] == "openPermissionStore") {
-        string cmd = "[8]";
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else if (command[0] == "buyPermission") {
-        string cmd = "[9]" + command[1];
-        send(sc, cmd.c_str(), sizeof(cmd), 0);
-    }
-    else {
-        cout << "Invalid Command" << endl;
+        else if (command[0] == "inventoryCheck") {
+            string cmd = "[3]";
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "sellItem") {
+            string cmd = "[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "buyNow") {
+            string cmd = "[5]" + command[1];
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "bid") {
+            string cmd = "[6]" + command[1] + "," + command[2];
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "breakItem") {
+            string cmd = "[7]" + command[1] + "," + command[2];
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "query") {
+            IDatabaseConnection& dc = DatabaseConnection::getInstance();
+            cout << "Enter the SQL query (you need to input ; at the end of query.)\n";
+            string query, temp;
+            while (temp[temp.length()-1] != ';') {
+                getline(cin, temp);
+                query += temp + " ";
+            }
+            for (int i=0; i<=6; i++) query[i] = tolower(query[i]);
+            if (query.substr(0, 6) == "select") {
+                cout << "select quert exec" << endl;
+                auto res = dc.selectQuery(query);
+                cout << "----------------------\n";
+                for (const auto& row : res) {
+                    for (const auto &p: row)
+                        cout << p.first << ":" << p.second << "\n";
+                    cout << "----------------------\n";
+                }
+            }
+            else {
+                auto res = dc.commandQuery(query);
+                if (res) cout << "command query successfully executed" << endl;
+                else cout << "failed to execute command query" << endl;
+            }
+        }
+        else if (command[0] == "openPermissionStore") {
+            string cmd = "[8]";
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else if (command[0] == "buyPermission") {
+            string cmd = "[9]" + command[1];
+            send(sc, cmd.c_str(), sizeof(cmd), 0);
+        }
+        else {
+            cout << "Invalid Command" << endl;
+        }
+    } catch (const exception& e) {
+        cerr << "Error, " << e.what() << endl;
+        cerr << "command 처리 실패" << endl;
     }
 }
 

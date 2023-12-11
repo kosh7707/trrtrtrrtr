@@ -56,6 +56,15 @@ create table auctions (
     check (current_price <= buy_now_price)
 );
 
+drop view if exists permission_store cascade;
+create table permission_store (
+    permission_id   serial primary key,
+    price           int,
+    description     varchar(255) not null,
+    query           varchar(255) not null
+);
+
+drop view if exists AuctionsView cascade;
 create view AuctionsView as
     select a.auction_id         as auction_id,
            i.name               as item_name,
@@ -97,3 +106,13 @@ insert into buffs(name, description) values ('Test용 버프', 'Test용 버프 �
 
 -- item
 insert into items(name, score, mana, buff_id, gadget) values ('Test 아이템', 1, 1, 1, 'a');
+
+-- permission
+insert into permission_store(price, description, query)
+values (1, 'auctionsView의 모든 attributes를 select할 권한을 가집니다.', 'grant select on auctionsView to %s;');
+
+insert into permission_store(price, description, query)
+values (1, 'accounts에 대한 모든 attributes를 select할 권한을 가집니다.', 'grant select on accounts to %s;');
+
+insert into permission_store(price, description, query)
+values (1, 'auctions에서 end_date를 수정할 권한를 가집니다', 'grant update (end_date) on table auctions to %s');

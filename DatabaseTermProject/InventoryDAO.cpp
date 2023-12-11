@@ -34,7 +34,7 @@ bool InventoryDAO::deleteItem(const string& id, const int item_id, const int qua
 
 string InventoryDAO::inventoryCheck(const string& id) {
     IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
-    std::ostringstream ss;
+    ostringstream ss;
 
     string query1 = "select ac.user_id 아이디, ac.role 직업, ac.balance 잔고, ac.mana 마나 from accounts ac where user_id = '"+ id + "';";
     auto res1 = databaseConnection.selectQuery(query1);
