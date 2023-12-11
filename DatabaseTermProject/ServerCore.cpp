@@ -44,6 +44,8 @@ SOCKET ServerCore::initServer() {
 -------------------*/
 
 [[noreturn]] void ServerCore::run() {
+    runAuctionWorker();
+
     WSANETWORKEVENTS ev;
     WSAEVENT handleArray[maxClientCount + 1];
 
@@ -152,6 +154,60 @@ vector<string> ServerCore::split(const string& input, char delimiter) {
 | Event Handling Part
 -------------------*/
 
+unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
+    ServerCore* serverCore = static_cast<ServerCore*>(params);
+    IDatabaseConnection& dc = DatabaseConnection::getInstance();
+    while (dc.isConnected()) {
+        auto res = dc.selectQuery("select * from auctions where end_time <= CURRENT_TIMESTAMP");
+        for (auto row : res) {
+            vector<string> queries;
+            int auction_id = stoi(row["auction_id"]);
+            int item_id = stoi(row["item_id"]);
+            int seller_id = stoi(row["seller_id"]);
+            int item_quantity = stoi(row["item_quantity"]);
+            if (row["current_bidder_id"] != "") {
+                int current_bidder_id = stoi(row["current_bidder_id"]);
+                int current_price = stoi(row["current_price"]);
+                const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
+                queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate1, auction_id));
+                const char* queryTemplate2 = "update accounts set balance = balance + %d where account_id = %d;";
+                queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate2, current_price, seller_id));
+                const char* queryTemplate3 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d)\n"
+                                             "on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
+                queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate3, current_bidder_id, item_id, item_quantity));
+                if (dc.transaction(queries)) {
+                    for (int i=1; i<serverCore->ClientsCount; i++) {
+                        if (serverCore->Clients[i].getAccount()->getAccountId() == current_bidder_id)
+                            serverCore->notifyClient(i, "You've won the auction item_id: " + to_string(item_id) + ". please check your inventory");
+                        else if (serverCore->Clients[i].getAccount()->getAccountId() == seller_id)
+                            serverCore->notifyClient(i, "your item has been sold out. please check your inventory");
+                    }
+                }
+            }
+            else {
+                const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
+                queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate1, auction_id));
+                const char* queryTemplate2 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d)\n"
+                                             "on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
+                queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate2, seller_id, item_id, item_quantity));
+                if (dc.transaction(queries)) {
+                    for (int i=1; i<serverCore->ClientsCount; i++) {
+                        if (serverCore->Clients[i].getAccount()->getAccountId() == seller_id)
+                            serverCore->notifyClient(i, "your auction has been expired. please check your inventory");
+                    }
+                }
+            }
+        }
+        this_thread::sleep_for(chrono::seconds(5));
+    }
+    return 0;
+}
+
+void ServerCore::runAuctionWorker() {
+    unsigned int tid;
+    auctionWorker = (HANDLE)_beginthreadex(NULL, 0, runAuctionWorkerThread, (void*)this, 0, &tid);
+}
+
 void ServerCore::readClient(const int index) {
     char buf[MAXBYTE];
     recv(Clients[index].getSc(), buf, MAXBYTE, 0);
@@ -232,16 +288,30 @@ void ServerCore::handleSellItem(const int index, const string& msg) {
 void ServerCore::handleBuyNow(const int index, const string& msg) {
     string id = Clients[index].getAccount()->getUserId();
     vector<string> params = split(msg, ',');
-    bool res = inventoryDao.buyNow(id, stoi(params[0]));
-    if (res) notifyClient(index, "Item has been successfully purchased in the auction.");
+    pair<bool, pair<int, int>> res = inventoryDao.buyNow(id, stoi(params[0]));
+    if (res.first) {
+        notifyClient(index, "Item has been successfully purchased in the auction.");
+        for (int i=1; i<ClientsCount; i++) {
+            if (Clients[i].getAccount()->getAccountId() == res.second.first)
+                notifyClient(i, "your item has been sold to " + id);
+            else if (Clients[i].getAccount()->getAccountId() == res.second.second)
+                notifyClient(i, "Your auction has been outbid. please check your inventory");
+        }
+    }
     else notifyClient(index, "Failed to purchase the item in the auction.");
 }
 
 void ServerCore::handleBid(const int index, const string& msg) {
-    string id = Clients[index].getAccount()->getUserId();
+    int account_id = Clients[index].getAccount()->getAccountId();
     vector<string> params = split(msg, ',');
-    bool res = inventoryDao.bid(id, params[0], params[1]);
-    if (res) notifyClient(index, "Bid has been successfully placed in the auction.");
+    pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[0]), stoi(params[1]));
+    if (res.first) {
+        notifyClient(index, "Bid has been successfully placed in the auction.");
+        for (int i=1; i<ClientsCount; i++) {
+            if (Clients[i].getAccount()->getAccountId() == res.second)
+                notifyClient(i, "Your auction has been outbid. please check your inventory");
+        }
+    }
     else notifyClient(index, "Failed to place the bid in the auction.");
 }
 
@@ -254,12 +324,13 @@ void ServerCore::handleBreakItem(const int index, const string& msg) {
 }
 
 void ServerCore::handleOpenPermissionStore(const int index) {
-    string id = Clients[index].getAccount()->getUserId();
-    // TODO Permission Store를 만듭시다..
+    int account_id = Clients[index].getAccount()->getAccountId();
+
+
 }
 
 void ServerCore::handleBuyPermission(const int index, const string& msg) {
-    string id = Clients[index].getAccount()->getUserId();
+    int account_id = Clients[index].getAccount()->getAccountId();
     vector<string> params = split(msg, ',');
 
 }

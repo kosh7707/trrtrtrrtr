@@ -2,6 +2,7 @@
 #define DATABASETERMPROJECT_SERVERCORE_H
 
 #include <winsock2.h>
+#include <thread>
 #include <memory>
 #include <iostream>
 #include <string>
@@ -39,8 +40,13 @@ private:
     int                     maxClientCount;
     int                     serverPort;
     int                     ClientsCount;
+    HANDLE                  auctionWorker;
 
     SOCKET  initServer();
+    void runAuctionWorker();
+
+    static unsigned int WINAPI runAuctionWorkerThread(void* params);
+
     int     getEvent(const char* buf);
     string  getMessage(const char* buf);
     void    addClient();

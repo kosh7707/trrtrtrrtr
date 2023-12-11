@@ -53,7 +53,7 @@ create table auctions (
     foreign key (seller_id) references accounts(account_id) on delete cascade,
     foreign key (current_bidder_id) references accounts(account_id) on delete cascade,
     check (start_time <= end_time),
-    check (current_price < buy_now_price)
+    check (current_price <= buy_now_price)
 );
 
 create view AuctionsView as
@@ -89,3 +89,11 @@ drop role if exists hacker;
 create role hacker;
 revoke all privileges on all tables in schema public from hacker;
 grant select (auction_id, item_name, item_gadget, quantity, seller, start_time, end_time, current_price, current_bidder) on AuctionsView to hacker;
+
+-- insert test buff, item
+
+-- buff
+insert into buffs(name, description) values ('Test용 버프', 'Test용 버프 설명');
+
+-- item
+insert into items(name, score, mana, buff_id, gadget) values ('Test 아이템', 1, 1, 1, 'a');

@@ -172,6 +172,9 @@ void ClientCore::handleCommand(const vector<string>& command) {
         string cmd = "[9]" + command[1];
         send(sc, cmd.c_str(), sizeof(cmd), 0);
     }
+    else {
+        cout << "Invalid Command" << endl;
+    }
 }
 
 const string &ClientCore::getUserId() const {

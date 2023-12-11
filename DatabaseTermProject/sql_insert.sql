@@ -1,8 +1,4 @@
--- buff
-insert into buffs(name, description) values ('Test용 버프', 'Test용 버프 설명');
 
--- item
-insert into items(name, score, mana, buff_id, gadget) values ('Test 아이템', 1, 1, 1, 'a');
 
 select * from inventory i where i.account_id = (select account_id from accounts where user_id='kosh77') and item_id = 1 and quantity >= 3;
 
