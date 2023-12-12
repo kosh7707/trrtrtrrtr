@@ -33,3 +33,8 @@
 6233	10399	7239929521079120	build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj	387700331e7bbe53
 10399	10512	7239929522214974	build-pqxx/src/libpqxx.a	22879cd2b0d0cba2
 10513	10877	7239929525743626	DatabaseTermProjectClient.exe	5208ba6bca4e875d
+3	1923	7240499858246153	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	fa20976eae6160b3
+1923	2232	7240499861275534	DatabaseTermProjectClient.exe	5208ba6bca4e875d
+3	1872	7240592525490365	CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj	3be6e5140a1cacb3
+6	2111	7240592527875246	CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj	fa20976eae6160b3
+2111	2419	7240592530891169	DatabaseTermProjectClient.exe	5208ba6bca4e875d

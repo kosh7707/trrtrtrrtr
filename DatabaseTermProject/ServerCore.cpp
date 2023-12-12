@@ -113,11 +113,12 @@ void ServerCore::removeClient(const int index) {
 void ServerCore::notifyAllClients(const string& msg) {
     cout << msg << endl;
     for (int i=1; i<ClientsCount; i++)
-        send(Clients[i].getSc(), msg.c_str(), MAXBYTE, 0);
+        send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0);
 }
 
 void ServerCore::notifyClient(const int index, const string& msg) {
-    send(Clients[index].getSc(), msg.c_str(), MAXBYTE, 0);
+    if (msg.length() >= BUF_SIZE) cerr << "Warning: Message may be truncated as it exceeds BUF_SIZE." << endl;
+    send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0);
 }
 
 int ServerCore::getEvent(const char* buf) {
@@ -209,8 +210,8 @@ void ServerCore::runAuctionWorker() {
 }
 
 void ServerCore::readClient(const int index) {
-    char buf[MAXBYTE];
-    recv(Clients[index].getSc(), buf, MAXBYTE, 0);
+    char buf[BUF_SIZE];
+    recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
     int event = getEvent(buf); string msg = getMessage(buf);
     if (event == LOGIN_EVENT) handleLogin(index, msg);
     else if (event == CHAT_EVENT) handleChat(index, msg);
@@ -319,7 +320,7 @@ void ServerCore::handleBreakItem(const int index, const string& msg) {
     string id = Clients[index].getAccount()->getUserId();
     vector<string> params = split(msg, ',');
     bool res = inventoryDao.breakItem(id, stoi(params[0]), stoi(params[1]));
-    if (res) notifyClient(index, "Item has been successfully breaked in the auction.");
+    if (res) notifyClient(index, "Item has been successfully breaked in the inventory.");
     else notifyClient(index, "Failed to break the item.");
 }
 

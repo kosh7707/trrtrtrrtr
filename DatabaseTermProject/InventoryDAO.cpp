@@ -94,8 +94,7 @@ bool InventoryDAO::sellItem(const string& id, const int item_id, const int quant
 pair<bool, pair<int, int>> InventoryDAO::buyNow(const string& id, const int auction_id) {
     IDatabaseConnection &databaseConnection = DatabaseConnection::getInstance();
 
-    auto res = databaseConnection.selectQuery(
-            "select * from auctions where auction_id = " + to_string(auction_id) + ";");
+    auto res = databaseConnection.selectQuery("select * from auctions where auction_id = " + to_string(auction_id) + ";");
     if (res.size() != 1) return pair<bool, pair<int, int>>(false, {-1, -1});
     int balance = stoi(
             databaseConnection.selectQuery("select balance from accounts where user_id = '" + id + "';")[0]["balance"]);
@@ -131,7 +130,7 @@ pair<bool, pair<int, int>> InventoryDAO::buyNow(const string& id, const int auct
         const char *queryTemplate3 = "delete from auctions where auction_id = %d";
         queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate3, auction_id));
         const char *queryTemplate4 = "update accounts set balance = balance + %d where account_id = (select account_id from accounts where user_id = '%s');";
-        queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate4, price, id.c_str()));
+        queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate4, price, seller_id));
         const char* queryTemplate5 = "update accounts set balance = balance + %d where account_id = %d";
         queries.emplace_back(DatabaseConnection::queryFormatting(queryTemplate5, current_price, current_bidder_id));
         return pair<bool, pair<int, int>>(databaseConnection.transaction(queries), {seller_id, current_bidder_id});

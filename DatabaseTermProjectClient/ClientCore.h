@@ -9,6 +9,7 @@
 #include <vector>
 #include "ClientConstant.h"
 #include "DatabaseConnection.h"
+#define BUF_SIZE 1024
 
 using namespace std;
 
@@ -24,6 +25,7 @@ public:
     const string&       getUserId() const;
     const string&       getUserPw() const;
     void                connectDB();
+    void                notifyServer(const string& msg);
 
 private:
     static unsigned int WINAPI runThread(void* params);

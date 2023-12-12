@@ -27,7 +27,7 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
 
 unsigned int WINAPI ClientCore::runThread(void* params) {
     SOCKET sc = (SOCKET)params;
-    char buf[MAXBYTE];
+    char buf[BUF_SIZE];
     int length = 0;
     int index = 0;
     WSANETWORKEVENTS ev;
@@ -39,7 +39,7 @@ unsigned int WINAPI ClientCore::runThread(void* params) {
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             WSAEnumNetworkEvents(sc, event, &ev);
             if (ev.lNetworkEvents == FD_READ) {
-                length = recv(sc, buf, MAXBYTE, 0);
+                length = recv(sc, buf, BUF_SIZE, 0);
                 if (length > 0) cout << buf << endl;
             }
             else if (ev.lNetworkEvents == FD_CLOSE) {
@@ -78,7 +78,7 @@ void ClientCore::login() {
         cout << "please enter the pw:"; cin >> pw;
         cout << "please enter the role(0: merchant, 1: mage, 2: hacker):"; cin >> role;
         string loginRequest = "[0]" + id + "," + pw + "," + role;
-        send(sc, loginRequest.c_str(), sizeof(loginRequest), 0);
+        notifyServer(loginRequest);
 
         index = WSAWaitForMultipleEvents(1, &event, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
@@ -123,35 +123,28 @@ bool ClientCore::getIsLogin() {
 }
 
 void ClientCore::handleChat(const string& msg) {
-    string temp = "[1]" + msg;
-    send(sc, temp.c_str(), sizeof(temp), 0);
+    notifyServer("[1]" + msg);
 }
 
 void ClientCore::handleCommand(const vector<string>& command) {
     try {
         if (command[0] == "getTestItem") {
-            string cmd = "[2]";
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[2]");
         }
         else if (command[0] == "inventoryCheck") {
-            string cmd = "[3]";
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[3]");
         }
         else if (command[0] == "sellItem") {
-            string cmd = "[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4]);
         }
         else if (command[0] == "buyNow") {
-            string cmd = "[5]" + command[1];
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[5]" + command[1]);
         }
         else if (command[0] == "bid") {
-            string cmd = "[6]" + command[1] + "," + command[2];
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[6]" + command[1] + "," + command[2]);
         }
         else if (command[0] == "breakItem") {
-            string cmd = "[7]" + command[1] + "," + command[2];
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[7]" + command[1] + "," + command[2]);
         }
         else if (command[0] == "query") {
             IDatabaseConnection& dc = DatabaseConnection::getInstance();
@@ -179,12 +172,10 @@ void ClientCore::handleCommand(const vector<string>& command) {
             }
         }
         else if (command[0] == "openPermissionStore") {
-            string cmd = "[8]";
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[8]");
         }
         else if (command[0] == "buyPermission") {
-            string cmd = "[9]" + command[1];
-            send(sc, cmd.c_str(), sizeof(cmd), 0);
+            notifyServer("[9]" + command[1]);
         }
         else {
             cout << "Invalid Command" << endl;
@@ -193,6 +184,10 @@ void ClientCore::handleCommand(const vector<string>& command) {
         cerr << "Error, " << e.what() << endl;
         cerr << "command 처리 실패" << endl;
     }
+}
+
+void ClientCore::notifyServer(const string& msg) {
+    send(sc, msg.c_str(), BUF_SIZE, 0);
 }
 
 const string &ClientCore::getUserId() const {

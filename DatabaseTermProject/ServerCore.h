@@ -14,6 +14,7 @@
 #include "AccountDAO.h"
 #include "InventoryDAO.h"
 #include "PermissionStoreDAO.h"
+#define BUF_SIZE 1024
 #define INVALID_EVENT -1
 #define LOGIN_EVENT 0
 #define CHAT_EVENT 1

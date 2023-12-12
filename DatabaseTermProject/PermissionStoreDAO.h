@@ -1,7 +1,7 @@
 #ifndef DATABASETERMPROJECT_PERMISSIONSTOREDAO_H
 #define DATABASETERMPROJECT_PERMISSIONSTOREDAO_H
 
-
+#include <sstream>
 #include "DatabaseConnection.h"
 
 class PermissionStoreDAO {

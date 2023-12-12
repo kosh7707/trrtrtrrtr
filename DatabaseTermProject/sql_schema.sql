@@ -116,3 +116,6 @@ values (1, 'accounts에 대한 모든 attributes를 select할 권한을 가집�
 
 insert into permission_store(price, description, query)
 values (1, 'auctions에서 end_date를 수정할 권한를 가집니다', 'grant update (end_date) on table auctions to %s');
+
+insert into permission_store(price, description, query)
+values (1, '모든 테이블에 대한 select 권한을 가집니다.', 'grant select on all tables in schema public to %s');
