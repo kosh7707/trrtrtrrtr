@@ -1,6 +1,7 @@
 -- 테스트용 아이디 삭제 쿼리
 drop owned by kosh1234;
 drop user kosh1234;
+delete from accounts;
 
 
 -- root 유저 생성 쿼리

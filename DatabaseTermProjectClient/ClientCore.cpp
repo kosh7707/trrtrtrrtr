@@ -26,36 +26,74 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
 }
 
 unsigned int WINAPI ClientCore::runThread(void* params) {
-    SOCKET sc = (SOCKET)params;
-    char buf[BUF_SIZE];
-    int length = 0;
-    int index = 0;
+    ClientCore* clientCore = static_cast<ClientCore*>(params);
+
+    int index;
     WSANETWORKEVENTS ev;
     HANDLE event = WSACreateEvent();
-
-    WSAEventSelect(sc, event, FD_READ | FD_CLOSE);
+    WSAEventSelect(clientCore->sc, event, FD_READ | FD_CLOSE);
     while (true) {
         index = WSAWaitForMultipleEvents(1, &event, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
-            WSAEnumNetworkEvents(sc, event, &ev);
-            if (ev.lNetworkEvents == FD_READ) {
-                length = recv(sc, buf, BUF_SIZE, 0);
-                if (length > 0) cout << buf << endl;
-            }
+            WSAEnumNetworkEvents(clientCore->sc, event, &ev);
+            if (ev.lNetworkEvents == FD_READ) clientCore->ReadServer();
             else if (ev.lNetworkEvents == FD_CLOSE) {
-                cout << "Server Disconnected" << endl;
-                closesocket(sc);
+                clientCore->~ClientCore();
                 break;
             }
         }
     }
-    WSACleanup();
     _endthreadex(0);
 }
 
+int ClientCore::getEvent(const char* buf) {
+    string temp = buf;
+    string prefix = temp.substr(0, 3);
+    if (prefix == "[0]") return LOGIN_EVENT;
+    else if (prefix == "[1]") return CHAT_EVENT;
+    else return INVALID_EVENT;
+}
+
+string ClientCore::getMessage(const char* buf) {
+    string temp = buf;
+    return temp.substr(3);
+}
+
+void ClientCore::handleChat(const string& msg) {
+    cout << "[Recv] " << msg << "\n";
+}
+
+void ClientCore::handleLogin(const string& msg) {
+    string loginResponse = msg;
+    if (loginResponse == "000") {
+        cout << "login success" << endl;
+        isLogin = true;
+    }
+    else if (loginResponse == "001") {
+        cout << "register success" << endl;
+        isLogin = true;
+    }
+    else if (loginResponse == "002") {
+        cout << "wrong password, login failed" << endl;
+    }
+    else if (loginResponse == "003") {
+        cout << "register failed" << endl;
+    }
+}
+
+void ClientCore::ReadServer() {
+    char buf[BUF_SIZE];
+    recv(sc, buf, BUF_SIZE, 0);
+
+    cout << "[Recv] Server: " << buf << "\n";
+    int event = getEvent(buf); string msg = getMessage(buf);
+    if (event == LOGIN_EVENT) handleLogin(msg);
+    else if (event == CHAT_EVENT) handleChat(msg);
+    else cout << "INVALID EVENT\nmsg: " << msg << endl;
+}
+
 void ClientCore::run() {
-    connectDB();
-    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)sc, 0, &tid);
+    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)this, 0, &tid);
 }
 
 ClientCore::~ClientCore() {
@@ -64,56 +102,25 @@ ClientCore::~ClientCore() {
     WSACleanup();
 }
 
-void ClientCore::login() {
-    char buf[MAXBYTE];
-    int length = 0;
-    int index = 0;
+void ClientCore::login(const string& id, const string& pw) {
+    userId = id;
+    userPw = pw;
+    string loginRequest = "[0]" + id + "," + pw;
+    notifyServer(loginRequest);
+
+    int index;
     WSANETWORKEVENTS ev;
     HANDLE event = WSACreateEvent();
-
     WSAEventSelect(sc, event, FD_READ | FD_CLOSE);
     while (true) {
-        string id, pw, role;
-        cout << "please enter the id:"; cin >> id;
-        cout << "please enter the pw:"; cin >> pw;
-        cout << "please enter the role(0: merchant, 1: mage, 2: hacker):"; cin >> role;
-        string loginRequest = "[0]" + id + "," + pw + "," + role;
-        notifyServer(loginRequest);
-
         index = WSAWaitForMultipleEvents(1, &event, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             WSAEnumNetworkEvents(sc, event, &ev);
             if (ev.lNetworkEvents == FD_READ) {
-                length = recv(sc, buf, MAXBYTE, 0);
-                if (length > 0) {
-                    string loginResponse = buf;
-                    if (loginResponse == "200") {
-                        cout << "login success" << endl;
-                        userId = id;
-                        userPw = pw;
-                        isLogin = true;
-                        break;
-                    }
-                    else if (loginResponse == "201") {
-                        cout << "register success" << endl;
-                        userId = id;
-                        userPw = pw;
-                        isLogin = true;
-                        break;
-                    }
-                    else if (loginResponse == "400") {
-                        cout << "wrong password, login failed" << endl;
-                    }
-                    else if (loginResponse == "401") {
-                        cout << "register failed" << endl;
-                    }
-                }
-            }
-            else if (ev.lNetworkEvents == FD_CLOSE) {
-                cout << "Server Disconnected" << endl;
-                closesocket(sc);
+                ReadServer();
                 break;
             }
+            else if (ev.lNetworkEvents == FD_CLOSE) break;
         }
     }
 }
@@ -122,11 +129,11 @@ bool ClientCore::getIsLogin() {
     return isLogin;
 }
 
-void ClientCore::handleChat(const string& msg) {
+void ClientCore::sendChat(const std::string &msg) {
     notifyServer("[1]" + msg);
 }
 
-void ClientCore::handleCommand(const vector<string>& command) {
+void ClientCore::sendCommand(const vector<std::string> &command) {
     try {
         if (command[0] == "getTestItem") {
             notifyServer("[2]");
@@ -146,37 +153,6 @@ void ClientCore::handleCommand(const vector<string>& command) {
         else if (command[0] == "breakItem") {
             notifyServer("[7]" + command[1] + "," + command[2]);
         }
-        else if (command[0] == "query") {
-            IDatabaseConnection& dc = DatabaseConnection::getInstance();
-            cout << "Enter the SQL query (you need to input ; at the end of query.)\n";
-            string query, temp;
-            while (temp[temp.length()-1] != ';') {
-                getline(cin, temp);
-                query += temp + " ";
-            }
-            for (int i=0; i<=6; i++) query[i] = tolower(query[i]);
-            if (query.substr(0, 6) == "select") {
-                cout << "select quert exec" << endl;
-                auto res = dc.selectQuery(query);
-                cout << "----------------------\n";
-                for (const auto& row : res) {
-                    for (const auto &p: row)
-                        cout << p.first << ":" << p.second << "\n";
-                    cout << "----------------------\n";
-                }
-            }
-            else {
-                auto res = dc.commandQuery(query);
-                if (res) cout << "command query successfully executed" << endl;
-                else cout << "failed to execute command query" << endl;
-            }
-        }
-        else if (command[0] == "openPermissionStore") {
-            notifyServer("[8]");
-        }
-        else if (command[0] == "buyPermission") {
-            notifyServer("[9]" + command[1]);
-        }
         else {
             cout << "Invalid Command" << endl;
         }
@@ -187,6 +163,7 @@ void ClientCore::handleCommand(const vector<string>& command) {
 }
 
 void ClientCore::notifyServer(const string& msg) {
+    cout << "[send] Client: " << msg << "\n";
     send(sc, msg.c_str(), BUF_SIZE, 0);
 }
 
@@ -196,10 +173,5 @@ const string &ClientCore::getUserId() const {
 
 const string &ClientCore::getUserPw() const {
     return userPw;
-}
-
-void ClientCore::connectDB() {
-    IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
-    databaseConnection.connectDB(userId, userPw);
 }
 

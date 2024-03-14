@@ -13,19 +13,11 @@
 #include "Client.h"
 #include "AccountDAO.h"
 #include "InventoryDAO.h"
-#include "PermissionStoreDAO.h"
 #define BUF_SIZE 1024
-#define INVALID_EVENT -1
-#define LOGIN_EVENT 0
-#define CHAT_EVENT 1
-#define GET_TEST_ITEM_EVENT 2
-#define INVENTORY_CHECK_EVENT 3
-#define SELL_ITEM_EVENT 4
-#define BUY_NOW_EVENT 5
-#define BID_EVENT 6
-#define BREAK_ITEM_EVENT 7
-#define OPEN_PERMISSION_STORE_EVENT 8
-#define BUY_PERMISSION_EVENT 9
+enum {
+    INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT, GET_TEST_ITEM_EVENT, INVENTORY_CHECK_EVENT
+    , SELL_ITEM_EVENT, BUY_NOW_EVENT, BID_EVENT, BREAK_ITEM_EVENT,
+};
 
 using namespace std;
 
@@ -37,7 +29,6 @@ private:
     ServerConstant          serverConstant;
     AccountDAO              accountDao;
     InventoryDAO            inventoryDao;
-    PermissionStoreDAO      permissionStoreDao;
     shared_ptr<Client[]>    Clients;
     string                  serverIP;
     int                     maxClientCount;
@@ -55,7 +46,7 @@ private:
     void    addClient();
     void    readClient(const int index);
     void    removeClient(const int index);
-    void    notifyClient(const int index, const string& msg);
+    void    notifyClient(const int index, const string& msg, const int event=CHAT_EVENT);
     void    notifyAllClients(const string& msg);
     vector<string> split(const string& input, char delimiter);
     void    handleLogin(const int index, const string& msg);
@@ -66,8 +57,6 @@ private:
     void    handleBuyNow(const int index, const string& msg);
     void    handleBid(const int index, const string& msg);
     void    handleBreakItem(const int index, const string& msg);
-    void    handleOpenPermissionStore(const int index);
-    void    handleBuyPermission(const int index, const string& msg);
 };
 
 

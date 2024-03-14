@@ -8,8 +8,11 @@
 #include <process.h>
 #include <vector>
 #include "ClientConstant.h"
-#include "DatabaseConnection.h"
 #define BUF_SIZE 1024
+
+enum {
+    INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT
+};
 
 using namespace std;
 
@@ -18,17 +21,12 @@ public:
     ClientCore();
     ~ClientCore();
     void                run();
-    void                login();
+    void                login(const string& id, const string& pw);
+    void                sendChat(const string& msg);
+    void                sendCommand(const vector<string>& command);
     bool                getIsLogin();
-    void                handleChat(const string& msg);
-    void                handleCommand(const vector<string>& command);
-    const string&       getUserId() const;
-    const string&       getUserPw() const;
-    void                connectDB();
-    void                notifyServer(const string& msg);
 
 private:
-    static unsigned int WINAPI runThread(void* params);
     ClientConstant      clientConstant;
     const string        serverIP;
     const int           serverPort;
@@ -38,6 +36,17 @@ private:
     bool                isLogin;
     string              userId;
     string              userPw;
+
+    const string&       getUserId() const;
+    const string&       getUserPw() const;
+    void                notifyServer(const string& msg);
+    void                ReadServer();
+    void                handleLogin(const string& msg);
+    void                handleChat(const string& msg);
+    string              getMessage(const char *buf);
+    int                 getEvent(const char *buf);
+    static unsigned int WINAPI runThread(void* params);
+
 };
 
 

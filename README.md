@@ -20,7 +20,7 @@
 - `File Encoding: UTF-8`
 - `CMake 3.26.4`
 - `MinGW 11.0 (threads: win32)`
-- `C++ 17`
+- `C++17`
 - `postgreSQL 15.5`
 - `libpqxx 7.9.0`
 
@@ -41,39 +41,15 @@ cmake cache를 정리 후 빌드하는 것을 추천합니다.
 ## 유저 기능 및 명령어
 
 유저는 자신의 인벤토리에 있는 아이템의 확인, 경매장에서의 물품 등록/구매/판매가 가능합니다.<br>
-시작할때 정한 직업에 따라 경매 물품 확인 시 확인 가능한 아이템 정보가 달라집니다.<br>
-common: `auction_id`, `item_name`, `quantity`, `seller`, `start_time`, `end_time`, `current_price`, `current_bidder`, `buy_now_price`<br>
-merchant: `score` | mage: `mana`, `buff` | hacker: `gadget`<br>
-
 기본적으로 유저는 채팅을 치거나, 명령어를 입력해서 서버와 소통합니다.<br>
 채팅은 단순히 터미널에 입력하는 것으로 가능합니다. 명령어는 `!command` 를 입력하시면 됩니다.
 
-- `!query` : 데이터베이스에 직접 쿼리를 실행합니다. 최초 유저가 갖는 권한은 `auctionView`에 대한 `select` 입니다. 쿼리는 세미콜론(;)이 등장할 때까지 계속 입력받을 수 있습니다.
 - `!getTestItem` : 테스트 아이템을 하나 얻습니다.
 - `!inventoryCheck` : 현재 내 정보와 인벤토리에 있는 아이템을 확인합니다.
 - `!sellItem [item_id] [quantity] [buyNowPrice] [startingBidPrice]` : 현재 내 인벤토리에 있는 아이템을 판매합니다.
 - `!buyNow [auction_id]` : `auction_id`에 해당하는 경매 품목을 즉시 구매합니다.
 - `!bid [auction_id] [price]` : `auction_id`에 해당하는 경매 품목을 입찰합니다.
-- `!breakItem [item_id] [quantity]` : `item_id`에 해당하는 인벤토리에 있는 아이템을 부수고 마나를 획득합니다.
-- `!openPermissionStore` : `권한 상점(PermissionStore)`에 있는 권한들을 불러옵니다.
-- `!buyPermission [permission_store_id]` : 권한 상점에 있는 권한을 구매합니다. 마나를 소모하여 구매할 수 있습니다. 해커의 경우, 특정 가젯들을 소지해야 구매 가능합니다.
-
-유저는 `!query`를 사용해 직접 `auctionsView`를 확인하며 `경매`를 진행합니다. `경매장(Auctions)` 사용하는 재화는 `accounts`의 `balance`에 기록됩니다. <br>
-유저는 `권한 상점(PermissionStore)`에서 원하는 권한을 구매할 수 있습니다. `권한 상점`에서 사용하는 재화는 `accounts`의 `mana`에 기록됩니다.
-
-현재는 테스트 단계로 다음 세 가지를 테스트할 수 있습니다.
-1. 인벤토리 확인
-2. 경매 진행
-3. 권한 상점에서 권한 구매 및 부여
-
-미구현된 항목은 다음과 같습니다.
-1. 아이템 버프 부분 : 인벤토리에 아이템 소지 시 추가 효과가 발생하도록 구현하려 했으나 미구현입니다.
-2. 게임 관련 기능 전반 : 게임에 관련된 모든 부분이 아직 미구현입니다. 기존에 구현하려 했던 시나리오는 다음과 같습니다.
-   1. 불특정 다수의 인원이 게임하는 것을 전제로 합니다.
-   2. 일정 시간마다 아이템이 경매장에 랜덤하게 등록됩니다.
-   3. 유저는 역할에 따라 승리 조건이 달라집니다. (상세 조건 미구현) 
-3. 클라이언트의 GUI 구현: Qt5를 사용해서 구현하려 했으나, 아직 미구현입니다.
-
+- `!breakItem [item_id] [quantity]` : `item_id`에 해당하는 인벤토리에 있는 아이템을 부숩니다.
 
 ## 개선이 필요한 부분 / 버그
 1. 현재 통신에 사용하는 버퍼 사이즈는 1024 bytes 입니다. 메시지의 크기와는 상관없이 고정이기에, 낭비되는 부분도 많고, 이 이상의 크기는 송수신이 불가합니다.

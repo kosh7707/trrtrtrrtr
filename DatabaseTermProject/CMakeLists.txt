@@ -21,8 +21,6 @@ add_executable(DatabaseTermProject main.cpp
         AccountDAO.h
         InventoryDAO.cpp
         InventoryDAO.h
-        PermissionStoreDAO.h
-        PermissionStoreDAO.cpp
 )
 
 # include libpqxx

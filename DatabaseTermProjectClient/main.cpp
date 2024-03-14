@@ -1,5 +1,4 @@
 #include "ClientCore.h"
-#include "DatabaseConnection.h"
 #include <vector>
 #include <sstream>
 using namespace std;
@@ -16,16 +15,22 @@ vector<string> split(const string& input, char delimiter) {
 int main() {
     try {
         ClientCore clientCore;
-        clientCore.login();
-        clientCore.run();
+
+        while (!clientCore.getIsLogin()) {
+            string id, pw;
+            cout << "please enter the id:"; cin >> id;
+            cout << "please enter the pw:"; cin >> pw;
+            clientCore.login(id, pw);
+        }
 
         cin.ignore();
+        clientCore.run();
         while (clientCore.getIsLogin()) {
             string msg; getline(cin, msg);
-            if (msg[0] != '!') clientCore.handleChat(msg);
+            if (msg[0] != '!') clientCore.sendChat(msg);
             else {
                 vector<string> command = split(msg.substr(1), ' ');
-                clientCore.handleCommand(command);
+                clientCore.sendCommand(command);
             }
         }
     } catch (const exception& e) {

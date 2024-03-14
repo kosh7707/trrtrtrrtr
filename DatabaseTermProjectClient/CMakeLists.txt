@@ -7,15 +7,7 @@ add_executable(DatabaseTermProjectClient main.cpp
         ClientCore.cpp
         ClientCore.h
         ClientConstant.cpp
-        ClientConstant.h
-        DatabaseConnection.cpp
-        DatabaseConnection.h
-        IDatabaseConnection.cpp
-        IDatabaseConnection.h)
-
-# include libpqxx
-add_subdirectory(./libpqxx build-pqxx)
-target_link_libraries(DatabaseTermProjectClient PRIVATE pqxx)
+        ClientConstant.h)
 
 # include winsock2_32
 target_link_libraries(DatabaseTermProjectClient PRIVATE ws2_32)

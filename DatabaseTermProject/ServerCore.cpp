@@ -111,16 +111,21 @@ void ServerCore::removeClient(const int index) {
 }
 
 void ServerCore::notifyAllClients(const string& msg) {
-    cout << msg << endl;
-    for (int i=1; i<ClientsCount; i++)
-        send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0);
+    string send_msg = "[1]" + msg;
+    cout << "[Send] All Clients: " << send_msg << endl;
+    for (int i=1; i<ClientsCount; i++) {
+        send(Clients[i].getSc(), send_msg.c_str(), BUF_SIZE, 0);
+    }
 }
 
-void ServerCore::notifyClient(const int index, const string& msg) {
-    if (msg.length() >= BUF_SIZE) cerr << "Warning: Message may be truncated as it exceeds BUF_SIZE." << endl;
-    send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0);
+void ServerCore::notifyClient(const int index, const string& msg, const int event) {
+    string send_msg;
+    if (event == LOGIN_EVENT) send_msg = "[0]" + msg;
+    else send_msg = "[1]" + msg;
+    cout << "[Send] Clients[" << index << "]: " << send_msg << endl;
+    send(Clients[index].getSc(), send_msg.c_str(), BUF_SIZE, 0);
 }
-
+d
 int ServerCore::getEvent(const char* buf) {
     string temp = buf;
     string prefix = temp.substr(0, 3);
@@ -132,8 +137,6 @@ int ServerCore::getEvent(const char* buf) {
     else if (prefix == "[5]") return BUY_NOW_EVENT;
     else if (prefix == "[6]") return BID_EVENT;
     else if (prefix == "[7]") return BREAK_ITEM_EVENT;
-    else if (prefix == "[8]") return OPEN_PERMISSION_STORE_EVENT;
-    else if (prefix == "[9]") return BUY_PERMISSION_EVENT;
     else return INVALID_EVENT;
 }
 
@@ -212,6 +215,7 @@ void ServerCore::runAuctionWorker() {
 void ServerCore::readClient(const int index) {
     char buf[BUF_SIZE];
     recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
+    cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
     int event = getEvent(buf); string msg = getMessage(buf);
     if (event == LOGIN_EVENT) handleLogin(index, msg);
     else if (event == CHAT_EVENT) handleChat(index, msg);
@@ -221,8 +225,6 @@ void ServerCore::readClient(const int index) {
     else if (event == BUY_NOW_EVENT) handleBuyNow(index, msg);
     else if (event == BID_EVENT) handleBid(index, msg);
     else if (event == BREAK_ITEM_EVENT) handleBreakItem(index, msg);
-    else if (event == OPEN_PERMISSION_STORE_EVENT) handleOpenPermissionStore(index);
-    else if (event == BUY_PERMISSION_EVENT) handleBuyPermission(index, msg);
     else cout << "INVALID EVENT\nmsg: " << msg << endl;
 }
 
@@ -232,69 +234,67 @@ void ServerCore::handleChat(const int index, const string& msg) {
 
 void ServerCore::handleLogin(const int index, const string& msg) {
     vector<string> params = split(msg, ',');
-    string id = params[0];
-    string pw = params[1];
-    string role = params[2];
+    string id = params[0], pw = params[1];
     if (accountDao.checkAccountExists(id)) {
         // login
-        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
+        shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
             Clients[index].setAccount(account);
             accountDao.updateAccountLastLogin(id);
-            notifyClient(index, "200");
+            notifyClient(index, "000", LOGIN_EVENT);
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
-        else notifyClient(index, "400");
+        else notifyClient(index, "002", LOGIN_EVENT);
     }
     else {
         // register
-        accountDao.registerAccount(id, pw, role);
-        shared_ptr<Account> account = accountDao.getAccount(id, pw, role);
+        accountDao.registerAccount(id, pw);
+        shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
             Clients[index].setAccount(account);
-            notifyClient(index, "201");
+            notifyClient(index, "001", LOGIN_EVENT);
             notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
         }
-        else notifyClient(index, "401");
+        else notifyClient(index, "003", LOGIN_EVENT);
     }
 }
 
 void ServerCore::handleGetTestItem(const int index) {
-    string id = Clients[index].getAccount()->getUserId();
-    bool res = inventoryDao.insertItem(id, 1);
+    int account_id = Clients[index].getAccount()->getAccountId();
+    bool res = inventoryDao.insertItem(account_id, 1);
     if (res) {
-        notifyClient(index, "grant user '" + id + "' test item.");
-        cout << "grant user '" + id + "' test item." << endl;
+        notifyClient(index, "Give you test item.");
+        cout << "grant user '" + to_string(account_id) + "' test item." << endl;
     }
     else{
-        notifyClient(index, "error, can't grant user '" + id + "' test item.");
-        cout << "error, can't grant user '" + id + "' test item." << endl;
+        notifyClient(index, "error, can't give you test item.");
+        cout << "error, can't grant user '" + to_string(account_id) + "' test item." << endl;
     }
 }
 
 void ServerCore::handleInventoryCheck(const int index) {
-    string id = Clients[index].getAccount()->getUserId();
-    string res = inventoryDao.inventoryCheck(id);
+    int account_id = Clients[index].getAccount()->getAccountId();
+    string res = inventoryDao.inventoryCheck(account_id);
     notifyClient(index, res);
 }
 
 void ServerCore::handleSellItem(const int index, const string& msg) {
-    string id = Clients[index].getAccount()->getUserId();
+    int account_id = Clients[index].getAccount()->getAccountId();
     vector<string> params = split(msg, ',');
-    bool res = inventoryDao.sellItem(id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
+    bool res = inventoryDao.sellItem(account_id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
     if (res) notifyClient(index, "Item has been successfully registered in the auction.");
     else notifyClient(index, "Failed to register the item in the auction.");
 }
 
 void ServerCore::handleBuyNow(const int index, const string& msg) {
-    string id = Clients[index].getAccount()->getUserId();
+    int account_id = Clients[index].getAccount()->getAccountId();
     vector<string> params = split(msg, ',');
-    pair<bool, pair<int, int>> res = inventoryDao.buyNow(id, stoi(params[0]));
+    pair<bool, pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[0]));
     if (res.first) {
         notifyClient(index, "Item has been successfully purchased in the auction.");
         for (int i=1; i<ClientsCount; i++) {
             if (Clients[i].getAccount()->getAccountId() == res.second.first)
-                notifyClient(i, "your item has been sold to " + id);
+                notifyClient(i, "your item has been sold to " + Clients[i].getAccount()->getUserId());
             else if (Clients[i].getAccount()->getAccountId() == res.second.second)
                 notifyClient(i, "Your auction has been outbid. please check your inventory");
         }
@@ -317,78 +317,9 @@ void ServerCore::handleBid(const int index, const string& msg) {
 }
 
 void ServerCore::handleBreakItem(const int index, const string& msg) {
-    string id = Clients[index].getAccount()->getUserId();
+    int account_id = Clients[index].getAccount()->getAccountId();
     vector<string> params = split(msg, ',');
-    bool res = inventoryDao.breakItem(id, stoi(params[0]), stoi(params[1]));
+    bool res = inventoryDao.breakItem(account_id, stoi(params[0]), stoi(params[1]));
     if (res) notifyClient(index, "Item has been successfully breaked in the inventory.");
     else notifyClient(index, "Failed to break the item.");
 }
-
-void ServerCore::handleOpenPermissionStore(const int index) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    string res = permissionStoreDao.openPermissionStore();
-    notifyClient(index, res);
-}
-
-void ServerCore::handleBuyPermission(const int index, const string& msg) {
-    const string& id = Clients[index].getAccount()->getUserId();
-    vector<string> params = split(msg, ',');
-    bool res = permissionStoreDao.buyPermission(id, stoi(params[0]));
-    if (res) notifyClient(index, "Permission has been successfully purchased in the store.");
-    else notifyClient(index, "Failed to purchased the permission");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
