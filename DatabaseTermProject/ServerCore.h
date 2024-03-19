@@ -13,14 +13,14 @@ public:
     ServerCore();
     [[noreturn]] void run();
 private:
-    ServerConstant          serverConstant;
-    std::shared_ptr<Client[]>    Clients;
-    std::string                  serverIP;
-    int                     maxClientCount;
-    int                     serverPort;
-    int                     ClientsCount;
-    EventHandler*           eventHandler;
-    HANDLE                  auctionWorker;
+    ServerConstant                  serverConstant;
+    std::shared_ptr<Client[]>       Clients;
+    std::string                     serverIP;
+    int                             maxClientCount;
+    int                             serverPort;
+    int                             ClientsCount;
+    std::shared_ptr<EventHandler>   eventHandler;
+    HANDLE                          auctionWorker;
 
     SOCKET  initServer();
     void runAuctionWorker();

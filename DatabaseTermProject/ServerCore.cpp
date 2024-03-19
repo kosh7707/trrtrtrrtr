@@ -4,7 +4,7 @@
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
                             serverIP(serverConstant.getServerIP()) {
-    eventHandler = new EventHandler(this);
+    eventHandler = std::shared_ptr<EventHandler>(new EventHandler(this));
     Clients = std::shared_ptr<Client[]>(new Client[maxClientCount + 1]);
     ClientsCount = 0;
 }
