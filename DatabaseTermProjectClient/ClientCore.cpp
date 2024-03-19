@@ -82,7 +82,7 @@ void ClientCore::handleLogin(const string& msg) {
 }
 
 void ClientCore::ReadServer() {
-    char buf[BUF_SIZE];
+    char buf[BUF_SIZE + 1];
     recv(sc, buf, BUF_SIZE, 0);
 
     cout << "[Recv] Server: " << buf << "\n";

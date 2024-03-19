@@ -2,8 +2,6 @@
 #include "ServerConstant.h"
 #include "DatabaseConnection.h"
 
-using namespace std;
-
 int main() {
     try {
         IDatabaseConnection& dc = DatabaseConnection::getInstance();
@@ -11,8 +9,8 @@ int main() {
         ServerCore sc;
         sc.run();
 
-    } catch (const exception& e) {
-        cerr << e.what() << endl;
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
         return 0;
     }
 }

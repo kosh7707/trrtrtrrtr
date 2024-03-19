@@ -3,6 +3,6 @@
 -- Detecting CXX compile features - done
 -- Generating config.h
 -- Generating config.h - done
--- Configuring done (9.2s)
+-- Configuring done (9.0s)
 -- Generating done (0.1s)
 -- Build files have been written to: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release

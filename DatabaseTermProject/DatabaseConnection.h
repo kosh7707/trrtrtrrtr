@@ -6,7 +6,6 @@
 #include <memory>
 #include "ServerConstant.h"
 #include "IDatabaseConnection.h"
-using namespace std;
 
 class DatabaseConnection : IDatabaseConnection {
 public:
@@ -15,20 +14,20 @@ public:
         return dc;
     }
     bool isConnected();
-    bool commandQuery(const string& query);
-    vector<map<string, string>> selectQuery(const string& query);
-    bool transaction(const vector<string>& queries);
+    bool commandQuery(const std::string& query);
+    std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query);
+    bool transaction(const std::vector<std::string>& queries);
 
     template <typename... Args>
-    static string queryFormatting(Args... formats) {
+    static std::string queryFormatting(Args... formats) {
         char queryBuffer[1024];
         snprintf(queryBuffer, sizeof(queryBuffer), formats...);
-        return string(queryBuffer);
+        return std::string(queryBuffer);
     }
 private:
     DatabaseConnection();
     ServerConstant  serverConstant;
-    unique_ptr<pqxx::connection> conn;
+    std::unique_ptr<pqxx::connection> conn;
 };
 
 

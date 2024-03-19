@@ -3,28 +3,26 @@
 
 #include <string>
 
-using namespace std;
-
 class Account {
 public:
     Account();
-    Account(int accountId, const string& userId, const string& userPw, int balance,
-            const string& createdDate, const string& lastLogin);
+    Account(int accountId, const std::string& userId, const std::string& userPw, int balance,
+            const std::string& createdDate, const std::string& lastLogin);
 
     int             getAccountId() const;
-    const string&   getUserId() const;
-    const string&   getUserPw() const;
-    const string&   getCreatedDate() const;
-    const string&   getLastLogin() const;
+    const std::string&   getUserId() const;
+    const std::string&   getUserPw() const;
+    const std::string&   getCreatedDate() const;
+    const std::string&   getLastLogin() const;
     int             getBalance();
     void            setBalance(int b);
 private:
     int     accountId;
-    string  userId;
-    string  userPw;
+    std::string  userId;
+    std::string  userPw;
     int     balance;
-    string  createdDate;
-    string  lastLogin;
+    std::string  createdDate;
+    std::string  lastLogin;
 };
 
 

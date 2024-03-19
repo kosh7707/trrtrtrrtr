@@ -1,10 +1,10 @@
 #include "Client.h"
 
-const shared_ptr<Account> Client::getAccount() const {
+const std::shared_ptr<Account> Client::getAccount() const {
     return _account;
 }
 
-void Client::setAccount(shared_ptr<Account> account) {
+void Client::setAccount(std::shared_ptr<Account> account) {
     _account = account;
 }
 
@@ -16,7 +16,7 @@ HANDLE Client::getEv() {
     return _ev;
 }
 
-const string& Client::getIp() {
+const std::string& Client::getIp() {
     return _ip;
 }
 
@@ -28,7 +28,7 @@ void Client::setEv(HANDLE ev) {
     _ev = ev;
 }
 
-void Client::setIp(string ip) {
+void Client::setIp(std::string ip) {
     _ip = ip;
 }
 

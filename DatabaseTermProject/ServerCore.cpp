@@ -1,9 +1,11 @@
 #include "ServerCore.h"
+#include "EventHandler.h"
 
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
                             serverIP(serverConstant.getServerIP()) {
-    Clients = shared_ptr<Client[]>(new Client[maxClientCount + 1]);
+    eventHandler = new EventHandler(this);
+    Clients = std::shared_ptr<Client[]>(new Client[maxClientCount + 1]);
     ClientsCount = 0;
 }
 
@@ -14,12 +16,12 @@ SOCKET ServerCore::initServer() {
 
     WORD wVersionRequested = MAKEWORD(2, 2);
     if (WSAStartup(wVersionRequested, &wsadata) != 0) {
-        cout << "WSAStartup Error." << endl;
+        std::cout << "WSAStartup Error." << std::endl;
         return 0;
     }
 
     if ((sc = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
-        cout << "socket creation error." << endl;
+        std::cout << "socket creation error." << std::endl;
         return 0;
     }
 
@@ -27,12 +29,12 @@ SOCKET ServerCore::initServer() {
     socketAddress.sin_addr.s_addr = htonl(INADDR_ANY);
     socketAddress.sin_port = htons(serverPort);
     if (bind(sc, reinterpret_cast<sockaddr*>(&socketAddress), sizeof(socketAddress)) < 0) {
-        cout << "bind error." << "\n";
+        std::cout << "bind error." << "\n";
         return 0;
     }
 
     if (listen(sc, SOMAXCONN) < 0) {
-        cout << "listen error." << endl;
+        std::cout << "listen error." << std::endl;
         return 0;
     }
 
@@ -51,7 +53,7 @@ SOCKET ServerCore::initServer() {
 
     SOCKET sc = initServer();
     if (sc == 0) {
-        cout << "socket initialization error" << endl;
+        std::cout << "socket initialization error" << std::endl;
         exit(0);
     }
 
@@ -63,7 +65,7 @@ SOCKET ServerCore::initServer() {
     WSAEventSelect(sc, event, FD_ACCEPT);
     ClientsCount++;
 
-    cout << "server listening at 127.0.0.1:7707" << endl;
+    std::cout << "server listening at 127.0.0.1:7707" << std::endl;
     int index;
     while (true) {
         for (int i=0; i<ClientsCount; i++)
@@ -96,67 +98,35 @@ void ServerCore::addClient() {
     ClientsCount++;
 }
 
+void ServerCore::readClient(const int index) {
+    char buf[BUF_SIZE + 1];
+    recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
+    std::cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
+    eventHandler->handling(index, buf);
+}
+
 void ServerCore::removeClient(const int index) {
     if (Clients[index].getAccount() == nullptr) {
         ClientsCount--;
-        swap(Clients[index], Clients[ClientsCount]);
+        std::swap(Clients[index], Clients[ClientsCount]);
     }
     else {
-        string removeClientIP = Clients[index].getIp();
-        string removeClientNickName = Clients[index].getAccount()->getUserId();
+        std::string removeClientIP = Clients[index].getIp();
+        std::string removeClientNickName = Clients[index].getAccount()->getUserId();
         ClientsCount--;
-        swap(Clients[index], Clients[ClientsCount]);
+        std::swap(Clients[index], Clients[ClientsCount]);
         notifyAllClients("Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")");
     }
 }
 
-void ServerCore::notifyAllClients(const string& msg) {
-    string send_msg = "[1]" + msg;
-    cout << "[Send] All Clients: " << send_msg << endl;
-    for (int i=1; i<ClientsCount; i++) {
-        send(Clients[i].getSc(), send_msg.c_str(), BUF_SIZE, 0);
-    }
+void ServerCore::notifyAllClients(const std::string& msg) {
+    for (int i=1; i<ClientsCount; i++)
+        send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0);
 }
 
-void ServerCore::notifyClient(const int index, const string& msg, const int event) {
-    string send_msg;
-    if (event == LOGIN_EVENT) send_msg = "[0]" + msg;
-    else send_msg = "[1]" + msg;
-    cout << "[Send] Clients[" << index << "]: " << send_msg << endl;
-    send(Clients[index].getSc(), send_msg.c_str(), BUF_SIZE, 0);
+void ServerCore::notifyClient(const int index, const std::string& msg) {
+    send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0);
 }
-d
-int ServerCore::getEvent(const char* buf) {
-    string temp = buf;
-    string prefix = temp.substr(0, 3);
-    if (prefix == "[0]") return LOGIN_EVENT;
-    else if (prefix == "[1]") return CHAT_EVENT;
-    else if (prefix == "[2]") return GET_TEST_ITEM_EVENT;
-    else if (prefix == "[3]") return INVENTORY_CHECK_EVENT;
-    else if (prefix == "[4]") return SELL_ITEM_EVENT;
-    else if (prefix == "[5]") return BUY_NOW_EVENT;
-    else if (prefix == "[6]") return BID_EVENT;
-    else if (prefix == "[7]") return BREAK_ITEM_EVENT;
-    else return INVALID_EVENT;
-}
-
-string ServerCore::getMessage(const char* buf) {
-    string temp = buf;
-    return temp.substr(3);
-}
-
-vector<string> ServerCore::split(const string& input, char delimiter) {
-    vector<string> result;
-    stringstream ss(input);
-    string token;
-    while (getline(ss, token, delimiter))
-        result.push_back(token);
-    return result;
-}
-
-/*-------------------
-| Event Handling Part
--------------------*/
 
 unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
     ServerCore* serverCore = static_cast<ServerCore*>(params);
@@ -164,7 +134,7 @@ unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
     while (dc.isConnected()) {
         auto res = dc.selectQuery("select * from auctions where end_time <= CURRENT_TIMESTAMP");
         for (auto row : res) {
-            vector<string> queries;
+            std::vector<std::string> queries;
             int auction_id = stoi(row["auction_id"]);
             int item_id = stoi(row["item_id"]);
             int seller_id = stoi(row["seller_id"]);
@@ -182,7 +152,7 @@ unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
                 if (dc.transaction(queries)) {
                     for (int i=1; i<serverCore->ClientsCount; i++) {
                         if (serverCore->Clients[i].getAccount()->getAccountId() == current_bidder_id)
-                            serverCore->notifyClient(i, "You've won the auction item_id: " + to_string(item_id) + ". please check your inventory");
+                            serverCore->notifyClient(i, "You've won the auction item_id: " + std::to_string(item_id) + ". please check your inventory");
                         else if (serverCore->Clients[i].getAccount()->getAccountId() == seller_id)
                             serverCore->notifyClient(i, "your item has been sold out. please check your inventory");
                     }
@@ -202,7 +172,7 @@ unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
                 }
             }
         }
-        this_thread::sleep_for(chrono::seconds(5));
+        std::this_thread::sleep_for(std::chrono::seconds(5));
     }
     return 0;
 }
@@ -210,116 +180,4 @@ unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
 void ServerCore::runAuctionWorker() {
     unsigned int tid;
     auctionWorker = (HANDLE)_beginthreadex(NULL, 0, runAuctionWorkerThread, (void*)this, 0, &tid);
-}
-
-void ServerCore::readClient(const int index) {
-    char buf[BUF_SIZE];
-    recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
-    cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
-    int event = getEvent(buf); string msg = getMessage(buf);
-    if (event == LOGIN_EVENT) handleLogin(index, msg);
-    else if (event == CHAT_EVENT) handleChat(index, msg);
-    else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index);
-    else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index);
-    else if (event == SELL_ITEM_EVENT) handleSellItem(index, msg);
-    else if (event == BUY_NOW_EVENT) handleBuyNow(index, msg);
-    else if (event == BID_EVENT) handleBid(index, msg);
-    else if (event == BREAK_ITEM_EVENT) handleBreakItem(index, msg);
-    else cout << "INVALID EVENT\nmsg: " << msg << endl;
-}
-
-void ServerCore::handleChat(const int index, const string& msg) {
-    notifyAllClients(Clients[index].getAccount()->getUserId() + " : " + msg);
-}
-
-void ServerCore::handleLogin(const int index, const string& msg) {
-    vector<string> params = split(msg, ',');
-    string id = params[0], pw = params[1];
-    if (accountDao.checkAccountExists(id)) {
-        // login
-        shared_ptr<Account> account = accountDao.getAccount(id, pw);
-        if (account != nullptr) {
-            Clients[index].setAccount(account);
-            accountDao.updateAccountLastLogin(id);
-            notifyClient(index, "000", LOGIN_EVENT);
-            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
-        }
-        else notifyClient(index, "002", LOGIN_EVENT);
-    }
-    else {
-        // register
-        accountDao.registerAccount(id, pw);
-        shared_ptr<Account> account = accountDao.getAccount(id, pw);
-        if (account != nullptr) {
-            Clients[index].setAccount(account);
-            notifyClient(index, "001", LOGIN_EVENT);
-            notifyAllClients("New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")");
-        }
-        else notifyClient(index, "003", LOGIN_EVENT);
-    }
-}
-
-void ServerCore::handleGetTestItem(const int index) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    bool res = inventoryDao.insertItem(account_id, 1);
-    if (res) {
-        notifyClient(index, "Give you test item.");
-        cout << "grant user '" + to_string(account_id) + "' test item." << endl;
-    }
-    else{
-        notifyClient(index, "error, can't give you test item.");
-        cout << "error, can't grant user '" + to_string(account_id) + "' test item." << endl;
-    }
-}
-
-void ServerCore::handleInventoryCheck(const int index) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    string res = inventoryDao.inventoryCheck(account_id);
-    notifyClient(index, res);
-}
-
-void ServerCore::handleSellItem(const int index, const string& msg) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    vector<string> params = split(msg, ',');
-    bool res = inventoryDao.sellItem(account_id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
-    if (res) notifyClient(index, "Item has been successfully registered in the auction.");
-    else notifyClient(index, "Failed to register the item in the auction.");
-}
-
-void ServerCore::handleBuyNow(const int index, const string& msg) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    vector<string> params = split(msg, ',');
-    pair<bool, pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[0]));
-    if (res.first) {
-        notifyClient(index, "Item has been successfully purchased in the auction.");
-        for (int i=1; i<ClientsCount; i++) {
-            if (Clients[i].getAccount()->getAccountId() == res.second.first)
-                notifyClient(i, "your item has been sold to " + Clients[i].getAccount()->getUserId());
-            else if (Clients[i].getAccount()->getAccountId() == res.second.second)
-                notifyClient(i, "Your auction has been outbid. please check your inventory");
-        }
-    }
-    else notifyClient(index, "Failed to purchase the item in the auction.");
-}
-
-void ServerCore::handleBid(const int index, const string& msg) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    vector<string> params = split(msg, ',');
-    pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[0]), stoi(params[1]));
-    if (res.first) {
-        notifyClient(index, "Bid has been successfully placed in the auction.");
-        for (int i=1; i<ClientsCount; i++) {
-            if (Clients[i].getAccount()->getAccountId() == res.second)
-                notifyClient(i, "Your auction has been outbid. please check your inventory");
-        }
-    }
-    else notifyClient(index, "Failed to place the bid in the auction.");
-}
-
-void ServerCore::handleBreakItem(const int index, const string& msg) {
-    int account_id = Clients[index].getAccount()->getAccountId();
-    vector<string> params = split(msg, ',');
-    bool res = inventoryDao.breakItem(account_id, stoi(params[0]), stoi(params[1]));
-    if (res) notifyClient(index, "Item has been successfully breaked in the inventory.");
-    else notifyClient(index, "Failed to break the item.");
 }

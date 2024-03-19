@@ -6,14 +6,13 @@
 #include <vector>
 #include <map>
 #include <pqxx/pqxx>
-using namespace std;
 
 class IDatabaseConnection {
 public:
     virtual bool isConnected() = 0;
-    virtual bool commandQuery(const string& query) = 0;
-    virtual vector<map<string, string>> selectQuery(const string& query) = 0;
-    virtual bool transaction(const vector<string>& queries) = 0;
+    virtual bool commandQuery(const std::string& query) = 0;
+    virtual std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query) = 0;
+    virtual bool transaction(const std::vector<std::string>& queries) = 0;
 };
 
 

@@ -1646,3 +1646,607 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:2 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_1af29 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_1af29.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_1af29.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -o cmTC_1af29.exe -Wl,--out-implib,libcmTC_1af29.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:6 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_7d393 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7d393.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_7d393.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -o cmTC_7d393.exe -Wl,--out-implib,libcmTC_7d393.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:10 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_3f9e4 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_3f9e4.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
+        FAILED: CMakeFiles/cmTC_3f9e4.dir/PQXX_HAVE_CMP.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_3f9e4.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx: In function 'int main()':
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:15: error: 'cmp_greater' is not a member of 'std'
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |               ^~~~~~~~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:15: note: 'std::cmp_greater' is only available from C++20 onwards
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:43: error: 'cmp_less_equal' is not a member of 'std'
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |                                           ^~~~~~~~~~~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:43: note: 'std::cmp_less_equal' is only available from C++20 onwards
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:14 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_02a90 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_02a90.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        FAILED: CMakeFiles/cmTC_02a90.dir/PQXX_HAVE_CONCEPTS.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_02a90.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx:5:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+            5 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx:8:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+            8 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:18 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_aa547 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_aa547.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_aa547.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -o cmTC_aa547.exe -Wl,--out-implib,libcmTC_aa547.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:22 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_eabb7 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_eabb7.dir/PQXX_HAVE_GCC_PURE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_eabb7.dir/PQXX_HAVE_GCC_PURE.cxx.obj -o cmTC_eabb7.exe -Wl,--out-implib,libcmTC_eabb7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:26 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_cde41 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_cde41.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_cde41.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -o cmTC_cde41.exe -Wl,--out-implib,libcmTC_cde41.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:30 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c8bee && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_c8bee.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
+        FAILED: CMakeFiles/cmTC_c8bee.dir/PQXX_HAVE_LIKELY.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_c8bee.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx: In function 'int main(int, char**)':
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:21: error: 'because' was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                     ^~~~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:30: error: 'older' was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                              ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:37: error: 'C' was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                     ^
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:42: error: 'standard' was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                          ^~~~~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:3: error: 'deliberately_fail' was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |   ^~~~~~~~~~~~~~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:34 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_MULTIDIM"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_644d2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_644d2.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        FAILED: CMakeFiles/cmTC_644d2.dir/PQXX_HAVE_MULTIDIM.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_644d2.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx:5:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+            5 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx:8:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+            8 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:38 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_584cf && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_584cf.dir/PQXX_HAVE_PATH.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_PATH.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_584cf.dir/PQXX_HAVE_PATH.cxx.obj -o cmTC_584cf.exe -Wl,--out-implib,libcmTC_584cf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:42 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_POLL"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_a795a && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_a795a.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
+        FAILED: CMakeFiles/cmTC_a795a.dir/PQXX_HAVE_POLL.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_a795a.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_POLL.cxx:2:10: fatal error: poll.h: No such file or directory
+            2 | #include <poll.h>
+              |          ^~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:46 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_84841 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_84841.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_84841.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -o cmTC_84841.exe -Wl,--out-implib,libcmTC_84841.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:50 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SOURCE_LOCATION"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_6e2f9 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_6e2f9.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        FAILED: CMakeFiles/cmTC_6e2f9.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_6e2f9.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:5:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+            5 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:8:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+            8 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:54 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_172e8 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_172e8.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
+        FAILED: CMakeFiles/cmTC_172e8.dir/PQXX_HAVE_SPAN.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_172e8.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx:5:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+            5 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx:8:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+            8 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:58 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SSIZE"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_3f14f && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_3f14f.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
+        FAILED: CMakeFiles/cmTC_3f14f.dir/PQXX_HAVE_SSIZE.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_3f14f.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx:5:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+            5 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx:8:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+            8 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:62 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_f4a42 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_f4a42.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        FAILED: CMakeFiles/cmTC_f4a42.dir/PQXX_HAVE_STRERROR_R.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_f4a42.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx: In function 'int main()':
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx:11:12: error: 'strerror_r' was not declared in this scope; did you mean 'strerror_s'?
+           11 |   auto res{strerror_r(1, buffer, 200)};
+              |            ^~~~~~~~~~
+              |            strerror_s
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:66 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_ea4bb && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_ea4bb.dir/PQXX_HAVE_STRERROR_S.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_ea4bb.dir/PQXX_HAVE_STRERROR_S.cxx.obj -o cmTC_ea4bb.exe -Wl,--out-implib,libcmTC_ea4bb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:70 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_48143 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_48143.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_48143.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -o cmTC_48143.exe -Wl,--out-implib,libcmTC_48143.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:74 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_UNREACHABLE"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_6b62e && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_6b62e.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
+        FAILED: CMakeFiles/cmTC_6b62e.dir/PQXX_HAVE_UNREACHABLE.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_6b62e.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx:5:4: error: #error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
+            5 | #  error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
+              |    ^~~~~
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx:8:4: error: #error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is false."
+            8 | #  error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is false."
+              |    ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:78 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_5a4c2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_5a4c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        FAILED: CMakeFiles/cmTC_5a4c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_5a4c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx: In function 'int main()':
+        C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx:6:27: error: 'year' is not a member of 'std::chrono'
+            6 |   return int(std::chrono::year{1});
+              |                           ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:82 (try_compile)"
+      - "libpqxx/cmake/config.cmake:56 (include)"
+      - "libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/cmake"
+    buildResult:
+      variable: "no_need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_2e022 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_2e022.dir/no_need_fslib.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProject/libpqxx/config-tests/no_need_fslib.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_2e022.dir/no_need_fslib.cxx.obj -o cmTC_2e022.exe -Wl,--out-implib,libcmTC_2e022.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

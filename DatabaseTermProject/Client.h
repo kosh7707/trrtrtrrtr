@@ -8,19 +8,19 @@
 
 class Client {
 public:
-    const shared_ptr<Account> getAccount() const;
+    const std::shared_ptr<Account> getAccount() const;
     SOCKET          getSc();
     HANDLE          getEv();
-    const string&   getIp();
-    void            setAccount(shared_ptr<Account> account);
+    const std::string&   getIp();
+    void            setAccount(std::shared_ptr<Account> account);
     void            setSc(SOCKET sc);
     void            setEv(HANDLE ev);
-    void            setIp(string ip);
+    void            setIp(std::string ip);
 private:
-    shared_ptr<Account> _account;
+    std::shared_ptr<Account> _account;
     SOCKET _sc;
     HANDLE _ev;
-    string _ip;
+    std::string _ip;
 };
 
 
