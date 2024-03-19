@@ -1,6 +1,7 @@
 #ifndef DATABASETERMPROJECT_SERVERCORE_H
 #define DATABASETERMPROJECT_SERVERCORE_H
 
+#include <unordered_map>
 #include "ServerConstant.h"
 #include "Client.h"
 #define BUF_SIZE 1024
@@ -13,14 +14,15 @@ public:
     ServerCore();
     [[noreturn]] void run();
 private:
-    ServerConstant                  serverConstant;
-    std::shared_ptr<Client[]>       Clients;
-    std::string                     serverIP;
-    int                             maxClientCount;
-    int                             serverPort;
-    int                             ClientsCount;
-    std::shared_ptr<EventHandler>   eventHandler;
-    HANDLE                          auctionWorker;
+    ServerConstant                          serverConstant;
+    std::shared_ptr<Client[]>               Clients;
+    std::string                             serverIP;
+    int                                     maxClientCount;
+    int                                     serverPort;
+    int                                     ClientsCount;
+    std::shared_ptr<EventHandler>           eventHandler;
+    HANDLE                                  auctionWorker;
+    std::unordered_map<std::string, std::vector<SOCKET>>    rooms;
 
     SOCKET  initServer();
     void runAuctionWorker();

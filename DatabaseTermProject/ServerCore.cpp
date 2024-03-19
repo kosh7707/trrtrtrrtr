@@ -7,6 +7,12 @@ ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
     eventHandler = std::shared_ptr<EventHandler>(new EventHandler(this));
     Clients = std::shared_ptr<Client[]>(new Client[maxClientCount + 1]);
     ClientsCount = 0;
+
+    rooms = std::unordered_map<std::string, std::vector<SOCKET>>();
+    rooms.insert({"1채널", std::vector<SOCKET>()});
+    rooms.insert({"2채널", std::vector<SOCKET>()});
+    rooms.insert({"3채널", std::vector<SOCKET>()});
+    rooms.insert({"4채널", std::vector<SOCKET>()});
 }
 
 SOCKET ServerCore::initServer() {
