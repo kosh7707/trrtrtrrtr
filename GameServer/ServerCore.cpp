@@ -98,7 +98,8 @@ void ServerCore::addClient() {
 
 void ServerCore::readClient(const int index) {
     char buf[BUF_SIZE + 1];
-    recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
+    if (recv(Clients[index].getSc(), buf, BUF_SIZE, 0) <= 0)
+        std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
     std::cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
     auto res = eventHandler.handling(index, buf, ClientsCount, Clients);
     for (auto it : res) {
@@ -124,12 +125,15 @@ void ServerCore::removeClient(const int index) {
 void ServerCore::notifyAllClients(const std::string& msg) {
     std::cout << "[send, all clients]: " << msg << "\n";
     for (int i=1; i<ClientsCount; i++)
-        send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0);
+        if(send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
+            std::cerr << "send error, errno: " << errno << "\n";
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
     std::cout << "[send, client[" << index << "]]: " << msg << "\n";
-    send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0);
+    std::cout << msg.c_str() << "\n";
+    if (send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
+        std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {

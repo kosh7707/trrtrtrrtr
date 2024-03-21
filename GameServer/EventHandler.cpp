@@ -105,7 +105,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int 
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    bool res = inventoryDao.sellItem(account_id, stoi(params[1]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
+    bool res = inventoryDao.sellItem(account_id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
     if (res) ret.push_back({index, "[1]Item has been successfully registered in the auction."});
     else ret.push_back({index, "[1]Failed to register the item in the auction."});
     return ret;
@@ -115,7 +115,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleBuyNow(const int in
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    std::pair<bool, std::pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[1]));
+    std::pair<bool, std::pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[0]));
     if (res.first) {
         ret.push_back({index, "[1]Item has been successfully purchased in the auction."});
         for (int i=1; i<ClientsCount; i++) {
@@ -133,7 +133,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleBid(const int index
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    std::pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[1]), stoi(params[1]));
+    std::pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[0]), stoi(params[1]));
     if (res.first) {
         ret.push_back({index, "[1]Bid has been successfully placed in the auction."});
         for (int i=1; i<ClientsCount; i++) {
@@ -149,7 +149,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleBreakItem(const int
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    bool res = inventoryDao.breakItem(account_id, stoi(params[1]), stoi(params[1]));
+    bool res = inventoryDao.breakItem(account_id, stoi(params[0]), stoi(params[1]));
     if (res) ret.push_back({index, "[1]Item has been successfully breaked in the inventory."});
     else ret.push_back({index, "[1]Failed to break the item."});
     return ret;

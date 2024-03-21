@@ -87,7 +87,8 @@ void ClientCore::handleLogin(const string& msg) {
 
 void ClientCore::ReadServer() {
     char buf[BUF_SIZE + 1];
-    recv(sc, buf, BUF_SIZE, 0);
+    if (recv(sc, buf, BUF_SIZE, 0) == -1)
+        std::cerr << "recv error, errno: " << strerror(errno) << "\n";
 
     int event = getEvent(buf); string msg = getMessage(buf);
     if (event == LOGIN_EVENT) handleLogin(msg);
@@ -165,7 +166,8 @@ void ClientCore::sendCommand(const vector<std::string> &command) {
 }
 
 void ClientCore::notifyServer(const string& msg) {
-    send(sc, msg.c_str(), BUF_SIZE, 0);
+    if (send(sc, msg.c_str(), BUF_SIZE, 0) == -1)
+        std::cerr << "send error, errno: " << strerror(errno) << "\n";
 }
 
 const string &ClientCore::getUserId() const {
