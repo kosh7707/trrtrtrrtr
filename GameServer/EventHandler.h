@@ -5,33 +5,27 @@
 #include "AccountDAO.h"
 #include "AuctionDAO.h"
 
-class ServerCore;
-
 class EventHandler {
 public:
-    EventHandler(ServerCore* serverCore);
-    void handling(const int index, const char* buf);
+    std::vector<std::pair<int, std::string>> handling(const int index, const char* buf, const int ClientsCount, const std::shared_ptr<Client[]> Clients);
 private:
     std::vector<std::string> split(const std::string &input);
-    int     getEvent(const char* buf);
-    std::string  getMessage(const char* buf);
-    void    notifyClient(const int index, const std::string& msg, const int event);
-    void    notifyAllClients(const std::string& msg);
-    void    handleLogin(const int index, const std::string& msg);
-    void    handleChat(const int index, const std::string& msg);
-    void    handleGetTestItem(const int index);
-    void    handleInventoryCheck(const int index);
-    void    handleSellItem(const int index, const std::string& msg);
-    void    handleBuyNow(const int index, const std::string& msg);
-    void    handleBid(const int index, const std::string& msg);
-    void    handleBreakItem(const int index, const std::string& msg);
-    void    handleAuction(const int index);
+    std::string     getMessage(const char* buf);
+    int             getEvent(const char* buf);
+    std::vector<std::pair<int, std::string>>    handleLogin(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleChat(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleGetTestItem(const int index, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleInventoryCheck(const int index, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleSellItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleBuyNow(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleBid(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleBreakItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>>    handleAuctionCheck(const int index);
 private:
     enum {
         INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT, GET_TEST_ITEM_EVENT, INVENTORY_CHECK_EVENT
         , SELL_ITEM_EVENT, BUY_NOW_EVENT, BID_EVENT, BREAK_ITEM_EVENT, AUCTION_CHECK_EVENT,
     };
-    ServerCore*         serverCore;
     InventoryDAO        inventoryDao;
     AccountDAO          accountDao;
     AuctionDAO          auctionDao;

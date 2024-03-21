@@ -1,9 +1,9 @@
 #ifndef DATABASETERMPROJECT_SERVERCORE_H
 #define DATABASETERMPROJECT_SERVERCORE_H
 
-#include <unordered_map>
-#include "ServerConstant.h"
 #include "Client.h"
+#include "EventHandler.h"
+#include "ServerConstant.h"
 #include "AuctionDAO.h"
 #define BUF_SIZE 1024
 
@@ -21,7 +21,7 @@ private:
     int                                     maxClientCount;
     int                                     serverPort;
     int                                     ClientsCount;
-    std::shared_ptr<EventHandler>           eventHandler;
+    EventHandler                            eventHandler;
     HANDLE                                  auctionWorker;
     AuctionDAO                              auctionDao;
 

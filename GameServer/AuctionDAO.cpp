@@ -14,7 +14,7 @@ std::string AuctionDAO::auctionCheck() {
     return ss.str();
 }
 
-std::vector<std::pair<int, std::string>> AuctionDAO::outdatedItemCheck(int ClientsCount, std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> AuctionDAO::outdatedItemCheck(int ClientsCount, const std::shared_ptr<Client[]> Clients) {
     std::vector<std::pair<int, std::string>> ret;
 
     IDatabaseConnection& dc = DatabaseConnection::getInstance();

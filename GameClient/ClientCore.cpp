@@ -46,6 +46,10 @@ unsigned int WINAPI ClientCore::runThread(void* params) {
     _endthreadex(0);
 }
 
+void ClientCore::run() {
+    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)this, 0, &tid);
+}
+
 int ClientCore::getEvent(const char* buf) {
     string temp = buf;
     string prefix = temp.substr(0, 3);
@@ -89,10 +93,6 @@ void ClientCore::ReadServer() {
     if (event == LOGIN_EVENT) handleLogin(msg);
     else if (event == CHAT_EVENT) handleChat(msg);
     else cout << "INVALID EVENT\nmsg: " << msg << endl;
-}
-
-void ClientCore::run() {
-    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)this, 0, &tid);
 }
 
 ClientCore::~ClientCore() {

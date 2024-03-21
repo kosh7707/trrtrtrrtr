@@ -1,10 +1,8 @@
 #include "ServerCore.h"
-#include "EventHandler.h"
 
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
                             serverIP(serverConstant.getServerIP()) {
-    eventHandler = std::shared_ptr<EventHandler>(new EventHandler(this));
     Clients = std::shared_ptr<Client[]>(new Client[maxClientCount + 1]);
     ClientsCount = 0;
 }
@@ -102,7 +100,11 @@ void ServerCore::readClient(const int index) {
     char buf[BUF_SIZE + 1];
     recv(Clients[index].getSc(), buf, BUF_SIZE, 0);
     std::cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
-    eventHandler->handling(index, buf);
+    auto res = eventHandler.handling(index, buf, ClientsCount, Clients);
+    for (auto it : res) {
+        if (it.first == 0) notifyAllClients(it.second);
+        else notifyClient(it.first, it.second);
+    }
 }
 
 void ServerCore::removeClient(const int index) {
@@ -126,7 +128,7 @@ void ServerCore::notifyAllClients(const std::string& msg) {
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
-    std::cout << "[send, client[" << index << "]: " << msg << "\n";
+    std::cout << "[send, client[" << index << "]]: " << msg << "\n";
     send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0);
 }
 

@@ -1,20 +1,19 @@
 #include "EventHandler.h"
-#include "ServerCore.h"
 
-EventHandler::EventHandler(ServerCore* serverCore) : serverCore(serverCore) {}
-
-void EventHandler::handling(const int index, const char* buf) {
+std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const char* buf, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
     int event = getEvent(buf); std::string msg = getMessage(buf);
-    if (event == LOGIN_EVENT) handleLogin(index, msg);
-    else if (event == CHAT_EVENT) handleChat(index, msg);
-    else if (event == GET_TEST_ITEM_EVENT) handleGetTestItem(index);
-    else if (event == INVENTORY_CHECK_EVENT) handleInventoryCheck(index);
-    else if (event == SELL_ITEM_EVENT) handleSellItem(index, msg);
-    else if (event == BUY_NOW_EVENT) handleBuyNow(index, msg);
-    else if (event == BID_EVENT) handleBid(index, msg);
-    else if (event == BREAK_ITEM_EVENT) handleBreakItem(index, msg);
-    else if (event == AUCTION_CHECK_EVENT) handleAuction(index);
+    std::vector<std::pair<int, std::string>> ret;
+    if (event == LOGIN_EVENT) ret = handleLogin(index, msg, Clients);
+    else if (event == CHAT_EVENT) ret = handleChat(index, msg, Clients);
+    else if (event == GET_TEST_ITEM_EVENT) ret = handleGetTestItem(index, Clients);
+    else if (event == INVENTORY_CHECK_EVENT) ret = handleInventoryCheck(index, Clients);
+    else if (event == SELL_ITEM_EVENT) ret = handleSellItem(index, msg, Clients);
+    else if (event == BUY_NOW_EVENT) ret = handleBuyNow(index, msg, ClientsCount, Clients);
+    else if (event == BID_EVENT) ret = handleBid(index, msg, ClientsCount, Clients);
+    else if (event == BREAK_ITEM_EVENT) ret = handleBreakItem(index, msg, Clients);
+    else if (event == AUCTION_CHECK_EVENT) ret = handleAuctionCheck(index);
     else std::cout << "INVALID EVENT\nmsg: " << msg << std::endl;
+    return ret;
 }
 
 std::vector<std::string> EventHandler::split(const std::string &input) {
@@ -46,118 +45,119 @@ std::string EventHandler::getMessage(const char* buf) {
     return temp.substr(3);
 }
 
-void EventHandler::notifyClient(const int index, const std::string& msg, const int event=CHAT_EVENT) {
-    switch (event) {
-        case LOGIN_EVENT:
-            serverCore->notifyClient(index, "[0]" + msg);
-            break;
-        case CHAT_EVENT:
-            serverCore->notifyClient(index, "[1]" + msg);
-            break;
-    }
-}
-
-void EventHandler::notifyAllClients(const std::string& msg) {
-    serverCore->notifyAllClients("[1]" + msg);
-}
-
-void EventHandler::handleLogin(const int index, const std::string& msg) {
+std::vector<std::pair<int, std::string>> EventHandler::handleLogin(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
     std::vector<std::string> params = split(msg);
     std::string id = params[0], pw = params[1];
     if (accountDao.checkAccountExists(id)) {
-        // login
         std::shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
-            serverCore->Clients[index].setAccount(account);
+            Clients[index].setAccount(account);
             accountDao.updateAccountLastLogin(id);
-            notifyClient(index, "000", LOGIN_EVENT);
-            notifyAllClients("New Client Connected (IP: " + serverCore->Clients[index].getIp() + ", name: " + serverCore->Clients[index].getAccount()->getUserId() + ")");
+            ret.push_back({index, "[0]000"});
+            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
         }
-        else notifyClient(index, "002", LOGIN_EVENT);
+        else ret.push_back({index, "[0]002"});
     }
     else {
-        // register
         accountDao.registerAccount(id, pw);
         std::shared_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
-            serverCore->Clients[index].setAccount(account);
-            notifyClient(index, "001", LOGIN_EVENT);
-            notifyAllClients("New Client Connected (IP: " + serverCore->Clients[index].getIp() + ", name: " + serverCore->Clients[index].getAccount()->getUserId() + ")");
+            Clients[index].setAccount(account);
+            ret.push_back({index, "[0]001"});
+            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
         }
-        else notifyClient(index, "003", LOGIN_EVENT);
+        else ret.push_back({index, "[0]003"});
     }
+    return ret;
 }
 
-void EventHandler::handleChat(const int index, const std::string& msg) {
-    notifyAllClients(serverCore->Clients[index].getAccount()->getUserId() + " : " + msg);
+std::vector<std::pair<int, std::string>> EventHandler::handleChat(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    ret.push_back({0, "[1]" + Clients[index].getAccount()->getUserId() + " : " + msg});
+    return ret;
 }
 
-void EventHandler::handleGetTestItem(const int index) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const int index, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     bool res = inventoryDao.insertItem(account_id, 1);
     if (res) {
-        notifyClient(index, "Give you test item.");
+        ret.push_back({index, "[1]Give you test item."});
         std::cout << "grant user '" + std::to_string(account_id) + "' test item." << std::endl;
     }
     else{
-        notifyClient(index, "error, can't give you test item.");
+        ret.push_back({index, "[1]error, can't give you test item."});
         std::cout << "error, can't grant user '" + std::to_string(account_id) + "' test item." << std::endl;
     }
+    return ret;
 }
 
-void EventHandler::handleInventoryCheck(const int index) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(const int index, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     std::string res = inventoryDao.inventoryCheck(account_id);
-    notifyClient(index, res);
+    ret.push_back({index, "[1]" + res});
+    return ret;
 }
 
-void EventHandler::handleSellItem(const int index, const std::string& msg) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    bool res = inventoryDao.sellItem(account_id, stoi(params[0]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
-    if (res) notifyClient(index, "Item has been successfully registered in the auction.");
-    else notifyClient(index, "Failed to register the item in the auction.");
+    bool res = inventoryDao.sellItem(account_id, stoi(params[1]), stoi(params[1]), stoi(params[2]), stoi(params[3]));
+    if (res) ret.push_back({index, "[1]Item has been successfully registered in the auction."});
+    else ret.push_back({index, "[1]Failed to register the item in the auction."});
+    return ret;
 }
 
-void EventHandler::handleBuyNow(const int index, const std::string& msg) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleBuyNow(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    std::pair<bool, std::pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[0]));
+    std::pair<bool, std::pair<int, int>> res = inventoryDao.buyNow(account_id, stoi(params[1]));
     if (res.first) {
-        notifyClient(index, "Item has been successfully purchased in the auction.");
-        for (int i=1; i<serverCore->ClientsCount; i++) {
-            if (serverCore->Clients[i].getAccount()->getAccountId() == res.second.first)
-                notifyClient(i, "your item has been sold to " + serverCore->Clients[i].getAccount()->getUserId());
-            else if (serverCore->Clients[i].getAccount()->getAccountId() == res.second.second)
-                notifyClient(i, "Your auction has been outbid. please check your inventory");
+        ret.push_back({index, "[1]Item has been successfully purchased in the auction."});
+        for (int i=1; i<ClientsCount; i++) {
+            if (Clients[i].getAccount()->getAccountId() == res.second.first)
+                ret.push_back({i, "[1]your item has been sold to " + Clients[i].getAccount()->getUserId()});
+            else if (Clients[i].getAccount()->getAccountId() == res.second.second)
+                ret.push_back({i, "[1]Your auction has been outbid. please check your inventory"});
         }
     }
-    else notifyClient(index, "Failed to purchase the item in the auction.");
+    else ret.push_back({index, "[1]Failed to purchase the item in the auction."});
+    return ret;
 }
 
-void EventHandler::handleBid(const int index, const std::string& msg) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleBid(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    std::pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[0]), stoi(params[1]));
+    std::pair<bool, int> res = inventoryDao.bid(account_id, stoi(params[1]), stoi(params[1]));
     if (res.first) {
-        notifyClient(index, "Bid has been successfully placed in the auction.");
-        for (int i=1; i<serverCore->ClientsCount; i++) {
-            if (serverCore->Clients[i].getAccount()->getAccountId() == res.second)
-                notifyClient(i, "Your auction has been outbid. please check your inventory");
+        ret.push_back({index, "[1]Bid has been successfully placed in the auction."});
+        for (int i=1; i<ClientsCount; i++) {
+            if (Clients[i].getAccount()->getAccountId() == res.second)
+                ret.push_back({i, "[1]Your auction has been outbid. please check your inventory"});
         }
     }
-    else notifyClient(index, "Failed to place the bid in the auction.");
+    else ret.push_back({index, "[1]Failed to place the bid in the auction."});
+    return ret;
 }
 
-void EventHandler::handleBreakItem(const int index, const std::string& msg) {
-    int account_id = serverCore->Clients[index].getAccount()->getAccountId();
+std::vector<std::pair<int, std::string>> EventHandler::handleBreakItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+    std::vector<std::pair<int, std::string>> ret;
+    int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
-    bool res = inventoryDao.breakItem(account_id, stoi(params[0]), stoi(params[1]));
-    if (res) notifyClient(index, "Item has been successfully breaked in the inventory.");
-    else notifyClient(index, "Failed to break the item.");
+    bool res = inventoryDao.breakItem(account_id, stoi(params[1]), stoi(params[1]));
+    if (res) ret.push_back({index, "[1]Item has been successfully breaked in the inventory."});
+    else ret.push_back({index, "[1]Failed to break the item."});
+    return ret;
 }
 
-void EventHandler::handleAuction(const int index) {
+std::vector<std::pair<int, std::string>> EventHandler::handleAuctionCheck(const int index) {
+    std::vector<std::pair<int, std::string>> ret;
     std::string res = auctionDao.auctionCheck();
-    notifyClient(index, res);
+    ret.push_back({index, "[1]" + res});
+    return ret;
 }
