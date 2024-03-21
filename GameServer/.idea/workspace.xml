@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="GameServer" targetName="GameServer" />
+      <config projectName="GameServer" targetName="pqxx" />
+      <config projectName="GameServer" targetName="runner" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4fd9a03-d594-45fb-91ef-39852d09833c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ChatServer/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-54adff6eb543a6739dc2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/target-ChatServer-Debug-4ab2800fe841228b2209.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatServer/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/GameServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5/storage_v2/_src_/database/databasetermproject.0jiRBw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5/storage_v2/_src_/database/databasetermproject.0jiRBw/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5/storage_v2/_src_/database/databasetermproject.0jiRBw/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5/storage_v2/_src_/database/databasetermproject.0jiRBw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3db2bd5-d6b1-45be-bb42-1ff421a92c7a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3db2bd5-d6b1-45be-bb42-1ff421a92c7a/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3db2bd5-d6b1-45be-bb42-1ff421a92c7a/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3db2bd5-d6b1-45be-bb42-1ff421a92c7a/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f3db2bd5-d6b1-45be-bb42-1ff421a92c7a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuctionDAO.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuctionDAO.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/AuctionDAO.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/EventHandler.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/ServerCore.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/DatabaseTermProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/ChatServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/Account.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Account.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/Account.h" beforeDir="false" afterPath="$PROJECT_DIR$/Account.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/AccountDAO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AccountDAO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/AccountDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/AccountDAO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/Client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/Client.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/DatabaseConnection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/DatabaseConnection.h" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/EventHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/EventHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/EventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/EventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/IDatabaseConnection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/IDatabaseConnection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/IDatabaseConnection.h" beforeDir="false" afterPath="$PROJECT_DIR$/IDatabaseConnection.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/InventoryDAO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryDAO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/InventoryDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryDAO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/ServerConstant.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ServerConstant.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/ServerConstant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ServerConstant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/ServerCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ServerCore.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/ServerCore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d8a4637bb545c20ddaa7.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-e71c3787b46a3a0f9e71.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7dfa503155c2c21f49aa.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-98fd8a47737adc71da0e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3611f88f8a825f6d56b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e143e6e21666c30ff10c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx-Debug-2ea953afa3319d8e4fa0.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx-Debug-2ea953afa3319d8e4fa0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.include-Debug-30831b4fd9dfee5f8b6b.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.include-Debug-30831b4fd9dfee5f8b6b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.src-Debug-13d2c35b10e93008f13c.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.src-Debug-13d2c35b10e93008f13c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.test-Debug-5b69ab4581b41ff5e39f.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.test-Debug-5b69ab4581b41ff5e39f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-19T00-10-32-0953.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-20T12-19-47-0457.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/target-DatabaseTermProject-Debug-8b89326f5af3107a8ef6.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-26845474f34995bdc7fd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/target-pqxx-Debug-4c6ad3f24aecc3c3e40c.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-pqxx-Debug-451ec81131da5c376355.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/target-runner-Debug-07a50dd9e5ba3ca7e33a.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-runner-Debug-bbbf7f71aaf55ac5c876.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/Account.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Account.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/AccountDAO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/Client.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Client.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/DatabaseConnection.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DatabaseConnection.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/EventHandler.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/IDatabaseConnection.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/IDatabaseConnection.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/InventoryDAO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/InventoryDAO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/PermissionStoreDAO.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/ServerConstant.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/ServerConstant.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/ServerCore.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/DatabaseTermProject.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CPackConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/CPackSourceConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/DatabaseTermProject.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/DatabaseTermProject.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/GameServer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-debug.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-debug.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/pqxx/config-internal-compiler.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-internal-compiler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/pqxx/config-internal-libpq.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-internal-libpq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/pqxx/config-public-compiler.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-public-compiler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/libpqxx-config-version.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-config-version.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/libpqxx-config.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-config.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/libpqxx.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/libpqxx.pc" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/src/libpqxx.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/libpqxx.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CMakeFiles/runner.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build-pqxx/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/query/cache-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/query/codemodel-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/query/toolchains-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/cache-v2-97d9ddf88790293147d8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d6ad36dd3cac4846afcc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-b5da424fd8d70bd80e44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-105c41f09fb7a2329bd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/directory-.-Release-d0094a50bb2071803777.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/directory-build-pqxx-Release-eeb0746a2901de3a76e4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/directory-build-pqxx.include-Release-2473c3530153a818ccbd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/directory-build-pqxx.src-Release-ca431cb445ddd4102f86.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/directory-build-pqxx.test-Release-5b69ab4581b41ff5e39f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/index-2024-03-19T00-10-32-0954.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-21T04-17-28-0789.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/target-DatabaseTermProject-Release-fddc9edb2eb7231f6f09.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/target-pqxx-Release-def25fc03c1c90808d8f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/target-runner-Release-7b53dade448ce646ae17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/Account.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/AccountDAO.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/Client.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/DatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/IDatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/InventoryDAO.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/PermissionStoreDAO.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/ServerConstant.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/ServerCore.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/DatabaseTermProject.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CPackConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/CPackSourceConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/DatabaseTermProject.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-release.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/include/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/include/pqxx/config-internal-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/include/pqxx/config-internal-libpq.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/include/pqxx/config-public-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/include/pqxx/config_cmake.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/libpqxx-config-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/libpqxx-config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/libpqxx.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/src/libpqxx.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/test/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build-pqxx/test/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/cmake-build-release/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/libpqxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/sql_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProject/sql_usersetting.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_usersetting.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/DatabaseTermProjectClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/DatabaseTermProjectClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/ClientConstant.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/ClientConstant.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/ClientConstant.h" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/ClientConstant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/ClientCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/ClientCore.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/ClientCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/ClientCore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/cache-v2-37e1da9090954af237fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/cache-v2-c0943678d8a84907b8f8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d5fffc6d87956991a558.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-fc042d3e57fd2197650e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-c3dde34395c9c2b8a189.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7dc3754c1ba651d19161.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-14T04-15-53-0171.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-20T12-13-47-0382.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/target-DatabaseTermProjectClient-Debug-2fbf92d05ec3f620c15b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/target-GameClient-Debug-a70566e946a8bb24695c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientConstant.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientCore.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CPackConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/CPackSourceConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/DatabaseTermProjectClient.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/include/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/include/pqxx/config-internal-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/include/pqxx/config-internal-libpq.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/include/pqxx/config-public-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/libpqxx-config-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/libpqxx-config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/libpqxx.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/src/libpqxx.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build-pqxx/test/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatServer/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/cache-v2-b10c915c8cc2dd6e7787.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-c13bc391fbaf276e86bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-2d50b424c218ae157a8d.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f643f5bfd535e9ab51fd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/directory-.-Release-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/index-2024-03-14T04-15-53-0171.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/target-DatabaseTermProjectClient-Release-ca29ad2af00162278fcc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir/ClientConstant.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir/ClientCore.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir/DatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir/IDatabaseConnection.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CPackConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/CPackSourceConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/DatabaseTermProjectClient.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-release.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/include/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/include/pqxx/config-internal-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/include/pqxx/config-internal-libpq.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/include/pqxx/config-public-compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/include/pqxx/config_cmake.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/libpqxx-config-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/libpqxx-config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/libpqxx-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/libpqxx.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/src/libpqxx.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/test/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build-pqxx/test/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/cmake-build-release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseTermProjectClient/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dx5t51fLwyMmzU0MBZ8WvcM9eL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "implement__channel",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake Application.GameServer">
+    <configuration name="GameServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="GameServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameServer" RUN_TARGET_NAME="GameServer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pqxx" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="pqxx" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="runner" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="runner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameServer" RUN_TARGET_NAME="runner">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.GameServer" />
+      <item itemvalue="CMake Application.pqxx" />
+      <item itemvalue="CMake Application.runner" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4fd9a03-d594-45fb-91ef-39852d09833c" name="Changes" comment="" />
+      <created>1710937099820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710937099820</updated>
+      <workItem from="1710937100895" duration="1959000" />
+      <workItem from="1710983002241" duration="8718000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>

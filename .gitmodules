@@ -1,0 +1,3 @@
+[submodule "GameServer/libpqxx"]
+	path = GameServer/libpqxx
+	url = https://github.com/jtv/libpqxx

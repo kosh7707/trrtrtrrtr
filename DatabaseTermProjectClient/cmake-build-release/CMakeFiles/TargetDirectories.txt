@@ -1,5 +1,0 @@
-C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release/CMakeFiles/DatabaseTermProjectClient.dir
-C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release/CMakeFiles/package.dir
-C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release/CMakeFiles/package_source.dir
-C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/Desktop/trrtrtrrtr/DatabaseTermProjectClient/cmake-build-release/CMakeFiles/rebuild_cache.dir
