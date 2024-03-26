@@ -34,6 +34,7 @@ int main() {
                 clientCore.sendCommand(command);
             }
         }
+
     } catch (const exception& e) {
         cerr << e.what() << endl;
         return 0;

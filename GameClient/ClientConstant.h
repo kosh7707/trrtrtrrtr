@@ -1,8 +1,11 @@
 #ifndef DATABASETERMPROJECTCLIENT_CLIENTCONSTANT_H
 #define DATABASETERMPROJECTCLIENT_CLIENTCONSTANT_H
 
-
+#include <iostream>
 #include <string>
+#include <winsock2.h>
+#include <process.h>
+#include <vector>
 
 using namespace std;
 

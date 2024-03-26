@@ -1,6 +1,8 @@
 #include "ClientCore.h"
 
-ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(clientConstant.getServerPort()), isLogin(false) {
+ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(clientConstant.getServerPort()), isLogin(false) {}
+
+void ClientCore::initClient() {
     WSADATA wsadata;
     SOCKADDR_IN serverAddress;
 
@@ -25,6 +27,11 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
     }
 }
 
+void ClientCore::run() {
+    unsigned int tid;
+    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)this, 0, &tid);
+}
+
 unsigned int WINAPI ClientCore::runThread(void* params) {
     ClientCore* clientCore = static_cast<ClientCore*>(params);
 
@@ -37,17 +44,10 @@ unsigned int WINAPI ClientCore::runThread(void* params) {
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             WSAEnumNetworkEvents(clientCore->sc, event, &ev);
             if (ev.lNetworkEvents == FD_READ) clientCore->ReadServer();
-            else if (ev.lNetworkEvents == FD_CLOSE) {
-                clientCore->~ClientCore();
-                break;
-            }
+            else if (ev.lNetworkEvents == FD_CLOSE) break;
         }
     }
     _endthreadex(0);
-}
-
-void ClientCore::run() {
-    mainThread = (HANDLE)_beginthreadex(NULL, 0, runThread, (void*)this, 0, &tid);
 }
 
 int ClientCore::getEvent(const char* buf) {
@@ -94,12 +94,6 @@ void ClientCore::ReadServer() {
     if (event == LOGIN_EVENT) handleLogin(msg);
     else if (event == CHAT_EVENT) handleChat(msg);
     else cout << "INVALID EVENT\nmsg: " << msg << endl;
-}
-
-ClientCore::~ClientCore() {
-    closesocket(sc);
-    CloseHandle(mainThread);
-    WSACleanup();
 }
 
 void ClientCore::login(const string& id, const string& pw) {

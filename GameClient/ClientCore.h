@@ -2,11 +2,6 @@
 #define DATABASETERMPROJECTCLIENT_CLIENTCORE_H
 
 
-#include <iostream>
-#include <string>
-#include <winsock2.h>
-#include <process.h>
-#include <vector>
 #include "ClientConstant.h"
 #define BUF_SIZE 1024
 
@@ -19,8 +14,8 @@ using namespace std;
 class ClientCore {
 public:
     ClientCore();
-    ~ClientCore();
-    void                run();
+    void                initClient();
+    [[noreturn]] void   run();
     void                login(const string& id, const string& pw);
     void                sendChat(const string& msg);
     void                sendCommand(const vector<string>& command);
@@ -30,7 +25,6 @@ private:
     ClientConstant      clientConstant;
     const string        serverIP;
     const int           serverPort;
-    unsigned int        tid;
     SOCKET              sc;
     HANDLE              mainThread;
     bool                isLogin;
