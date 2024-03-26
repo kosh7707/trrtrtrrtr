@@ -1,6 +1,6 @@
 #include "EventHandler.h"
 
-std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const char* buf, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const std::string& buf, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
     int event = getEvent(buf); std::string msg = getMessage(buf);
     std::vector<std::pair<int, std::string>> ret;
     if (event == LOGIN_EVENT) ret = handleLogin(index, msg, Clients);
@@ -25,9 +25,8 @@ std::vector<std::string> EventHandler::split(const std::string &input) {
     return result;
 }
 
-int EventHandler::getEvent(const char* buf) {
-    std::string temp = buf;
-    std::string prefix = temp.substr(0, 3);
+int EventHandler::getEvent(const std::string& buf) {
+    std::string prefix = buf.substr(0, 3);
     if (prefix == "[0]") return LOGIN_EVENT;
     else if (prefix == "[1]") return CHAT_EVENT;
     else if (prefix == "[2]") return GET_TEST_ITEM_EVENT;
@@ -40,7 +39,7 @@ int EventHandler::getEvent(const char* buf) {
     else return INVALID_EVENT;
 }
 
-std::string EventHandler::getMessage(const char* buf) {
+std::string EventHandler::getMessage(const std::string& buf) {
     std::string temp = buf;
     return temp.substr(3);
 }
