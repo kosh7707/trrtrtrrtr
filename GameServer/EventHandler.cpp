@@ -87,7 +87,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const i
         std::cout << "grant user '" + std::to_string(account_id) + "' test item." << std::endl;
     }
     else{
-        ret.push_back({index, "[1]error, can't give you test item."});
+        ret.push_back({index, "[1]error , can't give you test item."});
         std::cout << "error, can't grant user '" + std::to_string(account_id) + "' test item." << std::endl;
     }
     return ret;

@@ -97,10 +97,10 @@ void ServerCore::addClient() {
 }
 
 void ServerCore::readClient(const int index) {
-    char buf[BUF_SIZE + 1];
+    char buf[BUF_SIZE];
     if (recv(Clients[index].getSc(), buf, BUF_SIZE, 0) <= 0)
         std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
-    std::cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
+    std::cout << "[recv]: " << buf << "\n";
     auto res = eventHandler.handling(index, buf, ClientsCount, Clients);
     for (auto it : res) {
         if (it.first == 0) notifyAllClients(it.second);
@@ -123,16 +123,13 @@ void ServerCore::removeClient(const int index) {
 }
 
 void ServerCore::notifyAllClients(const std::string& msg) {
-    std::cout << "[send, all clients]: " << msg << "\n";
     for (int i=1; i<ClientsCount; i++)
-        if(send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
-            std::cerr << "send error, errno: " << errno << "\n";
+        if(send(Clients[i].getSc(), msg.c_str(), (int)strlen(msg.c_str()), 0) <= 0)
+            std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
-    std::cout << "[send, client[" << index << "]]: " << msg << "\n";
-    std::cout << msg.c_str() << "\n";
-    if (send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
+    if (send(Clients[index].getSc(), msg.c_str(), (int)strlen(msg.c_str()), 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 

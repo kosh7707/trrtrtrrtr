@@ -86,10 +86,10 @@ void ClientCore::handleLogin(const string& msg) {
 }
 
 void ClientCore::ReadServer() {
-    char buf[BUF_SIZE + 1];
-    if (recv(sc, buf, BUF_SIZE, 0) == -1)
-        std::cerr << "recv error, errno: " << strerror(errno) << "\n";
-
+    char buf[BUF_SIZE];
+    if (recv(sc, buf, BUF_SIZE, 0) <= 0)
+        std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
+    cout << "[Recv]: " << buf << "\n";
     int event = getEvent(buf); string msg = getMessage(buf);
     if (event == LOGIN_EVENT) handleLogin(msg);
     else if (event == CHAT_EVENT) handleChat(msg);
@@ -166,8 +166,8 @@ void ClientCore::sendCommand(const vector<std::string> &command) {
 }
 
 void ClientCore::notifyServer(const string& msg) {
-    if (send(sc, msg.c_str(), BUF_SIZE, 0) == -1)
-        std::cerr << "send error, errno: " << strerror(errno) << "\n";
+    if (send(sc, msg.c_str(), BUF_SIZE, 0) <= 0)
+        std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 const string &ClientCore::getUserId() const {
