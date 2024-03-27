@@ -50,4 +50,4 @@ cmake cache를 정리 후 빌드하는 것을 추천합니다.
 - `!buyNow [auction_id]` : `auction_id`에 해당하는 경매 품목을 즉시 구매합니다.
 - `!bid [auction_id] [price]` : `auction_id`에 해당하는 경매 품목을 입찰합니다.
 - `!breakItem [item_id] [quantity]` : `item_id`에 해당하는 인벤토리에 있는 아이템을 부숩니다.
-  - `!auctionCheck` : 경매장에 있는 물품들을 검색합니다.
+- `!auctionCheck` : 경매장에 있는 물품들을 검색합니다.

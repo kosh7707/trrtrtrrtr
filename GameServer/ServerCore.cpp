@@ -158,7 +158,7 @@ void ServerCore::runEventHandlingWorker() {
 
 void ServerCore::runSendWorker() {
     unsigned int tid;
-    recvWorker = (HANDLE)_beginthreadex(NULL, 0, runSendWorkerThread, (void*)this, 0, &tid);
+    sendWorker = (HANDLE)_beginthreadex(NULL, 0, runSendWorkerThread, (void*)this, 0, &tid);
 }
 
 [[noreturn]] unsigned int WINAPI ServerCore::runSendWorkerThread(void* params) {

@@ -6,20 +6,20 @@
 #include <winsock2.h>
 #include <process.h>
 #include <vector>
+#include <queue>
 
-using namespace std;
 
 class ClientConstant {
 public:
-    const string& getServerIP() const {
+    const std::string& getServerIP() const {
         return serverIP;
     }
     const int getServerPort() const {
         return serverPort;
     }
 private:
-    const string  serverIP = "127.0.0.1";
-    const int     serverPort = 7707;
+    const std::string   serverIP = "127.0.0.1";
+    const int           serverPort = 7707;
 };
 
 

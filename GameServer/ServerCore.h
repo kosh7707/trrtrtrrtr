@@ -28,8 +28,8 @@ private:
 
     HANDLE  auctionWorker;
     HANDLE  recvWorker;
-    HANDLE  sendWorker;
     HANDLE  eventHandlingWorker;
+    HANDLE  sendWorker;
 
     SOCKET  initServer();
 

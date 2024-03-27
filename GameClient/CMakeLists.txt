@@ -7,7 +7,8 @@ add_executable(GameClient main.cpp
         ClientCore.cpp
         ClientCore.h
         ClientConstant.cpp
-        ClientConstant.h)
+        ClientConstant.h
+        EventHandler.cpp)
 
 # include winsock2_32
 target_link_libraries(GameClient PRIVATE ws2_32)
