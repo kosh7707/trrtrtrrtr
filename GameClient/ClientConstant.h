@@ -8,6 +8,9 @@
 #include <vector>
 #include <queue>
 
+enum {
+    INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT
+};
 
 class ClientConstant {
 public:

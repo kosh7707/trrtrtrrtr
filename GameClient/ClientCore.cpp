@@ -15,8 +15,8 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
     runSendWorker();
 
     std::cout << "----- online -----\n";
+
     while (true) {
-        std::cin.ignore();
         std::string command; getline(std::cin, command);
         if (command == "!help") printUserCommand();
         else eventResQueue.push(eventHandler.userEventHandling(isLogin, command));
@@ -48,6 +48,7 @@ void ClientCore::initClient() {
 }
 
 void ClientCore::notifyServer(const std::string& msg) {
+    std::cout << "[send]: " << msg << "\n";
     if (send(sc, msg.c_str(), BUF_SIZE, 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
@@ -60,7 +61,7 @@ void ClientCore::runRecvWorker() {
 void ClientCore::printUserCommand() {
     if (!isLogin) {
         std::cout   << "------------------------\n"
-                    << "0. !login [id] [pw]"
+                    << "0. !login [id] [pw]\n"
                     << "------------------------\n";
     }
     else {
@@ -89,12 +90,15 @@ void ClientCore::printUserCommand() {
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             WSAEnumNetworkEvents(clientCore->sc, event, &ev);
             if (ev.lNetworkEvents == FD_READ) {
-                char buf[BUF_SIZE];
-                if (recv(clientCore->sc, buf, BUF_SIZE, 0) <= 0)
+                char buf[BUF_SIZE*2];
+                if (recv(clientCore->sc, buf, BUF_SIZE*2, 0) <= 0)
                     std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
+                std::cout << "[Recv]: " << buf << "\n";
                 clientCore->eventReqQueue.push(static_cast<std::string>(buf));
             }
-            else if (ev.lNetworkEvents == FD_CLOSE) break;
+            else if (ev.lNetworkEvents == FD_CLOSE) {
+                std::cout << "server disconnected\n";
+            }
         }
     }
 }
@@ -111,8 +115,29 @@ void ClientCore::runEventHandlingWorker() {
         if (clientCore->eventReqQueue.empty()) continue;
         auto event = clientCore->eventReqQueue.front(); clientCore->eventReqQueue.pop();
         auto res = clientCore->eventHandler.serverEventHandling(clientCore->isLogin, event);
-        for (auto it : res)
-            clientCore->eventResQueue.push(it);
+        switch (res.first) {
+            case LOGIN_EVENT:
+                if (res.second == "000") {
+                    std::cout << "login success\n";
+                    clientCore->isLogin = true;
+                }
+                else if (res.second == "001") {
+                    std::cout << "register success\n";
+                    clientCore->isLogin = true;
+                }
+                else if (res.second == "002") {
+                    std::cout << "wrong password, login failed\n";
+                }
+                else if (res.second == "003") {
+                    std::cout << "register failed\n";
+                }
+                break;
+            case CHAT_EVENT:
+                std::cout << res.second << "\n";
+                break;
+            default:
+                break;
+        }
     }
 }
 
@@ -127,7 +152,7 @@ void ClientCore::runSendWorker() {
     while (true) {
         if (clientCore->eventResQueue.empty()) continue;
         auto event = clientCore->eventResQueue.front(); clientCore->eventResQueue.pop();
-        clientCore->notifyServer(event);
+        if (event != "") clientCore->notifyServer(event);
     }
 }
 

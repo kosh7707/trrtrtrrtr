@@ -4,23 +4,16 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include "ClientConstant.h"
 
 class EventHandler {
 public:
-    std::vector<std::string> serverEventHandling(bool isLogin, const std::string& buf);
+    std::pair<int, std::string> serverEventHandling(bool isLogin, const std::string& buf);
     std::string userEventHandling(bool isLogin, const std::string& buf);
 private:
-    std::vector<std::string> split(const std::string& input, char delimiter) {
-        std::vector<std::string> result;
-        std::stringstream ss(input);
-        std::string token;
-        while (getline(ss, token, delimiter))
-            result.push_back(token);
-        return result;
-    }
-    enum {
-        INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT
-    };
+    int getEvent(const std::string& buf);
+    std::string getMessage(const std::string& buf);
+    std::vector<std::string> split(const std::string& input);
 };
 
 
