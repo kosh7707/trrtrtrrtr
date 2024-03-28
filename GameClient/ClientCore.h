@@ -3,6 +3,7 @@
 
 #include "ClientConstant.h"
 #include "EventHandler.h"
+#include <cstring>
 #define BUF_SIZE 1024
 
 class ClientCore {
