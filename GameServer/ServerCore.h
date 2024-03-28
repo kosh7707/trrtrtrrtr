@@ -5,6 +5,7 @@
 #include "EventHandler.h"
 #include "ServerConstant.h"
 #include "AuctionDAO.h"
+#include <cstring>
 #define BUF_SIZE 1024
 
 class EventHandler;

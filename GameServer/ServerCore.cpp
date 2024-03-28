@@ -83,6 +83,7 @@ void ServerCore::addClient() {
 
 void ServerCore::readClient(const int index) {
     char buf[BUF_SIZE];
+    memset(buf, 0, sizeof(buf));
     if (recv(Clients[index].getSc(), buf, BUF_SIZE, 0) <= 0)
         std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
     std::cout << "[Recv, Clients[" << index << "]: " << buf << "\n";
@@ -107,13 +108,13 @@ void ServerCore::removeClient(const int index) {
 void ServerCore::notifyAllClients(const std::string& msg) {
     std::cout << "[Send, All Clients]: " << msg << "\n";
     for (int i=1; i<ClientsCount; i++)
-        if(send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
+        if(send(Clients[i].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
             std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
     std::cout << "[Send, Clients[" << index << "]: " << msg << "\n";
-    if (send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
+    if (send(Clients[index].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
