@@ -22,13 +22,28 @@ private:
     int                                     serverPort;
     int                                     ClientsCount;
     EventHandler                            eventHandler;
-    HANDLE                                  auctionWorker;
     AuctionDAO                              auctionDao;
+    std::queue<std::pair<int, std::string>> eventReqQueue;
+    std::queue<std::pair<int, std::string>> eventResQueue;
+
+    HANDLE  auctionWorker;
+    HANDLE  recvWorker;
+    HANDLE  eventHandlingWorker;
+    HANDLE  sendWorker;
 
     SOCKET  initServer();
-    void runAuctionWorker();
 
-    static unsigned int WINAPI runAuctionWorkerThread(void* params);
+    void runRecvWorker();
+    [[noreturn]] static unsigned int WINAPI runRecvWorkerThread(void* params);
+
+    void runEventHandlingWorker();
+    [[noreturn]] static unsigned int WINAPI runEventHandlingWorkerThread(void* params);
+
+    void runSendWorker();
+    [[noreturn]] static unsigned int WINAPI runSendWorkerThread(void* params);
+
+    void runAuctionWorker();
+    [[noreturn]] static unsigned int WINAPI runAuctionWorkerThread(void* params);
 
     void    addClient();
     void    readClient(const int index);

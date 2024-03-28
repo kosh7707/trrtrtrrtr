@@ -39,16 +39,7 @@ SOCKET ServerCore::initServer() {
     return sc;
 }
 
-/*-------------------
-| Client Handling Part
--------------------*/
-
 [[noreturn]] void ServerCore::run() {
-    runAuctionWorker();
-
-    WSANETWORKEVENTS ev;
-    WSAEVENT handleArray[maxClientCount + 1];
-
     SOCKET sc = initServer();
     if (sc == 0) {
         std::cout << "socket initialization error" << std::endl;
@@ -63,19 +54,13 @@ SOCKET ServerCore::initServer() {
     WSAEventSelect(sc, event, FD_ACCEPT);
     ClientsCount++;
 
+    runRecvWorker();
+    runEventHandlingWorker();
+    runSendWorker();
+    runAuctionWorker();
+
     std::cout << "server listening at 127.0.0.1:7707" << std::endl;
-    int index;
-    while (true) {
-        for (int i=0; i<ClientsCount; i++)
-            handleArray[i] = Clients[i].getEv();
-        index = WSAWaitForMultipleEvents(ClientsCount, handleArray, false, INFINITE, false);
-        if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
-            WSAEnumNetworkEvents(Clients[index].getSc(), Clients[index].getEv(), &ev);
-            if (ev.lNetworkEvents == FD_ACCEPT) addClient();
-            else if (ev.lNetworkEvents == FD_READ) readClient(index);
-            else if (ev.lNetworkEvents == FD_CLOSE) removeClient(index);
-        }
-    }
+    while (true);
 }
 
 void ServerCore::addClient() {
@@ -97,15 +82,11 @@ void ServerCore::addClient() {
 }
 
 void ServerCore::readClient(const int index) {
-    char buf[BUF_SIZE + 1];
+    char buf[BUF_SIZE];
     if (recv(Clients[index].getSc(), buf, BUF_SIZE, 0) <= 0)
         std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
-    std::cout << "[Recv] Clients[" << index << "]: " << buf << "\n";
-    auto res = eventHandler.handling(index, buf, ClientsCount, Clients);
-    for (auto it : res) {
-        if (it.first == 0) notifyAllClients(it.second);
-        else notifyClient(it.first, it.second);
-    }
+    std::cout << "[Recv, Clients[" << index << "]: " << buf << "\n";
+    eventReqQueue.push({index, static_cast<std::string>(buf)});
 }
 
 void ServerCore::removeClient(const int index) {
@@ -118,37 +99,95 @@ void ServerCore::removeClient(const int index) {
         std::string removeClientNickName = Clients[index].getAccount()->getUserId();
         ClientsCount--;
         std::swap(Clients[index], Clients[ClientsCount]);
-        notifyAllClients("[1]Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")");
+        std::string msg = "[1]Client Disconnected (IP: " + removeClientIP + ", name: " + removeClientNickName + ")";
+        eventResQueue.push({0, msg});
     }
 }
 
 void ServerCore::notifyAllClients(const std::string& msg) {
-    std::cout << "[send, all clients]: " << msg << "\n";
+    std::cout << "[Send, All Clients]: " << msg << "\n";
     for (int i=1; i<ClientsCount; i++)
         if(send(Clients[i].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
-            std::cerr << "send error, errno: " << errno << "\n";
+            std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
-    std::cout << "[send, client[" << index << "]]: " << msg << "\n";
-    std::cout << msg.c_str() << "\n";
+    std::cout << "[Send, Clients[" << index << "]: " << msg << "\n";
     if (send(Clients[index].getSc(), msg.c_str(), BUF_SIZE, 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
-unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
+void ServerCore::runRecvWorker() {
+    unsigned int tid;
+    recvWorker = (HANDLE)_beginthreadex(NULL, 0, runRecvWorkerThread, (void*)this, 0, &tid);
+}
+
+[[noreturn]] unsigned int WINAPI ServerCore::runRecvWorkerThread(void* params) {
     ServerCore* serverCore = static_cast<ServerCore*>(params);
-    IDatabaseConnection& dc = DatabaseConnection::getInstance();
-    while (dc.isConnected()) {
-        auto res = serverCore->auctionDao.outdatedItemCheck(serverCore->ClientsCount, serverCore->Clients);
-        for (const auto& it : res)
-            serverCore->notifyClient(it.first, it.second);
-        std::this_thread::sleep_for(std::chrono::seconds(5));
+
+    WSANETWORKEVENTS ev;
+    WSAEVENT handleArray[serverCore->maxClientCount + 1];
+
+    int index;
+    while (true) {
+        for (int i=0; i<serverCore->ClientsCount; i++)
+            handleArray[i] = serverCore->Clients[i].getEv();
+        index = WSAWaitForMultipleEvents(serverCore->ClientsCount, handleArray, false, INFINITE, false);
+        if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
+            WSAEnumNetworkEvents(serverCore->Clients[index].getSc(), serverCore->Clients[index].getEv(), &ev);
+            if (ev.lNetworkEvents == FD_ACCEPT) serverCore->addClient();
+            else if (ev.lNetworkEvents == FD_READ) serverCore->readClient(index);
+            else if (ev.lNetworkEvents == FD_CLOSE) serverCore->removeClient(index);
+        }
     }
-    return 0;
+}
+
+void ServerCore::runEventHandlingWorker() {
+    unsigned int tid;
+    eventHandlingWorker = (HANDLE)_beginthreadex(NULL, 0, runEventHandlingWorkerThread, (void*)this, 0, &tid);
+}
+
+[[noreturn]] unsigned int WINAPI ServerCore::runEventHandlingWorkerThread(void* params) {
+    ServerCore* serverCore = static_cast<ServerCore*>(params);
+
+    while (true) {
+        if (serverCore->eventReqQueue.empty()) continue;
+        auto event = serverCore->eventReqQueue.front(); serverCore->eventReqQueue.pop();
+        auto res = serverCore->eventHandler.handling(event.first, event.second, serverCore->ClientsCount, serverCore->Clients);
+        for (auto it : res)
+            serverCore->eventResQueue.push(it);
+    }
+}
+
+void ServerCore::runSendWorker() {
+    unsigned int tid;
+    sendWorker = (HANDLE)_beginthreadex(NULL, 0, runSendWorkerThread, (void*)this, 0, &tid);
+}
+
+[[noreturn]] unsigned int WINAPI ServerCore::runSendWorkerThread(void* params) {
+    ServerCore* serverCore = static_cast<ServerCore*>(params);
+
+    while (true) {
+        if (serverCore->eventResQueue.empty()) continue;
+        auto event = serverCore->eventResQueue.front(); serverCore->eventResQueue.pop();
+        if (event.first == 0) serverCore->notifyAllClients(event.second);
+        else serverCore->notifyClient(event.first, event.second);
+    }
 }
 
 void ServerCore::runAuctionWorker() {
     unsigned int tid;
     auctionWorker = (HANDLE)_beginthreadex(NULL, 0, runAuctionWorkerThread, (void*)this, 0, &tid);
 }
+
+[[noreturn]] unsigned int WINAPI ServerCore::runAuctionWorkerThread(void* params) {
+    ServerCore* serverCore = static_cast<ServerCore*>(params);
+    while (true) {
+        auto res = serverCore->auctionDao.outdatedItemCheck(serverCore->ClientsCount, serverCore->Clients);
+        for (auto it : res)
+            serverCore->eventResQueue.push(it);
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+    }
+}
+
+

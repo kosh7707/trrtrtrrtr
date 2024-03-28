@@ -1,52 +1,41 @@
 #ifndef DATABASETERMPROJECTCLIENT_CLIENTCORE_H
 #define DATABASETERMPROJECTCLIENT_CLIENTCORE_H
 
-
-#include <iostream>
-#include <string>
-#include <winsock2.h>
-#include <process.h>
-#include <vector>
 #include "ClientConstant.h"
+#include "EventHandler.h"
 #define BUF_SIZE 1024
-
-enum {
-    INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT
-};
-
-using namespace std;
 
 class ClientCore {
 public:
     ClientCore();
-    ~ClientCore();
-    void                run();
-    void                login(const string& id, const string& pw);
-    void                sendChat(const string& msg);
-    void                sendCommand(const vector<string>& command);
-    bool                getIsLogin();
+    [[noreturn]] void run();
 
 private:
     ClientConstant      clientConstant;
-    const string        serverIP;
+    const std::string   serverIP;
     const int           serverPort;
-    unsigned int        tid;
-    SOCKET              sc;
-    HANDLE              mainThread;
     bool                isLogin;
-    string              userId;
-    string              userPw;
+    SOCKET              sc;
+    EventHandler        eventHandler;
+    std::queue<std::string> eventReqQueue;
+    std::queue<std::string> eventResQueue;
 
-    const string&       getUserId() const;
-    const string&       getUserPw() const;
-    void                notifyServer(const string& msg);
-    void                ReadServer();
-    void                handleLogin(const string& msg);
-    void                handleChat(const string& msg);
-    string              getMessage(const char *buf);
-    int                 getEvent(const char *buf);
-    static unsigned int WINAPI runThread(void* params);
+    HANDLE  recvWorker;
+    HANDLE  eventHandlingWorker;
+    HANDLE  sendWorker;
 
+    void    initClient();
+    void    notifyServer(const std::string& msg);
+    void    printUserCommand();
+
+    void runRecvWorker();
+    [[noreturn]] static unsigned int WINAPI runRecvWorkerThread(void* params);
+
+    void runEventHandlingWorker();
+    [[noreturn]] static unsigned int WINAPI runEventHandlingWorkerThread(void* params);
+
+    void runSendWorker();
+    [[noreturn]] static unsigned int WINAPI runSendWorkerThread(void* params);
 };
 
 

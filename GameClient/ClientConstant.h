@@ -1,22 +1,28 @@
 #ifndef DATABASETERMPROJECTCLIENT_CLIENTCONSTANT_H
 #define DATABASETERMPROJECTCLIENT_CLIENTCONSTANT_H
 
-
+#include <iostream>
 #include <string>
+#include <winsock2.h>
+#include <process.h>
+#include <vector>
+#include <queue>
 
-using namespace std;
+enum {
+    INVALID_EVENT = -1, LOGIN_EVENT, CHAT_EVENT
+};
 
 class ClientConstant {
 public:
-    const string& getServerIP() const {
+    const std::string& getServerIP() const {
         return serverIP;
     }
     const int getServerPort() const {
         return serverPort;
     }
 private:
-    const string  serverIP = "127.0.0.1";
-    const int     serverPort = 7707;
+    const std::string   serverIP = "127.0.0.1";
+    const int           serverPort = 7707;
 };
 
 
