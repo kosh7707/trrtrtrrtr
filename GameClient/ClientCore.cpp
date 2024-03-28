@@ -17,9 +17,13 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
     std::cout << "----- online -----\n";
 
     while (true) {
-        std::string command; getline(std::cin, command);
-        if (command == "!help") printUserCommand();
-        else eventResQueue.push(eventHandler.userEventHandling(isLogin, command));
+        try {
+            std::string command; getline(std::cin, command);
+            if (command == "!help") printUserCommand();
+            else eventResQueue.push(eventHandler.userEventHandling(isLogin, command));
+        } catch(const std::exception& e) {
+            std::cerr << e.what() << "\n";
+        }
     }
 }
 
@@ -49,7 +53,7 @@ void ClientCore::initClient() {
 
 void ClientCore::notifyServer(const std::string& msg) {
     std::cout << "[send]: " << msg << "\n";
-    if (send(sc, msg.c_str(), BUF_SIZE, 0) <= 0)
+    if (send(sc, msg.c_str(), (int)msg.length(), 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
@@ -90,8 +94,9 @@ void ClientCore::printUserCommand() {
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             WSAEnumNetworkEvents(clientCore->sc, event, &ev);
             if (ev.lNetworkEvents == FD_READ) {
-                char buf[BUF_SIZE*2];
-                if (recv(clientCore->sc, buf, BUF_SIZE*2, 0) <= 0)
+                char buf[BUF_SIZE];
+                memset(buf, 0, sizeof(buf));
+                if (recv(clientCore->sc, buf, BUF_SIZE, 0) <= 0)
                     std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
                 std::cout << "[Recv]: " << buf << "\n";
                 clientCore->eventReqQueue.push(static_cast<std::string>(buf));

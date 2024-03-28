@@ -52,6 +52,7 @@ std::string EventHandler::userEventHandling(bool isLogin, const std::string& buf
                 else if (command[0] == "!bid") ret = "[6]" + command[1] + "," + command[2];
                 else if (command[0] == "!breakItem") ret = "[7]" + command[1] + "," + command[2];
                 else if (command[0] == "!auctionCheck") ret = "[8]";
+                else throw std::bad_alloc();
             }
         }
     } catch (std::bad_alloc e) {
