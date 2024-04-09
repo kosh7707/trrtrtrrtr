@@ -5,22 +5,17 @@
 #include <winsock2.h>
 #include <memory>
 #include "Account.h"
+#include "GameSocket.h"
 
 class Client {
 public:
-    const std::shared_ptr<Account> getAccount() const;
-    SOCKET          getSc();
-    HANDLE          getEv();
-    const std::string&   getIp();
-    void            setAccount(std::shared_ptr<Account> account);
-    void            setSc(SOCKET sc);
-    void            setEv(HANDLE ev);
-    void            setIp(std::string ip);
+    const std::unique_ptr<GameSocket>& getGameSocket() const;
+    void setGameSocket(std::unique_ptr<GameSocket> gameSocket);
+    const std::unique_ptr<Account>& getAccount() const;
+    void  setAccount(std::unique_ptr<Account> account);
 private:
-    std::shared_ptr<Account> _account;
-    SOCKET _sc;
-    HANDLE _ev;
-    std::string _ip;
+    std::unique_ptr<GameSocket> gameSocket;
+    std::unique_ptr<Account>    account;
 };
 
 

@@ -8,7 +8,7 @@
 
 class AccountDAO {
 public:
-    std::shared_ptr<Account> getAccount(const std::string& id, const std::string& pw);
+    std::unique_ptr<Account> getAccount(const std::string& id, const std::string& pw);
     bool checkAccountExists(const std::string& id);
     bool registerAccount(const std::string& id, const std::string& pw);
     bool updateAccountLastLogin(const std::string& id);

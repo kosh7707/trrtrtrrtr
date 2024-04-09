@@ -3,7 +3,7 @@
 ServerCore::ServerCore() :  maxClientCount(serverConstant.getMaxClientCount()),
                             serverPort(serverConstant.getServerPort()),
                             serverIP(serverConstant.getServerIP()) {
-    Clients = std::shared_ptr<Client[]>(new Client[maxClientCount + 1]);
+    Clients = std::unique_ptr<Client[]>(new Client[maxClientCount + 1]);
     ClientsCount = 0;
 }
 
@@ -47,13 +47,11 @@ SOCKET ServerCore::initServer() {
     }
 
     HANDLE event = WSACreateEvent();
-    Clients[ClientsCount].setEv(event);
-    Clients[ClientsCount].setSc(sc);
-    Clients[ClientsCount].setIp("0.0.0.0");
+
+    GameSocket gameSocket(sc, event, "0.0.0.0");
+    Clients[ClientsCount++].setGameSocket(std::unique_ptr<GameSocket>(&gameSocket));
 
     WSAEventSelect(sc, event, FD_ACCEPT);
-    ClientsCount++;
-
     runRecvWorker();
     runEventHandlingWorker();
     runSendWorker();
@@ -66,25 +64,18 @@ SOCKET ServerCore::initServer() {
 void ServerCore::addClient() {
     SOCKADDR_IN socketAddress;
     SOCKET acceptSocket;
-    int length;
-
-    length = sizeof(socketAddress);
-    acceptSocket = accept(Clients[0].getSc(), reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
-
+    int length = sizeof(socketAddress);
+    acceptSocket = accept(Clients[0].getGameSocket()->getSc(), reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
     HANDLE event = WSACreateEvent();
-    Clients[ClientsCount].setEv(event);
-    Clients[ClientsCount].setSc(acceptSocket);
-    Clients[ClientsCount].setIp(inet_ntoa(socketAddress.sin_addr));
-
+    std::unique_ptr<GameSocket> gameSocket = std::make_unique<GameSocket>(acceptSocket, event, inet_ntoa(socketAddress.sin_addr));
+    Clients[ClientsCount++].setGameSocket(std::move(gameSocket));
     WSAEventSelect(acceptSocket, event, FD_READ | FD_CLOSE);
-
-    ClientsCount++;
 }
 
 void ServerCore::readClient(const int index) {
     char buf[BUF_SIZE];
     memset(buf, 0, sizeof(buf));
-    if (recv(Clients[index].getSc(), buf, BUF_SIZE, 0) <= 0)
+    if (recv(Clients[index].getGameSocket()->getSc(), buf, BUF_SIZE, 0) <= 0)
         std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
     std::cout << "[Recv, Clients[" << index << "]: " << buf << "\n";
     eventReqQueue.push({index, static_cast<std::string>(buf)});
@@ -96,7 +87,7 @@ void ServerCore::removeClient(const int index) {
         std::swap(Clients[index], Clients[ClientsCount]);
     }
     else {
-        std::string removeClientIP = Clients[index].getIp();
+        std::string removeClientIP = Clients[index].getGameSocket()->getIp();
         std::string removeClientNickName = Clients[index].getAccount()->getUserId();
         ClientsCount--;
         std::swap(Clients[index], Clients[ClientsCount]);
@@ -108,13 +99,13 @@ void ServerCore::removeClient(const int index) {
 void ServerCore::notifyAllClients(const std::string& msg) {
     std::cout << "[Send, All Clients]: " << msg << "\n";
     for (int i=1; i<ClientsCount; i++)
-        if(send(Clients[i].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
+        if(send(Clients[i].getGameSocket()->getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
             std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
 void ServerCore::notifyClient(const int index, const std::string& msg) {
     std::cout << "[Send, Clients[" << index << "]: " << msg << "\n";
-    if (send(Clients[index].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
+    if (send(Clients[index].getGameSocket()->getSc(), msg.c_str(), (int)msg.length(), 0) <= 0)
         std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
 }
 
@@ -132,10 +123,11 @@ void ServerCore::runRecvWorker() {
     int index;
     while (true) {
         for (int i=0; i<serverCore->ClientsCount; i++)
-            handleArray[i] = serverCore->Clients[i].getEv();
+            handleArray[i] = serverCore->Clients[i].getGameSocket()->getEv();
         index = WSAWaitForMultipleEvents(serverCore->ClientsCount, handleArray, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
-            WSAEnumNetworkEvents(serverCore->Clients[index].getSc(), serverCore->Clients[index].getEv(), &ev);
+            const std::unique_ptr<GameSocket>& gameSocket = serverCore->Clients[index].getGameSocket();
+            WSAEnumNetworkEvents(gameSocket->getSc(), gameSocket->getEv(), &ev);
             if (ev.lNetworkEvents == FD_ACCEPT) serverCore->addClient();
             else if (ev.lNetworkEvents == FD_READ) serverCore->readClient(index);
             else if (ev.lNetworkEvents == FD_CLOSE) serverCore->removeClient(index);

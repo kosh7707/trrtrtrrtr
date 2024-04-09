@@ -25,6 +25,8 @@ add_executable(GameServer main.cpp
         EventHandler.h
         AuctionDAO.cpp
         AuctionDAO.h
+        GameSocket.cpp
+        GameSocket.h
 )
 
 # include libpqxx

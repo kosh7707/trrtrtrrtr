@@ -5,7 +5,7 @@
 #include "EventHandler.h"
 #include "ServerConstant.h"
 #include "AuctionDAO.h"
-#include <cstring>
+#include "GameSocket.h"
 #define BUF_SIZE 1024
 
 class EventHandler;
@@ -17,7 +17,7 @@ public:
     [[noreturn]] void run();
 private:
     ServerConstant                          serverConstant;
-    std::shared_ptr<Client[]>               Clients;
+    std::unique_ptr<Client[]>               Clients;
     std::string                             serverIP;
     int                                     maxClientCount;
     int                                     serverPort;

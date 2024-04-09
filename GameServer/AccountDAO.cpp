@@ -1,6 +1,6 @@
 #include "AccountDAO.h"
 
-std::shared_ptr<Account> AccountDAO::getAccount(const std::string& id, const std::string& pw) {
+std::unique_ptr<Account> AccountDAO::getAccount(const std::string& id, const std::string& pw) {
     IDatabaseConnection& databaseConnection = DatabaseConnection::getInstance();
     std::string query = "select * from accounts where user_id='" + id + "' and user_pw='" + pw + "';";
     auto res = databaseConnection.selectQuery(query);
@@ -12,8 +12,7 @@ std::shared_ptr<Account> AccountDAO::getAccount(const std::string& id, const std
     int balance = stoi(res[0]["balance"]);
     std::string createdDate = res[0]["create_date"];
     std::string lastLogin = res[0]["last_login"];
-
-    std::shared_ptr<Account> account = std::shared_ptr<Account>(new Account(accountId, userId, userPw, balance, createdDate, lastLogin));
+    std::unique_ptr<Account> account = std::unique_ptr<Account>(new Account(accountId, userId, userPw, balance, createdDate, lastLogin));
     return account;
 }
 

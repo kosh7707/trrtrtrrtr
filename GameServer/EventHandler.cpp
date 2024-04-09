@@ -1,6 +1,6 @@
 #include "EventHandler.h"
 
-std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const std::string& buf, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const std::string& buf, const int ClientsCount, const std::unique_ptr<Client[]>& Clients) {
     int event = getEvent(buf); std::string msg = getMessage(buf);
     std::vector<std::pair<int, std::string>> ret;
     if (event == LOGIN_EVENT) ret = handleLogin(index, msg, Clients);
@@ -44,40 +44,40 @@ std::string EventHandler::getMessage(const std::string& buf) {
     return temp.substr(3);
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleLogin(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleLogin(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     std::vector<std::string> params = split(msg);
     std::string id = params[0], pw = params[1];
     if (accountDao.checkAccountExists(id)) {
-        std::shared_ptr<Account> account = accountDao.getAccount(id, pw);
+        std::unique_ptr<Account> account = std::move(accountDao.getAccount(id, pw));
         if (account != nullptr) {
-            Clients[index].setAccount(account);
+            Clients[index].setAccount(std::move(account));
             accountDao.updateAccountLastLogin(id);
             ret.push_back({index, "[0]000"});
-            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
+            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getGameSocket()->getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
         }
         else ret.push_back({index, "[0]002"});
     }
     else {
         accountDao.registerAccount(id, pw);
-        std::shared_ptr<Account> account = accountDao.getAccount(id, pw);
+        std::unique_ptr<Account> account = accountDao.getAccount(id, pw);
         if (account != nullptr) {
-            Clients[index].setAccount(account);
+            Clients[index].setAccount(std::move(account));
             ret.push_back({index, "[0]001"});
-            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
+            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getGameSocket()->getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
         }
         else ret.push_back({index, "[0]003"});
     }
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleChat(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleChat(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     ret.push_back({0, "[1]" + Clients[index].getAccount()->getUserId() + " : " + msg});
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const int index, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const int index, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     bool res = inventoryDao.insertItem(account_id, 1);
@@ -92,7 +92,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const i
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(const int index, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(const int index, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::string res = inventoryDao.inventoryCheck(account_id);
@@ -100,7 +100,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(cons
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
@@ -110,7 +110,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int 
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleBuyNow(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleBuyNow(const int index, const std::string& msg, const int ClientsCount, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
@@ -128,7 +128,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleBuyNow(const int in
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleBid(const int index, const std::string& msg, const int ClientsCount, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleBid(const int index, const std::string& msg, const int ClientsCount, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);
@@ -144,7 +144,7 @@ std::vector<std::pair<int, std::string>> EventHandler::handleBid(const int index
     return ret;
 }
 
-std::vector<std::pair<int, std::string>> EventHandler::handleBreakItem(const int index, const std::string& msg, const std::shared_ptr<Client[]> Clients) {
+std::vector<std::pair<int, std::string>> EventHandler::handleBreakItem(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
     std::vector<std::pair<int, std::string>> ret;
     int account_id = Clients[index].getAccount()->getAccountId();
     std::vector<std::string> params = split(msg);

@@ -7,7 +7,7 @@
 class AuctionDAO {
 public:
     std::string auctionCheck();
-    std::vector<std::pair<int, std::string>> outdatedItemCheck(int ClientsCount, const std::shared_ptr<Client[]> Clients);
+    std::vector<std::pair<int, std::string>> outdatedItemCheck(int ClientsCount, const std::unique_ptr<Client[]>& Clients);
 };
 
 

@@ -19,6 +19,8 @@ ClientCore::ClientCore() : serverIP(clientConstant.getServerIP()), serverPort(cl
     while (true) {
         try {
             std::string command; getline(std::cin, command);
+            if (command == "") continue;
+
             if (command == "!help") printUserCommand();
             else eventResQueue.push(eventHandler.userEventHandling(isLogin, command));
         } catch(const std::exception& e) {

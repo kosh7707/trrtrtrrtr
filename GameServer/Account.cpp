@@ -1,5 +1,9 @@
 #include "Account.h"
 
+Account::Account() {
+    userId = "svr";
+}
+
 Account::Account(int accountId, const std::string &userId, const std::string &userPw, int balance,
                  const std::string &createdDate, const std::string &lastLogin) : accountId(accountId), userId(userId),
                                                                        userPw(userPw), balance(balance),
@@ -23,9 +27,6 @@ const std::string& Account::getCreatedDate() const {
 
 const std::string& Account::getLastLogin() const {
     return lastLogin;
-}
-Account::Account() {
-    userId = "svr";
 }
 
 int Account::getBalance() {

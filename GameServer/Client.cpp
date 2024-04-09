@@ -1,35 +1,17 @@
 #include "Client.h"
 
-const std::shared_ptr<Account> Client::getAccount() const {
-    return _account;
+const std::unique_ptr<GameSocket>& Client::getGameSocket() const {
+    return gameSocket;
 }
 
-void Client::setAccount(std::shared_ptr<Account> account) {
-    _account = account;
+void Client::setGameSocket(std::unique_ptr<GameSocket> gameSocket) {
+    this->gameSocket = std::move(gameSocket);
 }
 
-SOCKET Client::getSc() {
-    return _sc;
+const std::unique_ptr<Account>& Client::getAccount() const {
+    return account;
 }
 
-HANDLE Client::getEv() {
-    return _ev;
+void Client::setAccount(std::unique_ptr<Account> account) {
+    this->account = std::move(account);
 }
-
-const std::string& Client::getIp() {
-    return _ip;
-}
-
-void Client::setSc(SOCKET sc) {
-    _sc = sc;
-}
-
-void Client::setEv(HANDLE ev) {
-    _ev = ev;
-}
-
-void Client::setIp(std::string ip) {
-    _ip = ip;
-}
-
-
