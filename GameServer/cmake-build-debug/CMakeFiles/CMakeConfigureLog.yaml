@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-96s19d"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-96s19d"
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mcabzr"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mcabzr"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,9 +71,9 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-96s19d
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mcabzr
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_32389 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c1d20 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -81,8 +81,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/'
-         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_32389.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccDSqcYf.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/'
+         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c1d20.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccpicGW9.s
         GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -100,13 +100,13 @@ events:
          C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/'
-         as -v -o CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccDSqcYf.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/'
+         as -v -o CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccpicGW9.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.'
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj -o cmTC_32389.exe -Wl,--out-implib,libcmTC_32389.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.'
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj -o cmTC_c1d20.exe -Wl,--out-implib,libcmTC_c1d20.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -117,9 +117,9 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32389.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_32389.'
-         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_32389.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_32389.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32389.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_32389.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d20.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c1d20.'
+         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c1d20.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c1d20.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d20.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c1d20.'
         
       exitCode: 0
   -
@@ -153,9 +153,9 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-96s19d]
+        ignore line: [Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mcabzr]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_32389 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c1d20 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -163,8 +163,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_32389.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccDSqcYf.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c1d20.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccpicGW9.s]
         ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -182,8 +182,8 @@ events:
         ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccDSqcYf.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccpicGW9.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/]
@@ -193,8 +193,8 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj -o cmTC_32389.exe -Wl --out-implib libcmTC_32389.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj -o cmTC_c1d20.exe -Wl --out-implib libcmTC_c1d20.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -211,9 +211,9 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32389.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_32389.']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_32389.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_32389.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_32389.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32389.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_32389.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d20.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c1d20.']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c1d20.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_c1d20.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c1d20.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c1d20.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c1d20.']
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -231,8 +231,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wmqq9u"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wmqq9u"
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-alu777"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-alu777"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -241,9 +241,9 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wmqq9u
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-alu777
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_679ea && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_349c1 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE
         Target: x86_64-w64-mingw32
@@ -251,8 +251,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/'
-         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_679ea.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccUqmpIs.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/'
+         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_349c1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccOw68QF.s
         GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -276,13 +276,13 @@ events:
          C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: e75de627edc3c57e31324b930b15b056
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/'
-         as -v -o CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccUqmpIs.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/'
+         as -v -o CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccOw68QF.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_679ea.exe -Wl,--out-implib,libcmTC_679ea.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_349c1.exe -Wl,--out-implib,libcmTC_349c1.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE
         COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -293,9 +293,9 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_679ea.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_679ea.'
-         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_679ea.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_679ea.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_679ea.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_679ea.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_349c1.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_349c1.'
+         C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_349c1.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_349c1.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_349c1.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_349c1.'
         
       exitCode: 0
   -
@@ -335,9 +335,9 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wmqq9u]
+        ignore line: [Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-alu777]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_679ea && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_349c1 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -345,8 +345,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_679ea.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccUqmpIs.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_349c1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccOw68QF.s]
         ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -370,8 +370,8 @@ events:
         ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccUqmpIs.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccOw68QF.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/]
@@ -381,8 +381,8 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_679ea.exe -Wl --out-implib libcmTC_679ea.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_349c1.exe -Wl --out-implib libcmTC_349c1.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -399,9 +399,9 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_679ea.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_679ea.']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_679ea.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_679ea.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_679ea.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_679ea.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_679ea.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_349c1.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_349c1.']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_349c1.exe C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_349c1.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_349c1.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2022.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_349c1.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_349c1.']
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -419,8 +419,8 @@ events:
     checks:
       - "Looking for poll"
     directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hcgdlt"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hcgdlt"
+      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zapvep"
+      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zapvep"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -430,13 +430,13 @@ events:
       variable: "PQXX_HAVE_POLL"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hcgdlt
+        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zapvep
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_d17dc && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=poll -fdiagnostics-color=always -o CMakeFiles/cmTC_d17dc.dir/CheckFunctionExists.c.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hcgdlt/CheckFunctionExists.c
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_d17dc.dir/CheckFunctionExists.c.obj -o cmTC_d17dc.exe -Wl,--out-implib,libcmTC_d17dc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: cmTC_d17dc.exe 
-        cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_d17dc.dir/CheckFunctionExists.c.obj -o cmTC_d17dc.exe -Wl,--out-implib,libcmTC_d17dc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        C:\\Program Files\\JetBrains\\CLion 2022.2.1\\bin\\mingw\\bin/ld.exe: CMakeFiles/cmTC_d17dc.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `poll'
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_20cb6 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=poll -fdiagnostics-color=always -o CMakeFiles/cmTC_20cb6.dir/CheckFunctionExists.c.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zapvep/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_20cb6.dir/CheckFunctionExists.c.obj -o cmTC_20cb6.exe -Wl,--out-implib,libcmTC_20cb6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: cmTC_20cb6.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=poll  CMakeFiles/cmTC_20cb6.dir/CheckFunctionExists.c.obj -o cmTC_20cb6.exe -Wl,--out-implib,libcmTC_20cb6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:\\Program Files\\JetBrains\\CLion 2022.2.1\\bin\\mingw\\bin/ld.exe: CMakeFiles/cmTC_20cb6.dir/CheckFunctionExists.c.obj:CheckFunctionExists.c:(.text+0x15): undefined reference to `poll'
         collect2.exe: error: ld returned 1 exit status
         ninja: build stopped: subcommand failed.
         
@@ -461,8 +461,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_d87b0 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_d87b0.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_d87b0.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -o cmTC_d87b0.exe -Wl,--out-implib,libcmTC_d87b0.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_899c3 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_899c3.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_899c3.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -o cmTC_899c3.exe -Wl,--out-implib,libcmTC_899c3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -485,8 +485,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_f6320 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_f6320.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_f6320.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -o cmTC_f6320.exe -Wl,--out-implib,libcmTC_f6320.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_3058e && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_3058e.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_3058e.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -o cmTC_3058e.exe -Wl,--out-implib,libcmTC_3058e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -509,9 +509,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_e54a6 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_e54a6.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
-        FAILED: CMakeFiles/cmTC_e54a6.dir/PQXX_HAVE_CMP.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_e54a6.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_9df12 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_9df12.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
+        FAILED: CMakeFiles/cmTC_9df12.dir/PQXX_HAVE_CMP.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_9df12.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx: In function 'int main()':
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:15: error: 'cmp_greater' is not a member of 'std'
             8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
@@ -544,9 +544,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_18794 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_18794.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
-        FAILED: CMakeFiles/cmTC_18794.dir/PQXX_HAVE_CONCEPTS.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_18794.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_76171 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_76171.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        FAILED: CMakeFiles/cmTC_76171.dir/PQXX_HAVE_CONCEPTS.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_76171.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx:5:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
             5 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
               |    ^~~~~
@@ -576,8 +576,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_00fd2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_00fd2.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_00fd2.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -o cmTC_00fd2.exe -Wl,--out-implib,libcmTC_00fd2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_16bba && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_16bba.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_16bba.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -o cmTC_16bba.exe -Wl,--out-implib,libcmTC_16bba.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -600,8 +600,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_617b6 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_617b6.dir/PQXX_HAVE_GCC_PURE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_617b6.dir/PQXX_HAVE_GCC_PURE.cxx.obj -o cmTC_617b6.exe -Wl,--out-implib,libcmTC_617b6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_162dd && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_162dd.dir/PQXX_HAVE_GCC_PURE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_162dd.dir/PQXX_HAVE_GCC_PURE.cxx.obj -o cmTC_162dd.exe -Wl,--out-implib,libcmTC_162dd.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -624,8 +624,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_685fa && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_685fa.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_685fa.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -o cmTC_685fa.exe -Wl,--out-implib,libcmTC_685fa.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_5fbc6 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_5fbc6.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_5fbc6.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -o cmTC_5fbc6.exe -Wl,--out-implib,libcmTC_5fbc6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -648,9 +648,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_1512f && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_1512f.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
-        FAILED: CMakeFiles/cmTC_1512f.dir/PQXX_HAVE_LIKELY.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_1512f.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_cee88 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_cee88.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
+        FAILED: CMakeFiles/cmTC_cee88.dir/PQXX_HAVE_LIKELY.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_cee88.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx: In function 'int main(int, char**)':
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:21: error: 'because' was not declared in this scope
             7 |   deliberately_fail(because, older, C++, standard);
@@ -690,9 +690,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_7730f && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7730f.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
-        FAILED: CMakeFiles/cmTC_7730f.dir/PQXX_HAVE_MULTIDIM.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7730f.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_7f6b5 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7f6b5.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        FAILED: CMakeFiles/cmTC_7f6b5.dir/PQXX_HAVE_MULTIDIM.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7f6b5.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx:5:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
             5 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
               |    ^~~~~
@@ -722,8 +722,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_d67b0 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_d67b0.dir/PQXX_HAVE_PATH.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_PATH.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_d67b0.dir/PQXX_HAVE_PATH.cxx.obj -o cmTC_d67b0.exe -Wl,--out-implib,libcmTC_d67b0.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_5eb36 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_5eb36.dir/PQXX_HAVE_PATH.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_PATH.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_5eb36.dir/PQXX_HAVE_PATH.cxx.obj -o cmTC_5eb36.exe -Wl,--out-implib,libcmTC_5eb36.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -746,9 +746,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_12c01 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_12c01.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
-        FAILED: CMakeFiles/cmTC_12c01.dir/PQXX_HAVE_POLL.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_12c01.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_fe097 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_fe097.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
+        FAILED: CMakeFiles/cmTC_fe097.dir/PQXX_HAVE_POLL.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_fe097.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx:2:10: fatal error: poll.h: No such file or directory
             2 | #include <poll.h>
               |          ^~~~~~~~
@@ -776,8 +776,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_8db26 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_8db26.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_8db26.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -o cmTC_8db26.exe -Wl,--out-implib,libcmTC_8db26.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_827b8 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_827b8.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_827b8.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -o cmTC_827b8.exe -Wl,--out-implib,libcmTC_827b8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -800,9 +800,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_2489d && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_2489d.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
-        FAILED: CMakeFiles/cmTC_2489d.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_2489d.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_78180 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_78180.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        FAILED: CMakeFiles/cmTC_78180.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_78180.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:5:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
             5 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
               |    ^~~~~
@@ -832,9 +832,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_84a58 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_84a58.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
-        FAILED: CMakeFiles/cmTC_84a58.dir/PQXX_HAVE_SPAN.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_84a58.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_ff3ba && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_ff3ba.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
+        FAILED: CMakeFiles/cmTC_ff3ba.dir/PQXX_HAVE_SPAN.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_ff3ba.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx:5:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
             5 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
               |    ^~~~~
@@ -864,9 +864,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_16d87 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_16d87.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
-        FAILED: CMakeFiles/cmTC_16d87.dir/PQXX_HAVE_SSIZE.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_16d87.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_00094 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_00094.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
+        FAILED: CMakeFiles/cmTC_00094.dir/PQXX_HAVE_SSIZE.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_00094.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx:5:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
             5 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
               |    ^~~~~
@@ -896,9 +896,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_30375 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_30375.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
-        FAILED: CMakeFiles/cmTC_30375.dir/PQXX_HAVE_STRERROR_R.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_30375.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_90d19 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_90d19.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        FAILED: CMakeFiles/cmTC_90d19.dir/PQXX_HAVE_STRERROR_R.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_90d19.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx: In function 'int main()':
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx:11:12: error: 'strerror_r' was not declared in this scope; did you mean 'strerror_s'?
            11 |   auto res{strerror_r(1, buffer, 200)};
@@ -927,8 +927,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_b5c5e && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_b5c5e.dir/PQXX_HAVE_STRERROR_S.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_b5c5e.dir/PQXX_HAVE_STRERROR_S.cxx.obj -o cmTC_b5c5e.exe -Wl,--out-implib,libcmTC_b5c5e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c9775 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_c9775.dir/PQXX_HAVE_STRERROR_S.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_c9775.dir/PQXX_HAVE_STRERROR_S.cxx.obj -o cmTC_c9775.exe -Wl,--out-implib,libcmTC_c9775.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -951,8 +951,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_4c3f8 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_4c3f8.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_4c3f8.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -o cmTC_4c3f8.exe -Wl,--out-implib,libcmTC_4c3f8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_41a3a && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_41a3a.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_41a3a.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -o cmTC_41a3a.exe -Wl,--out-implib,libcmTC_41a3a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -975,9 +975,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_33675 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_33675.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
-        FAILED: CMakeFiles/cmTC_33675.dir/PQXX_HAVE_UNREACHABLE.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_33675.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_9d6ab && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_9d6ab.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
+        FAILED: CMakeFiles/cmTC_9d6ab.dir/PQXX_HAVE_UNREACHABLE.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_9d6ab.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx:5:4: error: #error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
             5 | #  error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
               |    ^~~~~
@@ -1007,9 +1007,9 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_21971 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_21971.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
-        FAILED: CMakeFiles/cmTC_21971.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_21971.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_aa3bd && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_aa3bd.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        FAILED: CMakeFiles/cmTC_aa3bd.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_aa3bd.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx: In function 'int main()':
         C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx:6:27: error: 'year' is not a member of 'std::chrono'
             6 |   return int(std::chrono::year{1});
@@ -1037,612 +1037,8 @@ events:
       stdout: |
         Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_4866d && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_4866d.dir/no_need_fslib.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/no_need_fslib.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_4866d.dir/no_need_fslib.cxx.obj -o cmTC_4866d.exe -Wl,--out-implib,libcmTC_4866d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-...
-
----
-events:
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:2 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_CHARCONV_FLOAT"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_5a902 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_5a902.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_5a902.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.obj -o cmTC_5a902.exe -Wl,--out-implib,libcmTC_5a902.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:6 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_CHARCONV_INT"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_044e4 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_044e4.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_044e4.dir/PQXX_HAVE_CHARCONV_INT.cxx.obj -o cmTC_044e4.exe -Wl,--out-implib,libcmTC_044e4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:10 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_CMP"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_4468b && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_4468b.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
-        FAILED: CMakeFiles/cmTC_4468b.dir/PQXX_HAVE_CMP.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_4468b.dir/PQXX_HAVE_CMP.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx: In function 'int main()':
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:15: error: 'cmp_greater' is not a member of 'std'
-            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
-              |               ^~~~~~~~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:15: note: 'std::cmp_greater' is only available from C++20 onwards
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:43: error: 'cmp_less_equal' is not a member of 'std'
-            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
-              |                                           ^~~~~~~~~~~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CMP.cxx:8:43: note: 'std::cmp_less_equal' is only available from C++20 onwards
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:14 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_CONCEPTS"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_48785 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_48785.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
-        FAILED: CMakeFiles/cmTC_48785.dir/PQXX_HAVE_CONCEPTS.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_48785.dir/PQXX_HAVE_CONCEPTS.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx:5:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
-            5 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx:8:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
-            8 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:18 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_CXA_DEMANGLE"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_43b0e && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_43b0e.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_43b0e.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj -o cmTC_43b0e.exe -Wl,--out-implib,libcmTC_43b0e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:22 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_GCC_PURE"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_8caf3 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_8caf3.dir/PQXX_HAVE_GCC_PURE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_8caf3.dir/PQXX_HAVE_GCC_PURE.cxx.obj -o cmTC_8caf3.exe -Wl,--out-implib,libcmTC_8caf3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:26 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_GCC_VISIBILITY"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_a4dfa && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_a4dfa.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_a4dfa.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj -o cmTC_a4dfa.exe -Wl,--out-implib,libcmTC_a4dfa.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:30 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_LIKELY"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_68e26 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_68e26.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
-        FAILED: CMakeFiles/cmTC_68e26.dir/PQXX_HAVE_LIKELY.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_68e26.dir/PQXX_HAVE_LIKELY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx: In function 'int main(int, char**)':
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:21: error: 'because' was not declared in this scope
-            7 |   deliberately_fail(because, older, C++, standard);
-              |                     ^~~~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:30: error: 'older' was not declared in this scope
-            7 |   deliberately_fail(because, older, C++, standard);
-              |                              ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:37: error: 'C' was not declared in this scope
-            7 |   deliberately_fail(because, older, C++, standard);
-              |                                     ^
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:42: error: 'standard' was not declared in this scope
-            7 |   deliberately_fail(because, older, C++, standard);
-              |                                          ^~~~~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx:7:3: error: 'deliberately_fail' was not declared in this scope
-            7 |   deliberately_fail(because, older, C++, standard);
-              |   ^~~~~~~~~~~~~~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:34 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_MULTIDIM"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_af692 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_af692.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
-        FAILED: CMakeFiles/cmTC_af692.dir/PQXX_HAVE_MULTIDIM.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_af692.dir/PQXX_HAVE_MULTIDIM.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx:5:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
-            5 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx:8:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
-            8 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:38 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_PATH"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_28939 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_28939.dir/PQXX_HAVE_PATH.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_PATH.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_28939.dir/PQXX_HAVE_PATH.cxx.obj -o cmTC_28939.exe -Wl,--out-implib,libcmTC_28939.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:42 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_POLL"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_de4af && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_de4af.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
-        FAILED: CMakeFiles/cmTC_de4af.dir/PQXX_HAVE_POLL.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_de4af.dir/PQXX_HAVE_POLL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_POLL.cxx:2:10: fatal error: poll.h: No such file or directory
-            2 | #include <poll.h>
-              |          ^~~~~~~~
-        compilation terminated.
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:46 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_SLEEP_FOR"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_a4ce5 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_a4ce5.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_a4ce5.dir/PQXX_HAVE_SLEEP_FOR.cxx.obj -o cmTC_a4ce5.exe -Wl,--out-implib,libcmTC_a4ce5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:50 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_SOURCE_LOCATION"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_b5296 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_b5296.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
-        FAILED: CMakeFiles/cmTC_b5296.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_b5296.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:5:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
-            5 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:8:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
-            8 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:54 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_SPAN"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_7a584 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7a584.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
-        FAILED: CMakeFiles/cmTC_7a584.dir/PQXX_HAVE_SPAN.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_7a584.dir/PQXX_HAVE_SPAN.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx:5:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
-            5 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SPAN.cxx:8:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
-            8 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:58 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_SSIZE"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_98f56 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_98f56.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
-        FAILED: CMakeFiles/cmTC_98f56.dir/PQXX_HAVE_SSIZE.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_98f56.dir/PQXX_HAVE_SSIZE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx:5:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
-            5 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx:8:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
-            8 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:62 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_STRERROR_R"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c2fa5 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_c2fa5.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
-        FAILED: CMakeFiles/cmTC_c2fa5.dir/PQXX_HAVE_STRERROR_R.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_c2fa5.dir/PQXX_HAVE_STRERROR_R.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx: In function 'int main()':
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx:11:12: error: 'strerror_r' was not declared in this scope; did you mean 'strerror_s'?
-           11 |   auto res{strerror_r(1, buffer, 200)};
-              |            ^~~~~~~~~~
-              |            strerror_s
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:66 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_STRERROR_S"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_f6dbe && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_f6dbe.dir/PQXX_HAVE_STRERROR_S.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_f6dbe.dir/PQXX_HAVE_STRERROR_S.cxx.obj -o cmTC_f6dbe.exe -Wl,--out-implib,libcmTC_f6dbe.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:70 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_THREAD_LOCAL"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_e85be && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_e85be.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_e85be.dir/PQXX_HAVE_THREAD_LOCAL.cxx.obj -o cmTC_e85be.exe -Wl,--out-implib,libcmTC_e85be.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:74 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_UNREACHABLE"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_8f5e7 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_8f5e7.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
-        FAILED: CMakeFiles/cmTC_8f5e7.dir/PQXX_HAVE_UNREACHABLE.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_8f5e7.dir/PQXX_HAVE_UNREACHABLE.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx:5:4: error: #error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
-            5 | #  error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is not set."
-              |    ^~~~~
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx:8:4: error: #error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is false."
-            8 | #  error "No PQXX_HAVE_UNREACHABLE: __cpp_lib_unreachable is false."
-              |    ^~~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:78 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_002c2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_002c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
-        FAILED: CMakeFiles/cmTC_002c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj 
-        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_002c2.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx: In function 'int main()':
-        C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx:6:27: error: 'year' is not a member of 'std::chrono'
-            6 |   return int(std::chrono::year{1});
-              |                           ^~~~
-        ninja: build stopped: subcommand failed.
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "libpqxx/cmake/pqxx_cxx_feature_checks.cmake:82 (try_compile)"
-      - "libpqxx/cmake/config.cmake:56 (include)"
-      - "libpqxx/CMakeLists.txt:27 (include)"
-    directories:
-      source: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-      binary: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake"
-    buildResult:
-      variable: "no_need_fslib"
-      cached: true
-      stdout: |
-        Change Dir: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/CMakeFiles/CMakeTmp
-        
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_00a3c && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_00a3c.dir/no_need_fslib.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/no_need_fslib.cxx
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_00a3c.dir/no_need_fslib.cxx.obj -o cmTC_00a3c.exe -Wl,--out-implib,libcmTC_00a3c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_b40a3 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -std=c++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_b40a3.dir/no_need_fslib.cxx.obj -c C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/config-tests/no_need_fslib.cxx
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   CMakeFiles/cmTC_b40a3.dir/no_need_fslib.cxx.obj -o cmTC_b40a3.exe -Wl,--out-implib,libcmTC_b40a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
 ...

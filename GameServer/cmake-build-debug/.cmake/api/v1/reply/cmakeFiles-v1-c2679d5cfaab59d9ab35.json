@@ -772,13 +772,210 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
+		},
+		{
+			"path" : "libpqxx/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"path" : "libpqxx/cmake/config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckSymbolExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPostgreSQL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake"
+		},
+		{
+			"path" : "libpqxx/cmake/pqxx_cxx_feature_checks.cmake"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_CMP.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_PATH.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_POLL.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_SPAN.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx"
+		},
+		{
+			"path" : "libpqxx/config-tests/no_need_fslib.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
+		},
+		{
+			"path" : "libpqxx/cmake/libpqxx-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2022.2.1/bin/cmake/win/x64/share/cmake-3.26/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"path" : "libpqxx/src/CMakeLists.txt"
+		},
+		{
+			"path" : "libpqxx/libpqxx.pc.in"
+		},
+		{
+			"path" : "libpqxx/include/CMakeLists.txt"
+		},
+		{
+			"path" : "libpqxx/test/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/ChatServer/cmake-build-debug",
-		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/ChatServer"
+		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug",
+		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer"
 	},
 	"version" : 
 	{
