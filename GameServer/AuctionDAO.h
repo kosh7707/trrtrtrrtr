@@ -1,7 +1,7 @@
 #ifndef GAMESERVER_AUCTIONDAO_H
 #define GAMESERVER_AUCTIONDAO_H
 
-#include "DatabaseConnection.h"
+#include "../Database/DatabaseConnection.h"
 #include "Client.h"
 
 class AuctionDAO {

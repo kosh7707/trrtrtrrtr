@@ -5,12 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Create an executable
 add_executable(GameServer main.cpp
-        DatabaseConnection.cpp
-        DatabaseConnection.h
         ServerConstant.cpp
         ServerConstant.h
-        IDatabaseConnection.cpp
-        IDatabaseConnection.h
         ServerCore.cpp
         ServerCore.h
         Client.cpp
@@ -27,11 +23,17 @@ add_executable(GameServer main.cpp
         AuctionDAO.h
         GameSocket.cpp
         GameSocket.h
+        Inventory.cpp
+        Inventory.h
 )
 
-# include libpqxx
-add_subdirectory(./libpqxx build-pqxx)
-target_link_libraries(GameServer PRIVATE pqxx)
+# include ServerCore
+add_subdirectory(../ServerCore ServerCore)
+target_include_directories(GameServer PRIVATE ../ServerCore)
+
+# include Database
+add_subdirectory(../Database Database)
+target_include_directories(GameServer PRIVATE ../Database)
 
 # include winsock2_32
 target_link_libraries(GameServer PRIVATE ws2_32)

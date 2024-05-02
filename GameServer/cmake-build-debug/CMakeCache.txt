@@ -315,6 +315,15 @@ CPACK_SOURCE_7Z:BOOL=ON
 CPACK_SOURCE_ZIP:BOOL=ON
 
 //Value Computed by CMake
+Database_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/Database
+
+//Value Computed by CMake
+Database_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Database_SOURCE_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/Database
+
+//Value Computed by CMake
 GameServer_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug
 
 //Value Computed by CMake
@@ -342,13 +351,22 @@ PostgreSQL_LIBRARY_RELEASE:FILEPATH=C:/Program Files/PostgreSQL/15/lib/libpq.lib
 PostgreSQL_TYPE_INCLUDE_DIR:PATH=C:/Program Files/PostgreSQL/15/include/server
 
 //Value Computed by CMake
-libpqxx_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx
+ServerCore_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/ServerCore
+
+//Value Computed by CMake
+ServerCore_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ServerCore_SOURCE_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore
+
+//Value Computed by CMake
+libpqxx_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/Database/build-pqxx
 
 //Value Computed by CMake
 libpqxx_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-libpqxx_SOURCE_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx
+libpqxx_SOURCE_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/Database/libpqxx
 
 //Dependencies for the target
 pqxx_LIB_DEPENDS:STATIC=general;C:/Program Files/PostgreSQL/15/lib/libpq.lib;general;wsock32;general;ws2_32;
@@ -488,7 +506,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

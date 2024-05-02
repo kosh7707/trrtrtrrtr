@@ -3,8 +3,7 @@ project(ServerCore)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ServerCore main.cpp
-        ServerCore.cpp
+add_library(ServerCore ServerCore.cpp
         ServerCore.h
         IEventHandler.cpp
         IEventHandler.h

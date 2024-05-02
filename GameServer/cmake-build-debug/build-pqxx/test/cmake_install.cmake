@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/test
+# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

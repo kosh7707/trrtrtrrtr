@@ -21,7 +21,7 @@ set(CPACK_IGNORE_FILES "/CVS/;/\\.svn/;/\\.bzr/;/\\.hg/;/\\.git/;\\.swp\$;\\.#;/
 set(CPACK_INSTALLED_DIRECTORIES "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer;/")
 set(CPACK_INSTALL_CMAKE_PROJECTS "")
 set(CPACK_INSTALL_PREFIX "C:/Program Files (x86)/GameServer")
-set(CPACK_MODULE_PATH "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake")
+set(CPACK_MODULE_PATH "C:/Users/Administrator/Desktop/trrtrtrrtr/Database/libpqxx/cmake")
 set(CPACK_NSIS_DISPLAY_NAME "GameServer 7.9.0")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")
 set(CPACK_NSIS_INSTALLER_MUI_ICON_CODE "")

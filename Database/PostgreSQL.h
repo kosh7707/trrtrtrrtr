@@ -12,7 +12,6 @@ public:
     std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query);
     bool transaction(const std::vector<std::string>& queries);
 
-
 private:
     std::unique_ptr<pqxx::connection> conn;
 };

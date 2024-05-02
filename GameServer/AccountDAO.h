@@ -4,7 +4,7 @@
 
 #include <memory>
 #include "Account.h"
-#include "DatabaseConnection.h"
+#include "IDatabase.h"
 
 class AccountDAO {
 public:

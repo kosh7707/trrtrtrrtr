@@ -29,7 +29,7 @@ const std::string& Account::getLastLogin() const {
     return lastLogin;
 }
 
-int Account::getBalance() {
+int Account::getBalance() const {
     return balance;
 }
 

@@ -13,6 +13,8 @@
     <generated>
       <config projectName="GameServer" targetName="GameServer" />
       <config projectName="GameServer" targetName="pqxx" />
+      <config projectName="GameServer" targetName="ServerCore" />
+      <config projectName="GameServer" targetName="Database" />
       <config projectName="GameServer" targetName="runner" />
     </generated>
   </component>
@@ -23,18 +25,502 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4fd9a03-d594-45fb-91ef-39852d09833c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Queue.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Queue.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Inventory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Inventory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/PostgreSQL.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/PostgreSQL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Account.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Account.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Account.h" beforeDir="false" afterPath="$PROJECT_DIR$/Account.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/AccountDAO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuctionDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/AuctionDAO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryDAO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryDAO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryDAO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-e71c3787b46a3a0f9e71.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-98fd8a47737adc71da0e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-bafbf201f22e7a69821e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx-Debug-2ea953afa3319d8e4fa0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.include-Debug-30831b4fd9dfee5f8b6b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.src-Debug-499817f57ace9299926a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-build-pqxx.test-Debug-5b69ab4581b41ff5e39f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T01-03-53-0377.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-561df0ae621fc974ea8b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-pqxx-Debug-836749e3289951b0b6e3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-runner-Debug-e173367e8ac3bcb57284.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8cf41612fb38e203449a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T04-39-58-0602.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/target-ServerCore-Debug-7a592b9cb64ff6399648.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-056a71216c253276358a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-74489f471be62dcabc67.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T05-05-55-0135.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/target-ServerCore-Debug-dc1d2e8c97434a67ea0c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.circleci/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.clang-format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.clang-tidy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.cmake-format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.github/workflows/codeql.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.github/workflows/stale.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.lgtm.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.lift/ignoreFiles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.mdl_style.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.mdlrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/.readthedocs.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/AUTHORS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/BUILDING-cmake.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/BUILDING-configure.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/COPYING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/INSTALL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/NEWS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/aclocal.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/autogen.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/cmake/config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/cmake/libpqxx-config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/cmake/pqxx_cxx_feature_checks.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/compile_flags.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_CHARCONV_INT.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_CMP.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_CONCEPTS.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_GCC_PURE.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_LIKELY.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_MULTIDIM.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_PATH.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_POLL.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_SLEEP_FOR.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_SPAN.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_SSIZE.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_STRERROR_R.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_STRERROR_S.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_UNREACHABLE.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config-tests/no_need_fslib.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/compile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/config.guess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/config.sub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/depcomp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/install-sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/ltmain.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/libtool.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/ltoptions.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/ltsugar.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/ltversion.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/m4/lt~obsolete.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/missing" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/mkinstalldirs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/config/test-driver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/configitems" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/configure" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/configure.ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/cxx_features.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/Doxyfile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/_static/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/doc/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/CMakeLists.txt.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/array" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/array.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/binarystring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/binarystring.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/blob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/blob.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/composite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/composite.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/config.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/connection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/connection.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/cursor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/cursor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/dbtransaction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/dbtransaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/accessing-results.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/binary-data.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/datatypes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/escaping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/getting-started.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/mainpage.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/mainpage.md.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/parameters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/performance.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/prepared-statement.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/streams.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/doc/thread-safety.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/errorhandler" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/errorhandler.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/except" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/except.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/field" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/field.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/array-composite.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/callgate.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/concat.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/conversions.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/encoding_group.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/encodings.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-errorhandler.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-largeobject.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-notification_receiver.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-pipeline.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-sql_cursor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-stream_from.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-stream_to.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/connection-transaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/errorhandler-connection.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/icursor_iterator-icursorstream.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/icursorstream-icursor_iterator.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/result-connection.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/result-creation.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/result-pipeline.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/result-sql_cursor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/transaction-sql_cursor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/gates/transaction-transaction_focus.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/header-post.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/header-pre.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/ignore-deprecated-post.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/ignore-deprecated-pre.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/libpq-forward.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/result_iter.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/result_iterator.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/sql_cursor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/statement_parameters.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/stream_iterator.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/stream_query.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/stream_query_impl.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/internal/wait.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/isolation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/isolation.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/largeobject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/largeobject.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/nontransaction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/nontransaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/notification" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/notification.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/params.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/pipeline" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/pipeline.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/pqxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/prepared_statement" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/prepared_statement.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/range" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/range.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/result" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/result.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/robusttransaction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/robusttransaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/row" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/row.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/separated_list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/separated_list.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/strconv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/strconv.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/stream_from" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/stream_from.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/stream_to" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/stream_to.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/subtransaction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/subtransaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/time" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/time.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction_base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction_base.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction_focus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transaction_focus.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transactor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/transactor.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/types" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/types.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/util" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/util.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/version.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/version.hxx.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/zview" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/include/pqxx/zview.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/libpqxx.pc.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/pqxx_cxx_feature_checks.ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/requirements.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/array.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/binarystring.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/blob.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/connection.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/cursor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/encodings.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/errorhandler.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/except.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/field.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/largeobject.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/notification.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/params.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/pipeline.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/pqxx-source.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/result.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/robusttransaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/row.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/sql_cursor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/strconv.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/stream_from.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/stream_to.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/subtransaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/time.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/transaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/transaction_base.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/util.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/version.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/src/wait.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/Makefile.am.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/runner.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test00.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test01.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test02.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test04.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test07.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test10.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test11.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test13.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test14.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test16.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test17.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test18.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test20.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test21.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test26.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test29.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test30.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test32.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test37.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test39.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test46.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test56.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test60.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test61.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test62.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test69.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test70.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test71.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test72.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test74.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test75.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test76.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test77.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test78.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test79.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test82.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test84.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test87.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test88.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test89.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test90.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test_helpers.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/test_types.hxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_array.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_binarystring.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_blob.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_cancel_query.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_column.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_composite.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_connection.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_cursor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_encodings.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_error_verbosity.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_errorhandler.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_escape.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_exceptions.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_field.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_float.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_largeobject.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_nonblocking_connect.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_notification.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_pipeline.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_prepared_statement.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_range.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_read_transaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_result_iteration.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_result_slicing.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_row.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_separated_list.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_simultaneous_transactions.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_sql_cursor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_stateless_cursor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_strconv.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_stream_from.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_stream_query.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_stream_to.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_string_conversion.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_subtransaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_test_helpers.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_thread_safety_model.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_time.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_transaction.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_transaction_base.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_transaction_focus.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_transactor.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_type_name.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/test/unit/test_zview.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/deprecations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/extract_version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/generate_check_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/generate_cxx_checks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/lint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/m4esc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/pqxxthreadsafety.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/rmlo.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/splitconfig.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/template2mak.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/test_all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/todo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libpqxx/tools/update-copyright" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/.idea/library_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f343efc233719f8ac048.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-e2b8a15002506c9f7f2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-fd9f4ccdfbb2f3b31c4c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T06-34-33-0857.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/target-library_test-Debug-c0dac94c7d996536bdc3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/library_test.dir/library.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/liblibrary_test.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/cmake-build-debug/liblibrary_test.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/library.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library_test/library.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5b042a4f3c493b9395e3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-06fabf0e1cd66d5f2cb8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e24b286d3a0044950044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T06-49-22-0443.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/target-test-Debug-6856ef1ee964b8cc0819.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/CMakeFiles/test.dir/library.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/cmake-build-debug/libtest.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/library.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/library.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +538,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-Debug-Database" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2023" />
@@ -68,38 +557,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "servercore",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;servercore&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="CMake Application.GameServer">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Database" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="Database" CONFIG_NAME="Debug">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="GameServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="GameServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameServer" RUN_TARGET_NAME="GameServer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerCore" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="ServerCore" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameServer" RUN_TARGET_NAME="ServerCore">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -116,8 +610,10 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.GameServer" />
+      <item itemvalue="CMake Application.Database" />
       <item itemvalue="CMake Application.pqxx" />
       <item itemvalue="CMake Application.runner" />
+      <item itemvalue="CMake Application.ServerCore" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -139,7 +635,9 @@
       <workItem from="1711598360004" duration="3228000" />
       <workItem from="1712643920721" duration="4532000" />
       <workItem from="1714454928655" duration="1000" />
-      <workItem from="1714611760985" duration="11626000" />
+      <workItem from="1714611760985" duration="13428000" />
+      <workItem from="1714635353151" duration="4884000" />
+      <workItem from="1714643755892" duration="1563000" />
     </task>
     <servers />
   </component>

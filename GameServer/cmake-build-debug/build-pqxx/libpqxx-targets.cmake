@@ -50,7 +50,7 @@ unset(_cmake_expected_targets)
 add_library(libpqxx::pqxx STATIC IMPORTED)
 
 set_target_properties(libpqxx::pqxx PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/include;C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/include;C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/include"
   INTERFACE_LINK_LIBRARIES "C:/Program Files/PostgreSQL/15/lib/libpq.lib;wsock32;ws2_32"
 )
 

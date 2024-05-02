@@ -39,7 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/cmake_install.cmake")
+  include("C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/ServerCore/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/Database/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -1,0 +1,7 @@
+# ninja log v5
+10	278	7363359453320695	CMakeFiles/ServerCore.dir/Event.cpp.obj	1fd680869c8674f5
+5	298	7363359453523232	CMakeFiles/ServerCore.dir/Queue.cpp.obj	51c971c97e09e517
+3	306	7363359453613304	CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj	3735e1e07531497f
+7	1060	7363359461145820	CMakeFiles/ServerCore.dir/Socket.cpp.obj	ccaddd5bdb8c8bc6
+0	1463	7363359465165263	CMakeFiles/ServerCore.dir/ServerCore.cpp.obj	777186c64d2d43bc
+1463	1534	7363359465887014	libServerCore.a	5914823d4d5ebc9f

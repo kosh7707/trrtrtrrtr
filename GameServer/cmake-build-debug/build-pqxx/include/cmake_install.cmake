@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/include
+# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES
-    "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/include/pqxx"
+    "C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/include/pqxx"
     "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/include/pqxx"
     FILES_MATCHING REGEX "/[^/]*\\.hxx$" REGEX "/array$" REGEX "/binarystring$" REGEX "/blob$" REGEX "/composite$" REGEX "/connection$" REGEX "/cursor$" REGEX "/dbtransaction$" REGEX "/errorhandler$" REGEX "/except$" REGEX "/field$" REGEX "/isolation$" REGEX "/largeobject$" REGEX "/nontransaction$" REGEX "/notification$" REGEX "/params$" REGEX "/pipeline$" REGEX "/prepared\\_statement$" REGEX "/range$" REGEX "/result$" REGEX "/robusttransaction$" REGEX "/row$" REGEX "/separated\\_list$" REGEX "/strconv$" REGEX "/stream\\_from$" REGEX "/stream\\_to$" REGEX "/subtransaction$" REGEX "/time$" REGEX "/transaction$" REGEX "/transaction\\_base$" REGEX "/transaction\\_focus$" REGEX "/transactor$" REGEX "/types$" REGEX "/util$" REGEX "/version$" REGEX "/zview$" REGEX "/internal\\/[^/]*\\.hxx$" REGEX "/internal\\/gates\\/[^/]*\\.hxx$" REGEX "/config\\-public\\-compiler\\.h$" REGEX "/pqxx$" REGEX "/doc$" EXCLUDE)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/libpqxx" TYPE DIRECTORY FILES "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/include/pqxx/doc/" FILES_MATCHING REGEX "/[^/]*\\.md$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/libpqxx" TYPE DIRECTORY FILES "C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/include/pqxx/doc/" FILES_MATCHING REGEX "/[^/]*\\.md$")
 endif()
 

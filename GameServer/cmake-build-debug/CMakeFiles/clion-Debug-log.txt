@@ -3,6 +3,6 @@
 -- Detecting CXX compile features - done
 -- Generating config.h
 -- Generating config.h - done
--- Configuring done (10.5s)
+-- Configuring done (10.0s)
 -- Generating done (0.1s)
 -- Build files have been written to: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug

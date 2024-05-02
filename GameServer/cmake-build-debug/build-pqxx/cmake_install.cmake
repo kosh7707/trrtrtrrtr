@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx
+# Install script for directory: C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/libpqxx" TYPE FILE FILES
-    "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/libpqxx/cmake/libpqxx-config.cmake"
+    "C:/Users/Administrator/Desktop/trrtrtrrtr/libpqxx/cmake/libpqxx-config.cmake"
     "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/libpqxx-config-version.cmake"
     )
 endif()
