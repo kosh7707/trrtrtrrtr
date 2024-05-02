@@ -1,0 +1,4 @@
+# ninja log v5
+0	248	7363348896451461	CMakeFiles/library_test.dir/library.cpp.obj	476fcc033a8834d4
+249	311	7363348897052039	liblibrary_test.dll	161a18ade352c7a9
+249	311	7363348897052039	liblibrary_test.dll.a	161a18ade352c7a9
