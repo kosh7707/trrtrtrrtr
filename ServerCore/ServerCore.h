@@ -15,6 +15,7 @@
 #include "IEventHandler.h"
 #include "Socket.h"
 #include "Event.h"
+#include "Queue.h"
 #define BUF_SIZE 1024
 
 class ServerCore {
@@ -29,8 +30,8 @@ private:
 
     std::unique_ptr<Socket[]> connectedSockets;
 
-    std::queue<Event>               eventReqQueue;
-    std::queue<Event>               eventResQueue;
+    Queue<Event>                    eventReqQueue;
+    Queue<Event>                    eventResQueue;
     std::unique_ptr<IEventHandler>  eventHandler;
 
     HANDLE  recvWorker;

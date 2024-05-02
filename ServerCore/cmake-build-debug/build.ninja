@@ -79,6 +79,12 @@ build CMakeFiles/ServerCore.dir/Event.cpp.obj: CXX_COMPILER__ServerCore_unscanne
   OBJECT_DIR = CMakeFiles\ServerCore.dir
   OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
 
+build CMakeFiles/ServerCore.dir/Queue.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Queue.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\Queue.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ServerCore
@@ -87,7 +93,7 @@ build CMakeFiles/ServerCore.dir/Event.cpp.obj: CXX_COMPILER__ServerCore_unscanne
 #############################################
 # Link the executable ServerCore.exe
 
-build ServerCore.exe: CXX_EXECUTABLE_LINKER__ServerCore_Debug CMakeFiles/ServerCore.dir/main.cpp.obj CMakeFiles/ServerCore.dir/ServerCore.cpp.obj CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj CMakeFiles/ServerCore.dir/Socket.cpp.obj CMakeFiles/ServerCore.dir/Event.cpp.obj
+build ServerCore.exe: CXX_EXECUTABLE_LINKER__ServerCore_Debug CMakeFiles/ServerCore.dir/main.cpp.obj CMakeFiles/ServerCore.dir/ServerCore.cpp.obj CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj CMakeFiles/ServerCore.dir/Socket.cpp.obj CMakeFiles/ServerCore.dir/Event.cpp.obj CMakeFiles/ServerCore.dir/Queue.cpp.obj
   FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ServerCore.dir

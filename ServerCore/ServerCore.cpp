@@ -123,7 +123,8 @@ bool ServerCore::read(const int index) {
     // TODO: 패킷 헤더를 만들고, 그에 따라 읽는 byte를 정하도록 바꿔야 함.
     // 현재는 2byte로 코드를 나눔. "00message"
     int eventCode = (buf[0] - '0') * 10 + (buf[1] - '0');
-    eventReqQueue.push({index, eventCode, static_cast<std::string>(buf)});
+    auto pEvent = std::make_unique<Event>(index, eventCode, static_cast<std::string>(buf));
+    eventReqQueue.push(std::move(pEvent));
     return true;
 }
 
@@ -187,12 +188,11 @@ void ServerCore::runEventHandlingWorker() {
     ServerCore* serverCore = static_cast<ServerCore*>(params);
 
     while (true) {
-        if (serverCore->eventReqQueue.empty()) continue;
-
-        Event event = serverCore->eventReqQueue.front(); serverCore->eventReqQueue.pop();
-        auto res = serverCore->eventHandler->handling(event);
-        for (auto it : res)
-            serverCore->eventResQueue.push(it);
+        std::unique_ptr<Event> event;
+        serverCore->eventResQueue.pop(event);
+        auto res = serverCore->eventHandler->handling(std::move(event));
+        for (auto& it : res)
+            serverCore->eventResQueue.push(std::move(it));
     }
 }
 
@@ -205,10 +205,9 @@ void ServerCore::runSendWorker() {
     ServerCore* serverCore = static_cast<ServerCore*>(params);
 
     while (true) {
-        if (serverCore->eventResQueue.empty()) continue;
-
-        auto event = serverCore->eventResQueue.front(); serverCore->eventResQueue.pop();
-        serverCore->send(event);
+        std::unique_ptr<Event> event;
+        serverCore->eventResQueue.pop(event);
+        serverCore->send(*event.get());
     }
 }
 

@@ -11,7 +11,9 @@ add_executable(ServerCore main.cpp
         Socket.cpp
         Socket.h
         Event.cpp
-        Event.h)
+        Event.h
+        Queue.cpp
+        Queue.h)
 
 # include winsock2_32
 target_link_libraries(ServerCore PRIVATE ws2_32)

@@ -23,31 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4fd9a03-d594-45fb-91ef-39852d09833c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/ServerCore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Event.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Event.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/IEventHandler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Socket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/Socket.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServerCore/Queue.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServerCore/Queue.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c2679d5cfaab59d9ab35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-30T05-29-02-0055.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/ServerCore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8cf41612fb38e203449a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-02T04-39-58-0602.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/target-ServerCore-Debug-7a592b9cb64ff6399648.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +139,7 @@
       <workItem from="1711598360004" duration="3228000" />
       <workItem from="1712643920721" duration="4532000" />
       <workItem from="1714454928655" duration="1000" />
-      <workItem from="1714611760985" duration="11007000" />
+      <workItem from="1714611760985" duration="11626000" />
     </task>
     <servers />
   </component>
