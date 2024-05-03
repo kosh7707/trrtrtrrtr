@@ -128,125 +128,125 @@ ServerCore/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/build
 .PHONY : ServerCore/fast
 
-Event.obj: Event.cpp.obj
-.PHONY : Event.obj
+src/Event.obj: src/Event.cpp.obj
+.PHONY : src/Event.obj
 
 # target to build an object file
-Event.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Event.cpp.obj
-.PHONY : Event.cpp.obj
+src/Event.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Event.cpp.obj
+.PHONY : src/Event.cpp.obj
 
-Event.i: Event.cpp.i
-.PHONY : Event.i
+src/Event.i: src/Event.cpp.i
+.PHONY : src/Event.i
 
 # target to preprocess a source file
-Event.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Event.cpp.i
-.PHONY : Event.cpp.i
+src/Event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Event.cpp.i
+.PHONY : src/Event.cpp.i
 
-Event.s: Event.cpp.s
-.PHONY : Event.s
+src/Event.s: src/Event.cpp.s
+.PHONY : src/Event.s
 
 # target to generate assembly for a file
-Event.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Event.cpp.s
-.PHONY : Event.cpp.s
+src/Event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Event.cpp.s
+.PHONY : src/Event.cpp.s
 
-IEventHandler.obj: IEventHandler.cpp.obj
-.PHONY : IEventHandler.obj
+src/IEventHandler.obj: src/IEventHandler.cpp.obj
+.PHONY : src/IEventHandler.obj
 
 # target to build an object file
-IEventHandler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj
-.PHONY : IEventHandler.cpp.obj
+src/IEventHandler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj
+.PHONY : src/IEventHandler.cpp.obj
 
-IEventHandler.i: IEventHandler.cpp.i
-.PHONY : IEventHandler.i
+src/IEventHandler.i: src/IEventHandler.cpp.i
+.PHONY : src/IEventHandler.i
 
 # target to preprocess a source file
-IEventHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/IEventHandler.cpp.i
-.PHONY : IEventHandler.cpp.i
+src/IEventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.i
+.PHONY : src/IEventHandler.cpp.i
 
-IEventHandler.s: IEventHandler.cpp.s
-.PHONY : IEventHandler.s
+src/IEventHandler.s: src/IEventHandler.cpp.s
+.PHONY : src/IEventHandler.s
 
 # target to generate assembly for a file
-IEventHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/IEventHandler.cpp.s
-.PHONY : IEventHandler.cpp.s
+src/IEventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.s
+.PHONY : src/IEventHandler.cpp.s
 
-Queue.obj: Queue.cpp.obj
-.PHONY : Queue.obj
+src/Queue.obj: src/Queue.cpp.obj
+.PHONY : src/Queue.obj
 
 # target to build an object file
-Queue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Queue.cpp.obj
-.PHONY : Queue.cpp.obj
+src/Queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Queue.cpp.obj
+.PHONY : src/Queue.cpp.obj
 
-Queue.i: Queue.cpp.i
-.PHONY : Queue.i
+src/Queue.i: src/Queue.cpp.i
+.PHONY : src/Queue.i
 
 # target to preprocess a source file
-Queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Queue.cpp.i
-.PHONY : Queue.cpp.i
+src/Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Queue.cpp.i
+.PHONY : src/Queue.cpp.i
 
-Queue.s: Queue.cpp.s
-.PHONY : Queue.s
+src/Queue.s: src/Queue.cpp.s
+.PHONY : src/Queue.s
 
 # target to generate assembly for a file
-Queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Queue.cpp.s
-.PHONY : Queue.cpp.s
+src/Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Queue.cpp.s
+.PHONY : src/Queue.cpp.s
 
-ServerCore.obj: ServerCore.cpp.obj
-.PHONY : ServerCore.obj
+src/ServerCore.obj: src/ServerCore.cpp.obj
+.PHONY : src/ServerCore.obj
 
 # target to build an object file
-ServerCore.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/ServerCore.cpp.obj
-.PHONY : ServerCore.cpp.obj
+src/ServerCore.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj
+.PHONY : src/ServerCore.cpp.obj
 
-ServerCore.i: ServerCore.cpp.i
-.PHONY : ServerCore.i
+src/ServerCore.i: src/ServerCore.cpp.i
+.PHONY : src/ServerCore.i
 
 # target to preprocess a source file
-ServerCore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/ServerCore.cpp.i
-.PHONY : ServerCore.cpp.i
+src/ServerCore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/ServerCore.cpp.i
+.PHONY : src/ServerCore.cpp.i
 
-ServerCore.s: ServerCore.cpp.s
-.PHONY : ServerCore.s
+src/ServerCore.s: src/ServerCore.cpp.s
+.PHONY : src/ServerCore.s
 
 # target to generate assembly for a file
-ServerCore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/ServerCore.cpp.s
-.PHONY : ServerCore.cpp.s
+src/ServerCore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/ServerCore.cpp.s
+.PHONY : src/ServerCore.cpp.s
 
-Socket.obj: Socket.cpp.obj
-.PHONY : Socket.obj
+src/Socket.obj: src/Socket.cpp.obj
+.PHONY : src/Socket.obj
 
 # target to build an object file
-Socket.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Socket.cpp.obj
-.PHONY : Socket.cpp.obj
+src/Socket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Socket.cpp.obj
+.PHONY : src/Socket.cpp.obj
 
-Socket.i: Socket.cpp.i
-.PHONY : Socket.i
+src/Socket.i: src/Socket.cpp.i
+.PHONY : src/Socket.i
 
 # target to preprocess a source file
-Socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Socket.cpp.i
-.PHONY : Socket.cpp.i
+src/Socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Socket.cpp.i
+.PHONY : src/Socket.cpp.i
 
-Socket.s: Socket.cpp.s
-.PHONY : Socket.s
+src/Socket.s: src/Socket.cpp.s
+.PHONY : src/Socket.s
 
 # target to generate assembly for a file
-Socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/Socket.cpp.s
-.PHONY : Socket.cpp.s
+src/Socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/Socket.cpp.s
+.PHONY : src/Socket.cpp.s
 
 # Help Target
 help:
@@ -257,21 +257,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ServerCore
-	@echo ... Event.obj
-	@echo ... Event.i
-	@echo ... Event.s
-	@echo ... IEventHandler.obj
-	@echo ... IEventHandler.i
-	@echo ... IEventHandler.s
-	@echo ... Queue.obj
-	@echo ... Queue.i
-	@echo ... Queue.s
-	@echo ... ServerCore.obj
-	@echo ... ServerCore.i
-	@echo ... ServerCore.s
-	@echo ... Socket.obj
-	@echo ... Socket.i
-	@echo ... Socket.s
+	@echo ... src/Event.obj
+	@echo ... src/Event.i
+	@echo ... src/Event.s
+	@echo ... src/IEventHandler.obj
+	@echo ... src/IEventHandler.i
+	@echo ... src/IEventHandler.s
+	@echo ... src/Queue.obj
+	@echo ... src/Queue.i
+	@echo ... src/Queue.s
+	@echo ... src/ServerCore.obj
+	@echo ... src/ServerCore.i
+	@echo ... src/ServerCore.s
+	@echo ... src/Socket.obj
+	@echo ... src/Socket.i
+	@echo ... src/Socket.s
 .PHONY : help
 
 

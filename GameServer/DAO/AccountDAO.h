@@ -3,6 +3,7 @@
 
 
 #include <memory>
+#include "IDatabase.h"
 #include "../Model/Account.h"
 
 class AccountDAO {

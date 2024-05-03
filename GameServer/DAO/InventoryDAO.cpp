@@ -135,11 +135,13 @@ std::unique_ptr<Inventory> InventoryDAO::readInventory(int account_id) {
 
 bool InventoryDAO::updateInventory(const std::unique_ptr<Inventory>& inventory) {
     auto items = inventory->getItems();
+    bool ret = true;
     for (auto item : *items) {
         const char* queryTemplate = "insert into inventory values (%d, %d, %d) on conflict do update (account_id, item_id) set quantity = %d";
         std::string query = db->queryFormatting(queryTemplate, inventory->getAccountId(), item.first, item.second);
-        return db->commandQuery(query);
+        ret = ret and db->commandQuery(query);
     }
+    return ret;
 }
 
 bool InventoryDAO::insertItem(const int account_id, const int item_id, const int quantity) {

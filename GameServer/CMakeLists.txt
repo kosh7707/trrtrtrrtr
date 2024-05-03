@@ -4,9 +4,11 @@ project(GameServer)
 set(CMAKE_CXX_STANDARD 17)
 
 set(TARGET GameServer)
-set(OUTPUT_DIR ../../)
-set(SERVERCORE_LIB_PATH ../lib/libServerCore.a)
-set(DATABASE_LIB_PATH ../lib/libDatabase.a)
+set(OUTPUT_DIR ${CMAKE_SOURCE_DIR}/../dist/)
+set(LIBRARY_HEADER_PATH ${CMAKE_SOURCE_DIR}/../lib/include)
+set(PQXX_PATH ${CMAKE_SOURCE_DIR}/../lib/include/libpqxx)
+set(SERVERCORE_LIB_PATH ${CMAKE_SOURCE_DIR}/../lib/libServerCore.a)
+set(DATABASE_LIB_PATH ${CMAKE_SOURCE_DIR}/../lib/libDatabase.a)
 
 # Create an executable
 add_executable(${TARGET} main.cpp
@@ -34,7 +36,12 @@ set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR
 target_link_libraries(${TARGET} PRIVATE ${SERVERCORE_LIB_PATH})
 
 # include Database
-target_include_directories(${TARGET} PRIVATE ${DATABASE_LIB_PATH})
+add_subdirectory(${PQXX_PATH} build-pqxx)
+target_link_libraries(${TARGET} PRIVATE pqxx)
+target_link_libraries(${TARGET} PRIVATE ${DATABASE_LIB_PATH})
+
+# include headers
+target_include_directories(${TARGET} PRIVATE ${LIBRARY_HEADER_PATH})
 
 # include winsock2_32
 target_link_libraries(${TARGET} PRIVATE ws2_32)

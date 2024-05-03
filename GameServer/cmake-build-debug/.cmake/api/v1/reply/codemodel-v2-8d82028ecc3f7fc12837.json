@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "build-pqxx",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx-Debug-dca699da3b6c5a635fc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/lib/include/libpqxx"
+				},
+				{
+					"build" : "build-pqxx/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx.src-Debug-cafde62273a68a3fa229.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/lib/include/libpqxx/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "build-pqxx/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-build-pqxx.include-Debug-9955c29ea9cc743a74cc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/lib/include/libpqxx/include"
+				},
+				{
+					"build" : "build-pqxx/test",
+					"jsonFile" : "directory-build-pqxx.test-Debug-3cbfb6a08a376e9b89b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/lib/include/libpqxx/test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GameServer",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GameServer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GameServer-Debug-e4a3a12d7da3f638ddc8.json",
+					"name" : "GameServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pqxx::@ded9971ed639e414d3a4",
+					"jsonFile" : "target-pqxx-Debug-9e2eedc2bcd08d449bc8.json",
+					"name" : "pqxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "runner::@81e2c75a6ff29b583f40",
+					"jsonFile" : "target-runner-Debug-dd0e1ad88c916e07dd58.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug",
+		"source" : "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

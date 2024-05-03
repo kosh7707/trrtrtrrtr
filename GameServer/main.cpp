@@ -6,7 +6,7 @@ int main() {
     try {
         Constant constant;
 
-        std::unique_ptr<IEventHandler> eventHandler = std::unique_ptr<IEventHandler>(new EventHandler());
+        std::unique_ptr<IEventHandler> eventHandler(new EventHandler());
 
         ServerCore sc(constant.getServerIP(), constant.getServerPort(), std::move(eventHandler));
 

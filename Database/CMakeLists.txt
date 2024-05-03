@@ -5,14 +5,20 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(TARGET Database)
 
-set(OUTPUT_DIR ../../lib)
+set(OUTPUT_DIR ${CMAKE_SOURCE_DIR}/../lib)
 
-add_library(${TARGET} IDatabase.h
-        IDatabase.cpp
-        PostgreSQL.h
-        PostgreSQL.cpp)
+add_library(${TARGET} STATIC
+        include/IDatabase.h
+        include/PostgreSQL.h
+        src/IDatabase.cpp
+        src/PostgreSQL.cpp)
 
 set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
+
+target_include_directories(${TARGET} PUBLIC ${CMAKE_SOURCE_DIR}/include/)
+
+file(COPY include DESTINATION ${OUTPUT_DIR}/)
+file(COPY libpqxx DESTINATION ${OUTPUT_DIR}/include/)
 
 # include libpqxx
 add_subdirectory(libpqxx build-pqxx)

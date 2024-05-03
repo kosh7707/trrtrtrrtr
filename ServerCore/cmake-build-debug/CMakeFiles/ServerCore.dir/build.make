@@ -68,92 +68,97 @@ include CMakeFiles/ServerCore.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ServerCore.dir/flags.make
 
-CMakeFiles/ServerCore.dir/ServerCore.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
-CMakeFiles/ServerCore.dir/ServerCore.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/ServerCore.cpp
-CMakeFiles/ServerCore.dir/ServerCore.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ServerCore.dir/ServerCore.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/ServerCore.cpp.obj -MF CMakeFiles\ServerCore.dir\ServerCore.cpp.obj.d -o CMakeFiles\ServerCore.dir\ServerCore.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\ServerCore.cpp
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/ServerCore.cpp
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj -MF CMakeFiles\ServerCore.dir\src\ServerCore.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\ServerCore.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\ServerCore.cpp
 
-CMakeFiles/ServerCore.dir/ServerCore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/ServerCore.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\ServerCore.cpp > CMakeFiles\ServerCore.dir\ServerCore.cpp.i
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/ServerCore.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\ServerCore.cpp > CMakeFiles\ServerCore.dir\src\ServerCore.cpp.i
 
-CMakeFiles/ServerCore.dir/ServerCore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/ServerCore.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\ServerCore.cpp -o CMakeFiles\ServerCore.dir\ServerCore.cpp.s
+CMakeFiles/ServerCore.dir/src/ServerCore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/ServerCore.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\ServerCore.cpp -o CMakeFiles\ServerCore.dir\src\ServerCore.cpp.s
 
-CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
-CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/IEventHandler.cpp
-CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj -MF CMakeFiles\ServerCore.dir\IEventHandler.cpp.obj.d -o CMakeFiles\ServerCore.dir\IEventHandler.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\IEventHandler.cpp
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IEventHandler.cpp
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj -MF CMakeFiles\ServerCore.dir\src\IEventHandler.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\IEventHandler.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IEventHandler.cpp
 
-CMakeFiles/ServerCore.dir/IEventHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/IEventHandler.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\IEventHandler.cpp > CMakeFiles\ServerCore.dir\IEventHandler.cpp.i
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IEventHandler.cpp > CMakeFiles\ServerCore.dir\src\IEventHandler.cpp.i
 
-CMakeFiles/ServerCore.dir/IEventHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/IEventHandler.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\IEventHandler.cpp -o CMakeFiles\ServerCore.dir\IEventHandler.cpp.s
+CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IEventHandler.cpp -o CMakeFiles\ServerCore.dir\src\IEventHandler.cpp.s
 
-CMakeFiles/ServerCore.dir/Socket.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
-CMakeFiles/ServerCore.dir/Socket.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Socket.cpp
-CMakeFiles/ServerCore.dir/Socket.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ServerCore.dir/Socket.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/Socket.cpp.obj -MF CMakeFiles\ServerCore.dir\Socket.cpp.obj.d -o CMakeFiles\ServerCore.dir\Socket.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Socket.cpp
+CMakeFiles/ServerCore.dir/src/Socket.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/Socket.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/Socket.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Socket.cpp
+CMakeFiles/ServerCore.dir/src/Socket.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ServerCore.dir/src/Socket.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/Socket.cpp.obj -MF CMakeFiles\ServerCore.dir\src\Socket.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\Socket.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Socket.cpp
 
-CMakeFiles/ServerCore.dir/Socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/Socket.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Socket.cpp > CMakeFiles\ServerCore.dir\Socket.cpp.i
+CMakeFiles/ServerCore.dir/src/Socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/Socket.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Socket.cpp > CMakeFiles\ServerCore.dir\src\Socket.cpp.i
 
-CMakeFiles/ServerCore.dir/Socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/Socket.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Socket.cpp -o CMakeFiles\ServerCore.dir\Socket.cpp.s
+CMakeFiles/ServerCore.dir/src/Socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/Socket.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Socket.cpp -o CMakeFiles\ServerCore.dir\src\Socket.cpp.s
 
-CMakeFiles/ServerCore.dir/Event.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
-CMakeFiles/ServerCore.dir/Event.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Event.cpp
-CMakeFiles/ServerCore.dir/Event.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ServerCore.dir/Event.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/Event.cpp.obj -MF CMakeFiles\ServerCore.dir\Event.cpp.obj.d -o CMakeFiles\ServerCore.dir\Event.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Event.cpp
+CMakeFiles/ServerCore.dir/src/Event.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/Event.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/Event.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Event.cpp
+CMakeFiles/ServerCore.dir/src/Event.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ServerCore.dir/src/Event.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/Event.cpp.obj -MF CMakeFiles\ServerCore.dir\src\Event.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\Event.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Event.cpp
 
-CMakeFiles/ServerCore.dir/Event.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/Event.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Event.cpp > CMakeFiles\ServerCore.dir\Event.cpp.i
+CMakeFiles/ServerCore.dir/src/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/Event.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Event.cpp > CMakeFiles\ServerCore.dir\src\Event.cpp.i
 
-CMakeFiles/ServerCore.dir/Event.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/Event.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Event.cpp -o CMakeFiles\ServerCore.dir\Event.cpp.s
+CMakeFiles/ServerCore.dir/src/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/Event.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Event.cpp -o CMakeFiles\ServerCore.dir\src\Event.cpp.s
 
-CMakeFiles/ServerCore.dir/Queue.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
-CMakeFiles/ServerCore.dir/Queue.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Queue.cpp
-CMakeFiles/ServerCore.dir/Queue.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ServerCore.dir/Queue.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/Queue.cpp.obj -MF CMakeFiles\ServerCore.dir\Queue.cpp.obj.d -o CMakeFiles\ServerCore.dir\Queue.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Queue.cpp
+CMakeFiles/ServerCore.dir/src/Queue.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/Queue.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/Queue.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Queue.cpp
+CMakeFiles/ServerCore.dir/src/Queue.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ServerCore.dir/src/Queue.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/Queue.cpp.obj -MF CMakeFiles\ServerCore.dir\src\Queue.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\Queue.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Queue.cpp
 
-CMakeFiles/ServerCore.dir/Queue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/Queue.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Queue.cpp > CMakeFiles\ServerCore.dir\Queue.cpp.i
+CMakeFiles/ServerCore.dir/src/Queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/Queue.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Queue.cpp > CMakeFiles\ServerCore.dir\src\Queue.cpp.i
 
-CMakeFiles/ServerCore.dir/Queue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/Queue.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\Queue.cpp -o CMakeFiles\ServerCore.dir\Queue.cpp.s
+CMakeFiles/ServerCore.dir/src/Queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/Queue.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Queue.cpp -o CMakeFiles\ServerCore.dir\src\Queue.cpp.s
 
 # Object files for target ServerCore
 ServerCore_OBJECTS = \
-"CMakeFiles/ServerCore.dir/ServerCore.cpp.obj" \
-"CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj" \
-"CMakeFiles/ServerCore.dir/Socket.cpp.obj" \
-"CMakeFiles/ServerCore.dir/Event.cpp.obj" \
-"CMakeFiles/ServerCore.dir/Queue.cpp.obj"
+"CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" \
+"CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj" \
+"CMakeFiles/ServerCore.dir/src/Socket.cpp.obj" \
+"CMakeFiles/ServerCore.dir/src/Event.cpp.obj" \
+"CMakeFiles/ServerCore.dir/src/Queue.cpp.obj"
 
 # External object files for target ServerCore
 ServerCore_EXTERNAL_OBJECTS =
 
-C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/ServerCore.cpp.obj
-C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj
-C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/Socket.cpp.obj
-C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/Event.cpp.obj
-C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/Queue.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Socket.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Event.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Queue.cpp.obj
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/build.make
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a"
