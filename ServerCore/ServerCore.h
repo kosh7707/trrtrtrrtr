@@ -28,7 +28,7 @@ private:
     int             clientsCount;
     Socket          sc;
 
-    std::unique_ptr<Socket[]> connectedSockets;
+    std::unique_ptr<Socket[]>       connectedSockets;
 
     Queue<Event>                    eventReqQueue;
     Queue<Event>                    eventResQueue;

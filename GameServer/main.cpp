@@ -1,12 +1,15 @@
 #include "ServerCore.h"
-#include "ServerConstant.h"
-#include "../Database/DatabaseConnection.h"
+#include "EventHandler.h"
+#include "Constants/Constant.h"
 
 int main() {
     try {
-        IDatabaseConnection& dc = DatabaseConnection::getInstance();
+        Constant constant;
 
-        ServerCore sc;
+        std::unique_ptr<IEventHandler> eventHandler = std::unique_ptr<IEventHandler>(new EventHandler());
+
+        ServerCore sc(constant.getServerIP(), constant.getServerPort(), std::move(eventHandler));
+
         sc.run();
 
     } catch (const std::exception& e) {

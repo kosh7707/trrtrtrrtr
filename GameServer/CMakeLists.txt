@@ -3,40 +3,41 @@ project(GameServer)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(TARGET GameServer)
+set(OUTPUT_DIR ../../)
+set(SERVERCORE_LIB_PATH ../lib/libServerCore.a)
+set(DATABASE_LIB_PATH ../lib/libDatabase.a)
+
 # Create an executable
-add_executable(GameServer main.cpp
-        ServerConstant.cpp
-        ServerConstant.h
-        ServerCore.cpp
-        ServerCore.h
-        Client.cpp
-        Client.h
-        Account.cpp
-        Account.h
-        AccountDAO.cpp
-        AccountDAO.h
-        InventoryDAO.cpp
-        InventoryDAO.h
+add_executable(${TARGET} main.cpp
+        Constants/Constant.cpp
+        Constants/Constant.h
+        Model/Account.cpp
+        Model/Account.h
+        DAO/AccountDAO.cpp
+        DAO/AccountDAO.h
+        DAO/InventoryDAO.cpp
+        DAO/InventoryDAO.h
         EventHandler.cpp
         EventHandler.h
-        AuctionDAO.cpp
-        AuctionDAO.h
-        GameSocket.cpp
-        GameSocket.h
-        Inventory.cpp
-        Inventory.h
+        DAO/AuctionDAO.cpp
+        DAO/AuctionDAO.h
+        Model/Inventory.cpp
+        Model/Inventory.h
+        Service/InventoryService.h
+        Service/InventoryService.cpp
 )
 
+set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
+
 # include ServerCore
-add_subdirectory(../ServerCore ServerCore)
-target_include_directories(GameServer PRIVATE ../ServerCore)
+target_link_libraries(${TARGET} PRIVATE ${SERVERCORE_LIB_PATH})
 
 # include Database
-add_subdirectory(../Database Database)
-target_include_directories(GameServer PRIVATE ../Database)
+target_include_directories(${TARGET} PRIVATE ${DATABASE_LIB_PATH})
 
 # include winsock2_32
-target_link_libraries(GameServer PRIVATE ws2_32)
+target_link_libraries(${TARGET} PRIVATE ws2_32)
 
 # include static stdc++ library for distribution
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
