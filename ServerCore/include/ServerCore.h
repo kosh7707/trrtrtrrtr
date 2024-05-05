@@ -20,9 +20,11 @@
 
 class ServerCore {
 public:
-    ServerCore(std::string serverIP, int serverPort, std::unique_ptr<IEventHandler> eventHandler);
+    ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandler, std::string serverIP, int serverPort);
+    bool sendEventEnqueue(std::unique_ptr<Event> event);
     [[noreturn]] void run();
 private:
+    bool isServer;
     std::string     serverIP;
     int             serverPort;
     int             clientsCount;
@@ -48,7 +50,7 @@ private:
 
     bool read(const int index);
 
-    bool send(const Event& event);
+    bool send(std::unique_ptr<Event> event);
 
     void runRecvWorker();
     [[noreturn]] static unsigned int WINAPI runRecvWorkerThread(void* params);

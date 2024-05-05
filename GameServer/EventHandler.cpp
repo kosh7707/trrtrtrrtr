@@ -1,82 +1,65 @@
 #include "EventHandler.h"
 
-//std::vector<std::pair<int, std::string>> EventHandler::handling(const int index, const std::string& buf, const int ClientsCount, const std::unique_ptr<Client[]>& Clients) {
-//    int event = getEvent(buf); std::string msg = getMessage(buf);
-//    std::vector<std::pair<int, std::string>> ret;
-//    if (event == LOGIN_EVENT) ret = handleLogin(index, msg, Clients);
-//    else if (event == CHAT_EVENT) ret = handleChat(index, msg, Clients);
-//    else if (event == GET_TEST_ITEM_EVENT) ret = handleGetTestItem(index, Clients);
-//    else if (event == INVENTORY_CHECK_EVENT) ret = handleInventoryCheck(index, Clients);
-//    else if (event == SELL_ITEM_EVENT) ret = handleSellItem(index, msg, Clients);
-//    else if (event == BUY_NOW_EVENT) ret = handleBuyNow(index, msg, ClientsCount, Clients);
-//    else if (event == BID_EVENT) ret = handleBid(index, msg, ClientsCount, Clients);
-//    else if (event == BREAK_ITEM_EVENT) ret = handleBreakItem(index, msg, Clients);
-//    else if (event == AUCTION_CHECK_EVENT) ret = handleAuctionCheck(index);
-//    else std::cout << "INVALID EVENT\nmsg: " << msg << std::endl;
-//    return ret;
-//}
-//
-//std::vector<std::string> EventHandler::split(const std::string &input) {
-//    std::vector<std::string> result;
-//    std::stringstream ss(input);
-//    std::string token;
-//    while (getline(ss, token, ','))
-//        result.push_back(token);
-//    return result;
-//}
-//
-//int EventHandler::getEvent(const std::string& buf) {
-//    std::string prefix = buf.substr(0, 3);
-//    if (prefix == "[0]") return LOGIN_EVENT;
-//    else if (prefix == "[1]") return CHAT_EVENT;
-//    else if (prefix == "[2]") return GET_TEST_ITEM_EVENT;
-//    else if (prefix == "[3]") return INVENTORY_CHECK_EVENT;
-//    else if (prefix == "[4]") return SELL_ITEM_EVENT;
-//    else if (prefix == "[5]") return BUY_NOW_EVENT;
-//    else if (prefix == "[6]") return BID_EVENT;
-//    else if (prefix == "[7]") return BREAK_ITEM_EVENT;
-//    else if (prefix == "[8]") return AUCTION_CHECK_EVENT;
-//    else return INVALID_EVENT;
-//}
-//
-//std::string EventHandler::getMessage(const std::string& buf) {
-//    std::string temp = buf;
-//    return temp.substr(3);
-//}
-//
-//std::vector<std::pair<int, std::string>> EventHandler::handleLogin(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
-//    std::vector<std::pair<int, std::string>> ret;
-//    std::vector<std::string> params = split(msg);
-//    std::string id = params[0], pw = params[1];
-//    if (accountDao.checkAccountExists(id)) {
-//        std::unique_ptr<Account> account = std::move(accountDao.getAccount(id, pw));
-//        if (account != nullptr) {
-//            Clients[index].setAccount(std::move(account));
-//            accountDao.updateAccountLastLogin(id);
-//            ret.push_back({index, "[0]000"});
-//            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getGameSocket()->getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
-//        }
-//        else ret.push_back({index, "[0]002"});
-//    }
-//    else {
-//        accountDao.registerAccount(id, pw);
-//        std::unique_ptr<Account> account = accountDao.getAccount(id, pw);
-//        if (account != nullptr) {
-//            Clients[index].setAccount(std::move(account));
-//            ret.push_back({index, "[0]001"});
-//            ret.push_back({0, "[1]New Client Connected (IP: " + Clients[index].getGameSocket()->getIp() + ", name: " + Clients[index].getAccount()->getUserId() + ")"});
-//        }
-//        else ret.push_back({index, "[0]003"});
-//    }
-//    return ret;
-//}
-//
-//std::vector<std::pair<int, std::string>> EventHandler::handleChat(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
-//    std::vector<std::pair<int, std::string>> ret;
-//    ret.push_back({0, "[1]" + Clients[index].getAccount()->getUserId() + " : " + msg});
-//    return ret;
-//}
-//
+std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event> event) {
+    int         index       = event->getIndex();
+    int         eventCode   = event->getEventCode();
+    std::string contents    = event->getContents();
+
+    std::cout << "index: " << index << ", "
+              << "eventCode: " << eventCode << ", "
+              << "contents: " << contents << std::endl;
+
+    std::vector<std::unique_ptr<Event>> ret;
+    if (eventCode == Event::LOGIN_EVENT) {
+        ret = handleLogin(index, contents);
+    }
+    else if (eventCode == Event::CHAT_EVENT) {
+        ret = handleChat(index, contents);
+    }
+
+    return ret;
+}
+
+std::vector<std::string> EventHandler::split(const std::string& input) {
+    std::vector<std::string> result;
+    std::stringstream ss(input);
+    std::string token;
+    while (getline(ss, token, ','))
+        result.push_back(token);
+    return result;
+}
+
+std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, const std::string& contents) {
+    std::vector<std::unique_ptr<Event>> ret;
+    auto params = split(contents);
+    std::string id = params[0], pw = params[1];
+    if (accountService->isExistAccount(id)) {
+        auto account = accountService->loginAccount(id, pw);
+        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_FAIL, "Incorrect username or password."));
+        else {
+            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully logged in. Welcome " + id + "."));
+        }
+    }
+    else {
+        auto account = accountService->registerAccount(id, pw);
+        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, "Registration failed."));
+        else {
+            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully registered. Welcome " + id + "."));
+        }
+    }
+    return ret;
+}
+
+std::vector<std::unique_ptr<Event>> EventHandler::handleChat(const int index, const std::string& contents) {
+    std::vector<std::unique_ptr<Event>> ret;
+    ret.emplace_back(std::make_unique<Event>(BROADCAST_INDEX, Event::CHAT_EVENT, contents));
+    return ret;
+}
+
+std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::string &command) {
+    return std::vector<std::unique_ptr<Event>>();
+}
+
 //std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const int index, const std::unique_ptr<Client[]>& Clients) {
 //    std::vector<std::pair<int, std::string>> ret;
 //    int account_id = Clients[index].getAccount()->getAccountId();
@@ -91,7 +74,7 @@
 //    }
 //    return ret;
 //}
-//
+
 //std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(const int index, const std::unique_ptr<Client[]>& Clients) {
 //    std::vector<std::pair<int, std::string>> ret;
 //    int account_id = Clients[index].getAccount()->getAccountId();
@@ -161,15 +144,4 @@
 //    return ret;
 //}
 
-std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event> event) {
-    auto index = event->getIndex();
-    auto eventCode = event->getEventCode();
-    auto contents = event->getContents();
 
-    std::vector<std::unique_ptr<Event>> ret;
-    std::cout << "index: " << index << "\n"
-              << "eventCode: " << eventCode << "\n"
-              << "contents: " << contents << "\n";
-    ret.emplace_back(std::make_unique<Event>(index, eventCode, "pong"));
-    return ret;
-}

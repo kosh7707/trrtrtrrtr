@@ -69,6 +69,7 @@ include CMakeFiles/GameClient.dir/progress.make
 include CMakeFiles/GameClient.dir/flags.make
 
 CMakeFiles/GameClient.dir/main.cpp.obj: CMakeFiles/GameClient.dir/flags.make
+CMakeFiles/GameClient.dir/main.cpp.obj: CMakeFiles/GameClient.dir/includes_CXX.rsp
 CMakeFiles/GameClient.dir/main.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/main.cpp
 CMakeFiles/GameClient.dir/main.cpp.obj: CMakeFiles/GameClient.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameClient.dir/main.cpp.obj"
@@ -82,38 +83,26 @@ CMakeFiles/GameClient.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameClient.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\main.cpp -o CMakeFiles\GameClient.dir\main.cpp.s
 
-CMakeFiles/GameClient.dir/ClientCore.cpp.obj: CMakeFiles/GameClient.dir/flags.make
-CMakeFiles/GameClient.dir/ClientCore.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientCore.cpp
-CMakeFiles/GameClient.dir/ClientCore.cpp.obj: CMakeFiles/GameClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameClient.dir/ClientCore.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameClient.dir/ClientCore.cpp.obj -MF CMakeFiles\GameClient.dir\ClientCore.cpp.obj.d -o CMakeFiles\GameClient.dir\ClientCore.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientCore.cpp
+CMakeFiles/GameClient.dir/Constant.cpp.obj: CMakeFiles/GameClient.dir/flags.make
+CMakeFiles/GameClient.dir/Constant.cpp.obj: CMakeFiles/GameClient.dir/includes_CXX.rsp
+CMakeFiles/GameClient.dir/Constant.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.cpp
+CMakeFiles/GameClient.dir/Constant.cpp.obj: CMakeFiles/GameClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameClient.dir/Constant.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameClient.dir/Constant.cpp.obj -MF CMakeFiles\GameClient.dir\Constant.cpp.obj.d -o CMakeFiles\GameClient.dir\Constant.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\Constant.cpp
 
-CMakeFiles/GameClient.dir/ClientCore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameClient.dir/ClientCore.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientCore.cpp > CMakeFiles\GameClient.dir\ClientCore.cpp.i
+CMakeFiles/GameClient.dir/Constant.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameClient.dir/Constant.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\Constant.cpp > CMakeFiles\GameClient.dir\Constant.cpp.i
 
-CMakeFiles/GameClient.dir/ClientCore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameClient.dir/ClientCore.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientCore.cpp -o CMakeFiles\GameClient.dir\ClientCore.cpp.s
-
-CMakeFiles/GameClient.dir/ClientConstant.cpp.obj: CMakeFiles/GameClient.dir/flags.make
-CMakeFiles/GameClient.dir/ClientConstant.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientConstant.cpp
-CMakeFiles/GameClient.dir/ClientConstant.cpp.obj: CMakeFiles/GameClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameClient.dir/ClientConstant.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameClient.dir/ClientConstant.cpp.obj -MF CMakeFiles\GameClient.dir\ClientConstant.cpp.obj.d -o CMakeFiles\GameClient.dir\ClientConstant.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientConstant.cpp
-
-CMakeFiles/GameClient.dir/ClientConstant.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameClient.dir/ClientConstant.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientConstant.cpp > CMakeFiles\GameClient.dir\ClientConstant.cpp.i
-
-CMakeFiles/GameClient.dir/ClientConstant.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameClient.dir/ClientConstant.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\ClientConstant.cpp -o CMakeFiles\GameClient.dir\ClientConstant.cpp.s
+CMakeFiles/GameClient.dir/Constant.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameClient.dir/Constant.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\Constant.cpp -o CMakeFiles\GameClient.dir\Constant.cpp.s
 
 CMakeFiles/GameClient.dir/EventHandler.cpp.obj: CMakeFiles/GameClient.dir/flags.make
+CMakeFiles/GameClient.dir/EventHandler.cpp.obj: CMakeFiles/GameClient.dir/includes_CXX.rsp
 CMakeFiles/GameClient.dir/EventHandler.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.cpp
 CMakeFiles/GameClient.dir/EventHandler.cpp.obj: CMakeFiles/GameClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameClient.dir/EventHandler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameClient.dir/EventHandler.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameClient.dir/EventHandler.cpp.obj -MF CMakeFiles\GameClient.dir\EventHandler.cpp.obj.d -o CMakeFiles\GameClient.dir\EventHandler.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\EventHandler.cpp
 
 CMakeFiles/GameClient.dir/EventHandler.cpp.i: cmake_force
@@ -127,26 +116,25 @@ CMakeFiles/GameClient.dir/EventHandler.cpp.s: cmake_force
 # Object files for target GameClient
 GameClient_OBJECTS = \
 "CMakeFiles/GameClient.dir/main.cpp.obj" \
-"CMakeFiles/GameClient.dir/ClientCore.cpp.obj" \
-"CMakeFiles/GameClient.dir/ClientConstant.cpp.obj" \
+"CMakeFiles/GameClient.dir/Constant.cpp.obj" \
 "CMakeFiles/GameClient.dir/EventHandler.cpp.obj"
 
 # External object files for target GameClient
 GameClient_EXTERNAL_OBJECTS =
 
-GameClient.exe: CMakeFiles/GameClient.dir/main.cpp.obj
-GameClient.exe: CMakeFiles/GameClient.dir/ClientCore.cpp.obj
-GameClient.exe: CMakeFiles/GameClient.dir/ClientConstant.cpp.obj
-GameClient.exe: CMakeFiles/GameClient.dir/EventHandler.cpp.obj
-GameClient.exe: CMakeFiles/GameClient.dir/build.make
-GameClient.exe: CMakeFiles/GameClient.dir/linkLibs.rsp
-GameClient.exe: CMakeFiles/GameClient.dir/objects1.rsp
-GameClient.exe: CMakeFiles/GameClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GameClient.exe"
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/main.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/Constant.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/EventHandler.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/build.make
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/libServerCore.a
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/linkLibs.rsp
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/objects1.rsp
+C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CMakeFiles/GameClient.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\GameClient\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GameClient.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/GameClient.dir/build: GameClient.exe
+CMakeFiles/GameClient.dir/build: C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe
 .PHONY : CMakeFiles/GameClient.dir/build
 
 CMakeFiles/GameClient.dir/clean:

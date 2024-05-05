@@ -1,7 +1,7 @@
 #include "AccountDAO.h"
 
 bool AccountDAO::createAccount(const std::string& id, const std::string& pw) {
-    return db->commandQuery("insert into accounts(user_id, user_pw) values ('" + id + ", " + pw + "');");
+    return db->commandQuery("insert into accounts(user_id, user_pw) values ('" + id + "', '" + pw + "');");
 }
 
 std::unique_ptr<Account> AccountDAO::readAccount(const int account_id) {

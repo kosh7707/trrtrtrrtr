@@ -4,14 +4,13 @@ project(Database)
 set(CMAKE_CXX_STANDARD 17)
 
 set(TARGET Database)
+set(PQXX_PATH ${CMAKE_SOURCE_DIR}/libpqxx)
 
 set(OUTPUT_DIR ${CMAKE_SOURCE_DIR}/../lib)
 
 add_library(${TARGET} STATIC
         include/IDatabase.h
-        include/PostgreSQL.h
-        src/IDatabase.cpp
-        src/PostgreSQL.cpp)
+        include/PostgreSQL.h)
 
 set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 
@@ -21,7 +20,7 @@ file(COPY include DESTINATION ${OUTPUT_DIR}/)
 file(COPY libpqxx DESTINATION ${OUTPUT_DIR}/include/)
 
 # include libpqxx
-add_subdirectory(libpqxx build-pqxx)
+add_subdirectory(${PQXX_PATH} build-pqxx)
 target_link_libraries(${TARGET} PRIVATE pqxx)
 
 # include static stdc++ library for distribution

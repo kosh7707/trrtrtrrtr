@@ -1,7 +1,7 @@
 #include "../include/ServerCore.h"
 
-ServerCore::ServerCore(std::string serverIP, int serverPort, std::unique_ptr<IEventHandler> eventHandler)
-                : serverIP(serverIP), serverPort(serverPort), eventHandler(std::move(eventHandler)) {
+ServerCore::ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandler, std::string serverIP, int serverPort)
+                : serverIP(serverIP), serverPort(serverPort), eventHandler(std::move(eventHandler)), isServer(isServer) {
     connectedSockets = std::unique_ptr<Socket[]>(new Socket[100]);
     clientsCount = 0;
 }
@@ -11,21 +11,45 @@ ServerCore::ServerCore(std::string serverIP, int serverPort, std::unique_ptr<IEv
 
     if (sc.getSc() == 0) {
         std::cout << "socket initialization error" << std::endl;
-        exit(0);
+        exit(-1);
     }
 
-    WSAEventSelect(sc.getSc(), sc.getEv(), FD_ACCEPT);
+    if (isServer) WSAEventSelect(sc.getSc(), sc.getEv(), FD_ACCEPT);
+    else {
+        if (!connect(serverIP, serverPort))
+            exit(-1);
+    }
 
     runRecvWorker();
     runEventHandlingWorker();
     runSendWorker();
 
-    std::cout << "server listening at "
-              << serverIP << ":"
-              << serverPort
-              << std::endl;
+    if (isServer) {
+        std::cout << "server listening at "
+                  << serverIP << ":"
+                  << serverPort
+                  << std::endl;
+    }
+    else {
+        std::cout << "successfully connected to "
+                  << serverIP << ":"
+                  << serverPort
+                  << std::endl;
+    }
 
-    while (true);
+    while (true) {
+        try {
+            std::string command; getline(std::cin, command);
+            if (command == "") continue;
+            else {
+                auto res = eventHandler->userInputHandling(command);
+                for (auto& it : res)
+                    eventResQueue.push(std::move(it));
+            }
+        } catch(const std::exception& e) {
+            std::cerr << e.what() << "\n";
+        }
+    }
 }
 
 bool ServerCore::initServer() {
@@ -44,17 +68,19 @@ bool ServerCore::initServer() {
         return false;
     }
 
-    socketAddress.sin_family = AF_INET;
-    socketAddress.sin_addr.s_addr = htonl(INADDR_ANY);
-    socketAddress.sin_port = htons(serverPort);
-    if (bind(_sc, reinterpret_cast<sockaddr*>(&socketAddress), sizeof(socketAddress)) < 0) {
-        std::cerr << "bind error." << "\n";
-        return false;
-    }
+    if (isServer) {
+        socketAddress.sin_family = AF_INET;
+        socketAddress.sin_addr.s_addr = htonl(INADDR_ANY);
+        socketAddress.sin_port = htons(serverPort);
+        if (bind(_sc, reinterpret_cast<sockaddr*>(&socketAddress), sizeof(socketAddress)) < 0) {
+            std::cerr << "bind error." << "\n";
+            return false;
+        }
 
-    if (listen(_sc, SOMAXCONN) < 0) {
-        std::cerr << "listen error." << std::endl;
-        return false;
+        if (listen(_sc, SOMAXCONN) < 0) {
+            std::cerr << "listen error." << std::endl;
+            return false;
+        }
     }
 
     HANDLE ev = WSACreateEvent();
@@ -63,6 +89,7 @@ bool ServerCore::initServer() {
 }
 
 bool ServerCore::accept() {
+    if (!isServer) return false;
     SOCKADDR_IN socketAddress;
     int length = sizeof(socketAddress);
     SOCKET acceptSocket = ::accept(sc.getSc(), reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
@@ -110,6 +137,7 @@ bool ServerCore::connect(const std::string& destServerIP, const int destServerPo
 
 bool ServerCore::close(const int index) {
     ::close(connectedSockets[--clientsCount].getSc());
+    std::cout << "socket: " << connectedSockets[clientsCount].getSc() << ", IP: " << connectedSockets[clientsCount].getIp() << " is disconnected." << std::endl;
     std::swap(connectedSockets[index], connectedSockets[clientsCount]);
     return true;
 }
@@ -124,15 +152,19 @@ bool ServerCore::read(const int index) {
     // TODO: 패킷 헤더를 만들고, 그에 따라 읽는 byte를 정하도록 바꿔야 함.
     // 현재는 2byte로 코드를 나눔. "00message"
     int eventCode = (buf[0] - '0') * 10 + (buf[1] - '0');
-    auto pEvent = std::make_unique<Event>(index, eventCode, static_cast<std::string>(buf));
+    std::string msg = buf;
+    auto pEvent = std::make_unique<Event>(index, eventCode, msg.substr(2));
     eventReqQueue.push(std::move(pEvent));
     return true;
 }
 
-bool ServerCore::send(const Event& event) {
-    const int index = event.getIndex();
-    const std::string& msg = event.getContents();
-    if (index == 0) {
+bool ServerCore::send(std::unique_ptr<Event> event) {
+    int         index       = event->getIndex();
+    int         eventCode   = event->getEventCode();
+    std::string contents    = event->getContents();
+
+    std::string msg = ((eventCode < 10) ? "0" + std::to_string(eventCode) : std::to_string(eventCode)) + contents;
+    if (index == BROADCAST_INDEX) {
         for (int i=0; i<clientsCount; i++) {
             if (::send(connectedSockets[i].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0) {
                 std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
@@ -211,8 +243,13 @@ void ServerCore::runSendWorker() {
     while (true) {
         std::unique_ptr<Event> event;
         serverCore->eventResQueue.pop(event);
-        serverCore->send(*event.get());
+        serverCore->send(std::move(event));
     }
+}
+
+bool ServerCore::sendEventEnqueue(std::unique_ptr<Event> event) {
+    eventResQueue.push(std::move(event));
+    return true;
 }
 
 

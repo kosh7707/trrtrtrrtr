@@ -18,12 +18,13 @@
 				</MakeCommands>
 			</Target>
 			<Target title="GameClient">
-				<Option output="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/cmake-build-debug/GameClient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
@@ -40,12 +41,13 @@
 				</MakeCommands>
 			</Target>
 			<Target title="GameClient/fast">
-				<Option output="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/cmake-build-debug/GameClient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
@@ -82,16 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientConstant.cpp">
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.cpp">
 			<Option target="GameClient"/>
 		</Unit>
-		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientConstant.h">
-			<Option target="GameClient"/>
-		</Unit>
-		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientCore.cpp">
-			<Option target="GameClient"/>
-		</Unit>
-		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientCore.h">
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.h">
 			<Option target="GameClient"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.cpp">

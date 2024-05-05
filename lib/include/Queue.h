@@ -10,7 +10,7 @@
 template <class T>
 class Queue {
 public:
-    bool push(const std::unique_ptr<T> item) {
+    bool push(std::unique_ptr<T> item) {
         std::unique_lock<std::mutex> ul(mutex);
 
         qu.push(std::move(item));

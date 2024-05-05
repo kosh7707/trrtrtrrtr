@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientConstant.cpp" "CMakeFiles/GameClient.dir/ClientConstant.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/ClientConstant.cpp.obj.d"
-  "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientCore.cpp" "CMakeFiles/GameClient.dir/ClientCore.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/ClientCore.cpp.obj.d"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.cpp" "CMakeFiles/GameClient.dir/Constant.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/Constant.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.cpp" "CMakeFiles/GameClient.dir/EventHandler.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/EventHandler.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/main.cpp" "CMakeFiles/GameClient.dir/main.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/main.cpp.obj.d"
   )

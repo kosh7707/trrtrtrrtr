@@ -128,53 +128,29 @@ GameClient/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/build
 .PHONY : GameClient/fast
 
-ClientConstant.obj: ClientConstant.cpp.obj
-.PHONY : ClientConstant.obj
+Constant.obj: Constant.cpp.obj
+.PHONY : Constant.obj
 
 # target to build an object file
-ClientConstant.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientConstant.cpp.obj
-.PHONY : ClientConstant.cpp.obj
+Constant.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/Constant.cpp.obj
+.PHONY : Constant.cpp.obj
 
-ClientConstant.i: ClientConstant.cpp.i
-.PHONY : ClientConstant.i
-
-# target to preprocess a source file
-ClientConstant.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientConstant.cpp.i
-.PHONY : ClientConstant.cpp.i
-
-ClientConstant.s: ClientConstant.cpp.s
-.PHONY : ClientConstant.s
-
-# target to generate assembly for a file
-ClientConstant.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientConstant.cpp.s
-.PHONY : ClientConstant.cpp.s
-
-ClientCore.obj: ClientCore.cpp.obj
-.PHONY : ClientCore.obj
-
-# target to build an object file
-ClientCore.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientCore.cpp.obj
-.PHONY : ClientCore.cpp.obj
-
-ClientCore.i: ClientCore.cpp.i
-.PHONY : ClientCore.i
+Constant.i: Constant.cpp.i
+.PHONY : Constant.i
 
 # target to preprocess a source file
-ClientCore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientCore.cpp.i
-.PHONY : ClientCore.cpp.i
+Constant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/Constant.cpp.i
+.PHONY : Constant.cpp.i
 
-ClientCore.s: ClientCore.cpp.s
-.PHONY : ClientCore.s
+Constant.s: Constant.cpp.s
+.PHONY : Constant.s
 
 # target to generate assembly for a file
-ClientCore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/ClientCore.cpp.s
-.PHONY : ClientCore.cpp.s
+Constant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/Constant.cpp.s
+.PHONY : Constant.cpp.s
 
 EventHandler.obj: EventHandler.cpp.obj
 .PHONY : EventHandler.obj
@@ -233,12 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... GameClient
-	@echo ... ClientConstant.obj
-	@echo ... ClientConstant.i
-	@echo ... ClientConstant.s
-	@echo ... ClientCore.obj
-	@echo ... ClientCore.i
-	@echo ... ClientCore.s
+	@echo ... Constant.obj
+	@echo ... Constant.i
+	@echo ... Constant.s
 	@echo ... EventHandler.obj
 	@echo ... EventHandler.i
 	@echo ... EventHandler.s

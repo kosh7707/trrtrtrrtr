@@ -6,7 +6,6 @@
 #include <string>
 #include <map>
 #include <vector>
-#include "pqxx/pqxx"
 
 class IDatabase {
 public:
@@ -14,6 +13,7 @@ public:
     virtual bool   commandQuery(const std::string& query) = 0;
     virtual bool   transaction(const std::vector<std::string>& queries) = 0;
     virtual std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query) = 0;
+    virtual ~IDatabase() = default;
 
     template <typename... Args>
     std::string queryFormatting(Args... formats) {

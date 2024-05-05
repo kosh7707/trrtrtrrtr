@@ -323,6 +323,12 @@ GameServer_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GameServer_SOURCE_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer
 
+//Path to a file.
+PQXX_INCLUDE_DIR:PATH=PQXX_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+PQXX_LIB:FILEPATH=PQXX_LIB-NOTFOUND
+
 //The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
 // directory containing the PostgreSQL include directories. E.g
 // /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
@@ -343,6 +349,9 @@ PostgreSQL_TYPE_INCLUDE_DIR:PATH=C:/Program Files/PostgreSQL/15/include/server
 
 //Value Computed by CMake
 libpqxx_BINARY_DIR:STATIC=C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx
+
+//The directory containing a CMake configuration file for libpqxx.
+libpqxx_DIR:PATH=libpqxx_DIR-NOTFOUND
 
 //Value Computed by CMake
 libpqxx_IS_TOP_LEVEL:STATIC=OFF

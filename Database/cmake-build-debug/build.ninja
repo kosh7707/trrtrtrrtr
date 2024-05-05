@@ -49,20 +49,6 @@ cmake_ninja_workdir = C$:/Users/Administrator/Desktop/trrtrtrrtr/Database/cmake-
 
 build cmake_object_order_depends_target_Database: phony || cmake_object_order_depends_target_pqxx
 
-build CMakeFiles/Database.dir/src/IDatabase.cpp.obj: CXX_COMPILER__Database_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/Database/src/IDatabase.cpp || cmake_object_order_depends_target_Database
-  DEP_FILE = CMakeFiles\Database.dir\src\IDatabase.cpp.obj.d
-  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/cmake-build-debug/build-pqxx/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/libpqxx/include
-  OBJECT_DIR = CMakeFiles\Database.dir
-  OBJECT_FILE_DIR = CMakeFiles\Database.dir\src
-
-build CMakeFiles/Database.dir/src/PostgreSQL.cpp.obj: CXX_COMPILER__Database_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/Database/src/PostgreSQL.cpp || cmake_object_order_depends_target_Database
-  DEP_FILE = CMakeFiles\Database.dir\src\PostgreSQL.cpp.obj.d
-  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/cmake-build-debug/build-pqxx/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/Database/libpqxx/include
-  OBJECT_DIR = CMakeFiles\Database.dir
-  OBJECT_FILE_DIR = CMakeFiles\Database.dir\src
-
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Database
@@ -71,7 +57,7 @@ build CMakeFiles/Database.dir/src/PostgreSQL.cpp.obj: CXX_COMPILER__Database_uns
 #############################################
 # Link the static library C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libDatabase.a
 
-build C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libDatabase.a: CXX_STATIC_LIBRARY_LINKER__Database_Debug CMakeFiles/Database.dir/src/IDatabase.cpp.obj CMakeFiles/Database.dir/src/PostgreSQL.cpp.obj || build-pqxx/src/libpqxx.a
+build C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libDatabase.a: CXX_STATIC_LIBRARY_LINKER__Database_Debug || build-pqxx/src/libpqxx.a
   LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
   OBJECT_DIR = CMakeFiles\Database.dir
   POST_BUILD = cd .

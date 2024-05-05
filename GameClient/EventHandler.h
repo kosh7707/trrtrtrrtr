@@ -1,19 +1,22 @@
 #ifndef GAMECLIENT_EVENTHANDLER_H
 #define GAMECLIENT_EVENTHANDLER_H
 
-#include <vector>
-#include <string>
-#include <sstream>
-#include "ClientConstant.h"
 
-class EventHandler {
+#include <iostream>
+#include <sstream>
+#include "IEventHandler.h"
+#define MAIN_SERVER_INDEX 0
+
+class EventHandler final : public IEventHandler {
 public:
-    std::pair<int, std::string> serverEventHandling(bool isLogin, const std::string& buf);
-    std::string userEventHandling(bool isLogin, const std::string& buf);
+    EventHandler() {}
+    std::vector<std::unique_ptr<Event>> handling(std::unique_ptr<Event> event) override;
+    std::vector<std::unique_ptr<Event>> userInputHandling(const std::string& command) override;
 private:
-    int getEvent(const std::string& buf);
-    std::string getMessage(const std::string& buf);
+    bool isLogin = false;
+
     std::vector<std::string> split(const std::string& input);
+    void printUserCommand();
 };
 
 

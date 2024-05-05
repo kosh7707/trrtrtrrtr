@@ -23,96 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4fd9a03-d594-45fb-91ef-39852d09833c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Database/src/IDatabase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-7f3a859e952c23ab9bd2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8d82028ecc3f7fc12837.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-e4a3a12d7da3f638ddc8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/AccountDAO.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/InventoryDAO.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/EventHandler.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/main.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CPackConfig.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CPackSourceConfig.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/GameServer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets-debug.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/CMakeFiles/Export/d6b66e93f8212dd1f00debf9f6654819/libpqxx-targets.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-internal-compiler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-internal-libpq.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config-public-compiler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/include/pqxx/config_cmake.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-config-version.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-config.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx-targets.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/libpqxx.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/blob.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/connection.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/cursor.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/except.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/field.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/notification.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/params.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/pipeline.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/result.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/row.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/strconv.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_from.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/stream_to.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/subtransaction.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/time.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/util.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/version.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/CMakeFiles/pqxx.dir/wait.cxx.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/src/libpqxx.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build-pqxx/test/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-04ccc24145dce76a58d2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-74faeeee36f830c07dd1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T14-52-04-0996.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/target-ServerCore-Debug-65bd38a15d8577976e12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/includes_CXX.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Event.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Event.cpp.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Queue.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Queue.cpp.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Socket.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/Socket.cpp.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/src/Event.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/src/IEventHandler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerCore/src/Socket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/Event.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/IDatabase.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/IEventHandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/PostgreSQL.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/Queue.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/ServerCore.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/Socket.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/include/libpqxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/Constant.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameClient/Constant.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/AccountService.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/AccountService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0ec0ffe0699bb21bb3f7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-80b09e1a0a9bae88b590.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T12-41-58-0017.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-a04e170637b6baed549c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Service/AccountService.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dist/GameServer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/IDatabase.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/IDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/include/IDatabase.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/PostgreSQL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/src/PostgreSQL.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/PostgreSQL.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/include/PostgreSQL.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ec667fb0535f55c3e893.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T07-56-18-0474.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/target-Database-Debug-9eeeda8e26a526cec8ec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-c4b3e0632eaae597ddde.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T14-43-50-0788.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.cmake/api/v1/reply/target-Database-Debug-246d32b0a3c1aed1834a.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -120,45 +45,58 @@
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/IDatabase.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/PostgreSQL.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/src/IDatabase.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/src/IDatabase.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/src/PostgreSQL.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/Database.dir/src/PostgreSQL.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/cache-v2-c0943678d8a84907b8f8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-88546160c682e550b463.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-27T23-54-31-0020.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-26cc434ec312c9ba63bf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientConstant.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientConstant.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/include/IDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/include/IDatabase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/include/PostgreSQL.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/include/PostgreSQL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/src/IDatabase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/src/PostgreSQL.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/ClientConstant.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/ClientConstant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/ClientCore.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/ClientCore.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/EventHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/EventHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/EventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/EventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-581fbd86326f5e8658f8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-9859c52568f64e4b5cbf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T15-11-11-0353.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/.cmake/api/v1/reply/target-GameClient-Debug-09f455c10147cf1477cd.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientCore.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/ClientCore.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/EventHandler.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/EventHandler.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/linkLibs.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/linkLibs.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/GameClient.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/GameClient.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/acb7c280-e29f-4edd-b9c8-84ffe66265f5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/AccountDAO.h" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/AccountDAO.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/InventoryDAO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/InventoryDAO.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2f14b5001cb38ef39a1f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-e27e56658d1e1c711316.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-123d327ef5a43899b780.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T08-10-34-0675.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-cf070494562166df6c55.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/AccountDAO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/AccountDAO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/EventHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/EventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-7f3a859e952c23ab9bd2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8d82028ecc3f7fc12837.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T16-04-20-0186.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameServer-Debug-e4a3a12d7da3f638ddc8.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
@@ -167,55 +105,36 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/AccountDAO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/AccountDAO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/InventoryDAO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/DAO/InventoryDAO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/EventHandler.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/EventHandler.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameServer.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Event.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/Event.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/IEventHandler.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/IEventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/IEventHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/src/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/Queue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/src/ServerCore.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/ServerCore.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Socket.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/Socket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1dbd95fff4ab1fa4b5bd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8281311c64c7702f414e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T07-54-34-0206.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/target-ServerCore-Debug-7d461bf25353c529a205.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T14-52-04-0996.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Event.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Event.cpp.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Queue.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Queue.cpp.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/ServerCore.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/ServerCore.cpp.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Socket.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/Socket.cpp.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/compiler_depend.internal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/ServerCore.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/ServerCore.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/include/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/Event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/include/IEventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/IEventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/include/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/include/ServerCore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerCore/src/ServerCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerCore/src/ServerCore.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/Event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/IDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/IDatabase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/IEventHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/IEventHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/PostgreSQL.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/PostgreSQL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/include/ServerCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/include/ServerCore.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/libDatabase.a" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/libDatabase.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/libServerCore.a" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/libServerCore.a" afterDir="false" />
     </list>
@@ -262,6 +181,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "servercore",
@@ -288,15 +208,15 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake 애플리케이션.GameServer">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameServer" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
     <configuration name="GameServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameServer" TARGET_NAME="GameServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameServer" RUN_TARGET_NAME="GameServer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -348,6 +268,10 @@
       <workItem from="1714664154533" duration="1532000" />
       <workItem from="1714706047659" duration="11043000" />
       <workItem from="1714743514736" duration="8614000" />
+      <workItem from="1714755995974" duration="608000" />
+      <workItem from="1714801506002" duration="1130000" />
+      <workItem from="1714808075965" duration="2994000" />
+      <workItem from="1714896511548" duration="16006000" />
     </task>
     <servers />
   </component>
@@ -359,31 +283,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>10</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../ServerCore/src/ServerCore.cpp</url>
-          <line>195</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/EventHandler.cpp</url>
-          <line>164</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>8</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

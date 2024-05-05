@@ -28,6 +28,8 @@ add_executable(${TARGET} main.cpp
         Model/Inventory.h
         Service/InventoryService.h
         Service/InventoryService.cpp
+        Service/AccountService.h
+        Service/AccountService.cpp
 )
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})

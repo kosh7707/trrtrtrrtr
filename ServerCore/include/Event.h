@@ -6,6 +6,15 @@
 
 class Event {
 public:
+    enum {
+        INVALID_EVENT = -1,
+        LOGIN_EVENT = 1,
+        LOGIN_FAIL = 2,
+        LOGIN_SUCCESS = 3,
+        REGISTER_FAIL = 4,
+        REGISTER_SUCCESS = 5,
+        CHAT_EVENT = 6,
+    };
     Event(int index, int eventCode, const std::string& contents) : index(index), eventCode(eventCode), contents(contents) {}
 
     const int getIndex() const {

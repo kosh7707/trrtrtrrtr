@@ -3,6 +3,6 @@
 -- Detecting CXX compile features - done
 -- Generating config.h
 -- Generating config.h - done
--- Configuring done (6.9s)
+-- Configuring done (6.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/Administrator/Desktop/trrtrtrrtr/Database/cmake-build-debug

@@ -112,6 +112,13 @@ build CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\GameServer.dir
   OBJECT_FILE_DIR = CMakeFiles\GameServer.dir\Service
 
+build CMakeFiles/GameServer.dir/Service/AccountService.cpp.obj: CXX_COMPILER__GameServer_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/Service/AccountService.cpp || cmake_object_order_depends_target_GameServer
+  DEP_FILE = CMakeFiles\GameServer.dir\Service\AccountService.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx/include -IC:/Users/Administrator/Desktop/trrtrtrrtr/lib/include/libpqxx/include
+  OBJECT_DIR = CMakeFiles\GameServer.dir
+  OBJECT_FILE_DIR = CMakeFiles\GameServer.dir\Service
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GameServer
@@ -120,7 +127,7 @@ build CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameServer.exe
 
-build C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameServer.exe: CXX_EXECUTABLE_LINKER__GameServer_Debug CMakeFiles/GameServer.dir/main.cpp.obj CMakeFiles/GameServer.dir/Constants/Constant.cpp.obj CMakeFiles/GameServer.dir/Model/Account.cpp.obj CMakeFiles/GameServer.dir/DAO/AccountDAO.cpp.obj CMakeFiles/GameServer.dir/DAO/InventoryDAO.cpp.obj CMakeFiles/GameServer.dir/EventHandler.cpp.obj CMakeFiles/GameServer.dir/DAO/AuctionDAO.cpp.obj CMakeFiles/GameServer.dir/Model/Inventory.cpp.obj CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj | C$:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libServerCore.a build-pqxx/src/libpqxx.a C$:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libDatabase.a C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib || build-pqxx/src/libpqxx.a
+build C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameServer.exe: CXX_EXECUTABLE_LINKER__GameServer_Debug CMakeFiles/GameServer.dir/main.cpp.obj CMakeFiles/GameServer.dir/Constants/Constant.cpp.obj CMakeFiles/GameServer.dir/Model/Account.cpp.obj CMakeFiles/GameServer.dir/DAO/AccountDAO.cpp.obj CMakeFiles/GameServer.dir/DAO/InventoryDAO.cpp.obj CMakeFiles/GameServer.dir/EventHandler.cpp.obj CMakeFiles/GameServer.dir/DAO/AuctionDAO.cpp.obj CMakeFiles/GameServer.dir/Model/Inventory.cpp.obj CMakeFiles/GameServer.dir/Service/InventoryService.cpp.obj CMakeFiles/GameServer.dir/Service/AccountService.cpp.obj | C$:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libServerCore.a build-pqxx/src/libpqxx.a C$:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libDatabase.a C$:/Program$ Files/PostgreSQL/15/lib/libpq.lib || build-pqxx/src/libpqxx.a
   FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libServerCore.a  build-pqxx/src/libpqxx.a  C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/../lib/libDatabase.a  -lws2_32  "C:/Program Files/PostgreSQL/15/lib/libpq.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\GameServer.dir

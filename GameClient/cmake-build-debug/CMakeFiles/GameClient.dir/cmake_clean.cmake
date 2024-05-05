@@ -1,15 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GameClient.dir/ClientConstant.cpp.obj"
-  "CMakeFiles/GameClient.dir/ClientConstant.cpp.obj.d"
-  "CMakeFiles/GameClient.dir/ClientCore.cpp.obj"
-  "CMakeFiles/GameClient.dir/ClientCore.cpp.obj.d"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe.manifest"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.pdb"
+  "CMakeFiles/GameClient.dir/Constant.cpp.obj"
+  "CMakeFiles/GameClient.dir/Constant.cpp.obj.d"
   "CMakeFiles/GameClient.dir/EventHandler.cpp.obj"
   "CMakeFiles/GameClient.dir/EventHandler.cpp.obj.d"
   "CMakeFiles/GameClient.dir/main.cpp.obj"
   "CMakeFiles/GameClient.dir/main.cpp.obj.d"
-  "GameClient.exe"
-  "GameClient.exe.manifest"
-  "GameClient.pdb"
   "libGameClient.dll.a"
 )
 

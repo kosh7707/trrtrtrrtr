@@ -6,7 +6,6 @@
 #include <string>
 #include <map>
 #include <vector>
-#include "pqxx/pqxx"
 
 class IDatabase {
 public:

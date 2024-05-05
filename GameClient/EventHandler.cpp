@@ -1,15 +1,75 @@
 #include "EventHandler.h"
 
-int EventHandler::getEvent(const std::string& buf) {
-    std::string prefix = buf.substr(0, 3);
-    if (prefix == "[0]") return LOGIN_EVENT;
-    else if (prefix == "[1]") return CHAT_EVENT;
-    else return INVALID_EVENT;
+std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event> event) {
+    int         index       = event->getIndex();
+    int         eventCode   = event->getEventCode();
+    std::string contents    = event->getContents();
+
+    std::cout << "index: " << index << ", "
+              << "eventCode: " << eventCode << ", "
+              << "contents: " << contents << std::endl;
+
+    auto ret = std::vector<std::unique_ptr<Event>>();
+    switch (eventCode) {
+        case Event::LOGIN_SUCCESS:
+            isLogin = true;
+            break;
+        case Event::LOGIN_FAIL:
+            isLogin = false;
+            break;
+        case Event::REGISTER_SUCCESS:
+            isLogin = true;
+            break;
+        case Event::REGISTER_FAIL:
+            isLogin = false;
+            break;
+        case Event::CHAT_EVENT:
+            std::cout << contents << std::endl;
+            break;
+        default:
+            std::cerr << "Invalid event" << std::endl;
+            break;
+    }
+    return ret;
 }
 
-std::string EventHandler::getMessage(const std::string& buf) {
-    std::string temp = buf;
-    return temp.substr(3);
+std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::string& command) {
+    auto ret = std::vector<std::unique_ptr<Event>>();
+    try {
+        std::vector<std::string> cmd = split(command);
+        if (cmd[0] == "!help") printUserCommand();
+        if (!isLogin) {
+            if (cmd[0] == "!login") {
+                ret.emplace_back(std::make_unique<Event>(MAIN_SERVER_INDEX, Event::LOGIN_EVENT, cmd[1] + "," + cmd[2]));
+            }
+        }
+        else {
+            // TODO: User 명령어 구현
+        }
+        return ret;
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return ret;
+    }
+}
+
+void EventHandler::printUserCommand() {
+    if (!isLogin) {
+        std::cout   << "------------------------\n"
+                    << "0. !login [id] [pw]\n"
+                    << "------------------------\n";
+    }
+    else {
+        std::cout   << "------------------------\n"
+                    << "1. !getTestItem\n"
+                    << "2. !inventoryCheck\n"
+                    << "3. !sellItem [item_id] [quantity] [buyNowPrice] [startingBidPrice]\n"
+                    << "4. !buyNow [auction_id]\n"
+                    << "5. !bid [auction_id] [price]\n"
+                    << "6. !breakItem [item_id] [quantity]\n"
+                    << "7. !auctionCheck\n"
+                    << "------------------------\n";
+    }
 }
 
 std::vector<std::string> EventHandler::split(const std::string& input) {
@@ -19,44 +79,4 @@ std::vector<std::string> EventHandler::split(const std::string& input) {
     while (getline(ss, token, ' '))
         result.push_back(token);
     return result;
-}
-
-std::pair<int, std::string> EventHandler::serverEventHandling(bool isLogin, const std::string& buf) {
-    std::pair<int, std::string> ret;
-    int event = getEvent(buf); std::string msg = getMessage(buf);
-    if (!isLogin) {
-        if (event == LOGIN_EVENT)
-            ret = {LOGIN_EVENT, msg};
-    }
-    else {
-        if (event == CHAT_EVENT)
-            ret = {CHAT_EVENT, msg};
-    }
-    return ret;
-}
-
-std::string EventHandler::userEventHandling(bool isLogin, const std::string& buf) {
-    std::string ret;
-    try {
-        if (!isLogin) {
-            std::vector<std::string> command = split(buf);
-            if (command[0] == "!login") ret = "[0]" + command[1] + "," + command[2];
-        } else {
-            if (buf[0] != '!') ret = "[1]" + buf;
-            else {
-                std::vector<std::string> command = split(buf);
-                if (command[0] == "!getTestItem") ret = "[2]";
-                else if (command[0] == "!inventoryCheck") ret = "[3]";
-                else if (command[0] == "!sellItem") ret = "[4]" + command[1] + "," + command[2] + "," + command[3] + "," + command[4];
-                else if (command[0] == "!buyNow") ret = "[5]" + command[1];
-                else if (command[0] == "!bid") ret = "[6]" + command[1] + "," + command[2];
-                else if (command[0] == "!breakItem") ret = "[7]" + command[1] + "," + command[2];
-                else if (command[0] == "!auctionCheck") ret = "[8]";
-                else throw std::bad_alloc();
-            }
-        }
-    } catch (std::bad_alloc e) {
-        std::cout << "please enter correct command\n";
-    }
-    return ret;
 }
