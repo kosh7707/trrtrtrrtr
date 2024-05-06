@@ -12,7 +12,8 @@ add_executable(GameClient main.cpp
         Constant.h
         Constant.cpp
         EventHandler.h
-        EventHandler.cpp)
+        EventHandler.cpp
+        UserInputHandling.cpp)
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 

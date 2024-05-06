@@ -143,13 +143,29 @@ CMakeFiles/ServerCore.dir/src/Queue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/Queue.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\Queue.cpp -o CMakeFiles\ServerCore.dir\src\Queue.cpp.s
 
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj: CMakeFiles/ServerCore.dir/flags.make
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj: CMakeFiles/ServerCore.dir/includes_CXX.rsp
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IObserver.cpp
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj: CMakeFiles/ServerCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj -MF CMakeFiles\ServerCore.dir\src\IObserver.cpp.obj.d -o CMakeFiles\ServerCore.dir\src\IObserver.cpp.obj -c C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IObserver.cpp
+
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/src/IObserver.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IObserver.cpp > CMakeFiles\ServerCore.dir\src\IObserver.cpp.i
+
+CMakeFiles/ServerCore.dir/src/IObserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/src/IObserver.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\src\IObserver.cpp -o CMakeFiles\ServerCore.dir\src\IObserver.cpp.s
+
 # Object files for target ServerCore
 ServerCore_OBJECTS = \
 "CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" \
 "CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj" \
 "CMakeFiles/ServerCore.dir/src/Socket.cpp.obj" \
 "CMakeFiles/ServerCore.dir/src/Event.cpp.obj" \
-"CMakeFiles/ServerCore.dir/src/Queue.cpp.obj"
+"CMakeFiles/ServerCore.dir/src/Queue.cpp.obj" \
+"CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj"
 
 # External object files for target ServerCore
 ServerCore_EXTERNAL_OBJECTS =
@@ -159,9 +175,10 @@ C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/Server
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Socket.cpp.obj
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Event.cpp.obj
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/Queue.cpp.obj
+C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/build.make
 C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CMakeFiles/ServerCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\trrtrtrrtr\ServerCore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\ServerCore.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ServerCore.dir\link.txt --verbose=$(VERBOSE)
 

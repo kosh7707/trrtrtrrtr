@@ -90,6 +90,9 @@
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include/IEventHandler.h">
 			<Option target="ServerCore"/>
 		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include/IObserver.h">
+			<Option target="ServerCore"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include/Queue.h">
 			<Option target="ServerCore"/>
 		</Unit>
@@ -103,6 +106,9 @@
 			<Option target="ServerCore"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IEventHandler.cpp">
+			<Option target="ServerCore"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IObserver.cpp">
 			<Option target="ServerCore"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Queue.cpp">

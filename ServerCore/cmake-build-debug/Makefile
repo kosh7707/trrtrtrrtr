@@ -176,6 +176,30 @@ src/IEventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.s
 .PHONY : src/IEventHandler.cpp.s
 
+src/IObserver.obj: src/IObserver.cpp.obj
+.PHONY : src/IObserver.obj
+
+# target to build an object file
+src/IObserver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj
+.PHONY : src/IObserver.cpp.obj
+
+src/IObserver.i: src/IObserver.cpp.i
+.PHONY : src/IObserver.i
+
+# target to preprocess a source file
+src/IObserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IObserver.cpp.i
+.PHONY : src/IObserver.cpp.i
+
+src/IObserver.s: src/IObserver.cpp.s
+.PHONY : src/IObserver.s
+
+# target to generate assembly for a file
+src/IObserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ServerCore.dir\build.make CMakeFiles/ServerCore.dir/src/IObserver.cpp.s
+.PHONY : src/IObserver.cpp.s
+
 src/Queue.obj: src/Queue.cpp.obj
 .PHONY : src/Queue.obj
 
@@ -263,6 +287,9 @@ help:
 	@echo ... src/IEventHandler.obj
 	@echo ... src/IEventHandler.i
 	@echo ... src/IEventHandler.s
+	@echo ... src/IObserver.obj
+	@echo ... src/IObserver.i
+	@echo ... src/IObserver.s
 	@echo ... src/Queue.obj
 	@echo ... src/Queue.i
 	@echo ... src/Queue.s

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ServerCore.dir/src/Event.cpp.obj.d"
   "CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj"
   "CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj.d"
+  "CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj"
+  "CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj.d"
   "CMakeFiles/ServerCore.dir/src/Queue.cpp.obj"
   "CMakeFiles/ServerCore.dir/src/Queue.cpp.obj.d"
   "CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj"

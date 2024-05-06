@@ -38,6 +38,8 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_FAIL, "Incorrect username or password."));
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully logged in. Welcome " + id + "."));
+            SOCKET sc = observer->indexToSocket[index].getSc();
+            observer->socketToClient[sc].setAccount(std::move(account));
         }
     }
     else {
@@ -45,6 +47,8 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, "Registration failed."));
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully registered. Welcome " + id + "."));
+            SOCKET sc = observer->indexToSocket[index].getSc();
+            observer->socketToClient[sc].setAccount(std::move(account));
         }
     }
     return ret;
@@ -52,11 +56,14 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
 
 std::vector<std::unique_ptr<Event>> EventHandler::handleChat(const int index, const std::string& contents) {
     std::vector<std::unique_ptr<Event>> ret;
-    ret.emplace_back(std::make_unique<Event>(BROADCAST_INDEX, Event::CHAT_EVENT, contents));
+
+    SOCKET sc = observer->indexToSocket[index].getSc();
+    std::string user_id = observer->socketToClient[sc].getUserId();
+    ret.emplace_back(std::make_unique<Event>(BROADCAST_INDEX, Event::CHAT_EVENT, user_id + " : " + contents));
     return ret;
 }
 
-std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::string &command) {
+std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::string& command) {
     return std::vector<std::unique_ptr<Event>>();
 }
 

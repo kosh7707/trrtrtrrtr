@@ -102,6 +102,7 @@ bool ServerCore::accept() {
     WSAEventSelect(socket.getSc(), socket.getEv(), FD_READ | FD_CLOSE);
     connectedSockets[clientsCount++] = socket;
     std::cout << "socket: " << socket.getSc() << ", IP: " << socket.getIp() << " is connected." << std::endl;
+    publish();
     return true;
 }
 
@@ -132,13 +133,18 @@ bool ServerCore::connect(const std::string& destServerIP, const int destServerPo
     Socket socket(connectSocket, ev, destServerIP);
     WSAEventSelect(socket.getSc(), socket.getEv(), FD_READ | FD_CLOSE);
     connectedSockets[clientsCount++] = socket;
+    publish();
     return true;
 }
 
 bool ServerCore::close(const int index) {
-    ::close(connectedSockets[--clientsCount].getSc());
-    std::cout << "socket: " << connectedSockets[clientsCount].getSc() << ", IP: " << connectedSockets[clientsCount].getIp() << " is disconnected." << std::endl;
+    std::string close_ip = connectedSockets[index].getIp();
+    SOCKET      close_sc = connectedSockets[index].getSc();
+    clientsCount = clientsCount - 1;
     std::swap(connectedSockets[index], connectedSockets[clientsCount]);
+    ::close(connectedSockets[clientsCount].getSc());
+    std::cout << "socket: " << close_sc << ", IP: " << close_ip << " is disconnected." << std::endl;
+    publish();
     return true;
 }
 
@@ -251,5 +257,17 @@ bool ServerCore::sendEventEnqueue(std::unique_ptr<Event> event) {
     eventResQueue.push(std::move(event));
     return true;
 }
+
+void ServerCore::attachSocketObserver(std::shared_ptr<IObserver> observer) {
+    observers.emplace_back(observer);
+}
+
+void ServerCore::publish() {
+    for (const auto& observer : observers)
+        observer->update(clientsCount, connectedSockets);
+}
+
+
+
 
 

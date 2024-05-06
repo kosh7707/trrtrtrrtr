@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.cpp" "CMakeFiles/GameClient.dir/Constant.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/Constant.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.cpp" "CMakeFiles/GameClient.dir/EventHandler.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/EventHandler.cpp.obj.d"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/UserInputHandling.cpp" "CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/main.cpp" "CMakeFiles/GameClient.dir/main.cpp.obj" "gcc" "CMakeFiles/GameClient.dir/main.cpp.obj.d"
   )
 

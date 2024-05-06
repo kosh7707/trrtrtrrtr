@@ -17,7 +17,9 @@ add_library(${TARGET} STATIC
         src/Event.cpp
         include/Event.h
         src/Queue.cpp
-        include/Queue.h)
+        include/Queue.h
+        src/IObserver.cpp
+        include/IObserver.h)
 
 set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 

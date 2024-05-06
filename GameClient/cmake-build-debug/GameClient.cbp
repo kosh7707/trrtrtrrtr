@@ -96,6 +96,9 @@
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.h">
 			<Option target="GameClient"/>
 		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/UserInputHandling.cpp">
+			<Option target="GameClient"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/main.cpp">
 			<Option target="GameClient"/>
 		</Unit>

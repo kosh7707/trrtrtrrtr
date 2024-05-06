@@ -16,21 +16,25 @@
 #include "Socket.h"
 #include "Event.h"
 #include "Queue.h"
+#include "IObserver.h"
+
 #define BUF_SIZE 1024
 
 class ServerCore {
 public:
     ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandler, std::string serverIP, int serverPort);
     bool sendEventEnqueue(std::unique_ptr<Event> event);
+    void attachSocketObserver(std::shared_ptr<IObserver> observer);
     [[noreturn]] void run();
 private:
-    bool isServer;
+    bool            isServer;
     std::string     serverIP;
     int             serverPort;
     int             clientsCount;
     Socket          sc;
 
-    std::unique_ptr<Socket[]>       connectedSockets;
+    std::vector<std::shared_ptr<IObserver>> observers;
+    std::unique_ptr<Socket[]>               connectedSockets;
 
     Queue<Event>                    eventReqQueue;
     Queue<Event>                    eventResQueue;
@@ -60,6 +64,8 @@ private:
 
     void runSendWorker();
     [[noreturn]] static unsigned int WINAPI runSendWorkerThread(void* params);
+
+    void publish();
 };
 
 

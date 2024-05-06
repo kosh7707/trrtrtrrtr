@@ -1902,30 +1902,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "PQXX_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "PQXX_INCLUDE_DIR-NOTFOUND"
-		},
-		{
-			"name" : "PQXX_LIB",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "PQXX_LIB-NOTFOUND"
-		},
-		{
 			"name" : "PostgreSQL_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -2024,18 +2000,6 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/Administrator/Desktop/trrtrtrrtr/GameServer/cmake-build-debug/build-pqxx"
-		},
-		{
-			"name" : "libpqxx_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for libpqxx."
-				}
-			],
-			"type" : "PATH",
-			"value" : "libpqxx_DIR-NOTFOUND"
 		},
 		{
 			"name" : "libpqxx_IS_TOP_LEVEL",

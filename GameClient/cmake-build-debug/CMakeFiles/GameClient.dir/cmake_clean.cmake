@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameClient.dir/Constant.cpp.obj.d"
   "CMakeFiles/GameClient.dir/EventHandler.cpp.obj"
   "CMakeFiles/GameClient.dir/EventHandler.cpp.obj.d"
+  "CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj"
+  "CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj.d"
   "CMakeFiles/GameClient.dir/main.cpp.obj"
   "CMakeFiles/GameClient.dir/main.cpp.obj.d"
   "libGameClient.dll.a"

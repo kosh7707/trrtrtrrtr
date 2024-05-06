@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Event.cpp" "CMakeFiles/ServerCore.dir/src/Event.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/Event.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IEventHandler.cpp" "CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj.d"
+  "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IObserver.cpp" "CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Queue.cpp" "CMakeFiles/ServerCore.dir/src/Queue.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/Queue.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/ServerCore.cpp" "CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj.d"
   "C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Socket.cpp" "CMakeFiles/ServerCore.dir/src/Socket.cpp.obj" "gcc" "CMakeFiles/ServerCore.dir/src/Socket.cpp.obj.d"

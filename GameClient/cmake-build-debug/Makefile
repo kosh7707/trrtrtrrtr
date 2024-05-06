@@ -176,6 +176,30 @@ EventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/EventHandler.cpp.s
 .PHONY : EventHandler.cpp.s
 
+UserInputHandling.obj: UserInputHandling.cpp.obj
+.PHONY : UserInputHandling.obj
+
+# target to build an object file
+UserInputHandling.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj
+.PHONY : UserInputHandling.cpp.obj
+
+UserInputHandling.i: UserInputHandling.cpp.i
+.PHONY : UserInputHandling.i
+
+# target to preprocess a source file
+UserInputHandling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/UserInputHandling.cpp.i
+.PHONY : UserInputHandling.cpp.i
+
+UserInputHandling.s: UserInputHandling.cpp.s
+.PHONY : UserInputHandling.s
+
+# target to generate assembly for a file
+UserInputHandling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameClient.dir\build.make CMakeFiles/GameClient.dir/UserInputHandling.cpp.s
+.PHONY : UserInputHandling.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... EventHandler.obj
 	@echo ... EventHandler.i
 	@echo ... EventHandler.s
+	@echo ... UserInputHandling.obj
+	@echo ... UserInputHandling.i
+	@echo ... UserInputHandling.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

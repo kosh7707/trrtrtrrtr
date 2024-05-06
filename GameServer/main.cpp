@@ -8,13 +8,15 @@ int main() {
     try {
         Constant constant;
 
+        std::shared_ptr<IObserver> observer(new Observer());
         std::shared_ptr<IDatabase> db(new PostgreSQL(constant.getConnInfo()));
         std::shared_ptr<AccountDAO> accountDao(new AccountDAO(db));
         std::shared_ptr<InventoryDAO> inventoryDao(new InventoryDAO(db));
         std::shared_ptr<AccountService> accountService(new AccountService(accountDao));
-        std::unique_ptr<IEventHandler> eventHandler(new EventHandler(accountService));
+        std::unique_ptr<IEventHandler> eventHandler(new EventHandler(std::dynamic_pointer_cast<Observer>(observer), accountService));
 
         ServerCore sc(true, std::move(eventHandler), constant.getServerIP(), constant.getServerPort());
+        sc.attachSocketObserver(std::dynamic_pointer_cast<Observer>(observer));
 
         sc.run();
 
