@@ -1,0 +1,3 @@
+[submodule "Database/libpqxx"]
+	path = Database/libpqxx
+	url = https://github.com/jtv/libpqxx
