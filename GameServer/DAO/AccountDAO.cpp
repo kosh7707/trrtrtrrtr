@@ -26,7 +26,7 @@ std::unique_ptr<Account> AccountDAO::readAccount(const std::string& id, const st
     auto user_id = account["user_id"];
     auto user_pw = account["user_pw"];
     auto balance = stoi(account["balance"]);
-    auto score = stoi(account["socre"]);
+    auto score = stoi(account["score"]);
     auto created_date = account["created_date"];
     auto last_login = account["last_login"];
     std::unique_ptr<Account> pAccount = std::make_unique<Account>(account_id, user_id, user_pw, balance, score, created_date, last_login);

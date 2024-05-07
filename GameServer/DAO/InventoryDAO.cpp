@@ -123,10 +123,10 @@
 //
 //
 std::unique_ptr<Inventory> InventoryDAO::readInventory(int account_id) {
-    const char* queryTemplate = "select user_id, balance from accounts where account_id = %d;";
+    const char* queryTemplate = "select * from inventory_view where account_id = %d;";
     std::string query = db->queryFormatting(queryTemplate, account_id);
     auto res = db->selectQuery(query);
-    std::shared_ptr<std::unordered_map<int, Item>> items;
+    std::shared_ptr<std::unordered_map<int, Item>> items = std::make_shared<std::unordered_map<int, Item>>();
     for (auto row : res) {
         Item item(stoi(row["item_id"]), stoi(row["score"]), stoi(row["quantity"]));
         items->emplace(stoi(row["item_id"]), item);

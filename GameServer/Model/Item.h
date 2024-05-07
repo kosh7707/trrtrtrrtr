@@ -6,7 +6,10 @@
 
 class Item {
 public:
-    static std::unordered_map<int, int> idToScore;
+    // TODO: Item의 score를 다른 곳에서 loading해야함.
+    static inline std::unordered_map<int, int> idToScore {
+            {1, 1}, {2, 2}, {3, 3}
+    };
 
     Item() {}
     Item(int itemId, int score, int quantity) : item_id(itemId), score(score), quantity(quantity) {}

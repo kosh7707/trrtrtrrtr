@@ -74,8 +74,6 @@
 /* Define if this feature is available. */
 #define PQXX_HAVE_THREAD_LOCAL
 /* Define if this feature is available. */
-/* #undef PQXX_HAVE_UNREACHABLE */
-/* Define if this feature is available. */
 /* #undef PQXX_HAVE_YEAR_MONTH_DAY */
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for

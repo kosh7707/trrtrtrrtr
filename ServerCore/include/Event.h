@@ -14,6 +14,11 @@ public:
         REGISTER_FAIL = 4,
         REGISTER_SUCCESS = 5,
         CHAT_EVENT = 6,
+        INVENTORY_CHECK_EVENT = 7,
+        GET_TEST_ITEM_EVENT = 8,
+        BREAK_ITEM_EVENT = 9,
+        USER_INFO_EVENT = 10,
+
     };
     Event(int index, int eventCode, const std::string& contents) : index(index), eventCode(eventCode), contents(contents) {}
 

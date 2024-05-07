@@ -10,13 +10,29 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
               << "contents: " << contents << std::endl;
 
     std::vector<std::unique_ptr<Event>> ret;
-    if (eventCode == Event::LOGIN_EVENT) {
-        ret = handleLogin(index, contents);
+    switch (eventCode) {
+        case Event::LOGIN_EVENT:
+            ret = handleLogin(index, contents);
+            break;
+        case Event::CHAT_EVENT:
+            ret = handleChat(index, contents);
+            break;
+        case Event::INVENTORY_CHECK_EVENT:
+            ret = handleInventoryCheck(index);
+            break;
+        case Event::GET_TEST_ITEM_EVENT:
+            ret = handleGetTestItem(index, contents);
+            break;
+        case Event::BREAK_ITEM_EVENT:
+            ret = handleBreakItem(index, contents);
+            break;
+        case Event::USER_INFO_EVENT:
+            ret = handleUserInfo(index);
+            break;
+        default:
+            std::cerr << "Invalid Event" << std::endl;
+            break;
     }
-    else if (eventCode == Event::CHAT_EVENT) {
-        ret = handleChat(index, contents);
-    }
-
     return ret;
 }
 
@@ -38,8 +54,10 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_FAIL, "Incorrect username or password."));
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully logged in. Welcome " + id + "."));
+            auto inventory = inventoryService->getInventory(account->getAccountId());
             SOCKET sc = observer->indexToSocket[index].getSc();
             observer->socketToClient[sc].setAccount(std::move(account));
+            observer->socketToClient[sc].setInventory(std::move(inventory));
         }
     }
     else {
@@ -47,8 +65,10 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, "Registration failed."));
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully registered. Welcome " + id + "."));
+            auto inventory = inventoryService->getInventory(account->getAccountId());
             SOCKET sc = observer->indexToSocket[index].getSc();
             observer->socketToClient[sc].setAccount(std::move(account));
+            observer->socketToClient[sc].setInventory(std::move(inventory));
         }
     }
     return ret;
@@ -64,32 +84,57 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleChat(const int index, co
 }
 
 std::vector<std::unique_ptr<Event>> EventHandler::handleInventoryCheck(const int index) {
-    return std::vector<std::unique_ptr<Event>>();
+    std::vector<std::unique_ptr<Event>> ret;
+
+    SOCKET sc = observer->indexToSocket[index].getSc();
+    auto items = observer->socketToClient[sc].getInventory()->getItems();
+    std::stringstream ss;
+    for (auto item : *items) {
+        ss << item.second.getItemId()   << ","
+           << item.second.getScore()    << ","
+           << item.second.getQuantity() << "|";
+    }
+    ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, ss.str()));
+    return ret;
 }
 
-//std::vector<std::pair<int, std::string>> EventHandler::handleGetTestItem(const int index, const std::unique_ptr<Client[]>& Clients) {
-//    std::vector<std::pair<int, std::string>> ret;
-//    int account_id = Clients[index].getAccount()->getAccountId();
-//    bool res = inventoryDao.insertItem(account_id, 1);
-//    if (res) {
-//        ret.push_back({index, "[1]Give you test item."});
-//        std::cout << "grant user '" + std::to_string(account_id) + "' test item." << std::endl;
-//    }
-//    else{
-//        ret.push_back({index, "[1]error , can't give you test item."});
-//        std::cout << "error, can't grant user '" + std::to_string(account_id) + "' test item." << std::endl;
-//    }
-//    return ret;
-//}
+std::vector<std::unique_ptr<Event>> EventHandler::handleGetTestItem(const int index, const std::string& contents) {
+    std::vector<std::unique_ptr<Event>> ret;
 
-//std::vector<std::pair<int, std::string>> EventHandler::handleInventoryCheck(const int index, const std::unique_ptr<Client[]>& Clients) {
-//    std::vector<std::pair<int, std::string>> ret;
-//    int account_id = Clients[index].getAccount()->getAccountId();
-//    std::string res = inventoryDao.inventoryCheck(account_id);
-//    ret.push_back({index, "[1]" + res});
-//    return ret;
-//}
-//
+    SOCKET sc = observer->indexToSocket[index].getSc();
+    auto params = split(contents);
+    int item_id = std::stoi(params[0]); int quantity = std::stoi(params[1]);
+    bool res = inventoryService->grantItem(observer->socketToClient[sc].getAccount(), observer->socketToClient[sc].getInventory(), item_id, quantity);
+    if (res) ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, "Get test item, item_id: " + std::to_string(item_id) + ", quantity: " + std::to_string(quantity)));
+    else ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, "Fail to get test item."));
+    return ret;
+}
+
+std::vector<std::unique_ptr<Event>> EventHandler::handleBreakItem(const int index, const std::string& contents) {
+    std::vector<std::unique_ptr<Event>> ret;
+
+    SOCKET sc = observer->indexToSocket[index].getSc();
+    auto params = split(contents);
+    int item_id = std::stoi(params[0]); int quantity = std::stoi(params[1]);
+    bool res = inventoryService->breakItem(observer->socketToClient[sc].getAccount(), observer->socketToClient[sc].getInventory(), item_id, quantity);
+    if (res) ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, "successfully break the item."));
+    else ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, "Fail to break the item."));
+    return ret;
+}
+
+std::vector<std::unique_ptr<Event>> EventHandler::handleUserInfo(const int index) {
+    std::vector<std::unique_ptr<Event>> ret;
+
+    SOCKET sc = observer->indexToSocket[index].getSc();
+    auto account = observer->socketToClient[sc].getAccount().get();
+    std::string user_id = account->getUserId();
+    int score = account->getScore();
+    int balance = account->getBalance();
+    std::string contents = user_id + "," + std::to_string(score) + "," + std::to_string(balance);
+    ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, contents));
+    return ret;
+}
+
 //std::vector<std::pair<int, std::string>> EventHandler::handleSellItem(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
 //    std::vector<std::pair<int, std::string>> ret;
 //    int account_id = Clients[index].getAccount()->getAccountId();
@@ -134,16 +179,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleInventoryCheck(const int
 //    return ret;
 //}
 //
-//std::vector<std::pair<int, std::string>> EventHandler::handleBreakItem(const int index, const std::string& msg, const std::unique_ptr<Client[]>& Clients) {
-//    std::vector<std::pair<int, std::string>> ret;
-//    int account_id = Clients[index].getAccount()->getAccountId();
-//    std::vector<std::string> params = split(msg);
-//    bool res = inventoryDao.breakItem(account_id, stoi(params[0]), stoi(params[1]));
-//    if (res) ret.push_back({index, "[1]Item has been successfully breaked in the inventory."});
-//    else ret.push_back({index, "[1]Failed to break the item."});
-//    return ret;
-//}
-//
+
 //std::vector<std::pair<int, std::string>> EventHandler::handleAuctionCheck(const int index) {
 //    std::vector<std::pair<int, std::string>> ret;
 //    std::string res = auctionDao.auctionCheck();

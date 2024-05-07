@@ -1,18 +1,23 @@
 #include "InventoryService.h"
 
 
-bool InventoryService::grantItem(std::unique_ptr<Account>& account, std::unique_ptr<Inventory> inventory, const int item_id, const int quantity) {
-    return inventory->insertItem(item_id, quantity) and inventoryDao->insertItem(account->getAccountId(), item_id, quantity);
+bool InventoryService::grantItem(std::unique_ptr<Account>& account, std::unique_ptr<Inventory>& inventory, const int item_id, const int quantity) {
+    if (inventoryDao->insertItem(account->getAccountId(), item_id, quantity)) {
+        inventory->insertItem(item_id, quantity);
+        return true;
+    }
+    return false;
 }
 
-bool InventoryService::breakItem(std::unique_ptr<Account>& account, std::unique_ptr<Inventory> inventory, const int item_id, const int quantity) {
-    bool res1 = inventory->deleteItem(item_id, quantity);
+bool InventoryService::breakItem(std::unique_ptr<Account>& account, std::unique_ptr<Inventory>& inventory, const int item_id, const int quantity) {
     int account_id = account->getAccountId();
-    bool res2 = inventoryDao->deleteItem(account_id, item_id, quantity);
-    int score = Item::idToScore[item_id];
-    account->setScore(account->getScore() + score);
-    bool res3 = accountDao->updateAccount(account);
-    return res1 and res2 and res3;
+    if (inventoryDao->deleteItem(account_id, item_id, quantity)) {
+        inventory->deleteItem(item_id, quantity);
+        account->setScore(account->getScore() + Item::idToScore[item_id] * quantity);
+        accountDao->updateAccount(account);
+        return true;
+    }
+    return false;
 }
 
 std::unique_ptr<Inventory> InventoryService::getInventory(const int account_id) {

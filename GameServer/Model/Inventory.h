@@ -53,12 +53,6 @@ public:
         return false;
     }
 
-    friend std::ostream& operator<< (std::ostream& os, const Inventory& inventory) {
-        for (auto it : *inventory.items)
-            os << std::to_string(it.first) << "," << std::to_string(it.second.getQuantity()) << "|";
-        return os;
-    }
-
 private:
     int account_id;
     std::shared_ptr<std::unordered_map<int, Item>> items;

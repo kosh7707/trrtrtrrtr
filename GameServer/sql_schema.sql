@@ -53,6 +53,11 @@ create table auctions (
     check (current_price <= buy_now_price)
 );
 
+create view inventory_view as
+    select iv.account_id as account_id, iv.item_id as item_id, i.score as score, iv.quantity as quantity
+    from inventory iv, items i
+    where iv.item_id = i.item_id;
+
 -- buff
 insert into buffs(name, description) values ('Test buff', 'Test buff description');
 
