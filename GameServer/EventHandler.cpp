@@ -14,9 +14,6 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
         case Event::LOGIN_EVENT:
             ret = handleLogin(index, contents);
             break;
-        case Event::CHAT_EVENT:
-            ret = handleChat(index, contents);
-            break;
         case Event::INVENTORY_CHECK_EVENT:
             ret = handleInventoryCheck(index);
             break;
@@ -71,15 +68,6 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
             observer->socketToClient[sc].setInventory(std::move(inventory));
         }
     }
-    return ret;
-}
-
-std::vector<std::unique_ptr<Event>> EventHandler::handleChat(const int index, const std::string& contents) {
-    std::vector<std::unique_ptr<Event>> ret;
-
-    SOCKET sc = observer->indexToSocket[index].getSc();
-    std::string user_id = observer->socketToClient[sc].getUserId();
-    ret.emplace_back(std::make_unique<Event>(BROADCAST_INDEX, Event::CHAT_EVENT, user_id + " : " + contents));
     return ret;
 }
 

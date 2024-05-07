@@ -6,6 +6,7 @@
 #include "IEventHandler.h"
 #include "Observer.h"
 #include "Service/InventoryService.h"
+#define CHAT_SERVER_INDEX 0
 
 class EventHandler final : public IEventHandler {
 public:
@@ -21,7 +22,6 @@ public:
 private:
     std::vector<std::string> split(const std::string& input);
     std::vector<std::unique_ptr<Event>> handleLogin(const int index, const std::string& contents);
-    std::vector<std::unique_ptr<Event>> handleChat(const int index, const std::string& contents);
     std::vector<std::unique_ptr<Event>> handleInventoryCheck(const int index);
     std::vector<std::unique_ptr<Event>> handleGetTestItem(const int index, const std::string& contents);
     std::vector<std::unique_ptr<Event>> handleBreakItem(const int index, const std::string& contents);

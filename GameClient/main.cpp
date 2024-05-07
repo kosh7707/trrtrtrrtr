@@ -9,6 +9,8 @@ int main() {
         std::unique_ptr<IEventHandler> eventHandler(new EventHandler());
 
         ServerCore sc(false, std::move(eventHandler), constant.getMainServerIP(), constant.getMainServerPort());
+        if (sc.connect(constant.getChatServerIp(), constant.getChatServerPort()))
+            std::cout << "connected to chat server" << std::endl;
 
         sc.run();
 

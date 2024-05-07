@@ -5,7 +5,8 @@
 #include <iostream>
 #include <sstream>
 #include "IEventHandler.h"
-#define MAIN_SERVER_INDEX 0
+#define CHAT_SERVER_INDEX 0
+#define MAIN_SERVER_INDEX 1
 
 class EventHandler final : public IEventHandler {
 public:

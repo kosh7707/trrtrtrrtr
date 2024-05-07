@@ -14,7 +14,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::s
             }
         }
         else {
-            if (command[0] != '!') ret.emplace_back(std::make_unique<Event>(MAIN_SERVER_INDEX, Event::CHAT_EVENT, command));
+            if (command[0] != '!') ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::CHAT_EVENT, command));
             else {
                 std::vector<std::string> cmd = split(command);
                 if (cmd[0] == "!help") printUserCommand(isLogin);
