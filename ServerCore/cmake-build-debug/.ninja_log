@@ -1,9 +1,0 @@
-# ninja log v5
-1463	1534	7363359465887014	libServerCore.a	5914823d4d5ebc9f
-25	363	7367445492175421	CMakeFiles/ServerCore.dir/src/Event.cpp.obj	c7d215ddc90fc15d
-8	436	7367445492896625	CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj	b1d51a3bcc01cb30
-17	498	7367445493513398	CMakeFiles/ServerCore.dir/src/Queue.cpp.obj	a7e9ef5ef6e26a00
-13	1563	7367445504175689	CMakeFiles/ServerCore.dir/src/Socket.cpp.obj	b2eb26b40a99d5d8
-29	1713	7367445505668861	CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj	f6009c04e3c2346a
-1	2485	7367445513346683	CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj	a3b532a147081170
-2486	2625	7367445514781949	C:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a	f6ed14bf9e610039
