@@ -63,7 +63,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleChat(const int index, co
     return ret;
 }
 
-std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::string& command) {
+std::vector<std::unique_ptr<Event>> EventHandler::handleInventoryCheck(const int index) {
     return std::vector<std::unique_ptr<Event>>();
 }
 

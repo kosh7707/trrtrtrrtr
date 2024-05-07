@@ -52,34 +52,38 @@ build cmake_object_order_depends_target_GameClient: phony || CMakeFiles/GameClie
 build CMakeFiles/GameClient.dir/main.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/main.cpp || cmake_object_order_depends_target_GameClient
   DEP_FILE = CMakeFiles\GameClient.dir\main.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include
   OBJECT_DIR = CMakeFiles\GameClient.dir
   OBJECT_FILE_DIR = CMakeFiles\GameClient.dir
   TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
-  TARGET_PDB = GameClient.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.pdb
 
-build CMakeFiles/GameClient.dir/ClientCore.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientCore.cpp || cmake_object_order_depends_target_GameClient
-  DEP_FILE = CMakeFiles\GameClient.dir\ClientCore.cpp.obj.d
+build CMakeFiles/GameClient.dir/Constant.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/Constant.cpp || cmake_object_order_depends_target_GameClient
+  DEP_FILE = CMakeFiles\GameClient.dir\Constant.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include
   OBJECT_DIR = CMakeFiles\GameClient.dir
   OBJECT_FILE_DIR = CMakeFiles\GameClient.dir
   TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
-  TARGET_PDB = GameClient.pdb
-
-build CMakeFiles/GameClient.dir/ClientConstant.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/ClientConstant.cpp || cmake_object_order_depends_target_GameClient
-  DEP_FILE = CMakeFiles\GameClient.dir\ClientConstant.cpp.obj.d
-  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GameClient.dir
-  OBJECT_FILE_DIR = CMakeFiles\GameClient.dir
-  TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
-  TARGET_PDB = GameClient.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.pdb
 
 build CMakeFiles/GameClient.dir/EventHandler.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/EventHandler.cpp || cmake_object_order_depends_target_GameClient
   DEP_FILE = CMakeFiles\GameClient.dir\EventHandler.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include
   OBJECT_DIR = CMakeFiles\GameClient.dir
   OBJECT_FILE_DIR = CMakeFiles\GameClient.dir
   TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
-  TARGET_PDB = GameClient.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.pdb
+
+build CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj: CXX_COMPILER__GameClient_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/UserInputHandling.cpp || cmake_object_order_depends_target_GameClient
+  DEP_FILE = CMakeFiles\GameClient.dir\UserInputHandling.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/include
+  OBJECT_DIR = CMakeFiles\GameClient.dir
+  OBJECT_FILE_DIR = CMakeFiles\GameClient.dir
+  TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.pdb
 
 
 # =============================================================================
@@ -87,18 +91,18 @@ build CMakeFiles/GameClient.dir/EventHandler.cpp.obj: CXX_COMPILER__GameClient_u
 
 
 #############################################
-# Link the executable GameClient.exe
+# Link the executable C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.exe
 
-build GameClient.exe: CXX_EXECUTABLE_LINKER__GameClient_Debug CMakeFiles/GameClient.dir/main.cpp.obj CMakeFiles/GameClient.dir/ClientCore.cpp.obj CMakeFiles/GameClient.dir/ClientConstant.cpp.obj CMakeFiles/GameClient.dir/EventHandler.cpp.obj
+build C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe: CXX_EXECUTABLE_LINKER__GameClient_Debug CMakeFiles/GameClient.dir/main.cpp.obj CMakeFiles/GameClient.dir/Constant.cpp.obj CMakeFiles/GameClient.dir/EventHandler.cpp.obj CMakeFiles/GameClient.dir/UserInputHandling.cpp.obj | C$:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/libServerCore.a
   FLAGS = -static-libstdc++ -static-libgcc -g
-  LINK_LIBRARIES = -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/../lib/libServerCore.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\GameClient.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = CMakeFiles\GameClient.dir\
-  TARGET_FILE = GameClient.exe
+  TARGET_FILE = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.exe
   TARGET_IMPLIB = libGameClient.dll.a
-  TARGET_PDB = GameClient.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\dist\GameClient.pdb
 
 
 #############################################
@@ -126,7 +130,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build GameClient: phony GameClient.exe
+build GameClient: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe
+
+build GameClient.exe: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe
 
 # =============================================================================
 # Folder targets.
@@ -136,7 +142,7 @@ build GameClient: phony GameClient.exe
 #############################################
 # Folder: C:/Users/Administrator/Desktop/trrtrtrrtr/GameClient/cmake-build-debug
 
-build all: phony GameClient.exe
+build all: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/dist/GameClient.exe
 
 # =============================================================================
 # Built-in targets

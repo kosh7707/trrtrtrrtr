@@ -1,8 +1,8 @@
 #include "Account.h"
 
 Account::Account(int accountId, const std::string &userId, const std::string &userPw, int balance,
-                 const std::string &createdDate, const std::string &lastLogin) : accountId(accountId), userId(userId),
-                                                                       userPw(userPw), balance(balance),
+                 int score, const std::string& createdDate, const std::string &lastLogin) : accountId(accountId), userId(userId),
+                                                                       userPw(userPw), balance(balance), score(score),
                                                                        createdDate(createdDate), lastLogin(lastLogin) {}
 
 int Account::getAccountId() const {
@@ -31,6 +31,14 @@ int Account::getBalance() const {
 
 void Account::setBalance(int b) {
     balance = b;
+}
+
+int Account::getScore() const {
+    return score;
+}
+
+void Account::setScore(int b) {
+    score = b;
 }
 
 

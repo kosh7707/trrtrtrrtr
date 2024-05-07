@@ -34,6 +34,8 @@ add_executable(${TARGET} main.cpp
         Observer.h
         Client.cpp
         Client.h
+        Model/Item.cpp
+        Model/Item.h
 )
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})

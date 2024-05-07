@@ -4,6 +4,7 @@ create table accounts (
     user_id         varchar(20) unique,
     user_pw         varchar(20),
     balance         int default 10000 check (balance >= 0),
+    score           int default 0,
     created_date    timestamp default current_timestamp,
     last_login      timestamp default current_timestamp
 );
@@ -56,4 +57,7 @@ create table auctions (
 insert into buffs(name, description) values ('Test buff', 'Test buff description');
 
 -- item
-insert into items(name, score, buff_id) values ('Test item', 1, 1);
+insert into items(name, score, buff_id) values ('Test item1', 1, 1);
+insert into items(name, score, buff_id) values ('Test item1', 2, 1);
+insert into items(name, score, buff_id) values ('Test item1', 3, 1);
+

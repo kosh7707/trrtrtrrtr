@@ -126,9 +126,11 @@ std::unique_ptr<Inventory> InventoryDAO::readInventory(int account_id) {
     const char* queryTemplate = "select user_id, balance from accounts where account_id = %d;";
     std::string query = db->queryFormatting(queryTemplate, account_id);
     auto res = db->selectQuery(query);
-    std::shared_ptr<std::vector<std::pair<int, int>>> items;
-    for (auto row : res)
-        items->emplace_back(stoi(row["item_id"]), stoi(row["quantity"]));
+    std::shared_ptr<std::unordered_map<int, Item>> items;
+    for (auto row : res) {
+        Item item(stoi(row["item_id"]), stoi(row["score"]), stoi(row["quantity"]));
+        items->emplace(stoi(row["item_id"]), item);
+    }
     std::unique_ptr<Inventory> inventory = std::make_unique<Inventory>(account_id, items);
     return std::move(inventory);
 }
@@ -136,9 +138,9 @@ std::unique_ptr<Inventory> InventoryDAO::readInventory(int account_id) {
 bool InventoryDAO::updateInventory(const std::unique_ptr<Inventory>& inventory) {
     auto items = inventory->getItems();
     bool ret = true;
-    for (auto item : *items) {
+    for (const auto& item : *items) {
         const char* queryTemplate = "insert into inventory values (%d, %d, %d) on conflict do update (account_id, item_id) set quantity = %d";
-        std::string query = db->queryFormatting(queryTemplate, inventory->getAccountId(), item.first, item.second);
+        std::string query = db->queryFormatting(queryTemplate, inventory->getAccountId(), item.first, item.second.getQuantity());
         ret = ret and db->commandQuery(query);
     }
     return ret;

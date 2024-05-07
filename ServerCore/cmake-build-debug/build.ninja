@@ -49,45 +49,59 @@ cmake_ninja_workdir = C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/cmak
 
 build cmake_object_order_depends_target_ServerCore: phony || CMakeFiles/ServerCore.dir
 
-build CMakeFiles/ServerCore.dir/ServerCore.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/ServerCore.cpp || cmake_object_order_depends_target_ServerCore
-  DEP_FILE = CMakeFiles\ServerCore.dir\ServerCore.cpp.obj.d
+build CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/ServerCore.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\ServerCore.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
   OBJECT_DIR = CMakeFiles\ServerCore.dir
-  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_PDB = libServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
-build CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/IEventHandler.cpp || cmake_object_order_depends_target_ServerCore
-  DEP_FILE = CMakeFiles\ServerCore.dir\IEventHandler.cpp.obj.d
+build CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IEventHandler.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\IEventHandler.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
   OBJECT_DIR = CMakeFiles\ServerCore.dir
-  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_PDB = libServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
-build CMakeFiles/ServerCore.dir/Socket.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Socket.cpp || cmake_object_order_depends_target_ServerCore
-  DEP_FILE = CMakeFiles\ServerCore.dir\Socket.cpp.obj.d
+build CMakeFiles/ServerCore.dir/src/Socket.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Socket.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\Socket.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
   OBJECT_DIR = CMakeFiles\ServerCore.dir
-  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_PDB = libServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
-build CMakeFiles/ServerCore.dir/Event.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Event.cpp || cmake_object_order_depends_target_ServerCore
-  DEP_FILE = CMakeFiles\ServerCore.dir\Event.cpp.obj.d
+build CMakeFiles/ServerCore.dir/src/Event.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Event.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\Event.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
   OBJECT_DIR = CMakeFiles\ServerCore.dir
-  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_PDB = libServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
-build CMakeFiles/ServerCore.dir/Queue.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/Queue.cpp || cmake_object_order_depends_target_ServerCore
-  DEP_FILE = CMakeFiles\ServerCore.dir\Queue.cpp.obj.d
+build CMakeFiles/ServerCore.dir/src/Queue.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/Queue.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\Queue.cpp.obj.d
   FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
   OBJECT_DIR = CMakeFiles\ServerCore.dir
-  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_PDB = libServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
+
+build CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj: CXX_COMPILER__ServerCore_unscanned_Debug C$:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/src/IObserver.cpp || cmake_object_order_depends_target_ServerCore
+  DEP_FILE = CMakeFiles\ServerCore.dir\src\IObserver.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/include
+  OBJECT_DIR = CMakeFiles\ServerCore.dir
+  OBJECT_FILE_DIR = CMakeFiles\ServerCore.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
 
 # =============================================================================
@@ -95,16 +109,16 @@ build CMakeFiles/ServerCore.dir/Queue.cpp.obj: CXX_COMPILER__ServerCore_unscanne
 
 
 #############################################
-# Link the static library libServerCore.a
+# Link the static library C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a
 
-build libServerCore.a: CXX_STATIC_LIBRARY_LINKER__ServerCore_Debug CMakeFiles/ServerCore.dir/ServerCore.cpp.obj CMakeFiles/ServerCore.dir/IEventHandler.cpp.obj CMakeFiles/ServerCore.dir/Socket.cpp.obj CMakeFiles/ServerCore.dir/Event.cpp.obj CMakeFiles/ServerCore.dir/Queue.cpp.obj
+build C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a: CXX_STATIC_LIBRARY_LINKER__ServerCore_Debug CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj CMakeFiles/ServerCore.dir/src/Socket.cpp.obj CMakeFiles/ServerCore.dir/src/Event.cpp.obj CMakeFiles/ServerCore.dir/src/Queue.cpp.obj CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
   OBJECT_DIR = CMakeFiles\ServerCore.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = CMakeFiles\ServerCore.dir\ServerCore.pdb
-  TARGET_FILE = libServerCore.a
-  TARGET_PDB = libServerCore.pdb
+  TARGET_FILE = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a
+  TARGET_PDB = C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.pdb
 
 
 #############################################
@@ -132,7 +146,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build ServerCore: phony libServerCore.a
+build ServerCore: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a
+
+build libServerCore.a: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a
 
 # =============================================================================
 # Folder targets.
@@ -142,7 +158,7 @@ build ServerCore: phony libServerCore.a
 #############################################
 # Folder: C:/Users/Administrator/Desktop/trrtrtrrtr/ServerCore/cmake-build-debug
 
-build all: phony libServerCore.a
+build all: phony C$:/Users/Administrator/Desktop/trrtrtrrtr/lib/libServerCore.a
 
 # =============================================================================
 # Built-in targets

@@ -11,9 +11,10 @@ std::unique_ptr<Account> AccountDAO::readAccount(const int account_id) {
     auto user_id = account["user_id"];
     auto user_pw = account["user_pw"];
     auto balance = stoi(account["balance"]);
+    auto score = stoi(account["socre"]);
     auto created_date = account["created_date"];
     auto last_login = account["last_login"];
-    std::unique_ptr<Account> pAccount = std::make_unique<Account>(account_id, user_id, user_pw, balance, created_date, last_login);
+    std::unique_ptr<Account> pAccount = std::make_unique<Account>(account_id, user_id, user_pw, balance, score, created_date, last_login);
     return std::move(pAccount);
 }
 
@@ -25,9 +26,10 @@ std::unique_ptr<Account> AccountDAO::readAccount(const std::string& id, const st
     auto user_id = account["user_id"];
     auto user_pw = account["user_pw"];
     auto balance = stoi(account["balance"]);
+    auto score = stoi(account["socre"]);
     auto created_date = account["created_date"];
     auto last_login = account["last_login"];
-    std::unique_ptr<Account> pAccount = std::make_unique<Account>(account_id, user_id, user_pw, balance, created_date, last_login);
+    std::unique_ptr<Account> pAccount = std::make_unique<Account>(account_id, user_id, user_pw, balance, score, created_date, last_login);
     return std::move(pAccount);
 }
 
@@ -36,10 +38,11 @@ bool AccountDAO::updateAccount(const std::unique_ptr<Account>& account) {
     auto user_id = account->getUserId();
     auto user_pw = account->getUserPw();
     auto balance = account->getBalance();
+    auto score = account->getScore();
     auto created_date = account->getCreatedDate();
     auto last_login = account->getLastLogin();
-    const char* queryTemplate = "update accounts set user_id = '%s', user_pw = '%s', balance = %d, created_date = '%s', last_login = '%s' where account_id = %d";
-    std::string query = db->queryFormatting(queryTemplate, user_id.c_str(), user_pw.c_str(), balance, created_date.c_str(), last_login.c_str(), account_id);
+    const char* queryTemplate = "update accounts set user_id = '%s', user_pw = '%s', balance = %d, score = %d, created_date = '%s', last_login = '%s' where account_id = %d";
+    std::string query = db->queryFormatting(queryTemplate, user_id.c_str(), user_pw.c_str(), balance, score, created_date.c_str(), last_login.c_str(), account_id);
     return db->commandQuery(query);
 }
 

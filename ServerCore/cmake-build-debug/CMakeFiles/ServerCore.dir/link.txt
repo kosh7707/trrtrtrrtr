@@ -1,2 +1,0 @@
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a CMakeFiles/ServerCore.dir/src/ServerCore.cpp.obj CMakeFiles/ServerCore.dir/src/IEventHandler.cpp.obj CMakeFiles/ServerCore.dir/src/Socket.cpp.obj CMakeFiles/ServerCore.dir/src/Event.cpp.obj CMakeFiles/ServerCore.dir/src/Queue.cpp.obj CMakeFiles/ServerCore.dir/src/IObserver.cpp.obj
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ranlib.exe C:\Users\Administrator\Desktop\trrtrtrrtr\lib\libServerCore.a

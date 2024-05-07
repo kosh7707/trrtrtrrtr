@@ -12,15 +12,19 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
     auto ret = std::vector<std::unique_ptr<Event>>();
     switch (eventCode) {
         case Event::LOGIN_SUCCESS:
+            std::cout << contents << std::endl;
             isLogin = true;
             break;
         case Event::LOGIN_FAIL:
+            std::cout << contents << std::endl;
             isLogin = false;
             break;
         case Event::REGISTER_SUCCESS:
+            std::cout << contents << std::endl;
             isLogin = true;
             break;
         case Event::REGISTER_FAIL:
+            std::cout << contents << std::endl;
             isLogin = false;
             break;
         case Event::CHAT_EVENT:
