@@ -28,9 +28,9 @@ private:
     std::vector<std::unique_ptr<Event>> handleUserInfo(const int index);
 
 private:
-    std::shared_ptr<AccountService> accountService;
-    std::shared_ptr<InventoryService> inventoryService;
-    std::shared_ptr<Observer> observer;
+    std::shared_ptr<AccountService>     accountService;
+    std::shared_ptr<InventoryService>   inventoryService;
+    std::shared_ptr<Observer>           observer;
 };
 
 

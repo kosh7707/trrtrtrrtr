@@ -13,6 +13,8 @@ public:
     std::vector<std::unique_ptr<Event>> userInputHandling(const std::string &command) override {
         return std::vector<std::unique_ptr<Event>>();
     }
+private:
+    std::vector<std::string> users;
 };
 
 

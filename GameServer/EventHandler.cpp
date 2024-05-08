@@ -48,9 +48,9 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
     std::string id = params[0], pw = params[1];
     if (accountService->isExistAccount(id)) {
         auto account = accountService->loginAccount(id, pw);
-        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_FAIL, "Incorrect username or password."));
+        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_FAIL, ""));
         else {
-            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully logged in. Welcome " + id + "."));
+            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, id));
             auto inventory = inventoryService->getInventory(account->getAccountId());
             SOCKET sc = observer->indexToSocket[index].getSc();
             observer->socketToClient[sc].setAccount(std::move(account));
@@ -59,9 +59,9 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
     }
     else {
         auto account = accountService->registerAccount(id, pw);
-        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, "Registration failed."));
+        if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, ""));
         else {
-            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, "Successfully registered. Welcome " + id + "."));
+            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, id));
             auto inventory = inventoryService->getInventory(account->getAccountId());
             SOCKET sc = observer->indexToSocket[index].getSc();
             observer->socketToClient[sc].setAccount(std::move(account));
@@ -82,7 +82,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleInventoryCheck(const int
            << item.second.getScore()    << ","
            << item.second.getQuantity() << "|";
     }
-    ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, ss.str()));
+    ret.emplace_back(std::make_unique<Event>(index, Event::INVENTORY_CHECK_EVENT, ss.str()));
     return ret;
 }
 
@@ -119,7 +119,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleUserInfo(const int index
     int score = account->getScore();
     int balance = account->getBalance();
     std::string contents = user_id + "," + std::to_string(score) + "," + std::to_string(balance);
-    ret.emplace_back(std::make_unique<Event>(index, Event::CHAT_EVENT, contents));
+    ret.emplace_back(std::make_unique<Event>(index, Event::USER_INFO_EVENT, contents));
     return ret;
 }
 
