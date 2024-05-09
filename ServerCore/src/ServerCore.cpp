@@ -2,7 +2,7 @@
 
 ServerCore::ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandler, std::string serverIP, int serverPort)
                 : serverIP(serverIP), serverPort(serverPort), eventHandler(std::move(eventHandler)), isServer(isServer) {
-    connectedSockets = std::unique_ptr<Socket[]>(new Socket[100]);
+    connectedSockets = std::unique_ptr<Socket[]>(new Socket[63]);
     clientsCount = 0;
 }
 
@@ -90,6 +90,7 @@ bool ServerCore::initServer() {
 
 bool ServerCore::accept() {
     if (!isServer) return false;
+    if (clientsCount > 63) return false;
     SOCKADDR_IN socketAddress;
     int length = sizeof(socketAddress);
     SOCKET acceptSocket = ::accept(sc.getSc(), reinterpret_cast<SOCKADDR*>(&socketAddress), &length);
@@ -228,14 +229,14 @@ void ServerCore::runRecvWorker() {
     ServerCore* serverCore = static_cast<ServerCore*>(params);
 
     WSANETWORKEVENTS ev;
-    WSAEVENT handleArray[100];
+    WSAEVENT handleArray[64];
 
-    int index;
     while (true) {
         handleArray[0] = serverCore->sc.getEv();
         for (int i=0; i<serverCore->clientsCount; i++)
             handleArray[i+1] = serverCore->connectedSockets[i].getEv();
-        index = WSAWaitForMultipleEvents(serverCore->clientsCount+1, handleArray, false, INFINITE, false);
+
+        int index = WSAWaitForMultipleEvents(serverCore->clientsCount+1, handleArray, false, INFINITE, false);
         if ((index != WSA_WAIT_FAILED) and (index != WSA_WAIT_TIMEOUT)) {
             if (index == 0) {
                 WSAEnumNetworkEvents(serverCore->sc.getSc(), serverCore->sc.getEv(), &ev);

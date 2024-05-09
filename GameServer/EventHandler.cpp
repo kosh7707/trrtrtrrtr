@@ -54,9 +54,12 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, id));
             auto inventory = inventoryService->getInventory(account->getAccountId());
-            SOCKET sc = observer->indexToSocket[index].getSc();
-            observer->socketToClient[sc].setAccount(std::move(account));
-            observer->socketToClient[sc].setInventory(std::move(inventory));
+            {
+                std::lock_guard<std::mutex> lock(observer->mutex);
+                SOCKET sc = observer->indexToSocket[index].getSc();
+                observer->socketToClient[sc].setAccount(std::move(account));
+                observer->socketToClient[sc].setInventory(std::move(inventory));
+            }
         }
     }
     else {
@@ -65,9 +68,12 @@ std::vector<std::unique_ptr<Event>> EventHandler::handleLogin(const int index, c
         else {
             ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, id));
             auto inventory = inventoryService->getInventory(account->getAccountId());
-            SOCKET sc = observer->indexToSocket[index].getSc();
-            observer->socketToClient[sc].setAccount(std::move(account));
-            observer->socketToClient[sc].setInventory(std::move(inventory));
+            {
+                std::lock_guard<std::mutex> lock(observer->mutex);
+                SOCKET sc = observer->indexToSocket[index].getSc();
+                observer->socketToClient[sc].setAccount(std::move(account));
+                observer->socketToClient[sc].setInventory(std::move(inventory));
+            }
         }
     }
     return ret;

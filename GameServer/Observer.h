@@ -3,6 +3,7 @@
 
 
 #include <iostream>
+#include <mutex>
 #include <unordered_map>
 #include "IObserver.h"
 #include "Client.h"
@@ -15,6 +16,7 @@ public:
 private:
     std::unordered_map<int, Socket>     indexToSocket;
     std::unordered_map<SOCKET, Client>  socketToClient;
+    std::mutex mutex;
 };
 
 
