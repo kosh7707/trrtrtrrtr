@@ -6,7 +6,6 @@
 #include <string>
 #include <memory>
 #include "Event.h"
-#define BROADCAST_INDEX 0xFFFFFFFF
 
 class IEventHandler {
 public:

@@ -148,41 +148,73 @@ bool ServerCore::close(const int index) {
     return true;
 }
 
-bool ServerCore::read(const int index) {
-    char buf[BUF_SIZE];
-    memset(buf, 0, sizeof(buf));
-    int length = ::recv(connectedSockets[index].getSc(), buf, BUF_SIZE, 0);
-    if (length <= 0) {
-        std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
+bool ServerCore::recv(const int index) {
+    char header[5];
+    memset(header, 0, sizeof(header));
+
+    int bytesReceived = 0;
+    while (bytesReceived < sizeof(header)) {
+        int tempReceived = ::recv(connectedSockets[index].getSc(), header + bytesReceived, sizeof(header) - bytesReceived, 0);
+        if (tempReceived <= 0) {
+            std::cerr << "recv header error, errno: " << WSAGetLastError() << std::endl;
+            return false;
+        }
+        bytesReceived += tempReceived;
+    }
+
+    uint8_t eventCode = static_cast<uint8_t>(header[0]);
+
+    uint32_t length;
+    memcpy(&length, &header[1], sizeof(length));
+    length = ntohl(length);
+
+    if (length > BUF_SIZE) {
+        std::cerr << "recv error, message length exceeds BUF_SIZE" << std::endl;
         return false;
     }
-    int eventCode = (buf[0] - '0') * 10 + (buf[1] - '0');
-    std::string msg = buf;
-    auto pEvent = std::make_unique<Event>(index, eventCode, msg.substr(2));
+
+    char buf[BUF_SIZE];
+    bytesReceived = 0;
+    while (bytesReceived < static_cast<int>(length)) {
+        int tempReceived = ::recv(connectedSockets[index].getSc(), buf + bytesReceived, static_cast<int>(length) - bytesReceived, 0);
+        if (tempReceived <= 0) {
+            std::cerr << "recv contents error, errno: " << WSAGetLastError() << std::endl;
+            return false;
+        }
+        bytesReceived += tempReceived;
+    }
+
+    std::string msg(buf, bytesReceived);
+    auto pEvent = std::make_unique<Event>(index, eventCode, msg);
     eventReqQueue.push(std::move(pEvent));
+
     return true;
 }
 
 bool ServerCore::send(std::unique_ptr<Event> event) {
     int         index       = event->getIndex();
-    int         eventCode   = event->getEventCode();
+    uint8_t     eventCode   = event->getEventCode();
     std::string contents    = event->getContents();
 
-    std::string msg = ((eventCode < 10) ? "0" + std::to_string(eventCode) : std::to_string(eventCode)) + contents;
-    if (index == BROADCAST_INDEX) {
-        for (int i=0; i<clientsCount; i++) {
-            if (::send(connectedSockets[i].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0) {
-                std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
-                return false;
-            }
-        }
-    }
-    else {
-        if (::send(connectedSockets[index].getSc(), msg.c_str(), (int)msg.length(), 0) <= 0) {
-            std::cerr << "send error, errno: " << WSAGetLastError() << "\n";
+    uint32_t length = htonl(static_cast<uint32_t>(contents.length()));
+
+    std::string msg;
+    msg.push_back(static_cast<char>(eventCode));
+    msg.append(reinterpret_cast<const char*>(&length), sizeof(length)).append(contents);
+
+    const char* buf = msg.c_str();
+    int totalLength = static_cast<int>(msg.length());
+    int bytesSent = 0;
+
+    while (bytesSent < totalLength) {
+        int tempSent = ::send(connectedSockets[index].getSc(), buf + bytesSent, totalLength - bytesSent, 0);
+        if (tempSent <= 0) {
+            std::cerr << "send error, errno: " << WSAGetLastError() << std::endl;
             return false;
         }
+        bytesSent += tempSent;
     }
+
     return true;
 }
 
@@ -213,7 +245,7 @@ void ServerCore::runRecvWorker() {
                 index = index - 1;
                 Socket& sc = serverCore->connectedSockets[index];
                 WSAEnumNetworkEvents(sc.getSc(), sc.getEv(), &ev);
-                if (ev.lNetworkEvents == FD_READ) serverCore->read(index);
+                if (ev.lNetworkEvents == FD_READ) serverCore->recv(index);
                 else if (ev.lNetworkEvents == FD_CLOSE) serverCore->close(index);
             }
         }

@@ -28,7 +28,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             std::string msg             = params[2];
             auto sockets = channelManager.channelBroadCast(channel_name);
             for (auto socket : sockets)
-                ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, msg));
+                ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, user_id + " : " + msg));
             break;
         }
         case Event::CHAT_MAP_EVENT: {
@@ -39,7 +39,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             std::string msg             = params[3];
             auto sockets = channelManager.mapBroadCast(channel_name, map_name);
             for (auto socket : sockets)
-                ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, msg));
+                ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, user_id + " : " + msg));
             break;
         }
         case Event::SUB_EVENT: {

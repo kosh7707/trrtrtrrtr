@@ -42,14 +42,14 @@ std::vector<std::unique_ptr<Event>> EventHandler::userInputHandling(const std::s
                 else if (cmd[0] == "!breakItem") ret.emplace_back(std::make_unique<Event>(MAIN_SERVER_INDEX, Event::BREAK_ITEM_EVENT, cmd[1] + "," + cmd[2]));
                 else if (cmd[0] == "!userInfo") ret.emplace_back(std::make_unique<Event>(MAIN_SERVER_INDEX, Event::USER_INFO_EVENT, ""));
                 else if (cmd[0] == "!moveChannel") {
-                    channel_name = cmd[1];
                     ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::UNSUB_EVENT, user_id + "," + channel_name + "," + map_name));
                     ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::SUB_EVENT, user_id + "," + cmd[1] + "," + map_name));
+                    channel_name = cmd[1];
                 }
                 else if (cmd[0] == "!moveMap") {
-                    map_name = cmd[1];
                     ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::UNSUB_EVENT, user_id + "," + channel_name + "," + map_name));
                     ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::SUB_EVENT, user_id + "," + channel_name + "," + cmd[1]));
+                    map_name = cmd[1];
                 }
                 else if (cmd[0] == "!changeChatMode") {
                     int temp = stoi(cmd[1]);

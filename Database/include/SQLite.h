@@ -15,7 +15,7 @@ public:
     bool commandQuery(const std::string& query) {
 
     }
-    bool transaction(const std::vector<std::string&> queries) {
+    bool transaction(const std::vector<std::string>& queries) {
 
     }
     std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query) {

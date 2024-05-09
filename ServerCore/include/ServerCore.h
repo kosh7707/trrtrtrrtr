@@ -50,7 +50,7 @@ private:
 
     bool close(const int index);
 
-    bool read(const int index);
+    bool recv(const int index);
 
     bool send(std::unique_ptr<Event> event);
 
