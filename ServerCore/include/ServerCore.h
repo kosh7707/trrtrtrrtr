@@ -23,7 +23,6 @@
 class ServerCore {
 public:
     ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandler, std::string serverIP, int serverPort);
-    bool sendEventEnqueue(std::unique_ptr<Event> event);
     void attachSocketObserver(std::shared_ptr<IObserver> observer);
     bool connect(const std::string& destServerIP, const int destServerPort);
     [[noreturn]] void run();

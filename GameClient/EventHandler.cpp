@@ -17,6 +17,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             user_id = contents;
             channel_name = "channel_01";
             map_name = "map_01";
+            ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::SUB_EVENT, user_id + "," + channel_name + "," + map_name));
             break;
         case Event::LOGIN_FAIL:
             std::cout << "Incorrect username or password." << std::endl;
@@ -28,6 +29,7 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             user_id = contents;
             channel_name = "channel_01";
             map_name = "map_01";
+            ret.emplace_back(std::make_unique<Event>(CHAT_SERVER_INDEX, Event::SUB_EVENT, user_id + "," + channel_name + "," + map_name));
             break;
         case Event::REGISTER_FAIL:
             std::cout << "Registration failed." << std::endl;

@@ -151,12 +151,11 @@ bool ServerCore::close(const int index) {
 bool ServerCore::read(const int index) {
     char buf[BUF_SIZE];
     memset(buf, 0, sizeof(buf));
-    if (recv(connectedSockets[index].getSc(), buf, BUF_SIZE, 0) <= 0) {
+    int length = ::recv(connectedSockets[index].getSc(), buf, BUF_SIZE, 0);
+    if (length <= 0) {
         std::cerr << "recv error, errno: " << WSAGetLastError() << "\n";
         return false;
     }
-    // TODO: 패킷 헤더를 만들고, 그에 따라 읽는 byte를 정하도록 바꿔야 함.
-    // 현재는 2byte로 코드를 나눔. "00message"
     int eventCode = (buf[0] - '0') * 10 + (buf[1] - '0');
     std::string msg = buf;
     auto pEvent = std::make_unique<Event>(index, eventCode, msg.substr(2));
@@ -251,11 +250,6 @@ void ServerCore::runSendWorker() {
         serverCore->eventResQueue.pop(event);
         serverCore->send(std::move(event));
     }
-}
-
-bool ServerCore::sendEventEnqueue(std::unique_ptr<Event> event) {
-    eventResQueue.push(std::move(event));
-    return true;
 }
 
 void ServerCore::attachSocketObserver(std::shared_ptr<IObserver> observer) {
