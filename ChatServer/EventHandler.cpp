@@ -39,6 +39,29 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
                 ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, msg));
             break;
         }
+        case Event::SUB_EVENT: {
+            // channel_name,map_name
+            auto params = split(contents);
+            std::string channel_name    = params[0];
+            std::string map_name        = params[1];
+            bool res = channelManager.join(observer->indexToSocket[index], channel_name, map_name);
+            if (res) ret.emplace_back(std::make_unique<Event>(index, Event::SUB_SUCCESS_EVENT, ""));
+            else ret.emplace_back(std::make_unique<Event>(index, Event::SUB_FAIL_EVENT, ""));
+        }
+        case Event::UNSUB_EVENT: {
+            // channel_name,map_name
+            auto params = split(contents);
+            std::string channel_name    = params[0];
+            std::string map_name        = params[1];
+            bool res = channelManager.leave(observer->indexToSocket[index], channel_name, map_name);
+            if (res) ret.emplace_back(std::make_unique<Event>(index, Event::SUB_SUCCESS_EVENT, ""));
+            else ret.emplace_back(std::make_unique<Event>(index, Event::SUB_FAIL_EVENT, ""));
+        }
+        default: {
+            std::cerr << "Invalid Event" << std::endl;
+            ret.emplace_back(std::make_unique<Event>(index, Event::INVALID_EVENT, ""));
+            break;
+        }
     }
 
     return ret;

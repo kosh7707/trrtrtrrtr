@@ -26,9 +26,11 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
         case Event::USER_INFO_EVENT:
             ret = handleUserInfo(index);
             break;
-        default:
+        default: {
             std::cerr << "Invalid Event" << std::endl;
+            ret.emplace_back(std::make_unique<Event>(index, Event::INVALID_EVENT, ""));
             break;
+        }
     }
     return ret;
 }

@@ -7,11 +7,11 @@
 class ChannelManager {
 public:
     ChannelManager() {}
-    void join(SOCKET client, const std::string& channel_name, const std::string& map_name) {
-        channels[channel_name].join(client, map_name);
+    bool join(SOCKET client, const std::string& channel_name, const std::string& map_name) {
+        return channels[channel_name].join(client, map_name);
     }
-    void leave(SOCKET client, const std::string& channel_name, const std::string& map_name) {
-        channels[channel_name].leave(client, map_name);
+    bool leave(SOCKET client, const std::string& channel_name, const std::string& map_name) {
+        return channels[channel_name].leave(client, map_name);
     }
     std::vector<SOCKET> channelBroadCast(const std::string& channel_name) {
         return channels[channel_name].channelBroadCast();

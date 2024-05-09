@@ -11,11 +11,12 @@
 class Map {
 public:
     Map() {}
-    void join(SOCKET client) {
-        clients.insert(client);
+    bool join(SOCKET client) {
+        auto result = clients.insert(client);
+        return result.second;
     }
-    void leave(SOCKET client) {
-        clients.erase(client);
+    bool leave(SOCKET client) {
+        return clients.erase(client) == 1;
     }
     std::vector<SOCKET> mapBroadCast() {
         std::vector<SOCKET> ret;

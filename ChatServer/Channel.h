@@ -9,11 +9,11 @@
 class Channel {
 public:
     Channel() {}
-    void join(SOCKET client, const std::string& map_name) {
-        maps[map_name].join(client);
+    bool join(SOCKET client, const std::string& map_name) {
+        return maps[map_name].join(client);
     }
-    void leave(SOCKET client, const std::string& map_name) {
-        maps[map_name].leave(client);
+    bool leave(SOCKET client, const std::string& map_name) {
+        return maps[map_name].leave(client);
     }
     std::vector<SOCKET> channelBroadCast() {
         std::vector<SOCKET> ret;

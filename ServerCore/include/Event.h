@@ -20,6 +20,12 @@ public:
         USER_INFO_EVENT = 10,
         CHAT_CHANNEL_EVENT = 11,
         CHAT_MAP_EVENT = 12,
+        SUB_EVENT = 13,
+        UNSUB_EVENT = 14,
+        SUB_SUCCESS_EVENT = 15,
+        SUB_FAIL_EVENT = 16,
+        UNSUB_SUCCESS_EVENT = 17,
+        UNSUB_FAIL_EVENT = 18,
     };
     Event(int index, int eventCode, const std::string& contents) : index(index), eventCode(eventCode), contents(contents) {}
 

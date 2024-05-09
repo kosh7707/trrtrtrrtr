@@ -17,11 +17,11 @@ public:
         return std::vector<std::unique_ptr<Event>>();
     }
 private:
-    std::vector<std::string> split(const std::string& input) {
+    std::vector<std::string> split(const std::string& input, const char delimeter = ',') {
         std::vector<std::string> result;
         std::stringstream ss(input);
         std::string token;
-        while (getline(ss, token, ','))
+        while (getline(ss, token, delimeter))
             result.push_back(token);
         return result;
     }
