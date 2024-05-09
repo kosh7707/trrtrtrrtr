@@ -14,7 +14,17 @@ add_executable(${TARGET} main.cpp
         EventHandler.cpp
         EventHandler.h
         Constant.cpp
-        Constant.h)
+        Constant.h
+        Map.cpp
+        Map.h
+        Channel.cpp
+        Channel.h
+        ChannelManager.cpp
+        ChannelManager.h
+        Client.cpp
+        Client.h
+        Observer.cpp
+        Observer.h)
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 

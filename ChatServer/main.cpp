@@ -3,6 +3,7 @@
 #include "IDatabase.h"
 #include "PostgreSQL.h"
 #include "EventHandler.h"
+#include "Observer.h"
 #include <iostream>
 
 int main() {
@@ -11,11 +12,14 @@ int main() {
 
         std::shared_ptr<IDatabase> db(new PostgreSQL(constant.getConnInfo()));
 
-        std::unique_ptr<IEventHandler> eventHandler(new EventHandler());
+        std::shared_ptr<IObserver> observer(new Observer());
+
+        std::unique_ptr<IEventHandler> eventHandler(new EventHandler(std::dynamic_pointer_cast<Observer>(observer)));
 
         ServerCore sc(true, std::move(eventHandler), constant.getServerIP(), constant.getServerPort());
         if (sc.connect(constant.getMainServerIP(), constant.getMainServerPort()))
             std::cout << "connected to main server" << std::endl;
+        sc.attachSocketObserver(observer);
 
         sc.run();
 

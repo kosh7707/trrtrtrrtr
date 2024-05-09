@@ -18,7 +18,8 @@ public:
         GET_TEST_ITEM_EVENT = 8,
         BREAK_ITEM_EVENT = 9,
         USER_INFO_EVENT = 10,
-
+        CHAT_CHANNEL_EVENT = 11,
+        CHAT_MAP_EVENT = 12,
     };
     Event(int index, int eventCode, const std::string& contents) : index(index), eventCode(eventCode), contents(contents) {}
 
