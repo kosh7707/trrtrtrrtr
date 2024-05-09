@@ -17,18 +17,16 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             break;
         }
         case Event::CHAT_CHANNEL_EVENT: {
-            // user_id,channel_name,msg
             auto params = split(contents);
-            std::string user_id = params[0];
-            std::string channel_name = params[1];
-            std::string msg = params[2];
+            std::string user_id         = params[0];
+            std::string channel_name    = params[1];
+            std::string msg             = params[2];
             auto sockets = channelManager.channelBroadCast(channel_name);
             for (auto socket : sockets)
                 ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::CHAT_EVENT, msg));
             break;
         }
         case Event::CHAT_MAP_EVENT: {
-            // user_id,channel_name,map_name,msg
             auto params = split(contents);
             std::string user_id         = params[0];
             std::string channel_name    = params[1];
@@ -40,22 +38,32 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             break;
         }
         case Event::SUB_EVENT: {
-            // channel_name,map_name
             auto params = split(contents);
-            std::string channel_name    = params[0];
-            std::string map_name        = params[1];
+            std::string user_id         = params[0];
+            std::string channel_name    = params[1];
+            std::string map_name        = params[2];
             bool res = channelManager.join(observer->indexToSocket[index], channel_name, map_name);
-            if (res) ret.emplace_back(std::make_unique<Event>(index, Event::SUB_SUCCESS_EVENT, ""));
+            if (res) {
+                ret.emplace_back(std::make_unique<Event>(index, Event::SUB_SUCCESS_EVENT, ""));
+                auto sockets = channelManager.mapBroadCast(channel_name, map_name);
+                for (auto socket : sockets)
+                    ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::SUB_SUCCESS_EVENT, user_id));
+            }
             else ret.emplace_back(std::make_unique<Event>(index, Event::SUB_FAIL_EVENT, ""));
         }
         case Event::UNSUB_EVENT: {
-            // channel_name,map_name
             auto params = split(contents);
-            std::string channel_name    = params[0];
-            std::string map_name        = params[1];
+            std::string user_id         = params[0];
+            std::string channel_name    = params[1];
+            std::string map_name        = params[2];
             bool res = channelManager.leave(observer->indexToSocket[index], channel_name, map_name);
-            if (res) ret.emplace_back(std::make_unique<Event>(index, Event::SUB_SUCCESS_EVENT, ""));
-            else ret.emplace_back(std::make_unique<Event>(index, Event::SUB_FAIL_EVENT, ""));
+            if (res) {
+                ret.emplace_back(std::make_unique<Event>(index, Event::UNSUB_SUCCESS_EVENT, ""));
+                auto sockets = channelManager.mapBroadCast(channel_name, map_name);
+                for (auto socket : sockets)
+                    ret.emplace_back(std::make_unique<Event>(observer->socketToIndex[socket], Event::UNSUB_SUCCESS_EVENT, user_id));
+            }
+            else ret.emplace_back(std::make_unique<Event>(index, Event::UNSUB_FAIL_EVENT, ""));
         }
         default: {
             std::cerr << "Invalid Event" << std::endl;

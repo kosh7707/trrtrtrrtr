@@ -14,8 +14,11 @@ public:
     std::vector<std::unique_ptr<Event>> handling(std::unique_ptr<Event> event) override;
     std::vector<std::unique_ptr<Event>> userInputHandling(const std::string& command) override;
 private:
+    int         chat_mode = 0;
     bool        isLogin = false;
     std::string user_id;
+    std::string channel_name;
+    std::string map_name;
     std::vector<std::string> split(const std::string& input, char delimeter = ' ') {
         std::vector<std::string> result;
         std::stringstream ss(input);

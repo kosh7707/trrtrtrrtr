@@ -15,6 +15,8 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             std::cout << "Successfully logged in." << std::endl;
             isLogin = true;
             user_id = contents;
+            channel_name = "channel_01";
+            map_name = "map_01";
             break;
         case Event::LOGIN_FAIL:
             std::cout << "Incorrect username or password." << std::endl;
@@ -24,6 +26,8 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             std::cout << "Successfully registered." << std::endl;
             isLogin = true;
             user_id = contents;
+            channel_name = "channel_01";
+            map_name = "map_01";
             break;
         case Event::REGISTER_FAIL:
             std::cout << "Registration failed." << std::endl;
@@ -53,6 +57,22 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
                       << "balance: " << user[2] << "\n"
                       << "-----------------------"
                       << std::endl;
+            break;
+        }
+        case Event::SUB_SUCCESS_EVENT: {
+            std::cout << contents << " is joined." << std::endl;
+            break;
+        }
+        case Event::UNSUB_SUCCESS_EVENT: {
+            std::cout << contents << " is leaved." << std::endl;
+            break;
+        }
+        case Event::SUB_FAIL_EVENT: {
+            std::cout << "Fail to enter the channel/map" << std::endl;
+            break;
+        }
+        case Event::UNSUB_FAIL_EVENT: {
+            std::cout << "Fail to leave the channel/map" << std::endl;
             break;
         }
         default:
