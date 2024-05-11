@@ -13,7 +13,7 @@ bool InventoryService::breakItem(std::unique_ptr<Account>& account, std::unique_
     int account_id = account->getAccountId();
     if (inventoryDao->deleteItem(account_id, item_id, quantity)) {
         inventory->deleteItem(item_id, quantity);
-        account->setScore(account->getScore() + Item::idToScore[item_id] * quantity);
+        account->setScore(account->getScore() + ItemConstant::getItemScore(item_id) * quantity);
         accountDao->updateAccount(account);
         return true;
     }

@@ -9,11 +9,13 @@ set(LIBRARY_HEADER_PATH ${CMAKE_SOURCE_DIR}/../lib/include)
 set(SERVERCORE_LIB_PATH ${CMAKE_SOURCE_DIR}/../lib/libServerCore.a)
 
 add_executable(GameClient main.cpp
-        Constant.h
-        Constant.cpp
+        Constants/Constant.h
+        Constants/Constant.cpp
         EventHandler.h
         EventHandler.cpp
-        UserInputHandling.cpp)
+        UserInputHandling.cpp
+        Constants/ItemConstant.h
+        Constants/ItemConstant.cpp)
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 

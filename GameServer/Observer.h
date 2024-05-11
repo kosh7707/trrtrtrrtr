@@ -14,8 +14,9 @@ public:
     void update(const int clientsCount, const std::unique_ptr<Socket[]>& connectedSockets) override;
     ~Observer() {}
 private:
-    std::unordered_map<int, Socket>     indexToSocket;
-    std::unordered_map<SOCKET, Client>  socketToClient;
+    std::unordered_map<int, int>                     indexToSocketId;
+    std::unordered_map<int, std::shared_ptr<Client>> socketIdToClient;
+    std::unordered_map<int, std::shared_ptr<Client>> accountIdToClient;
     std::mutex mutex;
 };
 

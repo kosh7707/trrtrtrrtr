@@ -15,8 +15,12 @@ public:
     const std::string&      getLastLogin() const;
     int                     getBalance() const;
     void                    setBalance(int b);
+    void                    addBalance(int b);
+    void                    subBalance(int b);
     int                     getScore() const;
-    void                    setScore(int b);
+    void                    setScore(int s);
+    void                    addScore(int s);
+    void                    subScore(int s);
 private:
     int             accountId;
     std::string     userId;

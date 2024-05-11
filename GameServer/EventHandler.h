@@ -6,31 +6,37 @@
 #include "IEventHandler.h"
 #include "Observer.h"
 #include "Service/InventoryService.h"
+#include "Service/AuctionService.h"
 #define CHAT_SERVER_INDEX 0
 
 class EventHandler final : public IEventHandler {
+    using vectorEventPtr = std::vector<std::unique_ptr<Event>>;
 public:
     EventHandler(std::shared_ptr<Observer> observer, std::shared_ptr<AccountService> accountService
-                    , std::shared_ptr<InventoryService> inventoryService)
-        : observer(observer), accountService(accountService), inventoryService(inventoryService) {}
+                    , std::shared_ptr<InventoryService> inventoryService, std::shared_ptr<AuctionSystem::AuctionService> auctionService)
+        : observer(observer), accountService(accountService), inventoryService(inventoryService), auctionService(auctionService) {}
 
-    std::vector<std::unique_ptr<Event>> handling(std::unique_ptr<Event> event) override;
-    std::vector<std::unique_ptr<Event>> userInputHandling(const std::string& command) override {
-        return std::vector<std::unique_ptr<Event>>();
+    vectorEventPtr handling(std::unique_ptr<Event> event) override;
+    vectorEventPtr userInputHandling(const std::string& command) override {
+        return vectorEventPtr();
     }
     ~EventHandler() {}
 private:
     std::vector<std::string> split(const std::string& input);
-    std::vector<std::unique_ptr<Event>> handleLogin(const int index, const std::string& contents);
-    std::vector<std::unique_ptr<Event>> handleInventoryCheck(const int index);
-    std::vector<std::unique_ptr<Event>> handleGetTestItem(const int index, const std::string& contents);
-    std::vector<std::unique_ptr<Event>> handleBreakItem(const int index, const std::string& contents);
-    std::vector<std::unique_ptr<Event>> handleUserInfo(const int index);
-
+    vectorEventPtr handleLogin(const int index, const std::string& contents);
+    vectorEventPtr handleInventoryCheck(const int index);
+    vectorEventPtr handleGetTestItem(const int index, const std::string& contents);
+    vectorEventPtr handleBreakItem(const int index, const std::string& contents);
+    vectorEventPtr handleUserInfo(const int index);
+    vectorEventPtr handleSellItem(const int index, const std::string& contents);
+    vectorEventPtr handleOpenAuction(const int index);
+    vectorEventPtr handleBid(const int index, const std::string& contents);
+    vectorEventPtr handleBuyNow(const int index, const std::string& contents);
 private:
-    std::shared_ptr<AccountService>     accountService;
-    std::shared_ptr<InventoryService>   inventoryService;
-    std::shared_ptr<Observer>           observer;
+    std::shared_ptr<AccountService>                 accountService;
+    std::shared_ptr<InventoryService>               inventoryService;
+    std::shared_ptr<AuctionSystem::AuctionService>  auctionService;
+    std::shared_ptr<Observer>                       observer;
 };
 
 

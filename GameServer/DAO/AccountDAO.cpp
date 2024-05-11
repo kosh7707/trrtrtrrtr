@@ -6,8 +6,8 @@ bool AccountDAO::createAccount(const std::string& id, const std::string& pw) {
 
 std::unique_ptr<Account> AccountDAO::readAccount(const int account_id) {
     auto res = db->selectQuery("select * from accounts where account_id = " + std::to_string(account_id) + ";");
-    if (res.size() != 1) return nullptr;
-    auto account = res[0];
+    if (res->size() != 1) return nullptr;
+    auto account = (*res)[0];
     auto user_id = account["user_id"];
     auto user_pw = account["user_pw"];
     auto balance = stoi(account["balance"]);
@@ -20,8 +20,8 @@ std::unique_ptr<Account> AccountDAO::readAccount(const int account_id) {
 
 std::unique_ptr<Account> AccountDAO::readAccount(const std::string& id, const std::string& pw) {
     auto res = db->selectQuery("select * from accounts where user_id = '" + id + "' and user_pw = '" + pw + "';");
-    if (res.size() != 1) return nullptr;
-    auto account = res[0];
+    if (res->size() != 1) return nullptr;
+    auto account = (*res)[0];
     auto account_id = stoi(account["account_id"]);
     auto user_id = account["user_id"];
     auto user_pw = account["user_pw"];
@@ -56,11 +56,11 @@ bool AccountDAO::updateAccountBalance(const int account_id, const int balance) {
 
 bool AccountDAO::isExistAccount(const int account_id) {
     auto res = db->selectQuery("select * from accounts where account_id = " + std::to_string(account_id) + ";");
-    return res.size() == 1;
+    return res->size() == 1;
 }
 
 bool AccountDAO::isExistAccount(const std::string& id) {
     auto res = db->selectQuery("select * from accounts where user_id = '" + id + "';");
-    return res.size() == 1;
+    return res->size() == 1;
 }
 

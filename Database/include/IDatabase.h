@@ -6,13 +6,16 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <memory>
 
 class IDatabase {
+protected:
+    using selectQueryResultPtr = std::unique_ptr<std::vector<std::map<std::string, std::string>>>;
 public:
     virtual bool   isConnected() = 0;
     virtual bool   commandQuery(const std::string& query) = 0;
-    virtual bool   transaction(const std::vector<std::string>& queries) = 0;
-    virtual std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query) = 0;
+    virtual bool   transaction(const std::initializer_list<std::string>& queries) = 0;
+    virtual selectQueryResultPtr selectQuery(const std::string& query) = 0;
     virtual ~IDatabase() = default;
 
     template <typename... Args>

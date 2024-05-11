@@ -9,16 +9,15 @@
 class Client {
 public:
     Client() {}
-    Client(const int index) : index(index) {}
-    int getAccountId();
-    std::string getUserId();
-    std::unique_ptr<Account>& getAccount();
+    Client(int index) : index(index) {}
+    std::unique_ptr<Account>&   getAccount();
     std::unique_ptr<Inventory>& getInventory();
     void setAccount(std::unique_ptr<Account> _account);
     void setInventory(std::unique_ptr<Inventory> _inventory);
-    void setIndex(const int _index);
+    void setIndex(int _index);
+    int  getIndex();
 private:
-    int                         index;
+    int index;
     std::unique_ptr<Account>    account;
     std::unique_ptr<Inventory>  inventory;
 };

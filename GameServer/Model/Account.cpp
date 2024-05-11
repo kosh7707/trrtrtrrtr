@@ -29,16 +29,34 @@ int Account::getBalance() const {
     return balance;
 }
 
+
 void Account::setBalance(int b) {
     balance = b;
+}
+
+void Account::addBalance(int b) {
+    balance += b;
+}
+
+void Account::subBalance(int b) {
+    balance -= b;
 }
 
 int Account::getScore() const {
     return score;
 }
 
-void Account::setScore(int b) {
-    score = b;
+void Account::setScore(int s) {
+    score = s;
 }
+
+void Account::addScore(int s) {
+    score += s;
+}
+
+void Account::subScore(int s) {
+    score -= s;
+}
+
 
 

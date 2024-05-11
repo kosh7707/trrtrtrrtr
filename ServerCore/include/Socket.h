@@ -7,8 +7,14 @@
 
 class Socket {
 public:
-    Socket() {}
-    Socket(const SOCKET& sc, const HANDLE& ev, const std::string& ip) : sc(sc), ev(ev), ip(ip) {}
+    static inline int uuid = 0;
+
+    Socket() { socket_id = uuid++; }
+    Socket(const SOCKET& sc, const HANDLE& ev, const std::string& ip) : sc(sc), ev(ev), ip(ip) { socket_id = uuid++; }
+
+    const int getSocketId() const {
+        return socket_id;
+    }
 
     const SOCKET& getSc() const {
         return sc;
@@ -23,6 +29,7 @@ public:
     }
 
 private:
+    int         socket_id;
     SOCKET      sc;
     HANDLE      ev;
     std::string ip;

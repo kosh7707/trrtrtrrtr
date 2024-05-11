@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include "IEventHandler.h"
+#include "Constants/ItemConstant.h"
 #define CHAT_SERVER_INDEX 0
 #define MAIN_SERVER_INDEX 1
 

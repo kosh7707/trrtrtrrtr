@@ -1,6 +1,7 @@
 #ifndef GAMESERVER_INVENTORYSERVICE_H
 #define GAMESERVER_INVENTORYSERVICE_H
 
+#include "../Constants/ItemConstant.h"
 #include "../DAO/AccountDAO.h"
 #include "../DAO/InventoryDAO.h"
 

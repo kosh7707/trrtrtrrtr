@@ -3,9 +3,9 @@
 void Observer::update(const int clientsCount, const std::unique_ptr<Socket[]>& connectedSockets) {
     std::lock_guard<std::mutex> lock(mutex);
     for (int i=0; i<clientsCount; i++) {
-        indexToSocket.emplace(i, connectedSockets[i]);
-        SOCKET sc = connectedSockets[i].getSc();
-        if (socketToClient.find(sc) != socketToClient.end()) socketToClient[sc].setIndex(i);
-        else socketToClient[sc] = Client(i);
+        int socket_id = connectedSockets[i].getSocketId();
+        indexToSocketId.emplace(i, socket_id);
+        if (socketIdToClient.find(socket_id) == socketIdToClient.end()) socketIdToClient[socket_id] = std::make_unique<Client>(i);
+        else socketIdToClient[socket_id]->setIndex(i);
     }
 }

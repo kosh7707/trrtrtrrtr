@@ -23,30 +23,30 @@ public:
             return true;
         }
         catch (const std::exception& e) {
-            std::cerr << e.what() << std::endl;
+            std::cerr << "Query execution error: " << e.what() << std::endl;
             return false;
         }
     }
-    std::vector<std::map<std::string, std::string>> selectQuery(const std::string& query) {
+    selectQueryResultPtr selectQuery(const std::string& query) {
         try {
             pqxx::work txn(*conn);
             pqxx::result res = txn.exec(query);
 
-            std::vector<std::map<std::string, std::string>> ret;
+            selectQueryResultPtr ret = std::make_unique<std::vector<std::map<std::string, std::string>>>();
             for (const auto& row : res) {
                 std::map<std::string, std::string> temp_map;
                 for (const auto& field : row)
                     temp_map[field.name()] = field.c_str();
-                ret.push_back(temp_map);
+                ret->push_back(temp_map);
             }
-            return ret;
+            return std::move(ret);
         }
         catch (const std::exception& e) {
-            std::cerr << e.what() << std::endl;
-            return std::vector<std::map<std::string, std::string>>();
+            std::cerr << "Query execution error: " << e.what() << std::endl;
+            return nullptr;
         }
     }
-    bool transaction(const std::vector<std::string>& queries) {
+    bool transaction(const std::initializer_list<std::string>& queries) {
         try {
             pqxx::work txn(*conn);
             for (const auto& query : queries)
@@ -55,7 +55,7 @@ public:
             return true;
         }
         catch (const std::exception& e) {
-            std::cerr << e.what() << std::endl;
+            std::cerr << "Query execution error: " << e.what() << std::endl;
             return false;
         }
     }

@@ -36,6 +36,10 @@ add_executable(${TARGET} main.cpp
         Client.h
         Model/Item.cpp
         Model/Item.h
+        Service/AuctionService.cpp
+        Service/AuctionService.h
+        Constants/ItemConstant.cpp
+        Constants/ItemConstant.h
 )
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})

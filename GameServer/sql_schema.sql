@@ -9,20 +9,11 @@ create table accounts (
     last_login      timestamp default current_timestamp
 );
 
-drop table if exists buffs cascade;
-create table buffs (
-    buff_id         serial primary key,
-    name            varchar(255) not null,
-    description     varchar(255) not null
-);
-
 drop table if exists items cascade;
 create table items (
     item_id         serial primary key,
     name            varchar(255) not null,
-    score           int not null,
-    buff_id         int not null,
-    foreign key (buff_id) references buffs(buff_id) on delete cascade
+    score           int not null
 );
 
 drop table if exists inventory cascade;
@@ -49,6 +40,7 @@ create table auctions (
     foreign key (item_id) references items(item_id) on delete cascade,
     foreign key (seller_id) references accounts(account_id) on delete cascade,
     foreign key (current_bidder_id) references accounts(account_id) on delete cascade,
+    check (item_quantity >= 1),
     check (start_time <= end_time),
     check (current_price <= buy_now_price)
 );
@@ -58,11 +50,8 @@ create view inventory_view as
     from inventory iv, items i
     where iv.item_id = i.item_id;
 
--- buff
-insert into buffs(name, description) values ('Test buff', 'Test buff description');
-
 -- item
-insert into items(name, score, buff_id) values ('Test item1', 1, 1);
-insert into items(name, score, buff_id) values ('Test item1', 2, 1);
-insert into items(name, score, buff_id) values ('Test item1', 3, 1);
+insert into items(name, score) values ('Test item1', 1);
+insert into items(name, score) values ('Test item1', 2);
+insert into items(name, score) values ('Test item1', 3);
 

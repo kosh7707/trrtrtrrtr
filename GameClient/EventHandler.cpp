@@ -43,9 +43,10 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             std::cout << "-----------------------\n";
             for (auto it : items) {
                 auto item = split(it, ',');
-                std::cout << "item_id: "  << item[0] << "\n"
-                          << "score: "    << item[1] << "\n"
-                          << "quantity: " << item[2] << "\n"
+                std::cout << "item_id: "    << item[0] << "\n"
+                          << "item_name: "  << ItemConstant::getItemName(stoi(item[0])) << "\n"
+                          << "score: "      << ItemConstant::getItemScore(stoi(item[0])) << "\n"
+                          << "quantity: "   << item[1] << "\n"
                           << "-----------------------"
                           << std::endl;
             }
@@ -75,6 +76,57 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
         }
         case Event::UNSUB_FAIL_EVENT: {
             std::cout << "Fail to leave the channel/map" << std::endl;
+            break;
+        }
+        case Event::OPEN_AUCTION_EVENT: {
+            auto auctions = split(contents, '|');
+            for (auto it : auctions) {
+                auto auction = split(it, ',');
+                std::cout << "-----------------------\n"
+                          << "auction_id: "         << auction[0] << "\n"
+                          << "item_id: "            << auction[1] << "\n"
+                          << "item_quantity: "      << auction[2] << "\n"
+                          << "seller_id: "          << auction[3] << "\n"
+                          << "start_time: "         << auction[4] << "\n"
+                          << "end_time: "           << auction[5] << "\n"
+                          << "current_price: "      << auction[6] << "\n"
+                          << "current_bidder_id: "  << auction[7] << "\n"
+                          << "buy_now_price: "      << auction[8] << "\n"
+                          << "-----------------------"
+                          << std::endl;
+            }
+            break;
+        }
+        case Event::SELL_ITEM_SUCCESS_EVENT: {
+            std::cout << "Item has been successfully registered in the auction." << std::endl;
+            break;
+        }
+        case Event::SELL_ITEM_FAIL_EVENT: {
+            std::cout << "Failed to register the item in the auction." << std::endl;
+            break;
+        }
+        case Event::BID_SUCCESS_EVENT: {
+            std::cout << "Bid has been successfully placed in the auction." << std::endl;
+            break;
+        }
+        case Event::BID_FAIL_EVENT: {
+            std::cout << "Failed to place the bid in the auction." << std::endl;
+            break;
+        }
+        case Event::BUYNOW_SUCCESS_EVENT: {
+            std::cout << "Item has been successfully bought in the auction." << std::endl;
+            break;
+        }
+        case Event::BUYNOW_FAIL_EVENT: {
+            std::cout << "Failed to buy the item in the auction." << std::endl;
+            break;
+        }
+        case Event::OUTBID_EVENT: {
+            std::cout << "Your auction has been outbid. please check your inventory." << std::endl;
+            break;
+        }
+        case Event::ITEM_SOLD_EVENT: {
+            std::cout << "Your Item has benn sold, please check your inventory." << std::endl;
             break;
         }
         default:

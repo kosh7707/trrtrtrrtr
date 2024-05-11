@@ -11,10 +11,9 @@ set(OUTPUT_DIR ${CMAKE_SOURCE_DIR}/../lib)
 add_library(${TARGET} STATIC
         include/IDatabase.h
         include/PostgreSQL.h
-        include/SQLite.h
         src/IDatabase.cpp
         src/PostgreSQL.cpp
-        src/SQLite.cpp)
+)
 
 set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 
