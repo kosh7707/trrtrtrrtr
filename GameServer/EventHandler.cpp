@@ -81,7 +81,7 @@ vectorEventPtr EventHandler::handleLogin(const int index, const std::string& con
         auto account = accountService->registerAccount(id, pw);
         if (account == nullptr) ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_FAIL, ""));
         else {
-            ret.emplace_back(std::make_unique<Event>(index, Event::LOGIN_SUCCESS, id));
+            ret.emplace_back(std::make_unique<Event>(index, Event::REGISTER_SUCCESS, id));
             auto inventory = inventoryService->getInventory(account->getAccountId());
             {
                 std::lock_guard<std::mutex> lock(observer->mutex);
@@ -217,7 +217,7 @@ vectorEventPtr EventHandler::handleBuyNow(const int index, const std::string& co
         ret.emplace_back(std::make_unique<Event>(index, Event::BUYNOW_SUCCESS_EVENT, ""));
         auto sellerClient = observer->accountIdToClient[buyNowResult.seller_id];
         sellerClient->getAccount()->addBalance(buyNowResult.price);
-        ret.emplace_back(std::make_unique<Event>(sellerClient->getIndex(), Event::ITEM_SOLD_EVENT, ""));
+        ret.emplace_back(std::make_unique<Event>(sellerClient->getIndex(), Event::ITEM_SOLD_EVENT, std::to_string(buyNowResult.item_id)));
         if (buyNowResult.prev_bidder_id != -1) {
             auto prevBidderClient = observer->accountIdToClient[buyNowResult.prev_bidder_id];
             prevBidderClient->getAccount()->addBalance(buyNowResult.prev_price);
@@ -225,4 +225,35 @@ vectorEventPtr EventHandler::handleBuyNow(const int index, const std::string& co
         }
     }
     return ret;
+}
+
+void EventHandler::runAuctionWorker() {
+    unsigned int tid;
+    auctionWorker = (HANDLE)_beginthreadex(NULL, 0, runAuctionWorkerThread, (void*)this, 0, &tid);
+}
+
+// TODO: 경매장 서버 구현 시 삭제 예정
+[[noreturn]] unsigned int WINAPI EventHandler::runAuctionWorkerThread(void* params) {
+    EventHandler* eventHandler = static_cast<EventHandler*>(params);
+    while (true) {
+        auto outdatedItemResult = eventHandler->auctionService->outdatedItemCheck();
+        for (const auto& outdatedItem : *outdatedItemResult) {
+            int item_id = outdatedItem.item_id;
+            int quantity = outdatedItem.quantity;
+            auto sellerClient = eventHandler->observer->accountIdToClient[outdatedItem.seller_id];
+            if (!outdatedItem.success) {
+                sellerClient->getInventory()->insertItem(item_id, quantity);
+                eventHandler->eventReqQueue.push(std::make_unique<Event>(sellerClient->getIndex(), Event::EXPIRED_AUCTION_EVENT, ""));
+            }
+            else {
+                auto bidderClient = eventHandler->observer->accountIdToClient[outdatedItem.current_bidder_id];
+                int current_price = outdatedItem.current_price;
+                sellerClient->getAccount()->addBalance(current_price);
+                bidderClient->getInventory()->insertItem(item_id, quantity);
+                eventHandler->eventReqQueue.push(std::make_unique<Event>(sellerClient->getIndex(), Event::ITEM_SOLD_EVENT, std::to_string(item_id)));
+                eventHandler->eventReqQueue.push(std::make_unique<Event>(bidderClient->getIndex(), Event::WIN_AUCTION_EVENT, std::to_string(item_id)));
+            }
+        }
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+    }
 }

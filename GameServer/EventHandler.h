@@ -2,6 +2,7 @@
 #define DATABASETERMPROJECT_EVENTHANDLER_H
 
 #include <sstream>
+#include <thread>
 #include "Service/AccountService.h"
 #include "IEventHandler.h"
 #include "Observer.h"
@@ -14,13 +15,17 @@ class EventHandler final : public IEventHandler {
 public:
     EventHandler(std::shared_ptr<Observer> observer, std::shared_ptr<AccountService> accountService
                     , std::shared_ptr<InventoryService> inventoryService, std::shared_ptr<AuctionSystem::AuctionService> auctionService)
-        : observer(observer), accountService(accountService), inventoryService(inventoryService), auctionService(auctionService) {}
+        : observer(observer), accountService(accountService), inventoryService(inventoryService), auctionService(auctionService) {
+        runAuctionWorker();
+    }
 
     vectorEventPtr handling(std::unique_ptr<Event> event) override;
-    vectorEventPtr userInputHandling(const std::string& command) override {
-        return vectorEventPtr();
-    }
+    vectorEventPtr userInputHandling(const std::string& command) override;
     ~EventHandler() {}
+
+    void runAuctionWorker();
+    [[noreturn]] static unsigned int WINAPI runAuctionWorkerThread(void* params);
+
 private:
     std::vector<std::string> split(const std::string& input);
     vectorEventPtr handleLogin(const int index, const std::string& contents);
@@ -32,11 +37,14 @@ private:
     vectorEventPtr handleOpenAuction(const int index);
     vectorEventPtr handleBid(const int index, const std::string& contents);
     vectorEventPtr handleBuyNow(const int index, const std::string& contents);
+
 private:
     std::shared_ptr<AccountService>                 accountService;
     std::shared_ptr<InventoryService>               inventoryService;
     std::shared_ptr<AuctionSystem::AuctionService>  auctionService;
     std::shared_ptr<Observer>                       observer;
+
+    HANDLE auctionWorker;
 };
 
 

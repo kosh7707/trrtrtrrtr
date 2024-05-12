@@ -24,6 +24,9 @@ ServerCore::ServerCore(bool isServer, std::unique_ptr<IEventHandler> eventHandle
     runEventHandlingWorker();
     runSendWorker();
 
+    // TODO: 경매장 서버를 구현하면 삭제할 예정
+    runTempWorker();
+
     if (isServer) {
         std::cout << "server listening at "
                   << serverIP << ":"
@@ -294,7 +297,24 @@ void ServerCore::publish() {
         observer->update(clientsCount, connectedSockets);
 }
 
+// TODO: 경매장 서버를 구현하면 삭제할 예정
+void ServerCore::runTempWorker() {
+    if (isServer) {
+        unsigned int tid;
+        tempWorker = (HANDLE)_beginthreadex(NULL, 0, runTempWorkerThread, (void*)this, 0, &tid);
+    }
+}
 
+// TODO: 경매장 서버를 구현하면 삭제할 예정
+[[noreturn]] unsigned int WINAPI ServerCore::runTempWorkerThread(void* params) {
+    ServerCore* serverCore = static_cast<ServerCore*>(params);
+
+    while (true) {
+        std::unique_ptr<Event> event;
+        serverCore->eventHandler->eventReqQueue.pop(event);
+        serverCore->send(std::move(event));
+    }
+}
 
 
 

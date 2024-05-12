@@ -126,7 +126,17 @@ std::vector<std::unique_ptr<Event>> EventHandler::handling(std::unique_ptr<Event
             break;
         }
         case Event::ITEM_SOLD_EVENT: {
-            std::cout << "Your Item has benn sold, please check your inventory." << std::endl;
+            int item_id = stoi(contents);
+            std::cout << "Item(" + std::to_string(item_id) + ", " + ItemConstant::getItemName(item_id) + ") has been sold, please check your inventory." << std::endl;
+            break;
+        }
+        case Event::EXPIRED_AUCTION_EVENT: {
+            std::cout << "Your auction has been expired. please check your inventory." << std::endl;
+            break;
+        }
+        case Event::WIN_AUCTION_EVENT: {
+            int item_id = stoi(contents);
+            std::cout << "You've won the auction item: " << ItemConstant::getItemName(item_id) << ". please check your inventory." << std::endl;
             break;
         }
         default:

@@ -60,9 +60,9 @@ BidResult AuctionDAO::bid(const int account_id, const int auction_id, const int 
         const char* queryTemplate1 = "update auctions set current_bidder_id = %d, current_price = %d, end_time = CURRENT_TIMESTAMP + INTERVAL '1 minutes' where auction_id = %d;";
         const char* queryTemplate2 = "update accounts set balance = balance - %d where account_id = %d";
         bool ret = db->transaction({
-                                            db->queryFormatting(queryTemplate1, account_id, price, auction_id),
-                                            db->queryFormatting(queryTemplate2, price, account_id)
-                                    });
+            db->queryFormatting(queryTemplate1, account_id, price, auction_id),
+            db->queryFormatting(queryTemplate2, price, account_id)
+        });
         bidResult.success = ret;
         bidResult.prev_bidder_id = -1;
         return bidResult;
@@ -73,10 +73,10 @@ BidResult AuctionDAO::bid(const int account_id, const int auction_id, const int 
         const char* queryTemplate2 = "update accounts set balance = balance - %d where account_id = %d";
         const char* queryTemplate3 = "update accounts set balance = balance + %d where account_id = %d";
         bool ret = db->transaction({
-                                            db->queryFormatting(queryTemplate1, account_id, price, auction_id),
-                                            db->queryFormatting(queryTemplate2, price, account_id),
-                                            db->queryFormatting(queryTemplate3, current_price, current_bidder_id)
-                                    });
+            db->queryFormatting(queryTemplate1, account_id, price, auction_id),
+            db->queryFormatting(queryTemplate2, price, account_id),
+            db->queryFormatting(queryTemplate3, current_price, current_bidder_id)
+        });
         bidResult.success = ret;
         bidResult.prev_bidder_id = current_bidder_id;
         bidResult.prev_price = current_price;
@@ -109,11 +109,11 @@ BuyNowResult AuctionDAO::buyNow(const int account_id, const int auction_id) {
         const char *queryTemplate3 = "delete from auctions where auction_id = %d";
         const char *queryTemplate4 = "update accounts set balance = balance + %d where account_id = %d;";
         bool ret = db->transaction({
-                                           db->queryFormatting(queryTemplate1, price, account_id),
-                                           db->queryFormatting(queryTemplate2, account_id, item_id, quantity),
-                                           db->queryFormatting(queryTemplate3, auction_id),
-                                           db->queryFormatting(queryTemplate4, price, seller_id)
-                                   });
+           db->queryFormatting(queryTemplate1, price, account_id),
+           db->queryFormatting(queryTemplate2, account_id, item_id, quantity),
+           db->queryFormatting(queryTemplate3, auction_id),
+           db->queryFormatting(queryTemplate4, price, seller_id)
+        });
         buyNowResult.success = ret;
         buyNowResult.seller_id = seller_id;
         buyNowResult.item_id = item_id;
@@ -131,12 +131,12 @@ BuyNowResult AuctionDAO::buyNow(const int account_id, const int auction_id) {
         const char *queryTemplate4 = "update accounts set balance = balance + %d where account_id = %d;";
         const char* queryTemplate5 = "update accounts set balance = balance + %d where account_id = %d";
         bool ret = db->transaction({
-                                           db->queryFormatting(queryTemplate1, price, account_id),
-                                           db->queryFormatting(queryTemplate2, account_id, item_id, quantity),
-                                           db->queryFormatting(queryTemplate3, auction_id),
-                                           db->queryFormatting(queryTemplate4, price, seller_id),
-                                           db->queryFormatting(queryTemplate5, current_price, current_bidder_id)
-                                   });
+            db->queryFormatting(queryTemplate1, price, account_id),
+            db->queryFormatting(queryTemplate2, account_id, item_id, quantity),
+            db->queryFormatting(queryTemplate3, auction_id),
+            db->queryFormatting(queryTemplate4, price, seller_id),
+            db->queryFormatting(queryTemplate5, current_price, current_bidder_id)
+        });
         buyNowResult.success = ret;
         buyNowResult.seller_id = seller_id;
         buyNowResult.item_id = item_id;
@@ -148,36 +148,52 @@ BuyNowResult AuctionDAO::buyNow(const int account_id, const int auction_id) {
     }
 }
 
-//std::unique_ptr<std::vector<std::pair<bool, std::pair<int, int>>>> AuctionDAO::outdatedItemCheck() {
-//    auto ret = std::make_unique<std::vector<std::pair<bool, std::pair<int, int>>>>();
-//    auto res = db->selectQuery("select * from auctions where end_time <= CURRENT_TIMESTAMP");
-//    for (const auto& row : *res) {
-//        int auction_id      = stoi(row.at("auction_id"));
-//        int item_id         = stoi(row.at("item_id"));
-//        int seller_id       = stoi(row.at("seller_id"));
-//        int item_quantity   = stoi(row.at("item_quantity"));
-//        if (row.at("current_bidder_id").empty()) {
-//            const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
-//            const char* queryTemplate2 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d) on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
-//            bool txResult = db->transaction({
-//                                                    db->queryFormatting(queryTemplate1, auction_id),
-//                                                    db->queryFormatting(queryTemplate2, seller_id, item_id, item_quantity)
-//                                            });
-//            if (txResult) ret->emplace_back(std::pair<bool, std::pair<int, int>>(false, {seller_id, -1}));
-//        }
-//        else {
-//            int current_bidder_id   = stoi(row.at("current_bidder_id"));
-//            int current_price       = stoi(row.at("current_price"));
-//            const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
-//            const char* queryTemplate2 = "update accounts set balance = balance + %d where account_id = %d;";
-//            const char* queryTemplate3 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d) on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
-//            bool txResult = db->transaction({
-//                                                    db->queryFormatting(queryTemplate1, auction_id),
-//                                                    db->queryFormatting(queryTemplate2, current_price, seller_id),
-//                                                    db->queryFormatting(queryTemplate3, current_bidder_id, item_id, item_quantity)
-//                                            });
-//            if (txResult) ret->emplace_back(std::pair<bool, std::pair<int, int>>(true, {seller_id, current_bidder_id}));
-//        }
-//    }
-//    return std::move(ret);
-//}
+std::unique_ptr<std::vector<OutdatedItemResult>> AuctionDAO::outdatedItemCheck() {
+    auto ret = std::make_unique<std::vector<OutdatedItemResult>>();
+    auto res = db->selectQuery("select * from auctions where end_time <= CURRENT_TIMESTAMP");
+    for (const auto& row : *res) {
+        int auction_id      = stoi(row.at("auction_id"));
+        int item_id         = stoi(row.at("item_id"));
+        int item_quantity   = stoi(row.at("item_quantity"));
+        int seller_id       = stoi(row.at("seller_id"));
+        if (row.at("current_bidder_id").empty()) {
+            const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
+            const char* queryTemplate2 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d) on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
+            bool txResult = db->transaction({
+                db->queryFormatting(queryTemplate1, auction_id),
+                db->queryFormatting(queryTemplate2, seller_id, item_id, item_quantity)
+            });
+            if (txResult) {
+                OutdatedItemResult outdatedItemResult;
+                outdatedItemResult.success = false;
+                outdatedItemResult.seller_id = seller_id;
+                outdatedItemResult.item_id = item_id;
+                outdatedItemResult.quantity = item_quantity;
+                ret->emplace_back(outdatedItemResult);
+            }
+        }
+        else {
+            int current_bidder_id   = stoi(row.at("current_bidder_id"));
+            int current_price       = stoi(row.at("current_price"));
+            const char* queryTemplate1 = "delete from auctions where auction_id = %d;";
+            const char* queryTemplate2 = "update accounts set balance = balance + %d where account_id = %d;";
+            const char* queryTemplate3 = "insert into inventory (account_id, item_id, quantity) values (%d, %d, %d) on conflict (account_id, item_id) do update set quantity = inventory.quantity + excluded.quantity;";
+            bool txResult = db->transaction({
+                db->queryFormatting(queryTemplate1, auction_id),
+                db->queryFormatting(queryTemplate2, current_price, seller_id),
+                db->queryFormatting(queryTemplate3, current_bidder_id, item_id, item_quantity)
+            });
+            if (txResult) {
+                OutdatedItemResult outdatedItemResult;
+                outdatedItemResult.success = true;
+                outdatedItemResult.seller_id = seller_id;
+                outdatedItemResult.item_id = item_id;
+                outdatedItemResult.quantity = item_quantity;
+                outdatedItemResult.current_bidder_id = current_bidder_id;
+                outdatedItemResult.current_price = current_price;
+                ret->emplace_back(outdatedItemResult);
+            }
+        }
+    }
+    return std::move(ret);
+}

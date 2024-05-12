@@ -44,6 +44,13 @@ private:
     HANDLE  eventHandlingWorker;
     HANDLE  sendWorker;
 
+
+    // TODO: 경매장 서버를 구현하면 삭제할 예정
+    HANDLE tempWorker;
+    void runTempWorker();
+    [[noreturn]] static unsigned int WINAPI runTempWorkerThread(void* params);
+
+
     bool initServer();
 
     bool accept();

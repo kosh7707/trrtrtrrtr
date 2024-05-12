@@ -34,6 +34,15 @@ namespace AuctionSystem {
         int prev_price;
     };
 
+    struct OutdatedItemResult {
+        bool success;
+        int seller_id;
+        int item_id;
+        int quantity;
+        int current_price;
+        int current_bidder_id;
+    };
+
     class AuctionDAO {
     public:
         AuctionDAO(std::shared_ptr<IDatabase> db) : db(db) {}
@@ -41,7 +50,7 @@ namespace AuctionSystem {
         bool            addAuction(const int account_id, const int item_id, const int quantity, const int buyNowPrice, const int startingBidPrice);
         BidResult       bid(const int account_id, const int auction_id, const int price);
         BuyNowResult    buyNow(const int account_id, const int auction_id);
-        // std::unique_ptr<std::vector<std::pair<bool, Auction>>> outdatedItemCheck();
+        std::unique_ptr<std::vector<OutdatedItemResult>> outdatedItemCheck();
     private:
         std::shared_ptr<IDatabase> db;
     };

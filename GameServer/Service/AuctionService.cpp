@@ -15,14 +15,12 @@ bool AuctionService::sellItem(std::unique_ptr<Inventory>& inventory, const int a
 }
 
 BidResult AuctionService::bid(std::unique_ptr<Account>& account, const int auction_id, const int price) {
-    // TODO: caller가 outbid된 account의 balance를 update 해줘야 하는 구조. 고칠 필요가 있음.
     auto ret = auctionDao->bid(account->getAccountId(), auction_id, price);
     if (ret.success) account->setBalance(account->getBalance() - price);
     return ret;
 }
 
 BuyNowResult AuctionService::buyNow(std::unique_ptr<Account>& account, std::unique_ptr<Inventory>& inventory, const int auction_id) {
-    // TODO: caller가 outbid된 account의 balance를 update 해줘야 하는 구조. 고칠 필요가 있음.
     auto ret = auctionDao->buyNow(account->getAccountId(), auction_id);
     if (ret.success) {
         account->setBalance(account->getBalance() - ret.price);
@@ -30,3 +28,9 @@ BuyNowResult AuctionService::buyNow(std::unique_ptr<Account>& account, std::uniq
     }
     return ret;
 }
+
+std::unique_ptr<std::vector<OutdatedItemResult>> AuctionService::outdatedItemCheck() {
+    return std::move(auctionDao->outdatedItemCheck());
+}
+
+

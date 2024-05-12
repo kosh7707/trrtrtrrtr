@@ -6,7 +6,7 @@
 
 class Event {
 public:
-    enum : uint8_t {
+    enum eventEnum : uint8_t {
         INVALID_EVENT           = 0xFF,
         LOGIN_EVENT             = 1,
         LOGIN_FAIL              = 2,
@@ -38,6 +38,8 @@ public:
         BUYNOW_FAIL_EVENT       = 28,
         OUTBID_EVENT            = 29,
         ITEM_SOLD_EVENT         = 30,
+        EXPIRED_AUCTION_EVENT   = 31,
+        WIN_AUCTION_EVENT       = 32,
     };
 
     Event(int index, uint8_t eventCode, const std::string& contents)

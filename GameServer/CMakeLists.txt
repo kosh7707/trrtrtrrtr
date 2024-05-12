@@ -40,6 +40,7 @@ add_executable(${TARGET} main.cpp
         Service/AuctionService.h
         Constants/ItemConstant.cpp
         Constants/ItemConstant.h
+        UserInputHandling.cpp
 )
 
 set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
